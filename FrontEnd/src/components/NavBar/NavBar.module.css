@@ -1,0 +1,302 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+  /* --primary-color: #667eea; */
+  --secondary-color: #B3EBF2;
+  --text-color: #2d3748;
+  --text-light: #718096;
+  --white: #ffffff;
+  --shadow-light: 0 2px 10px rgba(102, 126, 234, 0.1);
+  --shadow-medium: 0 4px 20px rgba(102, 126, 234, 0.15);
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --special-color: #ff6b6b;
+  --success-color: #51cf66;
+}
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*
+   == Main Navbar Container ==
+*/
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--white);
+  box-shadow: var(--shadow-light);
+  position: relative;
+  min-height: 70px;
+}
+
+.navbarContainer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+/*
+   == Left Section (Logo) ==
+*/
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logoLink:hover {
+  transform: translateY(-2px);
+}
+
+.logoImage {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.2));
+}
+
+/*
+   == Right Section ==
+*/
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/*
+   == Navigation Links Section ==
+*/
+.navLinksSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: var(--transition);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink i {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+/*
+   == Dropdown Styles ==
+*/
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  padding: 0.5rem 0;
+  min-width: 200px;
+  z-index: 1000;
+  border: 1px solid var(--secondary-color);
+  margin-top: 0.5rem;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border-bottom: 1px solid #f7fafc;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: none;
+}
+
+.dropdownItem::after {
+  display: none;
+}
+
+.specialItem {
+  background: linear-gradient(135deg, var(--secondary-color), #e0f7ff);
+  font-weight: 600;
+  position: relative;
+}
+
+.specialItem:hover {
+  background: linear-gradient(135deg, #a0e6ed, var(--secondary-color));
+}
+
+.badge {
+  background: var(--special-color);
+  color: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/*
+   == Special Link Styles ==
+*/
+.specialLink {
+  background: linear-gradient(135deg, var(--secondary-color), #e0f7ff);
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.specialLink::after {
+  display: none;
+}
+
+.specialLink:hover {
+  background: linear-gradient(135deg, #a0e6ed, var(--secondary-color));
+  transform: translateY(-2px);
+}
+
+.specialBadge {
+  background: var(--success-color);
+  color: var(--white);
+  padding: 0.15rem 0.4rem;
+  border-radius: 15px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-left: 0.4rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/*
+   == Contact Button Styling ==
+*/
+.contactSection {
+  display: flex;
+  align-items: center;
+}
+
+/*
+   == Responsive Design ==
+*/
+
+
+
+
+/* ------------------------------------------ */
+
+.contactButton button {
+ padding: 13px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 600;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.contactButton button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+.contactButton button:hover {
+ color: #e8e8e8;
+}
+
+.contactButton button:hover::before {
+ width: 100%;
+}
