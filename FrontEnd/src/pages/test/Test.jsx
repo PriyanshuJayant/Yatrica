@@ -5,7 +5,7 @@ function Test() {
   return (
     <>
       <div className="testContainer">
-        <Hero/>
+        {/* <Hero/> */}
       </div>
     </>
   )
