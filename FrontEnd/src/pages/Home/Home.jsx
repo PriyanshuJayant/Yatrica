@@ -6,9 +6,15 @@ import Hero from '../../components/Hero/Hero'
 function Home() {
   return (
     <>
-        <div className="Home-Container">
+        <div className={styles.HomeContainer}>
             <NavBar/>
             <Hero/>
+            <div className={styles.pageContainer}>
+              
+
+
+              
+            </div>
         </div>
     </>
   )

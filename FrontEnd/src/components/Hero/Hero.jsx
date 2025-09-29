@@ -17,8 +17,8 @@ function Hero() {
         </video>
         
         <div className={styles.overlay}>
-          <h1 className={styles.title}>Hero Title</h1>
-          <p className={styles.subtitle}>Your compelling subtitle goes here</p>
+          <h1 className={styles.title}>Video Section</h1>
+          <p className={styles.subtitle}>bla bla bla bla</p>
         </div>
       </div>
     </>

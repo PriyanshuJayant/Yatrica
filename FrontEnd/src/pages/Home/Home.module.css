@@ -1,0 +1,9 @@
+.pageContainer{
+    /* border: 2px solid black; */
+    margin: 0 15rem 0 15rem; /* Page Orientation */
+}
+@media (max-width: 768px) {
+    .pageContainer{
+        margin: 0 1rem 0 1rem;
+    }
+}

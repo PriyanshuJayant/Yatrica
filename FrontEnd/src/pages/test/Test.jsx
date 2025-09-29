@@ -1,11 +1,10 @@
 import React from 'react'
-import Hero from '../../components/Hero/Hero'
-
+import Carousel from '../../components/Carousal/Carousal'
 function Test() {
   return (
     <>
       <div className="testContainer">
-        {/* <Hero/> */}
+        <Carousel/>
       </div>
     </>
   )
