@@ -1,11 +1,10 @@
 import React from 'react'
-import Carousel from '../../components/Carousal/Carousal'
+import PackageCarousel from '../../components/Card/package-carousel'
+
 function Test() {
   return (
     <>
-      <div className="testContainer">
-        <Carousel/>
-      </div>
+      <PackageCarousel/>
     </>
   )
 }
