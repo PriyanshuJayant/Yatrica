@@ -7,13 +7,13 @@ function CardCouresel() {
     <>
       <InfiniteCarousel
         autoScroll={true}
-        autoScrollInterval={4000}
+        autoScrollInterval={1000}
         showControls={true}
-        height="400px"
+        height="370px"
         width="100%"
-        maxWidth="1000px"
+        // maxWidth="1000px"
         animationTransition="smooth"
-        imagesShown={3}
+        imagesShown={4}
         innerImageHeight="350px"
         gap="20px"
       >
