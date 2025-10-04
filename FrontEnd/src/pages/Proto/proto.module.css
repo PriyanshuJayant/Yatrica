@@ -1,6 +1,6 @@
 .pageContainer{
     /* border: 2px solid black; */
-    margin: 0 15rem 0 15rem; /* Page Orientation */
+    margin: 0 10rem 0 10rem; /* Page Orientation */
     padding: 5rem 0 5rem 0;
     display: flex;
     flex-direction: column;
@@ -12,6 +12,9 @@
 .CardCarousel{
     position: relative;
     bottom: 70px;
+}
+.ExpandableCard{
+    border: 2px solid black;
 }
 @media (max-width: 768px) {
     .pageContainer{

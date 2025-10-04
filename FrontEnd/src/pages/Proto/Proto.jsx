@@ -18,10 +18,9 @@ function Home() {
           >
             <PackageCategory />
           </motion.div>
-          {/* <motion.div className={styles.CardCarousel}>
-            <CardCouresel />
-          </motion.div> */}
-          <ExpandableCard />
+          <div className={styles.ExpandableCard}><ExpandableCard /></div>
+          
+          <div className={styles.CardCarousel}><CardCouresel /></div>
         </div>
       </div>
     </>
