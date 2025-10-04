@@ -1,4 +1,4 @@
-import cardsData from "../../data/cardsData.json";
+import cardsData from '../../assets/data/cardsData.json'
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -133,7 +133,7 @@ export default function ExpandableCardDemo() {
   };
 
   return (
-    <div style={{ position: "relative", minHeight: "100vh", backgroundColor: "#f5f5f5", paddingTop: "40px" }}>
+    <div style={{ position: "relative", height: "auto", }}>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -251,7 +251,7 @@ export default function ExpandableCardDemo() {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "start",
-                    padding: "16px",
+                    padding: "2px 16px 6px",
                     gap: "12px",
                     flexShrink: 0,
                   }}
@@ -380,7 +380,7 @@ export default function ExpandableCardDemo() {
                 style={{
                   position: "relative",
                   width: "100%",
-                  height: "350px",
+                  height: "300px",
                   borderRadius: "16px",
                   overflow: "hidden",
                 }}

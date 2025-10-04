@@ -20,7 +20,6 @@ function Home() {
           </motion.div>
           <div className={styles.ExpandableCard}><ExpandableCard /></div>
           
-          <div className={styles.CardCarousel}><CardCouresel /></div>
         </div>
       </div>
     </>
