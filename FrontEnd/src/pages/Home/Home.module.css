@@ -1,11 +1,25 @@
-.pageContainer{
-    border: 2px solid black;
-    margin: 0 15rem 0 15rem; /* Page Orientation */
-    padding: 5rem 0 5rem 0;
+.pageContainer {
+  margin: 0 10rem 0 10rem;
 }
+.PackageCategory {
+  margin-top: 5rem;
+}
+.CardCarousel {
+  position: relative;
+  bottom: 70px;
+}
+.ExpandableCard {
+  position: relative;
+  bottom: 100px;
+  /* padding: 0 5rem 0 5rem; */
+}
+.HomeContainer{
+  border: 2px solid black;
+}
+
 @media (max-width: 768px) {
-    .pageContainer{
-        margin: 0 1rem 0 1rem;
-        padding: 2.5rem 0 2.5rem 0;
-    }
+  .pageContainer {
+    margin: 0 1rem 0 1rem;
+    padding: 2.5rem 0 2.5rem 0;
+  }
 }

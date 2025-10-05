@@ -88,7 +88,7 @@ export default function ExpandableCardDemo() {
     // Calculate expanded dimensions
     const expandedWidth = rect.width + 150;
     const expandedHeight = Math.min(
-      rect.height + 200,
+      rect.height + 250,
       window.innerHeight - 100
     );
 
@@ -380,7 +380,7 @@ export default function ExpandableCardDemo() {
                 style={{
                   position: "relative",
                   width: "100%",
-                  height: "300px",
+                  height: "340px",
                   borderRadius: "16px",
                   overflow: "hidden",
                 }}

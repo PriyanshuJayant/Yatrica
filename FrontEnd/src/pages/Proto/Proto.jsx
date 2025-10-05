@@ -12,14 +12,13 @@ function Home() {
     <>
       <div className={styles.HomeContainer}>
         <div className={styles.pageContainer}>
-          <h1 className="text-blue-600">Explore Places</h1>
-          <motion.div
-            className={styles.PackageCategory}
-          >
+          <h1>Explore Places</h1>
+          <motion.div>
             <PackageCategory />
           </motion.div>
-          <div className={styles.ExpandableCard}><ExpandableCard /></div>
-          
+          <div className={styles.ExpandableCard}>
+            <ExpandableCard />
+          </div>
         </div>
       </div>
     </>
