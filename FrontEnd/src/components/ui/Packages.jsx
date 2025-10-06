@@ -274,7 +274,7 @@ export default function ExpandableCardDemo() {
                         margin: 0,
                       }}
                     >
-                      {active.description}
+                      {`₹${active.description}`}
                     </p>
                   </div>
 

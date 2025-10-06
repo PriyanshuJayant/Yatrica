@@ -6,7 +6,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
 }
 
 .video {
@@ -18,41 +17,30 @@
   object-fit: cover;
   z-index: 1;
 }
-
-.overlay {
+.containerStyle {
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
   position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 2rem;
-  max-width: 800px;
-  width: 90%;
+  z-index: 20;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.24),
+               0 0 20px rgba(0, 0, 0, 0.233),
+               2px 2px 4px rgba(0, 0, 0, 0.459);
 }
-
-.title {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin: 0 0 1rem 0;
-  line-height: 1.2;
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  margin: 0;
-  line-height: 1.6;
-  font-weight: 300;
+.textStyle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #ffffffff;
+  text-align: left;
+  line-height: 1.4;
 }
 
 /* Tablet styles */
 @media (max-width: 1024px) {
   .videoContainer {
     height: 40vh;
-  }
-  .title {
-    font-size: 3rem;
-  }
-
-  .subtitle {
-    font-size: 1.125rem;
   }
 }
 
@@ -61,19 +49,6 @@
   .videoContainer {
     height: 40vh;
   }
-
-  .overlay {
-    padding: 1.5rem;
-    width: 95%;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
 }
 
 /* Small mobile styles */
@@ -81,14 +56,6 @@
   .videoContainer {
     height: 40vh;
   }
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 0.875rem;
-  }
-
   .overlay {
     padding: 1rem;
   }

@@ -16,7 +16,7 @@ function Home() {
         <NavBar />
         <Hero />
         <div className={styles.pageContainer}>
-          {/* <CarouselComp /> */}
+          <CarouselComp />
 
           <div className={styles.HomeContainer}>
             <div>
@@ -43,9 +43,10 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* <CardCouresel/>
+          <CardCouresel/>
+
               <ExpandableCard/>
-              <QuoteForm/> */}
+              <QuoteForm/>
         </div>
       </div>
     </>
