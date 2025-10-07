@@ -1,6 +1,10 @@
 .pageContainer {
   margin: 0 10rem 0 10rem;
-  padding-top: 5rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .PackageCategory {
   margin-top: 5rem;
@@ -15,7 +19,15 @@
   /* padding: 0 5rem 0 5rem; */
 }
 .HomeContainer{
-  border: 2px solid black;
+
+}
+.diwaliBanner{
+  height: 350px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {

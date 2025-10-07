@@ -9,7 +9,7 @@ function Hero() {
   const flipStyle = {
     display: "inline-block",
     margin: "0 0.4rem",
-    color: "#a2eaf7ff", // you can tweak for dark mode
+    color: "#a2eaf7ff",
     fontWeight: "600",
   };
   return (

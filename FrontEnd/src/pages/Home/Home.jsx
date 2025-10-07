@@ -8,6 +8,7 @@ import PackageCategory from "../../components/PackageCategory/PackageCategory";
 import CardCouresel from "../../components/CardCarousel/CardCouresel";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import CarouselComp from "../../components/Carousel/CarouselComp";
+import Diwali from "/videos/DiwaliOffers.mp4";
 
 function Home() {
   return (
@@ -16,11 +17,21 @@ function Home() {
         <NavBar />
         <Hero />
         <div className={styles.pageContainer}>
-          <CarouselComp />
+          {/* <CarouselComp /> */}
+          <video
+            className={styles.diwaliBanner}
+            src={Diwali}
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            Your Browser does not support this video format
+          </video>
+          <CardCouresel />
 
           <div className={styles.HomeContainer}>
             <div>
-              <h1>Explore Places</h1>
               <motion.div className={styles.PackageCategory}>
                 <PackageCategory />
               </motion.div>
@@ -30,11 +41,8 @@ function Home() {
             </div>
           </div>
 
-
-          
           <div className={styles.HomeContainer}>
             <div>
-              <h1>Explore Places</h1>
               <motion.div className={styles.PackageCategory}>
                 <PackageCategory />
               </motion.div>
@@ -43,10 +51,8 @@ function Home() {
               </div>
             </div>
           </div>
-          <CardCouresel/>
 
-              <ExpandableCard/>
-              <QuoteForm/>
+          <QuoteForm />
         </div>
       </div>
     </>
