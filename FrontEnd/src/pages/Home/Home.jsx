@@ -5,7 +5,6 @@ import { Packages } from "../../components/ui/Packages";
 import styles from "./Home.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
-// import ExpandableCard from "../../components/ui/Packages";
 import BannerVideo from "../../components/BannerVideo/BannerVideo";
 import CardCouresel from "../../components/CardCarousel/CardCouresel";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
@@ -14,10 +13,11 @@ import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
 import FAQs from '../../components/FAQ/FAQ'
-
+import Footer from "../../components/Footer/Footer";
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
 import CorporateJSON from '../../assets/data/corporate.json'
+
 
 function Home() {
   return (
@@ -84,6 +84,8 @@ function Home() {
           <FAQs/>
           <QuoteForm />
         </div>
+
+        <Footer/>
       </div>
     </>
   );
