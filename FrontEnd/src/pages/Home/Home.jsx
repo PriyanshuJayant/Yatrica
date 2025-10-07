@@ -13,8 +13,10 @@ import CarouselComp from "../../components/Carousel/CarouselComp";
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
+
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
+import CorporateJSON from '../../assets/data/corporate.json'
 
 function Home() {
   return (
@@ -58,13 +60,17 @@ function Home() {
             />
             {/* Family Packages Section */}
             <div className={styles.ExpandableCard}>
-              <Packages src={budgetFriendlyJSON} />
+              <Packages src={CorporateJSON} />
             </div>
           </div>
 
-          <div className={styles.HomeContainer}>
+          <div className={styles.HomeContainer}
+            // Edit Section
+            style={{height:"400px", marginBottom:"20rem"}} 
+          >
             <BannerComp
-              src={Corporate}
+              // src={Corporate}
+              src="https://www.pexels.com/download/video/9374869/"
               heading="Honeymoon"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"

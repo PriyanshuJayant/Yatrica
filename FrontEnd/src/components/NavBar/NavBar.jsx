@@ -51,7 +51,7 @@ function NavBar() {
           <Link to="/" className={styles.logoLink}>
             <div className={styles.logoImage}>
               <img
-                src="../../../public/images/Logo3.png"
+                src="/images/Logo3.png"
                 alt="Company Logo"
                 className={styles.logo}
               />
