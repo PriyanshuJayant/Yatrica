@@ -1,7 +1,7 @@
 import React from "react";
 import Video from "../../../public/videos/FamilyTours.mp4";
 
-function PackageCategory() {
+function BannerVideo() {
   return (
     <div
       style={{
@@ -102,4 +102,4 @@ function PackageCategory() {
   );
 }
 
-export default PackageCategory;
+export default BannerVideo;

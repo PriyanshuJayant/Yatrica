@@ -10,12 +10,12 @@ function CardCouresel() {
         autoScrollInterval={2000}
         showControls={true}
         height="370px"
-        width="100%"
+        width="90%"
         // maxWidth="1000px"
         animationTransition="smooth"
         imagesShown={4}
-        innerImageHeight="350px"
-        gap="20px"
+        innerImageHeight="340px"
+        gap="15px"
       >
         <Image
           src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=600"

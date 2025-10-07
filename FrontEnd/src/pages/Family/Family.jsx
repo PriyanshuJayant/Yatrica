@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BannerComp } from "../../components/ui/BannerComp";
-import styles from "./Home.module.css";
+import styles from "./Family.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
 import ExpandableCard from "../../components/ui/Packages";
@@ -12,7 +12,7 @@ import CarouselComp from "../../components/Carousel/CarouselComp";
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4"
 
-function Home() {
+function FamilyPage() {
   return (
     <>
       <div>
@@ -22,7 +22,7 @@ function Home() {
           {/* <CarouselComp /> */}
           <video
             className={styles.diwaliBanner}
-            src={Diwali}
+            src={Family}
             autoPlay
             muted
             loop
@@ -69,4 +69,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default FamilyPage;

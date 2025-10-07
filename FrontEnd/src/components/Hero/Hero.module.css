@@ -25,9 +25,8 @@
   padding: 0 1rem;
   position: relative;
   z-index: 20;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.24),
-               0 0 0px rgba(0, 0, 0, 0.233),
-               1px 4px 10px rgba(0, 0, 0, 0.459);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.24), 0 0 0px rgba(0, 0, 0, 0.233),
+    1px 4px 10px rgba(0, 0, 0, 0.459);
 }
 .textStyle {
   font-size: 2.5rem;

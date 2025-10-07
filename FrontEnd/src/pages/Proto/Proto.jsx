@@ -5,7 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
 import CardCouresel from "../../components/CardCarousel/CardCouresel";
 import ExpandableCard from "../../components/ui/Packages";
-import PackageCategory from "../../components/PackageCategory/PackageCategory";
+import BannerVideo from "../../components/BannerVideo/BannerVideo";
 
 function Home() {
   return (
@@ -14,7 +14,7 @@ function Home() {
         <div className={styles.pageContainer}>
           <h1>Explore Places</h1>
           <motion.div>
-            <PackageCategory />
+            <BannerVideo />
           </motion.div>
           <div className={styles.ExpandableCard}>
             <ExpandableCard />

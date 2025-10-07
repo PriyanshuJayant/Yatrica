@@ -1,5 +1,4 @@
 import React from "react";
-import PackageCategory from "../../components/PackageCategory/PackageCategory";
 
 function Test() {
   return (
@@ -8,7 +7,7 @@ function Test() {
 
 
       
-      <PackageCategory/>
+      <BannerVideo/>
     </>
   );
 }
