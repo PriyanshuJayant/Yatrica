@@ -13,6 +13,7 @@ import CarouselComp from "../../components/Carousel/CarouselComp";
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
+import FAQs from '../../components/FAQ/FAQ'
 
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
@@ -80,7 +81,7 @@ function Home() {
               <Packages src={budgetFriendlyJSON} />
             </div>
           </div>
-
+          <FAQs/>
           <QuoteForm />
         </div>
       </div>
