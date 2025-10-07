@@ -4,7 +4,7 @@ import { BannerComp } from "../../components/ui/BannerComp";
 import styles from "./Family.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
-import ExpandableCard from "../../components/ui/Packages";
+// import ExpandableCard from "../../components/ui/Packages";
 import BannerVideo from "../../components/BannerVideo/BannerVideo";
 import CardCouresel from "../../components/CardCarousel/CardCouresel";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
@@ -38,7 +38,7 @@ function FamilyPage() {
                 <BannerVideo />
               </motion.div>
               <div className={styles.ExpandableCard}>
-                <ExpandableCard />
+                {/* <ExpandableCard /> */}
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ function FamilyPage() {
               />
 
               <div className={styles.ExpandableCard}>
-                <ExpandableCard />
+                {/* <ExpandableCard /> */}
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import styles from "./proto.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
 import CardCouresel from "../../components/CardCarousel/CardCouresel";
-import ExpandableCard from "../../components/ui/Packages";
+// import ExpandableCard from "../../components/ui/Packages";
 import BannerVideo from "../../components/BannerVideo/BannerVideo";
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
             <BannerVideo />
           </motion.div>
           <div className={styles.ExpandableCard}>
-            <ExpandableCard />
+            {/* <ExpandableCard /> */}
           </div>
         </div>
       </div>

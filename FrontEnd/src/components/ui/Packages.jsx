@@ -1,20 +1,16 @@
-import cardsData from '../../assets/data/cardsData.json'
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-// Custom hook for outside click detection
+// ✅ Custom hook for outside click detection
 const useOutsideClick = (ref, callback) => {
   useEffect(() => {
     const listener = (event) => {
-      if (!ref.current || ref.current.contains(event.target)) {
-        return;
-      }
+      if (!ref.current || ref.current.contains(event.target)) return;
       callback(event);
     };
 
     document.addEventListener("mousedown", listener);
     document.addEventListener("touchstart", listener);
-
     return () => {
       document.removeEventListener("mousedown", listener);
       document.removeEventListener("touchstart", listener);
@@ -22,31 +18,32 @@ const useOutsideClick = (ref, callback) => {
   }, [ref, callback]);
 };
 
-const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.05 } }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      style={{ height: "16px", width: "16px", color: "#000" }}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
+// ✅ Close icon (unchanged)
+const CloseIcon = () => (
+  <motion.svg
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0, transition: { duration: 0.05 } }}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ height: "16px", width: "16px", color: "#000" }}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M18 6l-12 12" />
+    <path d="M6 6l12 12" />
+  </motion.svg>
+);
 
-export default function ExpandableCardDemo() {
+// ✅ Reusable Packages component
+export function Packages({ src }) {
+  const [cardsData, setCardsData] = useState([]);
   const [active, setActive] = useState(null);
   const [cardPosition, setCardPosition] = useState({
     top: 0,
@@ -56,20 +53,49 @@ export default function ExpandableCardDemo() {
   });
   const id = useId();
   const ref = useRef(null);
+  const containerRef = useRef(null);
+
+  // ✅ Fetch data dynamically from src
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        if (!src) return;
+
+        // If src is a string assume it's a URL/path and fetch it
+        if (typeof src === "string") {
+          const response = await fetch(src);
+          if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
+          const data = await response.json();
+          setCardsData(data);
+          return;
+        }
+
+        // If src is already the parsed JSON (imported), use it directly
+        if (Array.isArray(src)) {
+          setCardsData(src);
+          return;
+        }
+
+        // If src is an object (could be a module default export), try to extract data
+        if (typeof src === "object") {
+          const data = src.default ?? src;
+          if (Array.isArray(data)) setCardsData(data);
+          else if (data && typeof data === "object") setCardsData(Object.values(data));
+          return;
+        }
+      } catch (err) {
+        console.error("Failed to load cards data:", err);
+      }
+    }
+    fetchData();
+  }, [src]);
 
   useEffect(() => {
     function onKeyDown(event) {
-      if (event.key === "Escape") {
-        setActive(false);
-      }
+      if (event.key === "Escape") setActive(false);
     }
 
-    if (active && typeof active === "object") {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
+    document.body.style.overflow = active ? "hidden" : "auto";
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
@@ -77,7 +103,6 @@ export default function ExpandableCardDemo() {
   useOutsideClick(ref, () => setActive(null));
 
   const handleCardClick = (card, event) => {
-    // If clicking the same card, close it
     if (active?.title === card.title) {
       setActive(null);
       return;
@@ -126,16 +151,17 @@ export default function ExpandableCardDemo() {
       height: rect.height,
       expandedTop: desiredTop,
       expandedLeft: desiredLeft,
-      expandedWidth: expandedWidth,
-      expandedHeight: expandedHeight,
+      expandedWidth,
+      expandedHeight,
     });
     setActive(card);
   };
 
   return (
-    <div style={{ position: "relative", height: "auto", }}>
+    <div ref={containerRef} style={{ position: "relative", height: "auto", overflow: "hidden" }}>
+      {/* Dim background when expanded */}
       <AnimatePresence>
-        {active && typeof active === "object" && (
+        {active && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -152,20 +178,23 @@ export default function ExpandableCardDemo() {
       </AnimatePresence>
 
       <AnimatePresence>
-        {active && typeof active === "object" ? (
+        {active ? (
           <>
+            {/* Close Button */}
             <motion.button
               key={`button-${active.title}-${id}`}
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1,
-                top:cardPosition.expandedTop + 20,
-               }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                top: cardPosition.expandedTop + 20,
+              }}
               exit={{ opacity: 0, scale: 0.8 }}
               style={{
                 display: "flex",
                 position: "fixed",
-                top: `${Math.max(10, cardPosition.top - 0 + 8)}px`,
-                left: `${cardPosition.left + cardPosition.width + 40 - 32}px`,
+                top: `${Math.max(10, cardPosition.top + 8)}px`,
+                left: `${cardPosition.left + cardPosition.width + 8}px`,
                 alignItems: "center",
                 justifyContent: "center",
                 backgroundColor: "#fff",
@@ -181,6 +210,7 @@ export default function ExpandableCardDemo() {
               <CloseIcon />
             </motion.button>
 
+            {/* Expanded Card */}
             <motion.div
               key={`expanded-${active.title}-${id}`}
               ref={ref}
@@ -190,7 +220,6 @@ export default function ExpandableCardDemo() {
                 left: cardPosition.left,
                 width: cardPosition.width,
                 height: cardPosition.height,
-                opacity: 1,
               }}
               animate={{
                 position: "fixed",
@@ -198,7 +227,6 @@ export default function ExpandableCardDemo() {
                 left: cardPosition.expandedLeft,
                 width: cardPosition.expandedWidth,
                 height: cardPosition.expandedHeight,
-                opacity: 1,
               }}
               exit={{
                 position: "fixed",
@@ -220,12 +248,12 @@ export default function ExpandableCardDemo() {
                 backgroundColor: "#fff",
                 borderRadius: "24px",
                 overflow: "hidden",
-                width:"70%",
+                width: "70%",
                 zIndex: 100,
                 boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
               }}
             >
-              <div style={{ position: "relative"}}>
+              <div style={{ position: "relative" }}>
                 <img
                   src={active.src}
                   alt={active.title}
@@ -274,7 +302,7 @@ export default function ExpandableCardDemo() {
                         margin: 0,
                       }}
                     >
-                      {`₹${active.description}`}
+                      ₹{active.description}
                     </p>
                   </div>
 
@@ -319,7 +347,7 @@ export default function ExpandableCardDemo() {
                       lineHeight: "1.6",
                     }}
                   >
-                    <p style={{ margin: 0, whiteSpace: "pre-line", fontSize:"14px" }}>
+                    <p style={{ margin: 0, whiteSpace: "pre-line", fontSize: "14px" }}>
                       {active.content}
                     </p>
                   </motion.div>
@@ -330,13 +358,14 @@ export default function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
 
+      {/* Cards Grid */}
       <div
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          display:"flex",
-          justifyContent:"center",
-          alignItems:"center",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           width: "100%",
           padding: "0 20px",
           overflow: "hidden",
@@ -358,9 +387,7 @@ export default function ExpandableCardDemo() {
             <li
               key={card.title}
               onClick={(e) => {
-                if (active?.title !== card.title) {
-                  handleCardClick(card, e);
-                }
+                if (active?.title !== card.title) handleCardClick(card, e);
               }}
               style={{
                 display: "flex",
@@ -380,7 +407,7 @@ export default function ExpandableCardDemo() {
                 style={{
                   position: "relative",
                   width: "100%",
-                  height: "340px",
+                  height: "300px",
                   borderRadius: "16px",
                   overflow: "hidden",
                 }}
@@ -396,8 +423,7 @@ export default function ExpandableCardDemo() {
                     display: "block",
                   }}
                 />
-                
-                {/* Gradient overlay */}
+
                 <div
                   style={{
                     position: "absolute",
@@ -405,12 +431,12 @@ export default function ExpandableCardDemo() {
                     left: 0,
                     right: 0,
                     height: "50%",
-                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%)",
+                    background:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%)",
                     pointerEvents: "none",
                   }}
                 />
-                
-                {/* Text overlay */}
+
                 <div
                   style={{
                     position: "absolute",
