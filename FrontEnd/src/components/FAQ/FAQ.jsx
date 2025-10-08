@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail } from "lucide-react";
 import { Badge } from "../ui/badge";
+import FAQComponent from "./FAQ2";
 
 function FAQItem({ question, answer, index }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -221,11 +222,13 @@ export default function FAQs() {
           </p>
         </motion.div>
 
-        <div style={{ margin: "0 auto", maxWidth: "700px" }}>
+        {/* <div style={{ margin: "0 auto", maxWidth: "700px" }}>
           {faqs.map((faq, index) => (
             <FAQItem key={index} {...faq} index={index} />
           ))}
-        </div>
+        </div> */}
+        <FAQComponent/>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

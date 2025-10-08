@@ -6,7 +6,7 @@ export function BannerComp({
   subHeading = "Default Subheading",
   buttonText = "Learn More →",
   onButtonClick,
-  height = "100%",
+  height = "400px",
   overlayBottom = true,
   overlaySide = true,
 }) {
@@ -16,7 +16,7 @@ export function BannerComp({
         position: "relative",
         width: "100%",
         height,
-        borderRadius: "15px",
+        borderRadius: "15px 15px 0 0",
         overflow: "hidden",
       }}
     >

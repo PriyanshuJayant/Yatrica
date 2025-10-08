@@ -1,13 +1,14 @@
 import React from "react";
-import FAQs from "../../components/FAQ/FAQ";
 
 function Test() {
   return (
     <>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum voluptatum explicabo rem, exercitationem ad ex. Ducimus culpa earum magni at nemo officia veritatis quas cum tenetur. Minus, debitis! Ipsum, quia.</p>
+    <div style={{backgroundColor:"gray"}}>
+
+      <p className="h-10px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum voluptatum explicabo rem, exercitationem ad ex. Ducimus culpa earum magni at nemo officia veritatis quas cum tenetur. Minus, debitis! Ipsum, quia.</p>
 
 
-      <FAQs/>
+    </div>
     </>
   );
 }

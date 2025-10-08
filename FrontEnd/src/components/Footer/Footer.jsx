@@ -62,10 +62,10 @@ const aboutLinks = [
 ];
 
 const serviceLinks = [
-  { text: "Web Development", href: data.services.webdev },
-  { text: "Web Design", href: data.services.webdesign },
-  { text: "Marketing", href: data.services.marketing },
-  { text: "Google Ads", href: data.services.googleads },
+  { text: "Flights", href: data.services.webdev },
+  { text: "Hotels", href: data.services.webdesign },
+  { text: "Packages", href: data.services.marketing },
+  { text: "Visa Assistance", href: data.services.googleads },
 ];
 
 const helpfulLinks = [

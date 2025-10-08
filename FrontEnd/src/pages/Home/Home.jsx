@@ -1,57 +1,81 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BannerComp } from "../../components/ui/BannerComp";
-import { Packages } from "../../components/ui/Packages";
-import styles from "./Home.module.css";
+
+// -------------------- COMPONENT IMPORTS --------------------
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
 import BannerVideo from "../../components/BannerVideo/BannerVideo";
 import CardCouresel from "../../components/CardCarousel/CardCouresel";
+import { BannerComp } from "../../components/ui/BannerComp";
+import { Packages } from "../../components/ui/Packages";
+import Services from "../../components/Services/Services";
+import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
-import CarouselComp from "../../components/Carousel/CarouselComp";
+import Footer from "../../components/Footer/Footer";
+// import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
+import FAQComponent from "../../components/FAQ/FAQ2";
+
+
+// -------------------- STYLES --------------------
+import styles from "./Home.module.css";
+
+// -------------------- VIDEO ASSETS --------------------
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
-import FAQs from '../../components/FAQ/FAQ'
-import Footer from "../../components/Footer/Footer";
+
+// -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
-import CorporateJSON from '../../assets/data/corporate.json'
+import CorporateJSON from "../../assets/data/corporate.json";
 
+// =====================================================
+//                     HOME COMPONENT
+// =====================================================
 
 function Home() {
   return (
     <>
-      <div>
+      <div className={styles.homePageContainer}>
+        {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
         <Hero />
-        <div className={styles.pageContainer}>
-          {/* <CarouselComp /> */}
-          <video
-            className={styles.diwaliBanner}
-            src={Diwali}
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            Your Browser does not support this video format
-          </video>
-          <CardCouresel />
+        {/* <CarouselComp /> */}
 
+        {/* -------------------- Page Content -------------------- */}
+        <div className={styles.pageContainer}>
+          {/* --------------------Diwali Section-------------------- */}
+          <div className={styles.DiwaliComponent}>
+            <video
+              className={styles.diwaliBanner}
+              src={Diwali}
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              Your Browser does not support this video format
+            </video>
+            <CardCouresel />
+          </div>
+
+          {/* -------------------- FAMILY TOURS SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
               src={Family}
               heading="Family Tours"
               subHeading="Enjoy your best time with your Family"
-              buttonText="More Corporate Packages →"
+              buttonText="More Family Packages →"
             />
-            {/* Family Packages Section */}
             <div className={styles.ExpandableCard}>
               <Packages src={FamilyJSON} />
             </div>
           </div>
 
+          {/* -------------------- SERVICES SECTION -------------------- */}
+          <Services />
+
+          {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
@@ -59,33 +83,35 @@ function Home() {
               subHeading="Enjoy your best time with your Company"
               buttonText="More Corporate Packages →"
             />
-            {/* Family Packages Section */}
             <div className={styles.ExpandableCard}>
               <Packages src={CorporateJSON} />
             </div>
           </div>
 
-          <div className={styles.HomeContainer}
-            // Edit Section
-            style={{height:"400px", marginBottom:"20rem"}} 
+          {/* -------------------- HONEYMOON / BUDGET FRIENDLY SECTION -------------------- */}
+          <div
+            className={styles.HomeContainer}
           >
             <BannerComp
-              // src={Corporate}
-              src="https://www.pexels.com/download/video/9374869/"
+              src={Corporate}
               heading="Honeymoon"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"
             />
-            {/* Family Packages Section */}
             <div className={styles.ExpandableCard}>
               <Packages src={budgetFriendlyJSON} />
             </div>
           </div>
-          <FAQs/>
+
+          {/* -------------------- FAQ SECTION -------------------- */}
+          <FAQs />
+
+          {/* -------------------- QUOTE FORM -------------------- */}
           <QuoteForm />
         </div>
 
-        <Footer/>
+        {/* -------------------- FOOTER -------------------- */}
+        <Footer />
       </div>
     </>
   );
