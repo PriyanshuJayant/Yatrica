@@ -2,11 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail } from "lucide-react";
 import { Badge } from "../ui/badge";
-import FAQComponent from "./FAQ2";
 
-function FAQItem({ question, answer, index }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function FAQItem({ question, answer, index, isOpen, toggleOpen }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -18,16 +15,16 @@ function FAQItem({ question, answer, index }) {
       }}
       style={{
         border: "1px solid #ddd",
-        borderRadius: "10px",
         marginBottom: "10px",
         backgroundColor: isOpen ? "#f9f9f9" : "#fff",
         boxShadow: isOpen ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
         transition: "all 0.25s ease",
+        borderRadius:"20px",
       }}
     >
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => toggleOpen(index)}
         style={{
           display: "flex",
           alignItems: "center",
@@ -121,31 +118,43 @@ function FAQItem({ question, answer, index }) {
 }
 
 export default function FAQs() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleOpen = (index) => {
+    if (openIndex === index) {
+      setOpenIndex(null);
+    } else {
+      // Close current first, then open new one
+      setOpenIndex(null);
+      setTimeout(() => setOpenIndex(index), 150);
+    }
+  };
+
   const faqs = [
     {
       question: "What makes MVPBlocks unique?",
       answer:
-        "MVPBlocks stands out through its intuitive design, powerful component library, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features, all while maintaining excellent performance and accessibility.",
+        "MVPBlocks stands out through its intuitive design, powerful component library, and seamless integration options.",
     },
     {
       question: "How can I customize the components?",
       answer:
-        "All components are built with Tailwind CSS, making them highly customizable. You can modify colors, spacing, typography, and more by simply adjusting the class names or using our theme variables to match your brand identity.",
+        "All components are built with Tailwind CSS, making them highly customizable.",
     },
     {
       question: "Do the components work with dark mode?",
       answer:
-        "Yes, all MVPBlocks components are designed to work seamlessly with both light and dark modes. They automatically adapt to your site's theme settings, providing a consistent user experience regardless of the user's preference.",
+        "Yes, all MVPBlocks components are designed to work seamlessly with both light and dark modes.",
     },
     {
       question: "How can I get started with MVPBlocks?",
       answer:
-        "You can get started by browsing our component library and copying the code for the components you need. Our documentation provides clear instructions for installation and usage, and you can always reach out to our support team if you need assistance.",
+        "You can get started by browsing our component library and copying the code for the components you need.",
     },
     {
       question: "Can I use MVPBlocks for commercial projects?",
       answer:
-        "Absolutely! MVPBlocks is free to use for both personal and commercial projects. There are no licensing fees or attribution requirements—just build and launch your MVP faster than ever before.",
+        "Absolutely! MVPBlocks is free to use for both personal and commercial projects.",
     },
   ];
 
@@ -157,9 +166,11 @@ export default function FAQs() {
         overflow: "hidden",
         padding: "80px 0",
         backgroundColor: "#fff",
+        borderRadius:"20px",
+          boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"
       }}
     >
-      {/* Decorative elements */}
+      {/* Decorative Blurs */}
       <div
         style={{
           position: "absolute",
@@ -188,100 +199,110 @@ export default function FAQs() {
       <div
         style={{
           position: "relative",
-          maxWidth: "900px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "0 20px",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "40px",
+          alignItems: "flex-start",
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          style={{
-            textAlign: "center",
-            marginBottom: "48px",
-          }}
-        >
-          <Badge variant="outline" style={{ marginBottom: "12px" }}>
-            FAQs
-          </Badge>
-          <h2
+        {/* LEFT COLUMN */}
+        <div style={{ flex: "1 1 40%", minWidth: "300px" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{ marginBottom: "48px" }}
+          >
+            <Badge variant="outline" style={{ marginBottom: "12px" }}>
+              FAQs
+            </Badge>
+            <h2
+              style={{
+                fontSize: "28px",
+                fontWeight: "700",
+                color: "#000",
+                margin: "0 0 8px",
+              }}
+            >
+              Frequently Asked Questions
+            </h2>
+            <p style={{ color: "#777", fontSize: "14px" }}>
+              Everything you need to know about MVPBlocks
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             style={{
-              fontSize: "28px",
-              fontWeight: "700",
-              background: "linear-gradient(to right, #007bff, #ff6b6b)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              margin: "0 0 8px",
+              maxWidth: "400px",
+              textAlign: "left",
+              padding: "24px",
+              borderRadius: "10px",
+              backgroundColor: "#f9f9f9",
             }}
           >
-            Frequently Asked Questions
-          </h2>
-          <p style={{ color: "#777", fontSize: "14px" }}>
-            Everything you need to know about MVPBlocks
-          </p>
-        </motion.div>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "36px",
+                height: "36px",
+                borderRadius: "50%",
+                backgroundColor: "rgba(0, 123, 255, 0.1)",
+                color: "#007bff",
+                marginBottom: "12px",
+              }}
+            >
+              <Mail size={16} />
+            </div>
+            <p style={{ fontWeight: 600, margin: "0 0 4px" }}>
+              Still have questions?
+            </p>
+            <p style={{ color: "#666", fontSize: "13px", marginBottom: "12px" }}>
+              We're here to help you
+            </p>
+            <button
+              type="button"
+              style={{
+                backgroundColor: "#007bff",
+                color: "#fff",
+                padding: "10px 18px",
+                border: "none",
+                borderRadius: "6px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "background-color 0.2s ease",
+              }}
+              onMouseOver={(e) =>
+                (e.target.style.backgroundColor = "#0069d9")
+              }
+              onMouseOut={(e) =>
+                (e.target.style.backgroundColor = "#007bff")
+              }
+            >
+              Contact Support
+            </button>
+          </motion.div>
+        </div>
 
-        {/* <div style={{ margin: "0 auto", maxWidth: "700px" }}>
+        {/* RIGHT COLUMN */}
+        <div style={{ flex: "1 1 55%", minWidth: "300px" }}>
           {faqs.map((faq, index) => (
-            <FAQItem key={index} {...faq} index={index} />
+            <FAQItem
+              key={index}
+              {...faq}
+              index={index}
+              isOpen={openIndex === index}
+              toggleOpen={toggleOpen}
+            />
           ))}
-        </div> */}
-        <FAQComponent/>
-
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          style={{
-            margin: "60px auto 0",
-            maxWidth: "400px",
-            textAlign: "center",
-            padding: "24px",
-            borderRadius: "10px",
-            backgroundColor: "#f9f9f9",
-          }}
-        >
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "36px",
-              height: "36px",
-              borderRadius: "50%",
-              backgroundColor: "rgba(0, 123, 255, 0.1)",
-              color: "#007bff",
-              marginBottom: "12px",
-            }}
-          >
-            <Mail size={16} />
-          </div>
-          <p style={{ fontWeight: 600, margin: "0 0 4px" }}>
-            Still have questions?
-          </p>
-          <p style={{ color: "#666", fontSize: "13px", marginBottom: "12px" }}>
-            We're here to help you
-          </p>
-          <button
-            type="button"
-            style={{
-              backgroundColor: "#007bff",
-              color: "#fff",
-              padding: "10px 18px",
-              border: "none",
-              borderRadius: "6px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "background-color 0.2s ease",
-            }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "#0069d9")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
-          >
-            Contact Support
-          </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

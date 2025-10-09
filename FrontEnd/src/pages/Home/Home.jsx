@@ -16,7 +16,6 @@ import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
 // import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
-import FAQComponent from "../../components/FAQ/FAQ2";
 
 // -------------------- VIDEO ASSETS --------------------
 import Diwali from "/videos/DiwaliOffers.mp4";
@@ -107,7 +106,9 @@ function Home() {
           </div>
 
           {/* -------------------- FAQ SECTION -------------------- */}
+          <div className={styles.FAQSection}>
           <FAQs />
+          </div>
 
           {/* -------------------- QUOTE FORM -------------------- */}
           <QuoteForm />

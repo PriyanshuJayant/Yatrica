@@ -47,6 +47,9 @@
   padding: 0 3rem 0 3rem;
   /* padding: 0 5rem 0 5rem; */
 }
+.FAQSection{
+  width: 100%;
+}
 .HomeContainer{
   width: 100%;
   background-color: white;
