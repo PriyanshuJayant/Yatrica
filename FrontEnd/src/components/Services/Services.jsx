@@ -270,8 +270,7 @@ const Service9 = () => {
         borderRadius:"20px",
         paddingLeft:"35px",
         paddingRight:"35px",
-        // paddingTop:"30px",
-        // marginBottom:"30px",
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"
       }}
     >
       <div style={{ position: "relative", maxWidth: "1280px", margin: "0 auto", padding: "0 16px" }}>

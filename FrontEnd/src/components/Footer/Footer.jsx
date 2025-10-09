@@ -11,11 +11,11 @@ import {
 } from "lucide-react";
 
 const data = {
-  facebookLink: "https://facebook.com/mvpblocks",
-  instaLink: "https://instagram.com/mvpblocks",
-  twitterLink: "https://twitter.com/mvpblocks",
-  githubLink: "https://github.com/mvpblocks",
-  dribbbleLink: "https://dribbble.com/mvpblocks",
+  facebookLink: "",
+  instaLink: "",
+  twitterLink: "",
+  githubLink: "",
+  dribbbleLink: "",
   services: {
     webdev: "/web-development",
     webdesign: "/web-design",
@@ -34,12 +34,12 @@ const data = {
     livechat: "/live-chat",
   },
   contact: {
-    email: "hello@mvpblocks.com",
+    email: "help@yatrica.com",
     phone: "+91 8637373116",
     address: "Kolkata, West Bengal, India",
   },
   company: {
-    name: "Mvpblocks",
+    name: "Yatrica",
     description:
       "Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.",
     logo: "https://i.postimg.cc/2SRcktkT/Mvpblocks.webp",

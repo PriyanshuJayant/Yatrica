@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// -------------------- STYLES --------------------
+import styles from "./Home.module.css";
+
 // -------------------- COMPONENT IMPORTS --------------------
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
@@ -15,14 +18,11 @@ import Footer from "../../components/Footer/Footer";
 // import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
 import FAQComponent from "../../components/FAQ/FAQ2";
 
-
-// -------------------- STYLES --------------------
-import styles from "./Home.module.css";
-
 // -------------------- VIDEO ASSETS --------------------
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
+import HomeHero from '/videos/Hero.mp4'
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
@@ -39,7 +39,12 @@ function Home() {
       <div className={styles.homePageContainer}>
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
-        <Hero />
+        {/* <Hero src={Corporate}  showContent={true}  /> */}
+
+        <div className={styles.FamilyHero}>
+          <Hero videoSrc={HomeHero} showContent={true} />
+        </div>
+
         {/* <CarouselComp /> */}
 
         {/* -------------------- Page Content -------------------- */}
@@ -89,9 +94,7 @@ function Home() {
           </div>
 
           {/* -------------------- HONEYMOON / BUDGET FRIENDLY SECTION -------------------- */}
-          <div
-            className={styles.HomeContainer}
-          >
+          <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
               heading="Honeymoon"
