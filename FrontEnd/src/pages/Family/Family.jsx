@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// -------------------- STYLES --------------------
+// -------------------- STYLES ------------------------
 import styles from "./Family.module.css";
 
-// -------------------- COMPONENT IMPORTS --------------------
+// -------------------- COMPONENT IMPORTS -------------
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
 import BannerVideo from "../../components/BannerVideo/BannerVideo";
@@ -16,8 +16,13 @@ import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
 // import CarouselComp from "../../components/Carousel/CarouselComp";
+import ResponsivePackageGrid from "../../components/SinglePackage/ResponsiveGrid";
+import SinglePackage from "../../components/SinglePackage/SinglePackage";
 
-// -------------------- VIDEO ASSETS --------------------
+// --------------------- Dynamic Components -----------
+// import { ResponsivePackageGrid} from "../../components/SinglePackage/SinglePackage";
+
+// -------------------- VIDEO ASSETS ------------------
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
@@ -26,6 +31,7 @@ import Family from "/videos/FamilyTours.mp4";
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
 import CorporateJSON from "../../assets/data/corporate.json";
+import packagesData from "../../assets/Packages/FamilyPackages.json";
 
 // =====================================================
 //                     Family Packages
@@ -72,8 +78,20 @@ function Home() {
 
         {/* -------------------- Page Content -------------------- */}
         <div className={styles.pageContainer}>
+          <ResponsivePackageGrid>
+            {packagesData.map((pkg) => (
+              <SinglePackage
+                key={pkg.id}
+                src={pkg.src}
+                location={pkg.location}
+                pricing={pkg.pricing}
+                link={pkg.link}
+              />
+            ))}
+          </ResponsivePackageGrid>
+
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
+          {/* <div className={styles.HomeContainer}>
             <BannerComp
               src={Family}
               heading="Family Tours"
@@ -83,16 +101,16 @@ function Home() {
             <div className={styles.ExpandableCard}>
               <Packages src={FamilyJSON} />
             </div>
-          </div>
+          </div> */}
 
           {/* -------------------- QUOTE FORM -------------------- */}
-          <QuoteForm />
+          {/* <QuoteForm /> */}
 
           {/* -------------------- SERVICES SECTION -------------------- */}
-          <Services />
+          {/* <Services /> */}
 
           {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
+          {/* <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
               heading="Corporate Tours"
@@ -102,10 +120,10 @@ function Home() {
             <div className={styles.ExpandableCard}>
               <Packages src={CorporateJSON} />
             </div>
-          </div>
+          </div> */}
 
           {/* -------------------- HONEYMOON / BUDGET FRIENDLY SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
+          {/* <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
               heading="Honeymoon"
@@ -115,10 +133,10 @@ function Home() {
             <div className={styles.ExpandableCard}>
               <Packages src={budgetFriendlyJSON} />
             </div>
-          </div>
+          </div> */}
 
           {/* -------------------- FAQ SECTION -------------------- */}
-          <FAQs />
+          {/* <FAQs /> */}
         </div>
 
         {/* -------------------- FOOTER -------------------- */}

@@ -1,14 +1,26 @@
 import React from "react";
-
+import ResponsivePackageGrid from "../../components/SinglePackage/ResponsiveGrid";
+import SinglePackage from "../../components/SinglePackage/SinglePackage";
+import packagesData from '../../assets/Packages/FamilyPackages.json'
 function Test() {
   return (
     <>
-    <div style={{backgroundColor:"gray"}}>
-
-      <p className="h-10px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum voluptatum explicabo rem, exercitationem ad ex. Ducimus culpa earum magni at nemo officia veritatis quas cum tenetur. Minus, debitis! Ipsum, quia.</p>
-
-
-    </div>
+      <div>
+        <p style={{color:"black"}}>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+        </p>
+        <ResponsivePackageGrid>
+          {packagesData.map((pkg) => (
+            <SinglePackage
+              key={pkg.id}
+              src={pkg.src}
+              location={pkg.location}
+              pricing={pkg.pricing}
+              link={pkg.link}
+            />
+          ))}
+        </ResponsivePackageGrid>
+      </div>
     </>
   );
 }

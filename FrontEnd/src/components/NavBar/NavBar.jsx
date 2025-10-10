@@ -13,12 +13,12 @@ function NavBar() {
 
   // Use scroll progress so it's responsive across screen sizes.
   // Here, first 20% of page scroll maps to full blur (0 -> 8px).
-  const blur = useTransform(scrollYProgress, [0, 0.2], [0, 8]);
-  const backdrop = useMotionTemplate`blur(${blur}px)`;
+  // const blur = useTransform(scrollYProgress, [0, 0.2], [0, 8]);
+  // const backdrop = useMotionTemplate`blur(${blur}px)`;
   const bg = useTransform(
     scrollYProgress,
     [0, 0.2],
-    ["rgba(255,255,255,0)", "rgba(255,255,255,0.15)"]
+    ["rgba(255,255,255,0)", "rgba(255, 255, 255, 1)"]
   );
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,8 +45,8 @@ function NavBar() {
         className={styles.navbarContainer}
         style={{
           background: bg,
-          backdropFilter: backdrop,
-          WebkitBackdropFilter: backdrop,
+          // backdropFilter: none,
+          // WebkitBackdropFilter: none,
           zIndex: 1000,
         }}
       >

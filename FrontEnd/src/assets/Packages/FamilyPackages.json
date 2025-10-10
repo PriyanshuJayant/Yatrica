@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "src": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80",
+        "location": "Singapore",
+        "pricing": "17,172 - 80,000",
+        "link": "/package/singapore"
+    },
+    {
+        "id": 2,
+        "src": "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80",
+        "location": "Thailand",
+        "pricing": "15,000 - 65,000",
+        "link": "/package/thailand"
+    },
+    {
+        "id": 3,
+        "src": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+        "location": "South Korea",
+        "pricing": "25,000 - 95,000",
+        "link": "/package/south-korea"
+    },
+    {
+        "id": 4,
+        "src": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+        "location": "South Korea",
+        "pricing": "25,000 - 95,000",
+        "link": "/package/south-korea"
+    },
+    {
+        "id": 5,
+        "src": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+        "location": "South Korea",
+        "pricing": "25,000 - 95,000",
+        "link": "/package/south-korea"
+    }
+]
