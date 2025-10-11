@@ -14,8 +14,6 @@ const data = {
   facebookLink: "",
   instaLink: "",
   twitterLink: "",
-  githubLink: "",
-  dribbbleLink: "",
   services: {
     webdev: "/web-development",
     webdesign: "/web-design",
@@ -34,9 +32,9 @@ const data = {
     livechat: "/live-chat",
   },
   contact: {
-    email: "help@yatrica.com",
-    phone: "+91 8637373116",
-    address: "Kolkata, West Bengal, India",
+    email: "info@yatrica.co.in",
+    phone: "+91 9818456811 ",
+    address: "Milky ",
   },
   company: {
     name: "Yatrica",
@@ -50,8 +48,6 @@ const socialLinks = [
   { icon: Facebook, label: "Facebook", href: data.facebookLink },
   { icon: Instagram, label: "Instagram", href: data.instaLink },
   { icon: Twitter, label: "Twitter", href: data.twitterLink },
-  { icon: Github, label: "GitHub", href: data.githubLink },
-  { icon: Dribbble, label: "Dribbble", href: data.dribbbleLink },
 ];
 
 const aboutLinks = [

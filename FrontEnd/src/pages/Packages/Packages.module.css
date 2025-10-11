@@ -1,4 +1,4 @@
-.homePageContainer {
+.homePageContainer{
   background-color: rgb(236, 236, 236);
 }
 .pageContainer {
@@ -12,15 +12,14 @@
 
   /* background-color: white; */
 }
-.DiwaliComponent {
+.DiwaliComponent{
   /* border: 10px solid black; */
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: white;
   position: relative;
   border-radius: 20px;
   padding-bottom: 15px;
 }
-.diwaliBanner {
+.diwaliBanner{
   /* height: 350px; */
   height: 100%;
   width: 100%;
@@ -48,10 +47,10 @@
   padding: 0 3rem 0 3rem;
   /* padding: 0 5rem 0 5rem; */
 }
-.FAQSection {
+.FAQSection{
   width: 100%;
 }
-.HomeContainer {
+.HomeContainer{
   width: 100%;
   background-color: white;
   border-radius: 20px;

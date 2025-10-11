@@ -1,15 +1,31 @@
-import React from "react";
+import {useNavigate} from "react-router-dom";
 
 export function BannerComp({
   src,
   heading = "Default Heading",
   subHeading = "Default Subheading",
   buttonText = "Learn More →",
+  buttonLink,
   onButtonClick,
   height = "400px",
   overlayBottom = true,
   overlaySide = true,
 }) {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    if (buttonLink) {
+      // Internal link (starts with '/')
+      if (buttonLink.startsWith("/")) {
+        navigate(buttonLink);
+      } 
+      else {
+        window.open(buttonLink, "_blank");
+      }
+    } else if (onButtonClick) {
+      onButtonClick();
+    }
+  };
   return (
     <div
       style={{
@@ -100,7 +116,7 @@ export function BannerComp({
           backdropFilter: "blur(8px)",
           transition: "all 0.3s ease",
         }}
-        onClick={onButtonClick}
+        onClick={handleButtonClick}
         onMouseEnter={(e) =>
           (e.target.style.backgroundColor = "rgba(255,255,255,0.3)")
         }

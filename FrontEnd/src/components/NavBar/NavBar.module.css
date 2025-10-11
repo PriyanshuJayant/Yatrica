@@ -40,7 +40,7 @@
   /* position: relative; */
   position: fixed;
   width: 100%;
-  min-height: 70px;
+  max-height: 70px;
   z-index: 1000;
 }
 
@@ -277,7 +277,7 @@
 }
 
 .contactBtn {
-  padding: 13px 25px;
+  padding: 10px 25px;
   border: unset;
   border-radius: 15px;
   color: #212121;
