@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "src": "https://images.unsplash.com/photo-1582574643306-d00ea3f7d49b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "location": "Mauritius",
+        "pricing": "32,000 - 1,20,000",
+        "link": "/package/family/mauritius"
+    },
+    {
+        "id": 2,
+        "src": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "location": "Bali",
+        "pricing": "19,000 - 80,000",
+        "link": "/package/family/bali"
+    },
+    {
+        "id": 3,
+        "src": "https://plus.unsplash.com/premium_photo-1661955588369-b0d28de38b45?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171",
+        "location": "Turkey",
+        "pricing": "36,000 - 1,20,000",
+        "link": "/package/family/turkey"
+    },
+    {
+        "id": 4,
+        "src": "https://plus.unsplash.com/premium_photo-1661964177687-57387c2cbd14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "location": "Japan",
+        "pricing": "45,000 - 1,80,000",
+        "link": "/package/family/japan"
+    }
+]
