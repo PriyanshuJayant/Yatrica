@@ -1,0 +1,9 @@
+@media (max-width: 600px) {
+    .CardsContainer{
+        /* border: 2px solid black; */
+        padding: 0 !important;
+    }
+  .CardsUL {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

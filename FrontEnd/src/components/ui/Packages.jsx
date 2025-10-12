@@ -1,5 +1,6 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import './Packages.css';
 
 // ✅ Custom hook for outside click detection
 const useOutsideClick = (ref, callback) => {
@@ -360,6 +361,7 @@ export function Packages({ src }) {
 
       {/* Cards Grid */}
       <div
+      className="CardsContainer"
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
@@ -374,6 +376,7 @@ export function Packages({ src }) {
         }}
       >
         <ul
+        className="CardsUL"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",

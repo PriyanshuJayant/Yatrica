@@ -69,7 +69,7 @@ function PackagesPage() {
           {/* -------------------- HONEYMOON SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
-              src={Corporate}
+              src={Family}
               heading="Honeymoon"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"
