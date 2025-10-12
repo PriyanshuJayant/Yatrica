@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // -------------------- STYLES ------------------------
-import styles from "./Corporate.module.css";
+import styles from "./HoneyMoon.module.css";
 
 // -------------------- COMPONENT IMPORTS -------------
 import NavBar from "../../../components/NavBar/NavBar";
@@ -31,13 +31,13 @@ import Family from "/videos/FamilyTours.mp4";
 import FamilyJSON from "../../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../../assets/data/budgetFriendly.json";
 import CorporateJSON from "../../../assets/data/corporate.json";
-import packagesData from "../../../assets/Packages/CorporatePackages.json";
+import packagesData from "../../../assets/Packages/HoneyMoonPackages.json";
 
 // =====================================================
 //                     Corporate Packages
 // =====================================================
 
-function CorporatePage() {
+function HoneyMoonPage() {
   return (
     <>
       <div className={styles.homePageContainer}>
@@ -145,4 +145,4 @@ function CorporatePage() {
   );
 }
 
-export default CorporatePage;
+export default HoneyMoonPage;

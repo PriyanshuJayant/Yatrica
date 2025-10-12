@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // -------------------- STYLES ------------------------
-import styles from "./Corporate.module.css";
+import styles from "./Budget.module.css";
 
 // -------------------- COMPONENT IMPORTS -------------
 import NavBar from "../../../components/NavBar/NavBar";
@@ -31,13 +31,13 @@ import Family from "/videos/FamilyTours.mp4";
 import FamilyJSON from "../../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../../assets/data/budgetFriendly.json";
 import CorporateJSON from "../../../assets/data/corporate.json";
-import packagesData from "../../../assets/Packages/CorporatePackages.json";
+import packagesData from "../../../assets/Packages/BudgetPackages.json";
 
 // =====================================================
 //                     Corporate Packages
 // =====================================================
 
-function CorporatePage() {
+function BudgetPage() {
   return (
     <>
       <div className={styles.homePageContainer}>
@@ -66,10 +66,10 @@ function CorporatePage() {
             }}
           >
             <div style={{ fontSize: "35px", fontWeight: "600" }}>
-              Corporate Tours
+              Budget Tours
             </div>
             <div style={{ fontSize: "18px", fontWeight: "400" }}>
-              Enjoy your best time with your Colleagues
+              Enjoy your best time with your Family and Friends
             </div>
           </div>
         </div>
@@ -145,4 +145,4 @@ function CorporatePage() {
   );
 }
 
-export default CorporatePage;
+export default BudgetPage;

@@ -6,6 +6,10 @@ import Test from "./pages/test/Test";
 import FamilyPage from "./pages/Packages/Family/Family";
 import PackagesPage from "./pages/Packages/Packages";
 import ScrollToTop from "./hooks/ScrollToTop";
+import CorporatePage from "./pages/Packages/Corporate/Corporate";
+import HoneyMoonPage from "./pages/Packages/Honeymoon/HoneyMoon";
+import BudgetPage from "./pages/Packages/Budget/Budget";
+
 
 const pageTransition = {
   initial: { opacity: 0 },
@@ -23,6 +27,9 @@ function AnimatedRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/packages" element={<motion.div {...pageTransition}><PackagesPage /></motion.div>} />
         <Route path="/packages/family" element={<motion.div {...pageTransition}><FamilyPage /></motion.div>} />
+        <Route path="/packages/corporate" element={<motion.div {...pageTransition}><CorporatePage /></motion.div>} />
+        <Route path="/packages/honeymoon" element={<motion.div {...pageTransition}><HoneyMoonPage /></motion.div>} />
+        <Route path="/packages/budget" element={<motion.div {...pageTransition}><BudgetPage /></motion.div>} />
         <Route path="/test" element={<motion.div {...pageTransition}><Test /></motion.div>} />
       </Routes>
     </AnimatePresence>

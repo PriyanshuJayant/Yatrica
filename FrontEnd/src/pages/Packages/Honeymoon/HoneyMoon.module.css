@@ -1,0 +1,63 @@
+.homePageContainer {
+  background-color: rgb(236, 236, 236);
+}
+.pageContainer {
+  margin: 0 10rem 0 10rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.FamilyHero {
+  background: "linear-gradient(to right, rgba(0, 0, 0, 0.47) 0%, rgba(0,0,0,0.4) 40%, transparent 100%)";
+  z-index: 1;
+  position: "absolute",
+}
+.DiwaliComponent {
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  padding-bottom: 15px;
+}
+.diwaliBanner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 15px;
+}
+.BannerVideo {
+  margin-top: 5rem;
+}
+.CardCarousel {
+  position: relative;
+  bottom: 70px;
+}
+.ExpandableCard {
+  position: relative;
+  margin-top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+}
+.HomeContainer {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  height: auto;
+  padding-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    margin: 0 1rem 0 1rem;
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
