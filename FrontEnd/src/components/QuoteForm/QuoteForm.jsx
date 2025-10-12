@@ -95,27 +95,6 @@ export default function ContactForm() {
       borderRadius: '20px',
       boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'
     }}>
-      {/* Decorative Blurs */}
-      <div style={{
-        position: 'absolute',
-        top: '80px',
-        left: '-120px',
-        width: '260px',
-        height: '260px',
-        borderRadius: '50%',
-        background: 'rgba(0, 123, 255, 0.05)',
-        filter: 'blur(80px)'
-      }} />
-      <div style={{
-        position: 'absolute',
-        bottom: '80px',
-        right: '-120px',
-        width: '260px',
-        height: '260px',
-        borderRadius: '50%',
-        background: 'rgba(0, 123, 255, 0.05)',
-        filter: 'blur(80px)'
-      }} />
 
       <div style={{
         position: 'relative',

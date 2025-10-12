@@ -167,22 +167,11 @@ export default function FAQs() {
         padding: "80px 0",
         backgroundColor: "#fff",
         borderRadius:"20px",
-          boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"
+          boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
       }}
     >
       {/* Decorative Blurs */}
-      <div
-        style={{
-          position: "absolute",
-          top: "80px",
-          left: "-120px",
-          width: "260px",
-          height: "260px",
-          borderRadius: "50%",
-          background: "rgba(0, 123, 255, 0.05)",
-          filter: "blur(80px)",
-        }}
-      />
+
       <div
         style={{
           position: "absolute",

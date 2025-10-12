@@ -16,6 +16,7 @@ import Services from "../../components/Services/Services";
 import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
+import ContactForm from '../../components/Contact/Contact'
 // import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
 
 // -------------------- VIDEO ASSETS --------------------
@@ -146,6 +147,8 @@ function Home() {
           <div id="Question" style={{width:"100%"}}>
           <QuoteForm />
           </div>
+
+          <ContactForm/>
         </div>
 
         {/* -------------------- FOOTER -------------------- */}
