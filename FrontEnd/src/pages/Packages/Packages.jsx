@@ -14,7 +14,7 @@ import Footer from "../../components/Footer/Footer";
 // -------------------- VIDEO ASSETS --------------------
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
-import HomeHero from '/videos/Hero.mp4'
+import HomeHero from "/videos/Hero.mp4";
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
@@ -39,7 +39,6 @@ function PackagesPage() {
 
         {/* -------------------- Page Content -------------------- */}
         <div className={styles.pageContainer}>
-
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
@@ -67,7 +66,7 @@ function PackagesPage() {
             </div>
           </div>
 
-          {/* -------------------- HONEYMOON / BUDGET FRIENDLY SECTION -------------------- */}
+          {/* -------------------- HONEYMOON SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
@@ -79,15 +78,26 @@ function PackagesPage() {
               <Packages src={budgetFriendlyJSON} />
             </div>
           </div>
+          {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Corporate}
+              heading="Budget Friendly"
+              subHeading="Enjoy your best time with your Partner"
+              buttonText="More Budget Packages →"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={budgetFriendlyJSON} />
+            </div>
+          </div>
 
           {/* -------------------- QUOTE FORM -------------------- */}
           <QuoteForm />
 
           {/* -------------------- FAQ SECTION -------------------- */}
           <div className={styles.FAQSection}>
-          <FAQs />
+            <FAQs />
           </div>
-
         </div>
 
         {/* -------------------- FOOTER -------------------- */}

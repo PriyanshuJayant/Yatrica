@@ -89,19 +89,6 @@ function FamilyPage() {
             ))}
           </ResponsivePackageGrid>
 
-          {/* -------------------- FAMILY TOURS SECTION -------------------- */}
-          {/* <div className={styles.HomeContainer}>
-            <BannerComp
-              src={Family}
-              heading="Family Tours"
-              subHeading="Enjoy your best time with your Family"
-              buttonText="More Family Packages →"
-            />
-            <div className={styles.ExpandableCard}>
-              <Packages src={FamilyJSON} />
-            </div>
-          </div> */}
-
           {/* -------------------- QUOTE FORM -------------------- */}
           {/* <QuoteForm /> */}
 
@@ -109,33 +96,49 @@ function FamilyPage() {
           {/* <Services /> */}
 
           {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
-          {/* <div className={styles.HomeContainer}>
+          <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
               heading="Corporate Tours"
               subHeading="Enjoy your best time with your Company"
               buttonText="More Corporate Packages →"
+              buttonLink="/packages/corporate"
             />
             <div className={styles.ExpandableCard}>
               <Packages src={CorporateJSON} />
             </div>
-          </div> */}
-
-          {/* -------------------- HONEYMOON / BUDGET FRIENDLY SECTION -------------------- */}
-          {/* <div className={styles.HomeContainer}>
+          </div>
+          {/* -------------------- HONEYMOON SECTION -------------------- */}
+          <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
               heading="Honeymoon"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"
+              buttonLink="/packages/honeymoon"
             />
             <div className={styles.ExpandableCard}>
               <Packages src={budgetFriendlyJSON} />
             </div>
-          </div> */}
+          </div>
 
-          {/* -------------------- FAQ SECTION -------------------- */}
-          {/* <FAQs /> */}
+          {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Corporate}
+              heading="Budget Friendly"
+              subHeading="Enjoy your best time with your Partner"
+              buttonText="More Honeymoon Packages →"
+              buttonLink="/packages/honeymoon"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={budgetFriendlyJSON} />
+            </div>
+          </div>
+          {/* -------------------- QUOTE FORM -------------------- */}
+          <div id="Question" style={{ width: "100%" }}>
+            <QuoteForm />
+          </div>
         </div>
 
         {/* -------------------- FOOTER -------------------- */}

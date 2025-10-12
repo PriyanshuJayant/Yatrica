@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // -------------------- STYLES --------------------
@@ -21,7 +22,7 @@ import Footer from "../../components/Footer/Footer";
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
-import HomeHero from '/videos/Hero.mp4'
+import HomeHero from "/videos/Hero.mp4";
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
@@ -33,6 +34,18 @@ import CorporateJSON from "../../assets/data/corporate.json";
 // =====================================================
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // If navigation included state requesting a scroll, or a hash is present, scroll
+    const scrollTarget = location.state?.scrollTo || (location.hash ? location.hash.replace('#', '') : null);
+    if (scrollTarget) {
+      setTimeout(() => {
+        const el = document.getElementById(scrollTarget);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }, [location]);
   return (
     <>
       <div className={styles.homePageContainer}>
@@ -78,7 +91,9 @@ function Home() {
           </div>
 
           {/* -------------------- SERVICES SECTION -------------------- */}
+          <div id="services" style={{width:"100%"}}>
           <Services />
+          </div>
 
           {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
           <div className={styles.HomeContainer}>
@@ -87,20 +102,35 @@ function Home() {
               heading="Corporate Tours"
               subHeading="Enjoy your best time with your Company"
               buttonText="More Corporate Packages →"
-              
+              buttonLink="/packages/corporate"
             />
             <div className={styles.ExpandableCard}>
               <Packages src={CorporateJSON} />
             </div>
           </div>
 
-          {/* -------------------- HONEYMOON / BUDGET FRIENDLY SECTION -------------------- */}
+          {/* -------------------- HONEYMOON SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
               src={Corporate}
               heading="Honeymoon"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"
+              buttonLink="/packages/honeymoon"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={budgetFriendlyJSON} />
+            </div>
+          </div>
+
+          {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Corporate}
+              heading="Budget Friendly"
+              subHeading="Enjoy your best time with your Partner"
+              buttonText="More Honeymoon Packages →"
+              buttonLink="/packages/honeymoon"
             />
             <div className={styles.ExpandableCard}>
               <Packages src={budgetFriendlyJSON} />
@@ -109,11 +139,13 @@ function Home() {
 
           {/* -------------------- FAQ SECTION -------------------- */}
           <div className={styles.FAQSection}>
-          <FAQs />
+            <FAQs />
           </div>
 
           {/* -------------------- QUOTE FORM -------------------- */}
+          <div id="Question" style={{width:"100%"}}>
           <QuoteForm />
+          </div>
         </div>
 
         {/* -------------------- FOOTER -------------------- */}

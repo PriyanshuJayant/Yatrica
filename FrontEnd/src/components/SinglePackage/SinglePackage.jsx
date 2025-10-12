@@ -10,12 +10,10 @@ const SinglePackage = ({ src, location, pricing, link = "#" }) => {
     display: "block",
     borderRadius: "16px",
     overflow: "hidden",
-    // boxShadow:  '0 4px 12px rgba(0,0,0,0.1)',
     backgroundColor: "white",
     transition: "all 0.3s ease",
     textDecoration: "none",
     color: "inherit",
-    // backgroundColor: isHovered ? "#f7f7f7ff" : "#ffffffff",
   };
 
   const imageContainerStyle = {

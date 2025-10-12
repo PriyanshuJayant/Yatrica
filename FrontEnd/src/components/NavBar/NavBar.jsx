@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { ChevronDown } from "lucide-react";
 import {
@@ -13,10 +13,6 @@ import {
 function NavBar() {
   const { scrollYProgress } = useScroll();
 
-  // Use scroll progress so it's responsive across screen sizes.
-  // Here, first 20% of page scroll maps to full blur (0 -> 8px).
-  // const blur = useTransform(scrollYProgress, [0, 0.2], [0, 8]);
-  // const backdrop = useMotionTemplate`blur(${blur}px)`;
   const bg = useTransform(
     scrollYProgress,
     [0, 0.1],
@@ -26,6 +22,8 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,14 +52,26 @@ function NavBar() {
     },
     exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
   };
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      // Small timeout to ensure page has loaded
+      setTimeout(() => {
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+
+      // Clear the state to prevent scrolling on back navigation
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
   return (
     <>
       <motion.header
         className={styles.navbarContainer}
         style={{
           background: bg,
-          // backdropFilter: none,
-          // WebkitBackdropFilter: none,
           zIndex: 1000,
         }}
       >
@@ -86,7 +96,6 @@ function NavBar() {
             <Link to="/" className={styles.navLink}>
               Home
             </Link>
-
 
             <div
               style={{
@@ -204,12 +213,38 @@ function NavBar() {
               </AnimatePresence>
             </div>
 
-            <Link to="/services" className={styles.navLink}>
+            <a
+              href="#services"
+              className={styles.navLink}
+              onClick={(e) => {
+                e.preventDefault();
+                if (location.pathname === "/") {
+                  const el = document.getElementById("services");
+                  if (el)
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                } else {
+                  navigate("/", { state: { scrollTo: "services" } });
+                }
+              }}
+            >
               Services
-            </Link>
-            <Link to="/about-us" className={styles.navLink}>
-              About Us
-            </Link>
+            </a>
+            <a
+              href="#Question"
+              className={styles.navLink}
+              onClick={(e) => {
+                e.preventDefault();
+                if (location.pathname === "/") {
+                  const el = document.getElementById("Question");
+                  if (el)
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                } else {
+                  navigate("/", { state: { scrollTo: "Question" } });
+                }
+              }}
+            >
+              Ask Question
+            </a>
             <Link to="/book-now" className={styles.navLink}>
               Book Now
             </Link>
@@ -274,13 +309,27 @@ function NavBar() {
                 >
                   Packages
                 </Link>
-                <Link
-                  to="/services"
+                <a
+                  href="#services"
                   className={styles.mobileNavLink}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+
+                    if (location.pathname === "/") {
+                      const el = document.getElementById("services");
+                      if (el)
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                    } else {
+                      navigate("/", { state: { scrollTo: "services" } });
+                    }
+                  }}
                 >
                   Services
-                </Link>
+                </a>
                 <Link
                   to="/about-us"
                   className={styles.mobileNavLink}

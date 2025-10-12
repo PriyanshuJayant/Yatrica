@@ -24,7 +24,7 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<motion.div {...pageTransition}><Home /></motion.div>} />
         <Route path="/packages" element={<motion.div {...pageTransition}><PackagesPage /></motion.div>} />
         <Route path="/packages/family" element={<motion.div {...pageTransition}><FamilyPage /></motion.div>} />
         <Route path="/packages/corporate" element={<motion.div {...pageTransition}><CorporatePage /></motion.div>} />
