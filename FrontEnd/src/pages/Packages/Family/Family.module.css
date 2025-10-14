@@ -11,9 +11,12 @@
   gap: 40px;
 }
 .FamilyHero {
-  background: "linear-gradient(to right, rgba(0, 0, 0, 0.47) 0%, rgba(0,0,0,0.4) 40%, transparent 100%)";
-  z-index: 1;
-  position: "absolute",
+  /* background: "linear-gradient(to right, rgba(0, 0, 0, 0.47) 0%, rgba(0,0,0,0.4) 40%, transparent 100%)"; */
+  /* z-index: 1; */
+  /* position: "relative"; */
+}
+.FamilyHeroVideo {
+  border: 2px solid black;
 }
 .DiwaliComponent {
   background-color: white;

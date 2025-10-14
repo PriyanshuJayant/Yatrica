@@ -43,15 +43,20 @@ function FamilyPage() {
       <div className={styles.homePageContainer}>
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
-        <div className={styles.FamilyHero}>
+
+        <div className={styles.FamilyHero} style={{ position: "relative" }}>
+          {/* <div className={styles.FamilyHeroVideo}> */}
           <Hero videoSrc={Family} showContent={false} />
+          {/* </div> */}
           <div
             style={{
               position: "absolute",
               top: 0,
               left: 0,
               width: "40%",
-              height: "80%",
+              height: "100%",
+              background:
+                "linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent)",
               zIndex: 1,
             }}
           ></div>
