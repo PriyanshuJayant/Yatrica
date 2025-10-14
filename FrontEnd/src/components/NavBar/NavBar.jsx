@@ -12,10 +12,17 @@ import {
 
 function NavBar() {
   const { scrollYProgress } = useScroll();
+  const [isMobileNavBar, setIsMobileNavBar] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobileNavBar(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const bg = useTransform(
     scrollYProgress,
-    [0, 0.1],
+    [0, isMobileNavBar? 0.03 : 0.1],
     ["rgba(255,255,255,0)", "rgba(255, 255, 255, 1)"]
   );
 
@@ -207,6 +214,25 @@ function NavBar() {
                       }
                     >
                       Honeymoon
+                    </Link>{" "}
+                    <Link
+                      to="/packages/budget"
+                      className={styles.navLink}
+                      style={{
+                        padding: "10px 16px",
+                        color: "#333",
+                        textDecoration: "none",
+                        fontSize: "15px",
+                        transition: "background 0.2s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.background = "#f5f5f5")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.background = "white")
+                      }
+                    >
+                      Budget
                     </Link>
                   </motion.div>
                 )}

@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import './Packages.css';
+import "./Packages.css";
 
 // ✅ Custom hook for outside click detection
 const useOutsideClick = (ref, callback) => {
@@ -65,7 +65,8 @@ export function Packages({ src }) {
         // If src is a string assume it's a URL/path and fetch it
         if (typeof src === "string") {
           const response = await fetch(src);
-          if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
+          if (!response.ok)
+            throw new Error(`HTTP ${response.status} ${response.statusText}`);
           const data = await response.json();
           setCardsData(data);
           return;
@@ -81,7 +82,8 @@ export function Packages({ src }) {
         if (typeof src === "object") {
           const data = src.default ?? src;
           if (Array.isArray(data)) setCardsData(data);
-          else if (data && typeof data === "object") setCardsData(Object.values(data));
+          else if (data && typeof data === "object")
+            setCardsData(Object.values(data));
           return;
         }
       } catch (err) {
@@ -158,8 +160,19 @@ export function Packages({ src }) {
     setActive(card);
   };
 
+  // -------------Responsiveness-------------
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div ref={containerRef} style={{ position: "relative", height: "auto", overflow: "hidden" }}>
+    <div
+      ref={containerRef}
+      style={{ position: "relative", height: "auto", overflow: "hidden" }}
+    >
       {/* Dim background when expanded */}
       <AnimatePresence>
         {active && (
@@ -189,13 +202,14 @@ export function Packages({ src }) {
                 opacity: 1,
                 scale: 1,
                 top: cardPosition.expandedTop + 20,
+                left: cardPosition.expandedLeft + cardPosition.expandedWidth - 40,
               }}
               exit={{ opacity: 0, scale: 0.8 }}
               style={{
                 display: "flex",
                 position: "fixed",
                 top: `${Math.max(10, cardPosition.top + 8)}px`,
-                left: `${cardPosition.left + cardPosition.width + 8}px`,
+                left: `${cardPosition.left + cardPosition.width + (isMobile? 80 : 8)}px`,
                 alignItems: "center",
                 justifyContent: "center",
                 backgroundColor: "#fff",
@@ -348,7 +362,13 @@ export function Packages({ src }) {
                       lineHeight: "1.6",
                     }}
                   >
-                    <p style={{ margin: 0, whiteSpace: "pre-line", fontSize: "14px" }}>
+                    <p
+                      style={{
+                        margin: 0,
+                        whiteSpace: "pre-line",
+                        fontSize: "14px",
+                      }}
+                    >
                       {active.content}
                     </p>
                   </motion.div>
@@ -361,7 +381,7 @@ export function Packages({ src }) {
 
       {/* Cards Grid */}
       <div
-      className="CardsContainer"
+        className="CardsContainer"
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
@@ -376,7 +396,7 @@ export function Packages({ src }) {
         }}
       >
         <ul
-        className="CardsUL"
+          className="CardsUL"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",

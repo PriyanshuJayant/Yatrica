@@ -1,19 +1,26 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Image, InfiniteCarousel } from "../ui/CardCarousel";
 import CardCarousel from "../ui/CardCarousel";
 
 function CardCouresel() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  
+  useEffect(() => {
+    const handleResize = () => setIsMobile( window.innerWidth <= 768);
+    window.addEventListener("resize" , handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <InfiniteCarousel
         autoScroll={true}
         autoScrollInterval={2000}
         showControls={true}
-        height="370px"
+        height={isMobile ? "200px" : "370px"}
         width="90%"
         // maxWidth="1000px"
         animationTransition="smooth"
-        imagesShown={4}
+        imagesShown={isMobile ? 3 : 4}
         innerImageHeight="340px"
         gap="15px"
       >
@@ -21,7 +28,7 @@ function CardCouresel() {
           src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=600"
           alt="Dubai"
           title="Dubai"
-        />
+          />
         <Image
           src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=600"
           alt="Vietnam"

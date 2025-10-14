@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail } from "lucide-react";
 import { Badge } from "../ui/badge";
@@ -6,21 +6,21 @@ import { Badge } from "../ui/badge";
 function FAQItem({ question, answer, index, isOpen, toggleOpen }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.3,
-        delay: index * 0.15,
-        ease: "easeOut",
-      }}
-      style={{
-        border: "1px solid #ddd",
-        marginBottom: "10px",
-        backgroundColor: isOpen ? "#f9f9f9" : "#fff",
-        boxShadow: isOpen ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
-        transition: "all 0.25s ease",
-        borderRadius:"20px",
-      }}
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.3,
+      delay: index * 0.15,
+      ease: "easeOut",
+    }}
+    style={{
+      border: "1px solid #ddd",
+      marginBottom: "10px",
+      backgroundColor: isOpen ? "#f9f9f9" : "#fff",
+      boxShadow: isOpen ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
+      transition: "all 0.25s ease",
+      borderRadius: "20px",
+    }}
     >
       <button
         type="button"
@@ -157,7 +157,13 @@ export default function FAQs() {
         "Absolutely! MVPBlocks is free to use for both personal and commercial projects.",
     },
   ];
-
+// -------------Responsiveness-------------
+      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+      useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
   return (
     <section
       style={{
@@ -166,8 +172,8 @@ export default function FAQs() {
         overflow: "hidden",
         padding: "80px 0",
         backgroundColor: "#fff",
-        borderRadius:"20px",
-          boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+        borderRadius: "20px",
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
       }}
     >
       {/* Decorative Blurs */}
@@ -193,7 +199,7 @@ export default function FAQs() {
           padding: "0 20px",
           display: "flex",
           flexWrap: "wrap",
-          gap: "40px",
+          gap: isMobile ? "40px" : "60px",
           alignItems: "flex-start",
         }}
       >
@@ -253,7 +259,9 @@ export default function FAQs() {
             <p style={{ fontWeight: 600, margin: "0 0 4px" }}>
               Still have questions?
             </p>
-            <p style={{ color: "#666", fontSize: "13px", marginBottom: "12px" }}>
+            <p
+              style={{ color: "#666", fontSize: "13px", marginBottom: "12px" }}
+            >
               We're here to help you
             </p>
             <button
@@ -268,12 +276,8 @@ export default function FAQs() {
                 cursor: "pointer",
                 transition: "background-color 0.2s ease",
               }}
-              onMouseOver={(e) =>
-                (e.target.style.backgroundColor = "#0069d9")
-              }
-              onMouseOut={(e) =>
-                (e.target.style.backgroundColor = "#007bff")
-              }
+              onMouseOver={(e) => (e.target.style.backgroundColor = "#0069d9")}
+              onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
             >
               Contact Support
             </button>

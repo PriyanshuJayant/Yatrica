@@ -185,7 +185,7 @@ export const InfiniteCarousel = ({
               style={{
                 display:"flex",
                 position: 'absolute',
-                left: '16px',
+                left: '10px',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 background: 'rgba(255, 255, 255, 0.9)',
@@ -216,7 +216,7 @@ export const InfiniteCarousel = ({
               style={{
                 display:"flex",
                 position: 'absolute',
-                right: '16px',
+                right: '10px',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 background: 'rgba(255, 255, 255, 0.9)',

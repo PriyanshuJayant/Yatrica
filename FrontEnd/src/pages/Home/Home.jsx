@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -16,7 +16,7 @@ import Services from "../../components/Services/Services";
 import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
-import ContactForm from '../../components/Contact/Contact'
+import ContactForm from "../../components/Contact/Contact";
 // import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
 
 // -------------------- VIDEO ASSETS --------------------
@@ -39,11 +39,13 @@ function Home() {
 
   useEffect(() => {
     // If navigation included state requesting a scroll, or a hash is present, scroll
-    const scrollTarget = location.state?.scrollTo || (location.hash ? location.hash.replace('#', '') : null);
+    const scrollTarget =
+      location.state?.scrollTo ||
+      (location.hash ? location.hash.replace("#", "") : null);
     if (scrollTarget) {
       setTimeout(() => {
         const el = document.getElementById(scrollTarget);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 50);
     }
   }, [location]);
@@ -92,8 +94,8 @@ function Home() {
           </div>
 
           {/* -------------------- SERVICES SECTION -------------------- */}
-          <div id="services" style={{width:"100%"}}>
-          <Services />
+          <div id="services" style={{ width: "100%" }}>
+            <Services />
           </div>
 
           {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
@@ -144,11 +146,11 @@ function Home() {
           </div>
 
           {/* -------------------- QUOTE FORM -------------------- */}
-          <div id="Question" style={{width:"100%"}}>
-          <QuoteForm />
+          <div id="Question" style={{ width: "100%" }}>
+            <QuoteForm />
           </div>
 
-          <ContactForm/>
+          <ContactForm />
         </div>
 
         {/* -------------------- FOOTER -------------------- */}
