@@ -16,7 +16,7 @@ import Services from "../../components/Services/Services";
 import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
-import ContactForm from "../../components/Contact/Contact";
+// import ContactForm from "../../components/Contact/Contact";
 // import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
 
 // -------------------- VIDEO ASSETS --------------------
@@ -65,7 +65,7 @@ function Home() {
         {/* -------------------- Page Content -------------------- */}
         <div className={styles.pageContainer}>
           {/* --------------------Diwali Section-------------------- */}
-          <div className={styles.DiwaliComponent}>
+          {/* <div className={styles.DiwaliComponent}> */}
             <video
               className={styles.diwaliBanner}
               src={Diwali}
@@ -76,8 +76,8 @@ function Home() {
             >
               Your Browser does not support this video format
             </video>
-            <CardCouresel />
-          </div>
+            {/* <CardCouresel /> */}
+          {/* </div> */}
 
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
           <div className={styles.HomeContainer}>
@@ -150,7 +150,7 @@ function Home() {
             <QuoteForm />
           </div>
 
-          <ContactForm />
+          {/* <ContactForm /> */}
         </div>
 
         {/* -------------------- FOOTER -------------------- */}

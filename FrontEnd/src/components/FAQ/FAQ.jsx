@@ -158,12 +158,12 @@ export default function FAQs() {
     },
   ];
 // -------------Responsiveness-------------
-      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-      useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 768);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-      }, []);
+      // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+      // useEffect(() => {
+      //   const handleResize = () => setIsMobile(window.innerWidth <= 768);
+      //   window.addEventListener("resize", handleResize);
+      //   return () => window.removeEventListener("resize", handleResize);
+      // }, []);
   return (
     <section
       style={{
@@ -199,7 +199,7 @@ export default function FAQs() {
           padding: "0 20px",
           display: "flex",
           flexWrap: "wrap",
-          gap: isMobile ? "40px" : "60px",
+          gap: "40px",
           alignItems: "flex-start",
         }}
       >

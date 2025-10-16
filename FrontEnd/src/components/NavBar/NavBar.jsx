@@ -271,7 +271,7 @@ function NavBar() {
             >
               Ask Question
             </a>
-            <Link to="/book-now" className={styles.navLink}>
+            <Link to="/contact" className={styles.navLink}>
               Book Now
             </Link>
           </nav>

@@ -9,7 +9,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import CorporatePage from "./pages/Packages/Corporate/Corporate";
 import HoneyMoonPage from "./pages/Packages/Honeymoon/HoneyMoon";
 import BudgetPage from "./pages/Packages/Budget/Budget";
-
+import ContactPage from "./pages/Static/Contact/ContactPage";
 
 const pageTransition = {
   initial: { opacity: 0 },
@@ -31,6 +31,7 @@ function AnimatedRoutes() {
         <Route path="/packages/honeymoon" element={<motion.div {...pageTransition}><HoneyMoonPage /></motion.div>} />
         <Route path="/packages/budget" element={<motion.div {...pageTransition}><BudgetPage /></motion.div>} />
         <Route path="/test" element={<motion.div {...pageTransition}><Test /></motion.div>} />
+        <Route path="/contact" element={<motion.div {...pageTransition}><ContactPage /></motion.div>} />
       </Routes>
     </AnimatePresence>
   );
