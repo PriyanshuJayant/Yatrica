@@ -24,14 +24,14 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: 'gmail', // You can use other services like 'outlook', 'yahoo', etc.
       auth: {
-        user: process.env.VITE_EMAIL_USER, // Your email
-        pass: process.env.VITE_EMAIL_PASS, // Your email app password
+        user: process.env.EMAIL_USER || process.env.VITE_EMAIL_USER, // Your email
+        pass: process.env.EMAIL_PASS || process.env.VITE_EMAIL_PASS, // Your email app password
       },
     });
 
     // Email to the person who filled the form
     const userMailOptions = {
-      from: `"Yatrica Travel" <${process.env.VITE_EMAIL_USER}>`,
+      from: `"Yatrica Travel" <${process.env.EMAIL_USER || process.env.VITE_EMAIL_USER}>`,
       to: email,
       subject: 'Thank You for Contacting Yatrica Travel',
       html: `
@@ -117,8 +117,8 @@ export default async function handler(req, res) {
 
     // Email to your business (admin notification)
     const adminMailOptions = {
-      from: `"Yatrica Contact Form" <${process.env.VITE_EMAIL_USER}>`,
-      to: process.env.VITE_EMAIL_USER, // Your business email
+      from: `"Yatrica Contact Form" <${process.env.EMAIL_USER || process.env.VITE_EMAIL_USER}>`,
+      to: process.env.EMAIL_USER || process.env.VITE_EMAIL_USER, // Your business email
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <!DOCTYPE html>
