@@ -105,11 +105,52 @@ function ContactPage() {
     message: ''
   });
     const [focusedField, setFocusedField] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Contact request submitted! Our team will get back to you soon.');
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! We have received your message and will contact you soon.'
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Failed to send message. Please try again.'
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -185,7 +226,7 @@ function ContactPage() {
               label="Full Name"
               name="name"
               type="text"
-              placeholder="John Doe"
+              placeholder="Name"
               value={formData.name}
               onChange={handleChange}
               focusedField={focusedField}
@@ -197,7 +238,7 @@ function ContactPage() {
               label="Email Address"
               name="email"
               type="email"
-              placeholder="john.doe@example.com"
+              placeholder="example@gmail.com"
               value={formData.email}
               onChange={handleChange}
               focusedField={focusedField}
@@ -209,7 +250,7 @@ function ContactPage() {
               label="Phone Number"
               name="phone"
               type="tel"
-              placeholder="+1 (555) 000-0000"
+              placeholder="+91 (000) 000-0000"
               value={formData.phone}
               onChange={handleChange}
               focusedField={focusedField}
@@ -230,43 +271,76 @@ function ContactPage() {
               rows={3}
             />
 
+            {/* Status Message */}
+            {submitStatus.message && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                style={{
+                  padding: '12px 16px',
+                  borderRadius: '8px',
+                  marginBottom: '16px',
+                  backgroundColor: submitStatus.type === 'success' ? '#d4edda' : '#f8d7da',
+                  border: `1px solid ${submitStatus.type === 'success' ? '#c3e6cb' : '#f5c6cb'}`,
+                  color: submitStatus.type === 'success' ? '#155724' : '#721c24',
+                  fontSize: '14px',
+                  fontWeight: '500'
+                }}
+              >
+                {submitStatus.message}
+              </motion.div>
+            )}
+
             <motion.button
               type="submit"
+              disabled={isSubmitting}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
               whileHover={{ 
-                scale: 1.02,
-                boxShadow: '0 6px 20px rgba(0, 123, 255, 0.3)'
+                scale: isSubmitting ? 1 : 1.02,
+                boxShadow: isSubmitting ? '0 4px 12px rgba(0, 123, 255, 0.2)' : '0 6px 20px rgba(0, 123, 255, 0.3)'
               }}
-              whileTap={{ scale: 0.98 }}
+              whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
               style={{
                 width: '100%',
                 padding: '14px 32px',
-                backgroundColor: '#007bff',
+                backgroundColor: isSubmitting ? '#6c757d' : '#007bff',
                 color: '#fff',
                 border: 'none',
                 borderRadius: '8px',
                 fontWeight: '600',
                 fontSize: '15px',
-                cursor: 'pointer',
+                cursor: isSubmitting ? 'not-allowed' : 'pointer',
                 transition: 'all 0.3s ease',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '8px',
-                boxShadow: '0 4px 12px rgba(0, 123, 255, 0.2)'
+                boxShadow: '0 4px 12px rgba(0, 123, 255, 0.2)',
+                opacity: isSubmitting ? 0.7 : 1
               }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#0056b3'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#007bff'}
+              onMouseOver={(e) => !isSubmitting && (e.target.style.backgroundColor = '#0056b3')}
+              onMouseOut={(e) => !isSubmitting && (e.target.style.backgroundColor = '#007bff')}
             >
-              <span>Send Message</span>
-              <motion.span
-                animate={{ x: [0, 4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                →
-              </motion.span>
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+              {!isSubmitting && (
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              )}
+              {isSubmitting && (
+                <motion.span
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                  style={{ display: 'inline-block' }}
+                >
+                  ⏳
+                </motion.span>
+              )}
             </motion.button>
           </motion.form>
         </div>
