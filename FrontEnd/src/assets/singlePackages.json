@@ -1,0 +1,1250 @@
+[
+  {
+    "id": "1",
+    "title": "Thailand",
+    "category": "South East Asia",
+    "image": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "description": "Vibrant mix of Bangkok temples, Chiang Mai culture, and Thai beaches.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Bangkok — check in, evening street food & Khao San Road." ,
+          "Grand Palace, Wat Pho, boat ride on Chao Phraya; evening rooftop." ,
+          "Morning market/shopping, fly home or connect to Chiang Mai." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Bangkok — check-in, evening street-food crawl in Chinatown." ,
+          "Grand Palace, Wat Pho, Chao Phraya ferry hop & local markets." ,
+          "Train/flight to Chiang Mai; explore Old City & night market." ,
+          "Day trip to Doi Suthep & local hill-tribe craft village." ,
+          "Cheap cooking class or market + free-time for shopping." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Bangkok — rest, night market." ,
+          "Grand Palace, Wat Pho, river cruise." ,
+          "Chatuchak/MBK shopping, evening flight to Chiang Mai." ,
+          "Chiang Mai old city temples & night bazaar." ,
+          "Elephant sanctuary day (ethical) or Doi Suthep trip." ,
+          "Fly to Phuket/Krabi — beach arrival." ,
+          "Phi Phi island day trip (boat + snorkeling)." ,
+          "Relax beach / optional rock-climbing in Railay." ,
+          "Travel to Khao Sok (lake/ jungle safari)." ,
+          "Canoe/kayak and jungle walk." ,
+          "Return to Bangkok; last-minute shopping." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Vietnam",
+    "category": "South East Asia",
+    "image": "https://images.unsplash.com/photo-1504457047772-27faf1c00561?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1247",
+    "description": "From Hanoi's charm to Halong Bay cruises and Hoi An heritage.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Hanoi — Old Quarter walk, street food." ,
+          "Full day Halong Bay cruise (overnight optional) or city sightseeing." ,
+          "Morning museums/temples, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Hanoi — Old Quarter walk, street-food dinner." ,
+          "Full-day Halong Bay budget cruise (shared)." ,
+          "Return to Hanoi; museums & train to Hoi An (overnight or flight)." ,
+          "Hoi An walking tour, tailor visit, beach time." ,
+          "Countryside bike ride & local cooking class." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Hanoi — explore Old Quarter." ,
+          "Hanoi sights: Hoan Kiem Lake, Temple of Literature." ,
+          "Overnight/Day Halong Bay cruise." ,
+          "Return to Hanoi; fly to Hue." ,
+          "Hue: Imperial Citadel & Perfume River cruise." ,
+          "Drive to Hoi An via Hai Van Pass; stop at Marble Mountains." ,
+          "Hoi An walking tour, tailor visit, beach time." ,
+          "Cooking class and countryside bike ride." ,
+          "Fly to Da Nang then to Nha Trang — beach." ,
+          "Relax / island boat trip / snorkeling." ,
+          "Fly to Ho Chi Minh City, short city tour." ,
+          "Cu Chi tunnels half-day, depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Sri Lanka",
+    "category": "Asia",
+    "image": "https://images.unsplash.com/photo-1649856092355-eee498b1d0f2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1632",
+    "description": "Temples, tea plantations, and stunning coastal scenery.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Colombo — city quick tour, transfer to Negombo." ,
+          "Sigiriya rock or Galle Fort (choose north or south)." ,
+          "Morning beach or Colombo museums, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Colombo — transfer to Negombo, relax on beach." ,
+          "Train/drive to Sigiriya, visit Sigiriya Rock (budget entry)." ,
+          "Dambulla cave temples, transfer to Kandy, evening cultural show." ,
+          "Kandy: Temple of the Tooth, botanical gardens." ,
+          "Scenic train to Nuwara Eliya / tea-estate visit." ,
+          "Return to Colombo & depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Colombo — overnight." ,
+          "Colombo city tour; transfer to Sigiriya." ,
+          "Climb Sigiriya Rock; Dambulla cave temples." ,
+          "Kandy — Temple of Tooth, cultural show." ,
+          "Tea country: Nuwara Eliya, tea plantation visit." ,
+          "Ella: train ride through scenic hills." ,
+          "Yala National Park — afternoon safari." ,
+          "South coast — Mirissa/Unawatuna beaches." ,
+          "Whale watching (Mirissa) or beach day." ,
+          "Galle Fort & Dutch heritage tour." ,
+          "Return to Colombo; shopping." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Laos",
+    "category": "South East Asia",
+    "image": "/images/packages/laos.jpg",
+    "description": "Relaxed pace with stunning waterfalls and ancient temples.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Luang Prabang — evening market & sunset at Mount Phousi." ,
+          "Kuang Si Falls and Pak Ou Caves boat trip." ,
+          "Morning alms ceremony viewing, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Luang Prabang — sunset on Mount Phousi & night market." ,
+          "Pak Ou Cave boat trip and riverside villages." ,
+          "Kuang Si Falls day trip and picnic." ,
+          "Morning alms-viewing, fly/drive to Vientiane; city stroll." ,
+          "Vientiane temples, Patuxai & local markets." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Vientiane — Patuxai and temples." ,
+          "Fly to Luang Prabang; night market." ,
+          "Kuang Si Falls & bear rescue centre." ,
+          "Pak Ou Caves river cruise; local villages." ,
+          "Flight to Vang Vieng; blue lagoon and caves." ,
+          "Kayaking/zipline or hot air balloon (seasonal)." ,
+          "Return to Vientiane; slower day, temples." ,
+          "Southern Laos — Si Phan Don (4000 Islands) travel." ,
+          "Mekong island relaxation, dolphin spotting." ,
+          "Bike around islands; local life." ,
+          "Return to capital." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Dubai / UAE",
+    "category": "Middle East",
+    "image": "/images/packages/dubai.jpg",
+    "description": "Modern wonders, desert adventures, and cultural heritage.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Dubai — Dubai Mall & Burj Khalifa sunset." ,
+          "Old Dubai (Al Fahidi), abra ride, desert safari with BBQ." ,
+          "Palm Jumeirah / beach, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Dubai — Dubai Mall & Burj Khalifa (book online for cheaper slots)." ,
+          "Old Dubai: Al Fahidi, abra across Dubai Creek, spice/souk markets." ,
+          "Desert safari (budget shared transfer)." ,
+          "Abu Dhabi day trip: Sheikh Zayed Mosque (budget coach tours available)." ,
+          "Jumeirah Beach + Marina walk; cheap eats at local food courts." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Dubai — Dubai Mall + Burj Khalifa." ,
+          "Old Dubai: Al Fahidi, spice souk, dhow cruise dinner." ,
+          "Desert safari + dune bashing." ,
+          "Abu Dhabi day trip: Sheikh Zayed Grand Mosque & Louvre." ,
+          "Dubai Marina, JBR beach, Atlantis aquarium." ,
+          "Mall of the Emirates + indoor ski (if interested)." ,
+          "Day trip to Hatta mountains or Al Ain oasis." ,
+          "Leisure day for shopping or theme parks (IMG Worlds)." ,
+          "Ras Al Khaimah day trip or beach resort." ,
+          "Explore Etihad Museum and cultural sites." ,
+          "Marina sunset cruise & dining." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Kenya",
+    "category": "Africa",
+    "image": "/images/packages/kenya.jpg",
+    "description": "World-class safaris and unique wildlife experiences.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Nairobi — visit David Sheldrick Elephant Orphanage." ,
+          "Full-day Masai Mara safari (if possible, early flight)." ,
+          "Morning safari, return to Nairobi, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Nairobi — Nairobi National Museum & local eateries." ,
+          "Early flight/drive to Masai Mara (budget camp or community lodge)." ,
+          "Full-day game drives in Masai Mara (shared jeep)." ,
+          "Cultural visit to Maasai village; evening return to lodge." ,
+          "Fly back to Nairobi; David Sheldrick Elephants / local markets." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Nairobi — city sights." ,
+          "Fly to Masai Mara — afternoon game drive." ,
+          "Full day Masai Mara safari." ,
+          "Hot air balloon safari (optional) & community visit." ,
+          "Transfer to Lake Naivasha — boat ride, Crescent Island." ,
+          "Hell’s Gate National Park cycling & hiking." ,
+          "Lake Nakuru — flamingos & rhino reserve." ,
+          "Amboseli National Park — views of Kilimanjaro." ,
+          "Game drives in Amboseli." ,
+          "Return to Nairobi; shopping/relax." ,
+          "Nairobi museums / Karen Blixen house." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Mauritius",
+    "category": "Island Escape",
+    "image": "/images/packages/mauritius.jpg",
+    "description": "Tropical beaches, coral reefs, and volcanic landscapes.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Port Louis — beach time or hotel pool." ,
+          "North island tour: Grand Bay, Pamplemousses Botanical Garden." ,
+          "Catamaran cruise or Chamarel seven-coloured earth, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Port Louis — local market & Pamplemousses Garden." ,
+          "North coast beaches and budget water activities." ,
+          "Catamaran day trip to Ile aux Cerfs (shared boat)." ,
+          "South excursion: Chamarel seven-colour earth & viewpoint." ,
+          "Leisure beach day or snorkeling with local operators." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive; relax on beach." ,
+          "Port Louis market & Pamplemousses Garden." ,
+          "North coast beaches and water sports." ,
+          "Catamaran day trip to Ile aux Cerfs." ,
+          "South west: Chamarel, Black River Gorges hike." ,
+          "Leisure — spa or golf." ,
+          "Diving/snorkeling day trip." ,
+          "Cultural tour: tea plantations and local villages." ,
+          "Ile aux Aigrettes nature reserve visit." ,
+          "Sunset cruise and seafood dinner." ,
+          "Shopping & last beach day." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Bali (Indonesia)",
+    "category": "Island Escape",
+    "image": "/images/packages/bali.jpg",
+    "description": "Temples, rice terraces, spiritual experiences, and beaches.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Denpasar — Uluwatu temple sunset & Kecak dance." ,
+          "Ubud: rice terraces, Monkey Forest, local arts." ,
+          "Beach morning, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Denpasar — Seminyak/Kuta beach evening." ,
+          "Uluwatu temple at sunset + local warung dinner." ,
+          "Transfer to Ubud: Monkey Forest & market." ,
+          "Tegallalang rice terraces & coffee tasting (budget tour)." ,
+          "Mount Batur sunrise trek (group tour) or beach day." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Bali — Seminyak/ Kuta beach." ,
+          "Uluwatu temple & beaches." ,
+          "Transfer to Ubud; market & Monkey Forest." ,
+          "Tegallalang rice terraces & coffee tasting." ,
+          "Mount Batur sunrise trek." ,
+          "East Bali exploration: Tirta Empul & waterfalls." ,
+          "Nusa Penida day trip for Kelingking & snorkeling." ,
+          "Relax on Nusa Lembongan / snorkeling." ,
+          "South coast water activities or spa day." ,
+          "Cultural show & cooking class in Ubud." ,
+          "Last beach day / shopping." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "France / Europe (multi-city)",
+    "category": "Europe",
+    "image": "/images/packages/france.jpg",
+    "description": "Iconic landmarks and chateau exploration in France.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Paris — Eiffel Tower & Seine evening cruise." ,
+          "Louvre, Notre Dame, Montmartre." ,
+          "Morning stroll, depart or train to next city." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Paris — Seine riverside walk & free viewpoint at Trocadéro." ,
+          "Louvre (book in advance), Île de la Cité and Notre-Dame exterior." ,
+          "Montmartre, Sacré-Cœur, stroll in Le Marais." ,
+          "Day trip to Versailles (regional train)." ,
+          "Musee d’Orsay or free parks + local boulangeries." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Paris — Eiffel Tower." ,
+          "Louvre & Ile de la Cité." ,
+          "Montmartre & shopping." ,
+          "Day trip to Versailles." ,
+          "Train to Loire Valley — chateau tour." ,
+          "More chateau visits & wine tasting." ,
+          "Train to Avignon/Provence — explore markets." ,
+          "Lavender fields (seasonal) & hill towns." ,
+          "Travel to Nice / French Riviera — beach." ,
+          "Day trip to Monaco & Eze." ,
+          "Relax in Nice; Old Town." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Spain / Europe",
+    "category": "Europe",
+    "image": "/images/packages/spain.jpg",
+    "description": "Experience vibrant cities, Gothic history, and sun-drenched beaches.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Barcelona — La Rambla & Gothic Quarter." ,
+          "Sagrada Familia, Park Güell; beach sunset." ,
+          "Morning markets, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Barcelona — La Rambla & Gothic Quarter." ,
+          "Sagrada Familia (advance tickets), Park Güell (free areas)." ,
+          "Beach time + local tapas crawl in evening." ,
+          "Train to Madrid (budget AVE deals) — Plaza Mayor & Retiro Park." ,
+          "Prado museum or day trip to Toledo (cheap regional train)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Madrid — Prado & Plaza Mayor." ,
+          "Royal Palace & Retiro Park." ,
+          "Train to Seville — evening flamenco." ,
+          "Seville sights: Alcázar & cathedral." ,
+          "Córdoba day trip (Mezquita)." ,
+          "Granada — Alhambra visit." ,
+          "Train to Valencia — City of Arts & beaches." ,
+          "Valencia paella + market." ,
+          "Barcelona arrival; Gothic Quarter." ,
+          "Sagrada Familia & Park Güell." ,
+          "Beach or Montserrat day trip." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "USA",
+    "category": "North America",
+    "image": "/images/packages/usa.jpg",
+    "description": "Explore East Coast cityscapes and West Coast natural wonders.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive New York — Times Square at night." ,
+          "Statue of Liberty, 9/11 Memorial, Central Park." ,
+          "Morning museum or shopping, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive New York — Times Square & free walking tour." ,
+          "Statue of Liberty ferry (budget option) & 9/11 Memorial." ,
+          "Museums or Brooklyn Bridge + DUMBO." ,
+          "Fly to Washington DC (budget carrier) — National Mall & free museums." ,
+          "Day trip to Mount Vernon or local markets." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive New York — Manhattan highlights." ,
+          "Museums, Brooklyn walk." ,
+          "Fly to Washington DC — monuments & museums." ,
+          "DC tour, evening flight to Orlando or Miami." ,
+          "Orlando theme parks or Miami beaches." ,
+          "Fly to Las Vegas — evening strip." ,
+          "Grand Canyon day trip." ,
+          "Fly to Los Angeles — Hollywood & Santa Monica." ,
+          "LA beaches & Getty museum." ,
+          "San Francisco flight/drive; Golden Gate & Fisherman’s Wharf." ,
+          "Alcatraz or Napa day trip." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Turkey",
+    "category": "Eurasia",
+    "image": "/images/packages/turkey.jpg",
+    "description": "Blend of European and Asian culture, historic sites, and unique landscapes.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Istanbul — Sultanahmet area, evening stroll." ,
+          "Hagia Sophia, Blue Mosque, Topkapi Palace, Grand Bazaar." ,
+          "Bosphorus cruise, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Istanbul — Sultanahmet stroll & cheap kebab dinner." ,
+          "Hagia Sophia, Blue Mosque, Topkapi Palace exterior + Grand Bazaar." ,
+          "Bosphorus ferry ride (public ferry) & Spice Bazaar." ,
+          "Flight to Cappadocia (budget flight) — sunset viewpoints." ,
+          "Explore Goreme open-air museum & valleys (shared tour)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Istanbul — mix of Asian & European sides." ,
+          "Historic Istanbul deep dive." ,
+          "Spice Bazaar & Bosphorus ferry cruise." ,
+          "Fly to Cappadocia — sunset viewpoints." ,
+          "Hot air balloon & Goreme open-air museum." ,
+          "Underground cities & valleys hike." ,
+          "Fly to Izmir; drive to Ephesus ancient city." ,
+          "Pamukkale travertines & thermal pools." ,
+          "Antalya/Turkish Riviera beach time." ,
+          "Leisure in Antalya; old town." ,
+          "Return to Istanbul." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Russia",
+    "category": "Europe/Eurasia",
+    "image": "/images/packages/russia.jpg",
+    "description": "Experience the grandeur of Moscow and the elegance of St. Petersburg.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Moscow — Red Square at night." ,
+          "Kremlin, St. Basil’s, GUM, Bolshoi (optional)." ,
+          "Metro tour, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Moscow — Red Square & evening walk." ,
+          "Kremlin & Armoury Museum (prebook combo)." ,
+          "Metro tour + train to St. Petersburg (overnight or cheap flight)." ,
+          "Hermitage & Palace Square (book timed entry)." ,
+          "Peterhof gardens excursion (budget ferry or train)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Moscow — Red Square." ,
+          "Kremlin & Armory museum." ,
+          "St. Basil’s & cultural evening." ,
+          "Train to St. Petersburg (overnight train optional)." ,
+          "Hermitage & Palace Square." ,
+          "Peterhof gardens day." ,
+          "Church of the Savior on Spilled Blood & canals." ,
+          "Pushkin (Catherine Palace) day trip." ,
+          "Local markets and river cruise." ,
+          "Explore arts districts & theaters." ,
+          "Return to Moscow or extra regional visit." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Cambodia",
+    "category": "South East Asia",
+    "image": "/images/packages/cambodia.jpg",
+    "description": "Discover the ancient wonders of Angkor Wat and vibrant local life.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Siem Reap — evening markets." ,
+          "Sunrise at Angkor Wat; Angkor Thom & Ta Prohm." ,
+          "Tonle Sap lake boat trip, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Siem Reap — night market & local dinner." ,
+          "Sunrise at Angkor Wat; Angkor Thom & Ta Prohm." ,
+          "Full temple circuit or countryside bicycle tour." ,
+          "Tonle Sap floating village boat trip (shared)." ,
+          "Relax, local craft workshops & markets." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Phnom Penh — Royal Palace & waterfront." ,
+          "Genocide museums (sensitive) & markets; fly to Siem Reap." ,
+          "Angkor Wat sunrise & main temples." ,
+          "More temple circuit (Ta Prohm, Bayon)." ,
+          "Explore countryside & local villages." ,
+          "Kulen Mountain waterfall day." ,
+          "Tonle Sap cruise & floating village." ,
+          "Leisure / crafts and markets." ,
+          "Southern coast option: Kep & Kampot pepper farms." ,
+          "Bokor National Park & coast." ,
+          "Return to Phnom Penh." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Mexico",
+    "category": "North America",
+    "image": "/images/packages/mexico.jpg",
+    "description": "Ancient pyramids, rich culture, and beautiful Caribbean beaches.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Mexico City — Zócalo & evening tacos." ,
+          "Teotihuacan pyramids & Frida Kahlo Museum." ,
+          "Chapultepec park/museum, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Mexico City — Zócalo & street tacos." ,
+          "Teotihuacan day trip (shared tour) & Museo Frida (book ahead)." ,
+          "Fly to Cancún / Tulum (budget flight) — beach time." ,
+          "Tulum ruins + cenote swim (local colectivos/cheap tours)." ,
+          "Snorkeling in Cozumel or Playa del Carmen." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Mexico City — historic centre." ,
+          "Museums & Xochimilco canals." ,
+          "Day trip to Teotihuacan." ,
+          "Fly to Mérida/Península Yucatán; explore colonial town." ,
+          "Chichén Itzá early visit; cenote swim." ,
+          "Valladolid & local markets." ,
+          "Tulum beaches & ruins." ,
+          "Coba ruins & jungle exploration." ,
+          "Cozumel/Playa del Carmen snorkeling/diving." ,
+          "Relax at beach/resort." ,
+          "Return to Mexico City for last shopping." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Japan",
+    "category": "Asia",
+    "image": "/images/packages/japan.jpg",
+    "description": "A perfect blend of modern innovation and ancient tradition.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Tokyo — Shibuya crossing & evening." ,
+          "Asakusa & Senso-ji, Meiji Shrine, Shinjuku sunset." ,
+          "Morning fish market or shopping; depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Tokyo — Shinjuku evening & small-plate dinner." ,
+          "Asakusa & Senso-ji, Ueno Park museums (many discount mornings)." ,
+          "Day trip to Nikko or Hakone (budget express)." ,
+          "Shinkansen to Kyoto — Gion and evening stroll." ,
+          "Fushimi Inari & Arashiyama bamboo grove (budget bus)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Tokyo — explore neighborhoods (Shibuya/Shinjuku)." ,
+          "Asakusa, Tokyo Skytree, Ueno museums." ,
+          "Day trip to Nikko or Mt. Fuji area." ,
+          "Shinkansen to Kyoto — Gion & evening." ,
+          "Fushimi Inari, Kiyomizu-dera & Arashiyama bamboo." ,
+          "Nara day trip (Todai-ji & deer park)." ,
+          "Osaka — food tour & Dotonbori." ,
+          "Himeji Castle day trip." ,
+          "Hiroshima & Miyajima island visit." ,
+          "Return to Tokyo or explore northern region." ,
+          "Shopping & cultural experiences." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Greece",
+    "category": "Europe",
+    "image": "/images/packages/greece.jpg",
+    "description": "Ancient history in Athens and the iconic islands of the Aegean Sea.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Athens — Plaka & evening views of Acropolis." ,
+          "Acropolis, Acropolis museum, Monastiraki." ,
+          "Morning seaside or fly to Santorini, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Athens — Plaka & Acropolis viewpoint at sunset." ,
+          "Acropolis & Acropolis Museum (combo ticket)." ,
+          "Ferry to Mykonos or Santorini (budget ferry if off-season)." ,
+          "Island exploration: beaches & local tavernas." ,
+          "Optional day trip to nearby island or relax." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Athens — Acropolis at sunset." ,
+          "Full Athens city tour." ,
+          "Ferry to Mykonos — beaches & nightlife." ,
+          "Mykonos relaxation & island tour." ,
+          "Ferry to Santorini — Oia sunset." ,
+          "Santorini tour, wine tasting." ,
+          "Boat day / caldera cruise." ,
+          "Santorini leisure / black sand beaches." ,
+          "Optional Naxos or Paros day trips." ,
+          "Return to Athens; islands wrap-up." ,
+          "Day trip to Delphi or Sounion." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Australia",
+    "category": "Oceania",
+    "image": "/images/packages/australia.jpg",
+    "description": "Explore Sydney's harbour, Melbourne's culture, and the Great Barrier Reef.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Sydney — Opera House & Harbour Bridge." ,
+          "Bondi to Coogee coastal walk; evening The Rocks." ,
+          "Taronga Zoo or Blue Mountains day trip, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Sydney — Opera House & harbour walk." ,
+          "Bondi to Coogee coastal walk & beaches." ,
+          "Blue Mountains day trip (public transport & walking)." ,
+          "Fly to Melbourne (budget carrier) — laneways & street art." ,
+          "Great Ocean Road short section day trip (budget coach)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Sydney — harbour highlights." ,
+          "Blue Mountains day trip." ,
+          "Fly to Melbourne — laneways & cafes." ,
+          "Great Ocean Road day trip." ,
+          "Melbourne arts & shopping." ,
+          "Fly to Cairns — reef gateway." ,
+          "Great Barrier Reef snorkeling/diving." ,
+          "Daintree Rainforest & Cape Tribulation." ,
+          "Cairns leisure or Kuranda trip." ,
+          "Fly to Canberra or Adelaide (optional wine regions)." ,
+          "Regional exploration (Barossa or Hunter Valley)." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Switzerland",
+    "category": "Europe",
+    "image": "/images/packages/switzerland.jpg",
+    "description": "Alpine views, pristine lakes, and charming cities via scenic trains.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Zurich — Bahnhofstrasse & old town." ,
+          "Day trip to Lucerne & Mt Pilatus or Rigi." ,
+          "Scenic train to Interlaken or depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Zurich — old town stroll & lakefront." ,
+          "Train to Lucerne — Chapel Bridge & lakeside." ,
+          "Day trip to Mt. Pilatus or Rigi (look for saver passes)." ,
+          "Travel to Interlaken — scenic walks & budget activities." ,
+          "Jungfrau region day trip using regional passes (plan saver fares)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Zurich — city stroll." ,
+          "Zurich to Lucerne; Chapel Bridge." ,
+          "Train to Interlaken; lakeside." ,
+          "Jungfrau region — Lauterbrunnen & Mürren." ,
+          "Grindelwald & alpine activities." ,
+          "Zermatt & Matterhorn views." ,
+          "Glacier Express scenic train to St. Moritz." ,
+          "Bernina pass & Engadin valleys." ,
+          "Geneva — lake & UN." ,
+          "Montreux & Chillon Castle." ,
+          "Wine region (Lavaux terraces)." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Norway / Scandinavia",
+    "category": "Europe",
+    "image": "/images/packages/norway.jpg",
+    "description": "Spectacular fjords, Viking history, and cosmopolitan cities.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Oslo — Opera House & waterfront." ,
+          "Day fjord cruise or Vigeland Park & museums." ,
+          "Morning museums, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Oslo — waterfront & Vigeland Park." ,
+          "Oslo museums (choose 1–2) and ferry rides." ,
+          "Train/flight to Bergen — Bryggen & harbour walk." ,
+          "Fjord cruise day (book economy/shared options)." ,
+          "Flåm Railway short scenic stretch & village walk." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Oslo — city sights." ,
+          "Oslo museums and harbour." ,
+          "Train/flight to Bergen; Bryggen." ,
+          "Fjord cruise (Nærøyfjord) & scenic drives." ,
+          "Flåm Railway & mountain vistas." ,
+          "Ålesund & Geirangerfjord area." ,
+          "Drive coastal Atlantic Road." ,
+          "Trondheim historic sites." ,
+          "Tromsø (optional) for northern lights (seasonal)." ,
+          "Arctic cultural experiences (north)." ,
+          "Return to Oslo." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Egypt",
+    "category": "Africa/Middle East",
+    "image": "/images/packages/egypt.jpg",
+    "description": "Ancient wonders of the pyramids and a cruise along the Nile River.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Cairo — Khan el-Khalili market." ,
+          "Pyramids of Giza & Egyptian Museum." ,
+          "Islamic Cairo or fly to Luxor, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Cairo — Khan el-Khalili market & street eats." ,
+          "Giza Pyramids & Sphinx (shared tour)." ,
+          "Egyptian Museum & Coptic Cairo half-day." ,
+          "Fly to Luxor — East Bank temples." ,
+          "West Bank: Valley of the Kings (budget guided group)." ,
+          "Return to Cairo & depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Cairo — pyramids at sunset." ,
+          "Pyramids & Sphinx, museum." ,
+          "Fly to Luxor — East Bank temples." ,
+          "Luxor West Bank (Valley of the Kings)." ,
+          "Begin Nile cruise to Aswan — temples along way." ,
+          "Aswan: Philae Temple & Nubian village." ,
+          "Abu Simbel day trip (from Aswan)." ,
+          "Nile cruise leisure; free exploration." ,
+          "Return to Cairo; Coptic Cairo." ,
+          "Alexandria day trip (Roman amphitheatre)." ,
+          "Markets & final sightseeing." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Hawaii (USA)",
+    "category": "Island Escape",
+    "image": "/images/packages/hawaii.jpg",
+    "description": "Island hopping across the diverse landscapes of the Hawaiian archipelago.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Oahu — Waikiki beach & sunset." ,
+          "Pearl Harbor and North Shore surf beaches." ,
+          "Diamond Head hike, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Oahu — Waikiki beach & local eatery." ,
+          "Pearl Harbor visit & North Shore surf beaches." ,
+          "Diamond Head hike & local markets." ,
+          "Fly to Maui (budget inter-island deals) — beach town." ,
+          "Road to Hana highlights or snorkeling trip (book group tours)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Oahu — Waikiki." ,
+          "Pearl Harbor & Honolulu." ,
+          "Fly to Maui — road to Hana or Lahaina." ,
+          "Haleakalā sunrise & beach time." ,
+          "Fly to Kauai — Waimea Canyon & Napali coast boat." ,
+          "Napali coast hike or boat tour." ,
+          "Fly to Big Island — Volcanoes National Park." ,
+          "Lava fields & black sand beaches." ,
+          "Kona coffee region & snorkeling." ,
+          "Leisure & spa day." ,
+          "Return to Oahu for last shopping." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "South Korea",
+    "category": "Asia",
+    "image": "/images/packages/southkorea.jpg",
+    "description": "Modern Seoul, ancient palaces, and coastal Busan.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Seoul — Myeongdong street food & shopping." ,
+          "Gyeongbokgung Palace, Bukchon Hanok Village, Insadong." ,
+          "N Seoul Tower morning, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Seoul — Myeongdong shopping & street food." ,
+          "Gyeongbokgung Palace & Bukchon Hanok Village." ,
+          "DMZ half-day tour (book ahead) or local markets." ,
+          "KTX to Busan — Haeundae beach & nightlife." ,
+          "Gamcheon Culture Village & Jagalchi Market." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Seoul — city highlights." ,
+          "Palaces & markets tour." ,
+          "DMZ day trip (book in advance)." ,
+          "Busan — Haeundae beach & market." ,
+          "Gamcheon Culture Village & seaside." ,
+          "Gyeongju historical sites (Bulguksa)." ,
+          "Jeju Island flight — waterfalls & lava tubes." ,
+          "Hallasan hike & coastal views." ,
+          "Return to Seoul; K-pop / cafe culture." ,
+          "Shopping & Han River cruise." ,
+          "Gangnam & modern Seoul experiences." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Tanzania",
+    "category": "Africa",
+    "image": "/images/packages/tanzania.jpg",
+    "description": "Home to the Serengeti, Ngorongoro Crater, and Zanzibar beaches.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Kilimanjaro / Arusha — rest." ,
+          "Full-day Serengeti safari or Ngorongoro crater visit." ,
+          "Morning game drive, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Arusha/Kilimanjaro — local market & rest." ,
+          "Drive to Ngorongoro Crater — evening at lodge." ,
+          "Full-day Ngorongoro safari (shared vehicle)." ,
+          "Transfer to Serengeti — afternoon game drive." ,
+          "Full-day Serengeti safari (budget camps)." ,
+          "Depart (return to Arusha & fly)." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Arusha — acclimatize." ,
+          "Tarangire National Park safari." ,
+          "Lake Manyara or move to Ngorongoro." ,
+          "Ngorongoro Crater full-day safari." ,
+          "Transfer to Serengeti — evening game drive." ,
+          "Full day Serengeti safaris." ,
+          "Balloon safari morning (seasonal)." ,
+          "Cultural visit to Maasai village." ,
+          "Fly to Zanzibar — Stone Town evening." ,
+          "Spice tour & beaches." ,
+          "Relaxation / water sports." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Costa Rica",
+    "category": "Central America",
+    "image": "/images/packages/costarica.jpg",
+    "description": "Eco-tourism haven with volcanoes, cloud forests, and stunning beaches.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive San José — transfer to Arenal or Manuel Antonio." ,
+          "Arenal volcano & hot springs OR Manuel Antonio national park." ,
+          "Zipline or beach morning, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive San José — transfer to La Fortuna/Arenal region." ,
+          "Arenal volcano viewpoint & hot springs (budget pools)." ,
+          "Zipline or hanging bridges (look for group discounts)." ,
+          "Monteverde cloud forest (shared shuttle) & reserve walk." ,
+          "Travel to Manuel Antonio — beach & national park (entrance fee)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive San José — city quick tour." ,
+          "Arenal/La Fortuna: volcano & hot springs." ,
+          "Waterfall hike & canopy zipline." ,
+          "Monteverde cloud forest — wildlife and hanging bridges." ,
+          "Travel to Nicoya Peninsula or Guanacaste beaches." ,
+          "Surfing or beach relaxation." ,
+          "Manuel Antonio national park wildlife & beaches." ,
+          "Corcovado (Osa Peninsula) or Tortuguero for turtles (seasonal)." ,
+          "Wildlife tours and boat rides." ,
+          "Coffee plantation visit & cultural experiences." ,
+          "Return to San José; markets." ,
+          "Depart." 
+        ]
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Brazil",
+    "category": "South America",
+    "image": "/images/packages/brazil.jpg",
+    "description": "Famous beaches, vibrant culture, and the majestic Iguazu Falls.",
+    "options": [
+      {
+        "id": "3d2n",
+        "duration": "2N / 3D",
+        "itinerary": [
+          "Arrive Rio — Copacabana beach & evening." ,
+          "Christ the Redeemer & Sugarloaf cable car." ,
+          "Tijuca forest or morning beach, depart." 
+        ]
+      },
+      {
+        "id": "6d5n",
+        "duration": "5N / 6D",
+        "itinerary": [
+          "Arrive Rio de Janeiro — Copacabana evening & local churrascaria." ,
+          "Christ the Redeemer & Sugarloaf (book combo for savings)." ,
+          "Lapa & Santa Teresa neighborhoods + Selarón Steps." ,
+          "Fly to Foz do Iguaçu (budget flight) — explore Brazilian side of falls." ,
+          "Argentine side of Iguazu (optional cheap cross-border bus)." ,
+          "Depart." 
+        ]
+      },
+      {
+        "id": "12d11n",
+        "duration": "11N / 12D",
+        "itinerary": [
+          "Arrive Rio — beaches & promenade." ,
+          "Christ the Redeemer & Sugarloaf." ,
+          "Explore Lapa & Santa Teresa neighborhoods." ,
+          "Fly to Foz do Iguaçu — Iguazu Falls." ,
+          "Explore both Argentine & Brazilian sides of falls." ,
+          "Fly to Salvador — Pelourinho & Afro-Brazilian culture." ,
+          "Beaches & cultural performances." ,
+          "Flight to Manaus — gateway to Amazon." ,
+          "Begin Amazon lodge/cruise — wildlife." ,
+          "Jungle walks & river excursions." ,
+          "Return to Manaus; city tour." ,
+          "Depart." 
+        ]
+      }
+    ]
+  }
+]

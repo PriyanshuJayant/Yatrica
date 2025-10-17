@@ -1,0 +1,307 @@
+.homePageContainer {
+  background-color: rgb(236, 236, 236);
+}
+
+.pageContainer {
+  margin: 0 10rem 0 10rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.FamilyHero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.47) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+  z-index: 1;
+  position: absolute;
+}
+
+/* ==================== PACKAGE PAGE STYLES ==================== */
+
+.loading {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+  background: white;
+  border-radius: 20px;
+}
+
+.packageSection {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* Hero Image & Header */
+.packageHeader {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.headerOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+  padding: 3rem;
+  color: white;
+}
+
+.categoryBadge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.packageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.packageDescription {
+  font-size: 18px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Options Container */
+.optionsContainer {
+  padding: 3rem;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 2rem;
+}
+
+/* Option Card */
+.optionCard {
+  background: #fafafa;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.optionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: rgb(158, 185, 233);
+}
+
+.optionCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.optionDuration {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.bookBtn {
+  padding: 10px 20px;
+  background: rgb(37, 110, 235);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 110, 235, 0.4);
+}
+
+/* Itinerary Section */
+.itinerarySection {
+  margin-top: 16px;
+}
+
+.itineraryTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px 0;
+}
+
+.itineraryList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itineraryItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: rgb(238, 238, 238);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.itineraryItem:hover {
+  background: #f3f4f6;
+  border-left-color: rgb(37, 110, 235);
+}
+
+.dayNumber {
+  font-weight: 600;
+  color: rgb(37, 110, 235);
+  font-size: 14px;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.dayDetails {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Call to Action Section */
+.ctaSection {
+  background: rgb(37, 110, 235);
+  padding: 4rem 3rem;
+  text-align: center;
+  color: white;
+}
+
+.ctaTitle {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  color: white;
+}
+
+.ctaSubtitle {
+  font-size: 18px;
+  margin: 0 0 24px 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaButton {
+  padding: 16px 40px;
+  background: white;
+  color: rgb(37, 110, 235);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .pageContainer {
+    margin: 0 5rem 0 5rem;
+  }
+  
+  .packageTitle {
+    font-size: 36px;
+  }
+  
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    margin: 0 1rem 0 1rem;
+    padding-top: 0.5rem;
+  }
+  
+  .packageHeader {
+    height: 350px;
+  }
+  
+  .headerOverlay {
+    padding: 2rem 1.5rem;
+  }
+  
+  .packageTitle {
+    font-size: 28px;
+  }
+  
+  .packageDescription {
+    font-size: 16px;
+  }
+  
+  .optionsContainer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+  
+  .ctaSection {
+    padding: 3rem 2rem;
+  }
+  
+  .ctaTitle {
+    font-size: 28px;
+  }
+}

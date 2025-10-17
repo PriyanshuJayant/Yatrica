@@ -8,8 +8,8 @@ import styles from "./Home.module.css";
 // -------------------- COMPONENT IMPORTS --------------------
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
-import BannerVideo from "../../components/BannerVideo/BannerVideo";
-import CardCouresel from "../../components/CardCarousel/CardCouresel";
+// import BannerVideo from "../../components/BannerVideo/BannerVideo";
+// import CardCouresel from "../../components/CardCarousel/CardCouresel";
 import { BannerComp } from "../../components/ui/BannerComp";
 import { Packages } from "../../components/ui/Packages";
 import Services from "../../components/Services/Services";
