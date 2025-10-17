@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "functions": {
     "api/sendEmail.js": {
       "memory": 1024,
