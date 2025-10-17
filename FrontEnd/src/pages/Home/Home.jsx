@@ -30,6 +30,7 @@ import HomeHero from "/videos/Hero.mp4";
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
 import CorporateJSON from "../../assets/data/corporate.json";
+import HoneyMoon from '../../assets/data/honeyMoon.json'
 
 // =====================================================
 //                     HOME COMPONENT
@@ -123,7 +124,7 @@ function Home() {
               buttonLink="/packages/honeymoon"
             />
             <div className={styles.ExpandableCard}>
-              <Packages src={budgetFriendlyJSON} />
+              <Packages src={HoneyMoon} />
             </div>
           </div>
 

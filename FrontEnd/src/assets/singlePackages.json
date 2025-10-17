@@ -9,40 +9,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 16800,
         "itinerary": [
-          "Arrive Bangkok — check in, evening street food & Khao San Road." ,
-          "Grand Palace, Wat Pho, boat ride on Chao Phraya; evening rooftop." ,
-          "Morning market/shopping, fly home or connect to Chiang Mai." 
+          "Arrive Bangkok — check in, evening street food & Khao San Road.",
+          "Grand Palace, Wat Pho, boat ride on Chao Phraya; evening rooftop.",
+          "Morning market/shopping, fly home or connect to Chiang Mai."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 28500,
         "itinerary": [
-          "Arrive Bangkok — check-in, evening street-food crawl in Chinatown." ,
-          "Grand Palace, Wat Pho, Chao Phraya ferry hop & local markets." ,
-          "Train/flight to Chiang Mai; explore Old City & night market." ,
-          "Day trip to Doi Suthep & local hill-tribe craft village." ,
-          "Cheap cooking class or market + free-time for shopping." ,
-          "Depart." 
+          "Arrive Bangkok — check-in, evening street-food crawl in Chinatown.",
+          "Grand Palace, Wat Pho, Chao Phraya ferry hop & local markets.",
+          "Train/flight to Chiang Mai; explore Old City & night market.",
+          "Day trip to Doi Suthep & local hill-tribe craft village.",
+          "Cheap cooking class or market + free-time for shopping.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 55400,
         "itinerary": [
-          "Arrive Bangkok — rest, night market." ,
-          "Grand Palace, Wat Pho, river cruise." ,
-          "Chatuchak/MBK shopping, evening flight to Chiang Mai." ,
-          "Chiang Mai old city temples & night bazaar." ,
-          "Elephant sanctuary day (ethical) or Doi Suthep trip." ,
-          "Fly to Phuket/Krabi — beach arrival." ,
-          "Phi Phi island day trip (boat + snorkeling)." ,
-          "Relax beach / optional rock-climbing in Railay." ,
-          "Travel to Khao Sok (lake/ jungle safari)." ,
-          "Canoe/kayak and jungle walk." ,
-          "Return to Bangkok; last-minute shopping." ,
-          "Depart." 
+          "Arrive Bangkok — rest, night market.",
+          "Grand Palace, Wat Pho, river cruise.",
+          "Chatuchak/MBK shopping, evening flight to Chiang Mai.",
+          "Chiang Mai old city temples & night bazaar.",
+          "Elephant sanctuary day (ethical) or Doi Suthep trip.",
+          "Fly to Phuket/Krabi — beach arrival.",
+          "Phi Phi island day trip (boat + snorkeling).",
+          "Relax beach / optional rock-climbing in Railay.",
+          "Travel to Khao Sok (lake/ jungle safari).",
+          "Canoe/kayak and jungle walk.",
+          "Return to Bangkok; last-minute shopping.",
+          "Depart."
         ]
       }
     ]
@@ -57,40 +60,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 19200,
         "itinerary": [
-          "Arrive Hanoi — Old Quarter walk, street food." ,
-          "Full day Halong Bay cruise (overnight optional) or city sightseeing." ,
-          "Morning museums/temples, depart." 
+          "Arrive Hanoi — Old Quarter walk, street food.",
+          "Full day Halong Bay cruise (overnight optional) or city sightseeing.",
+          "Morning museums/temples, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 37000,
         "itinerary": [
-          "Arrive Hanoi — Old Quarter walk, street-food dinner." ,
-          "Full-day Halong Bay budget cruise (shared)." ,
-          "Return to Hanoi; museums & train to Hoi An (overnight or flight)." ,
-          "Hoi An walking tour, tailor visit, beach time." ,
-          "Countryside bike ride & local cooking class." ,
-          "Depart." 
+          "Arrive Hanoi — Old Quarter walk, street-food dinner.",
+          "Full-day Halong Bay budget cruise (shared).",
+          "Return to Hanoi; museums & train to Hoi An (overnight or flight).",
+          "Hoi An walking tour, tailor visit, beach time.",
+          "Countryside bike ride & local cooking class.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 81000,
         "itinerary": [
-          "Arrive Hanoi — explore Old Quarter." ,
-          "Hanoi sights: Hoan Kiem Lake, Temple of Literature." ,
-          "Overnight/Day Halong Bay cruise." ,
-          "Return to Hanoi; fly to Hue." ,
-          "Hue: Imperial Citadel & Perfume River cruise." ,
-          "Drive to Hoi An via Hai Van Pass; stop at Marble Mountains." ,
-          "Hoi An walking tour, tailor visit, beach time." ,
-          "Cooking class and countryside bike ride." ,
-          "Fly to Da Nang then to Nha Trang — beach." ,
-          "Relax / island boat trip / snorkeling." ,
-          "Fly to Ho Chi Minh City, short city tour." ,
-          "Cu Chi tunnels half-day, depart." 
+          "Arrive Hanoi — explore Old Quarter.",
+          "Hanoi sights: Hoan Kiem Lake, Temple of Literature.",
+          "Overnight/Day Halong Bay cruise.",
+          "Return to Hanoi; fly to Hue.",
+          "Hue: Imperial Citadel & Perfume River cruise.",
+          "Drive to Hoi An via Hai Van Pass; stop at Marble Mountains.",
+          "Hoi An walking tour, tailor visit, beach time.",
+          "Cooking class and countryside bike ride.",
+          "Fly to Da Nang then to Nha Trang — beach.",
+          "Relax / island boat trip / snorkeling.",
+          "Fly to Ho Chi Minh City, short city tour.",
+          "Cu Chi tunnels half-day, depart."
         ]
       }
     ]
@@ -105,40 +111,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 12900,
         "itinerary": [
-          "Arrive Colombo — city quick tour, transfer to Negombo." ,
-          "Sigiriya rock or Galle Fort (choose north or south)." ,
-          "Morning beach or Colombo museums, depart." 
+          "Arrive Colombo — city quick tour, transfer to Negombo.",
+          "Sigiriya rock or Galle Fort (choose north or south).",
+          "Morning beach or Colombo museums, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 25700,
         "itinerary": [
-          "Arrive Colombo — transfer to Negombo, relax on beach." ,
-          "Train/drive to Sigiriya, visit Sigiriya Rock (budget entry)." ,
-          "Dambulla cave temples, transfer to Kandy, evening cultural show." ,
-          "Kandy: Temple of the Tooth, botanical gardens." ,
-          "Scenic train to Nuwara Eliya / tea-estate visit." ,
-          "Return to Colombo & depart." 
+          "Arrive Colombo — transfer to Negombo, relax on beach.",
+          "Train/drive to Sigiriya, visit Sigiriya Rock (budget entry).",
+          "Dambulla cave temples, transfer to Kandy, evening cultural show.",
+          "Kandy: Temple of the Tooth, botanical gardens.",
+          "Scenic train to Nuwara Eliya / tea-estate visit.",
+          "Return to Colombo & depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 51000,
         "itinerary": [
-          "Arrive Colombo — overnight." ,
-          "Colombo city tour; transfer to Sigiriya." ,
-          "Climb Sigiriya Rock; Dambulla cave temples." ,
-          "Kandy — Temple of Tooth, cultural show." ,
-          "Tea country: Nuwara Eliya, tea plantation visit." ,
-          "Ella: train ride through scenic hills." ,
-          "Yala National Park — afternoon safari." ,
-          "South coast — Mirissa/Unawatuna beaches." ,
-          "Whale watching (Mirissa) or beach day." ,
-          "Galle Fort & Dutch heritage tour." ,
-          "Return to Colombo; shopping." ,
-          "Depart." 
+          "Arrive Colombo — overnight.",
+          "Colombo city tour; transfer to Sigiriya.",
+          "Climb Sigiriya Rock; Dambulla cave temples.",
+          "Kandy — Temple of Tooth, cultural show.",
+          "Tea country: Nuwara Eliya, tea plantation visit.",
+          "Ella: train ride through scenic hills.",
+          "Yala National Park — afternoon safari.",
+          "South coast — Mirissa/Unawatuna beaches.",
+          "Whale watching (Mirissa) or beach day.",
+          "Galle Fort & Dutch heritage tour.",
+          "Return to Colombo; shopping.",
+          "Depart."
         ]
       }
     ]
@@ -153,40 +162,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 17100,
         "itinerary": [
-          "Arrive Luang Prabang — evening market & sunset at Mount Phousi." ,
-          "Kuang Si Falls and Pak Ou Caves boat trip." ,
-          "Morning alms ceremony viewing, depart." 
+          "Arrive Luang Prabang — evening market & sunset at Mount Phousi.",
+          "Kuang Si Falls and Pak Ou Caves boat trip.",
+          "Morning alms ceremony viewing, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 32100,
         "itinerary": [
-          "Arrive Luang Prabang — sunset on Mount Phousi & night market." ,
-          "Pak Ou Cave boat trip and riverside villages." ,
-          "Kuang Si Falls day trip and picnic." ,
-          "Morning alms-viewing, fly/drive to Vientiane; city stroll." ,
-          "Vientiane temples, Patuxai & local markets." ,
-          "Depart." 
+          "Arrive Luang Prabang — sunset on Mount Phousi & night market.",
+          "Pak Ou Cave boat trip and riverside villages.",
+          "Kuang Si Falls day trip and picnic.",
+          "Morning alms-viewing, fly/drive to Vientiane; city stroll.",
+          "Vientiane temples, Patuxai & local markets.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 713000,
         "itinerary": [
-          "Arrive Vientiane — Patuxai and temples." ,
-          "Fly to Luang Prabang; night market." ,
-          "Kuang Si Falls & bear rescue centre." ,
-          "Pak Ou Caves river cruise; local villages." ,
-          "Flight to Vang Vieng; blue lagoon and caves." ,
-          "Kayaking/zipline or hot air balloon (seasonal)." ,
-          "Return to Vientiane; slower day, temples." ,
-          "Southern Laos — Si Phan Don (4000 Islands) travel." ,
-          "Mekong island relaxation, dolphin spotting." ,
-          "Bike around islands; local life." ,
-          "Return to capital." ,
-          "Depart." 
+          "Arrive Vientiane — Patuxai and temples.",
+          "Fly to Luang Prabang; night market.",
+          "Kuang Si Falls & bear rescue centre.",
+          "Pak Ou Caves river cruise; local villages.",
+          "Flight to Vang Vieng; blue lagoon and caves.",
+          "Kayaking/zipline or hot air balloon (seasonal).",
+          "Return to Vientiane; slower day, temples.",
+          "Southern Laos — Si Phan Don (4000 Islands) travel.",
+          "Mekong island relaxation, dolphin spotting.",
+          "Bike around islands; local life.",
+          "Return to capital.",
+          "Depart."
         ]
       }
     ]
@@ -201,40 +213,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 20500,
         "itinerary": [
-          "Arrive Dubai — Dubai Mall & Burj Khalifa sunset." ,
-          "Old Dubai (Al Fahidi), abra ride, desert safari with BBQ." ,
-          "Palm Jumeirah / beach, depart." 
+          "Arrive Dubai — Dubai Mall & Burj Khalifa sunset.",
+          "Old Dubai (Al Fahidi), abra ride, desert safari with BBQ.",
+          "Palm Jumeirah / beach, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 45000,
         "itinerary": [
-          "Arrive Dubai — Dubai Mall & Burj Khalifa (book online for cheaper slots)." ,
-          "Old Dubai: Al Fahidi, abra across Dubai Creek, spice/souk markets." ,
-          "Desert safari (budget shared transfer)." ,
-          "Abu Dhabi day trip: Sheikh Zayed Mosque (budget coach tours available)." ,
-          "Jumeirah Beach + Marina walk; cheap eats at local food courts." ,
-          "Depart." 
+          "Arrive Dubai — Dubai Mall & Burj Khalifa (book online for cheaper slots).",
+          "Old Dubai: Al Fahidi, abra across Dubai Creek, spice/souk markets.",
+          "Desert safari (budget shared transfer).",
+          "Abu Dhabi day trip: Sheikh Zayed Mosque (budget coach tours available).",
+          "Jumeirah Beach + Marina walk; cheap eats at local food courts.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 91000,
         "itinerary": [
-          "Arrive Dubai — Dubai Mall + Burj Khalifa." ,
-          "Old Dubai: Al Fahidi, spice souk, dhow cruise dinner." ,
-          "Desert safari + dune bashing." ,
-          "Abu Dhabi day trip: Sheikh Zayed Grand Mosque & Louvre." ,
-          "Dubai Marina, JBR beach, Atlantis aquarium." ,
-          "Mall of the Emirates + indoor ski (if interested)." ,
-          "Day trip to Hatta mountains or Al Ain oasis." ,
-          "Leisure day for shopping or theme parks (IMG Worlds)." ,
-          "Ras Al Khaimah day trip or beach resort." ,
-          "Explore Etihad Museum and cultural sites." ,
-          "Marina sunset cruise & dining." ,
-          "Depart." 
+          "Arrive Dubai — Dubai Mall + Burj Khalifa.",
+          "Old Dubai: Al Fahidi, spice souk, dhow cruise dinner.",
+          "Desert safari + dune bashing.",
+          "Abu Dhabi day trip: Sheikh Zayed Grand Mosque & Louvre.",
+          "Dubai Marina, JBR beach, Atlantis aquarium.",
+          "Mall of the Emirates + indoor ski (if interested).",
+          "Day trip to Hatta mountains or Al Ain oasis.",
+          "Leisure day for shopping or theme parks (IMG Worlds).",
+          "Ras Al Khaimah day trip or beach resort.",
+          "Explore Etihad Museum and cultural sites.",
+          "Marina sunset cruise & dining.",
+          "Depart."
         ]
       }
     ]
@@ -249,40 +264,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 45000,
         "itinerary": [
-          "Arrive Nairobi — visit David Sheldrick Elephant Orphanage." ,
-          "Full-day Masai Mara safari (if possible, early flight)." ,
-          "Morning safari, return to Nairobi, depart." 
+          "Arrive Nairobi — visit David Sheldrick Elephant Orphanage.",
+          "Full-day Masai Mara safari (if possible, early flight).",
+          "Morning safari, return to Nairobi, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 91000,
         "itinerary": [
-          "Arrive Nairobi — Nairobi National Museum & local eateries." ,
-          "Early flight/drive to Masai Mara (budget camp or community lodge)." ,
-          "Full-day game drives in Masai Mara (shared jeep)." ,
-          "Cultural visit to Maasai village; evening return to lodge." ,
-          "Fly back to Nairobi; David Sheldrick Elephants / local markets." ,
-          "Depart." 
+          "Arrive Nairobi — Nairobi National Museum & local eateries.",
+          "Early flight/drive to Masai Mara (budget camp or community lodge).",
+          "Full-day game drives in Masai Mara (shared jeep).",
+          "Cultural visit to Maasai village; evening return to lodge.",
+          "Fly back to Nairobi; David Sheldrick Elephants / local markets.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 180000,
         "itinerary": [
-          "Arrive Nairobi — city sights." ,
-          "Fly to Masai Mara — afternoon game drive." ,
-          "Full day Masai Mara safari." ,
-          "Hot air balloon safari (optional) & community visit." ,
-          "Transfer to Lake Naivasha — boat ride, Crescent Island." ,
-          "Hell’s Gate National Park cycling & hiking." ,
-          "Lake Nakuru — flamingos & rhino reserve." ,
-          "Amboseli National Park — views of Kilimanjaro." ,
-          "Game drives in Amboseli." ,
-          "Return to Nairobi; shopping/relax." ,
-          "Nairobi museums / Karen Blixen house." ,
-          "Depart." 
+          "Arrive Nairobi — city sights.",
+          "Fly to Masai Mara — afternoon game drive.",
+          "Full day Masai Mara safari.",
+          "Hot air balloon safari (optional) & community visit.",
+          "Transfer to Lake Naivasha — boat ride, Crescent Island.",
+          "Hell’s Gate National Park cycling & hiking.",
+          "Lake Nakuru — flamingos & rhino reserve.",
+          "Amboseli National Park — views of Kilimanjaro.",
+          "Game drives in Amboseli.",
+          "Return to Nairobi; shopping/relax.",
+          "Nairobi museums / Karen Blixen house.",
+          "Depart."
         ]
       }
     ]
@@ -297,40 +315,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 32000,
         "itinerary": [
-          "Arrive Port Louis — beach time or hotel pool." ,
-          "North island tour: Grand Bay, Pamplemousses Botanical Garden." ,
-          "Catamaran cruise or Chamarel seven-coloured earth, depart." 
+          "Arrive Port Louis — beach time or hotel pool.",
+          "North island tour: Grand Bay, Pamplemousses Botanical Garden.",
+          "Catamaran cruise or Chamarel seven-coloured earth, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 61000,
         "itinerary": [
-          "Arrive Port Louis — local market & Pamplemousses Garden." ,
-          "North coast beaches and budget water activities." ,
-          "Catamaran day trip to Ile aux Cerfs (shared boat)." ,
-          "South excursion: Chamarel seven-colour earth & viewpoint." ,
-          "Leisure beach day or snorkeling with local operators." ,
-          "Depart." 
+          "Arrive Port Louis — local market & Pamplemousses Garden.",
+          "North coast beaches and budget water activities.",
+          "Catamaran day trip to Ile aux Cerfs (shared boat).",
+          "South excursion: Chamarel seven-colour earth & viewpoint.",
+          "Leisure beach day or snorkeling with local operators.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 120000,
         "itinerary": [
-          "Arrive; relax on beach." ,
-          "Port Louis market & Pamplemousses Garden." ,
-          "North coast beaches and water sports." ,
-          "Catamaran day trip to Ile aux Cerfs." ,
-          "South west: Chamarel, Black River Gorges hike." ,
-          "Leisure — spa or golf." ,
-          "Diving/snorkeling day trip." ,
-          "Cultural tour: tea plantations and local villages." ,
-          "Ile aux Aigrettes nature reserve visit." ,
-          "Sunset cruise and seafood dinner." ,
-          "Shopping & last beach day." ,
-          "Depart." 
+          "Arrive; relax on beach.",
+          "Port Louis market & Pamplemousses Garden.",
+          "North coast beaches and water sports.",
+          "Catamaran day trip to Ile aux Cerfs.",
+          "South west: Chamarel, Black River Gorges hike.",
+          "Leisure — spa or golf.",
+          "Diving/snorkeling day trip.",
+          "Cultural tour: tea plantations and local villages.",
+          "Ile aux Aigrettes nature reserve visit.",
+          "Sunset cruise and seafood dinner.",
+          "Shopping & last beach day.",
+          "Depart."
         ]
       }
     ]
@@ -345,40 +366,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 19000,
         "itinerary": [
-          "Arrive Denpasar — Uluwatu temple sunset & Kecak dance." ,
-          "Ubud: rice terraces, Monkey Forest, local arts." ,
-          "Beach morning, depart." 
+          "Arrive Denpasar — Uluwatu temple sunset & Kecak dance.",
+          "Ubud: rice terraces, Monkey Forest, local arts.",
+          "Beach morning, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 42000,
         "itinerary": [
-          "Arrive Denpasar — Seminyak/Kuta beach evening." ,
-          "Uluwatu temple at sunset + local warung dinner." ,
-          "Transfer to Ubud: Monkey Forest & market." ,
-          "Tegallalang rice terraces & coffee tasting (budget tour)." ,
-          "Mount Batur sunrise trek (group tour) or beach day." ,
-          "Depart." 
+          "Arrive Denpasar — Seminyak/Kuta beach evening.",
+          "Uluwatu temple at sunset + local warung dinner.",
+          "Transfer to Ubud: Monkey Forest & market.",
+          "Tegallalang rice terraces & coffee tasting (budget tour).",
+          "Mount Batur sunrise trek (group tour) or beach day.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 80000,
         "itinerary": [
-          "Arrive Bali — Seminyak/ Kuta beach." ,
-          "Uluwatu temple & beaches." ,
-          "Transfer to Ubud; market & Monkey Forest." ,
-          "Tegallalang rice terraces & coffee tasting." ,
-          "Mount Batur sunrise trek." ,
-          "East Bali exploration: Tirta Empul & waterfalls." ,
-          "Nusa Penida day trip for Kelingking & snorkeling." ,
-          "Relax on Nusa Lembongan / snorkeling." ,
-          "South coast water activities or spa day." ,
-          "Cultural show & cooking class in Ubud." ,
-          "Last beach day / shopping." ,
-          "Depart." 
+          "Arrive Bali — Seminyak/ Kuta beach.",
+          "Uluwatu temple & beaches.",
+          "Transfer to Ubud; market & Monkey Forest.",
+          "Tegallalang rice terraces & coffee tasting.",
+          "Mount Batur sunrise trek.",
+          "East Bali exploration: Tirta Empul & waterfalls.",
+          "Nusa Penida day trip for Kelingking & snorkeling.",
+          "Relax on Nusa Lembongan / snorkeling.",
+          "South coast water activities or spa day.",
+          "Cultural show & cooking class in Ubud.",
+          "Last beach day / shopping.",
+          "Depart."
         ]
       }
     ]
@@ -393,40 +417,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 59000,
         "itinerary": [
-          "Arrive Paris — Eiffel Tower & Seine evening cruise." ,
-          "Louvre, Notre Dame, Montmartre." ,
-          "Morning stroll, depart or train to next city." 
+          "Arrive Paris — Eiffel Tower & Seine evening cruise.",
+          "Louvre, Notre Dame, Montmartre.",
+          "Morning stroll, depart or train to next city."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 110000,
         "itinerary": [
-          "Arrive Paris — Seine riverside walk & free viewpoint at Trocadéro." ,
-          "Louvre (book in advance), Île de la Cité and Notre-Dame exterior." ,
-          "Montmartre, Sacré-Cœur, stroll in Le Marais." ,
-          "Day trip to Versailles (regional train)." ,
-          "Musee d’Orsay or free parks + local boulangeries." ,
-          "Depart." 
+          "Arrive Paris — Seine riverside walk & free viewpoint at Trocadéro.",
+          "Louvre (book in advance), Île de la Cité and Notre-Dame exterior.",
+          "Montmartre, Sacré-Cœur, stroll in Le Marais.",
+          "Day trip to Versailles (regional train).",
+          "Musee d’Orsay or free parks + local boulangeries.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 250000,
         "itinerary": [
-          "Arrive Paris — Eiffel Tower." ,
-          "Louvre & Ile de la Cité." ,
-          "Montmartre & shopping." ,
-          "Day trip to Versailles." ,
-          "Train to Loire Valley — chateau tour." ,
-          "More chateau visits & wine tasting." ,
-          "Train to Avignon/Provence — explore markets." ,
-          "Lavender fields (seasonal) & hill towns." ,
-          "Travel to Nice / French Riviera — beach." ,
-          "Day trip to Monaco & Eze." ,
-          "Relax in Nice; Old Town." ,
-          "Depart." 
+          "Arrive Paris — Eiffel Tower.",
+          "Louvre & Ile de la Cité.",
+          "Montmartre & shopping.",
+          "Day trip to Versailles.",
+          "Train to Loire Valley — chateau tour.",
+          "More chateau visits & wine tasting.",
+          "Train to Avignon/Provence — explore markets.",
+          "Lavender fields (seasonal) & hill towns.",
+          "Travel to Nice / French Riviera — beach.",
+          "Day trip to Monaco & Eze.",
+          "Relax in Nice; Old Town.",
+          "Depart."
         ]
       }
     ]
@@ -441,40 +468,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 51000,
         "itinerary": [
-          "Arrive Barcelona — La Rambla & Gothic Quarter." ,
-          "Sagrada Familia, Park Güell; beach sunset." ,
-          "Morning markets, depart." 
+          "Arrive Barcelona — La Rambla & Gothic Quarter.",
+          "Sagrada Familia, Park Güell; beach sunset.",
+          "Morning markets, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 110000,
         "itinerary": [
-          "Arrive Barcelona — La Rambla & Gothic Quarter." ,
-          "Sagrada Familia (advance tickets), Park Güell (free areas)." ,
-          "Beach time + local tapas crawl in evening." ,
-          "Train to Madrid (budget AVE deals) — Plaza Mayor & Retiro Park." ,
-          "Prado museum or day trip to Toledo (cheap regional train)." ,
-          "Depart." 
+          "Arrive Barcelona — La Rambla & Gothic Quarter.",
+          "Sagrada Familia (advance tickets), Park Güell (free areas).",
+          "Beach time + local tapas crawl in evening.",
+          "Train to Madrid (budget AVE deals) — Plaza Mayor & Retiro Park.",
+          "Prado museum or day trip to Toledo (cheap regional train).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 250000,
         "itinerary": [
-          "Arrive Madrid — Prado & Plaza Mayor." ,
-          "Royal Palace & Retiro Park." ,
-          "Train to Seville — evening flamenco." ,
-          "Seville sights: Alcázar & cathedral." ,
-          "Córdoba day trip (Mezquita)." ,
-          "Granada — Alhambra visit." ,
-          "Train to Valencia — City of Arts & beaches." ,
-          "Valencia paella + market." ,
-          "Barcelona arrival; Gothic Quarter." ,
-          "Sagrada Familia & Park Güell." ,
-          "Beach or Montserrat day trip." ,
-          "Depart." 
+          "Arrive Madrid — Prado & Plaza Mayor.",
+          "Royal Palace & Retiro Park.",
+          "Train to Seville — evening flamenco.",
+          "Seville sights: Alcázar & cathedral.",
+          "Córdoba day trip (Mezquita).",
+          "Granada — Alhambra visit.",
+          "Train to Valencia — City of Arts & beaches.",
+          "Valencia paella + market.",
+          "Barcelona arrival; Gothic Quarter.",
+          "Sagrada Familia & Park Güell.",
+          "Beach or Montserrat day trip.",
+          "Depart."
         ]
       }
     ]
@@ -489,40 +519,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 150000,
         "itinerary": [
-          "Arrive New York — Times Square at night." ,
-          "Statue of Liberty, 9/11 Memorial, Central Park." ,
-          "Morning museum or shopping, depart." 
+          "Arrive New York — Times Square at night.",
+          "Statue of Liberty, 9/11 Memorial, Central Park.",
+          "Morning museum or shopping, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 230000,
         "itinerary": [
-          "Arrive New York — Times Square & free walking tour." ,
-          "Statue of Liberty ferry (budget option) & 9/11 Memorial." ,
-          "Museums or Brooklyn Bridge + DUMBO." ,
-          "Fly to Washington DC (budget carrier) — National Mall & free museums." ,
-          "Day trip to Mount Vernon or local markets." ,
-          "Depart." 
+          "Arrive New York — Times Square & free walking tour.",
+          "Statue of Liberty ferry (budget option) & 9/11 Memorial.",
+          "Museums or Brooklyn Bridge + DUMBO.",
+          "Fly to Washington DC (budget carrier) — National Mall & free museums.",
+          "Day trip to Mount Vernon or local markets.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 390000,
         "itinerary": [
-          "Arrive New York — Manhattan highlights." ,
-          "Museums, Brooklyn walk." ,
-          "Fly to Washington DC — monuments & museums." ,
-          "DC tour, evening flight to Orlando or Miami." ,
-          "Orlando theme parks or Miami beaches." ,
-          "Fly to Las Vegas — evening strip." ,
-          "Grand Canyon day trip." ,
-          "Fly to Los Angeles — Hollywood & Santa Monica." ,
-          "LA beaches & Getty museum." ,
-          "San Francisco flight/drive; Golden Gate & Fisherman’s Wharf." ,
-          "Alcatraz or Napa day trip." ,
-          "Depart." 
+          "Arrive New York — Manhattan highlights.",
+          "Museums, Brooklyn walk.",
+          "Fly to Washington DC — monuments & museums.",
+          "DC tour, evening flight to Orlando or Miami.",
+          "Orlando theme parks or Miami beaches.",
+          "Fly to Las Vegas — evening strip.",
+          "Grand Canyon day trip.",
+          "Fly to Los Angeles — Hollywood & Santa Monica.",
+          "LA beaches & Getty museum.",
+          "San Francisco flight/drive; Golden Gate & Fisherman’s Wharf.",
+          "Alcatraz or Napa day trip.",
+          "Depart."
         ]
       }
     ]
@@ -537,40 +570,42 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 36000,
         "itinerary": [
-          "Arrive Istanbul — Sultanahmet area, evening stroll." ,
-          "Hagia Sophia, Blue Mosque, Topkapi Palace, Grand Bazaar." ,
-          "Bosphorus cruise, depart." 
+          "Arrive Istanbul — Sultanahmet area, evening stroll.",
+          "Hagia Sophia, Blue Mosque, Topkapi Palace, Grand Bazaar.",
+          "Bosphorus cruise, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 65000,
         "itinerary": [
-          "Arrive Istanbul — Sultanahmet stroll & cheap kebab dinner." ,
-          "Hagia Sophia, Blue Mosque, Topkapi Palace exterior + Grand Bazaar." ,
-          "Bosphorus ferry ride (public ferry) & Spice Bazaar." ,
-          "Flight to Cappadocia (budget flight) — sunset viewpoints." ,
-          "Explore Goreme open-air museum & valleys (shared tour)." ,
-          "Depart." 
+          "Arrive Istanbul — Sultanahmet stroll & cheap kebab dinner.",
+          "Hagia Sophia, Blue Mosque, Topkapi Palace exterior + Grand Bazaar.",
+          "Bosphorus ferry ride (public ferry) & Spice Bazaar.",
+          "Flight to Cappadocia (budget flight) — sunset viewpoints.",
+          "Explore Goreme open-air museum & valleys (shared tour).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 120000,
         "itinerary": [
-          "Arrive Istanbul — mix of Asian & European sides." ,
-          "Historic Istanbul deep dive." ,
-          "Spice Bazaar & Bosphorus ferry cruise." ,
-          "Fly to Cappadocia — sunset viewpoints." ,
-          "Hot air balloon & Goreme open-air museum." ,
-          "Underground cities & valleys hike." ,
-          "Fly to Izmir; drive to Ephesus ancient city." ,
-          "Pamukkale travertines & thermal pools." ,
-          "Antalya/Turkish Riviera beach time." ,
-          "Leisure in Antalya; old town." ,
-          "Return to Istanbul." ,
-          "Depart." 
+          "Arrive Istanbul — mix of Asian & European sides.",
+          "Historic Istanbul deep dive.",
+          "Spice Bazaar & Bosphorus ferry cruise.",
+          "Fly to Cappadocia — sunset viewpoints.",
+          "Hot air balloon & Goreme open-air museum.",
+          "Underground cities & valleys hike.",
+          "Fly to Izmir; drive to Ephesus ancient city.",
+          "Pamukkale travertines & thermal pools.",
+          "Antalya/Turkish Riviera beach time.",
+          "Leisure in Antalya; old town.",
+          "Return to Istanbul."
         ]
       }
     ]
@@ -585,40 +620,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 37000,
         "itinerary": [
-          "Arrive Moscow — Red Square at night." ,
-          "Kremlin, St. Basil’s, GUM, Bolshoi (optional)." ,
-          "Metro tour, depart." 
+          "Arrive Moscow — Red Square at night.",
+          "Kremlin, St. Basil’s, GUM, Bolshoi (optional).",
+          "Metro tour, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 72000,
         "itinerary": [
-          "Arrive Moscow — Red Square & evening walk." ,
-          "Kremlin & Armoury Museum (prebook combo)." ,
-          "Metro tour + train to St. Petersburg (overnight or cheap flight)." ,
-          "Hermitage & Palace Square (book timed entry)." ,
-          "Peterhof gardens excursion (budget ferry or train)." ,
-          "Depart." 
+          "Arrive Moscow — Red Square & evening walk.",
+          "Kremlin & Armoury Museum (prebook combo).",
+          "Metro tour + train to St. Petersburg (overnight or cheap flight).",
+          "Hermitage & Palace Square (book timed entry).",
+          "Peterhof gardens excursion (budget ferry or train).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 150000,
         "itinerary": [
-          "Arrive Moscow — Red Square." ,
-          "Kremlin & Armory museum." ,
-          "St. Basil’s & cultural evening." ,
-          "Train to St. Petersburg (overnight train optional)." ,
-          "Hermitage & Palace Square." ,
-          "Peterhof gardens day." ,
-          "Church of the Savior on Spilled Blood & canals." ,
-          "Pushkin (Catherine Palace) day trip." ,
-          "Local markets and river cruise." ,
-          "Explore arts districts & theaters." ,
-          "Return to Moscow or extra regional visit." ,
-          "Depart." 
+          "Arrive Moscow — Red Square.",
+          "Kremlin & Armory museum.",
+          "St. Basil’s & cultural evening.",
+          "Train to St. Petersburg (overnight train optional).",
+          "Hermitage & Palace Square.",
+          "Peterhof gardens day.",
+          "Church of the Savior on Spilled Blood & canals.",
+          "Pushkin (Catherine Palace) day trip.",
+          "Local markets and river cruise.",
+          "Explore arts districts & theaters.",
+          "Return to Moscow or extra regional visit.",
+          "Depart."
         ]
       }
     ]
@@ -633,40 +671,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 18000,
         "itinerary": [
-          "Arrive Siem Reap — evening markets." ,
-          "Sunrise at Angkor Wat; Angkor Thom & Ta Prohm." ,
-          "Tonle Sap lake boat trip, depart." 
+          "Arrive Siem Reap — evening markets.",
+          "Sunrise at Angkor Wat; Angkor Thom & Ta Prohm.",
+          "Tonle Sap lake boat trip, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 35000,
         "itinerary": [
-          "Arrive Siem Reap — night market & local dinner." ,
-          "Sunrise at Angkor Wat; Angkor Thom & Ta Prohm." ,
-          "Full temple circuit or countryside bicycle tour." ,
-          "Tonle Sap floating village boat trip (shared)." ,
-          "Relax, local craft workshops & markets." ,
-          "Depart." 
+          "Arrive Siem Reap — night market & local dinner.",
+          "Sunrise at Angkor Wat; Angkor Thom & Ta Prohm.",
+          "Full temple circuit or countryside bicycle tour.",
+          "Tonle Sap floating village boat trip (shared).",
+          "Relax, local craft workshops & markets.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 79000,
         "itinerary": [
-          "Arrive Phnom Penh — Royal Palace & waterfront." ,
-          "Genocide museums (sensitive) & markets; fly to Siem Reap." ,
-          "Angkor Wat sunrise & main temples." ,
-          "More temple circuit (Ta Prohm, Bayon)." ,
-          "Explore countryside & local villages." ,
-          "Kulen Mountain waterfall day." ,
-          "Tonle Sap cruise & floating village." ,
-          "Leisure / crafts and markets." ,
-          "Southern coast option: Kep & Kampot pepper farms." ,
-          "Bokor National Park & coast." ,
-          "Return to Phnom Penh." ,
-          "Depart." 
+          "Arrive Phnom Penh — Royal Palace & waterfront.",
+          "Genocide museums (sensitive) & markets; fly to Siem Reap.",
+          "Angkor Wat sunrise & main temples.",
+          "More temple circuit (Ta Prohm, Bayon).",
+          "Explore countryside & local villages.",
+          "Kulen Mountain waterfall day.",
+          "Tonle Sap cruise & floating village.",
+          "Leisure / crafts and markets.",
+          "Southern coast option: Kep & Kampot pepper farms.",
+          "Bokor National Park & coast.",
+          "Return to Phnom Penh.",
+          "Depart."
         ]
       }
     ]
@@ -681,40 +722,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 75000,
         "itinerary": [
-          "Arrive Mexico City — Zócalo & evening tacos." ,
-          "Teotihuacan pyramids & Frida Kahlo Museum." ,
-          "Chapultepec park/museum, depart." 
+          "Arrive Mexico City — Zócalo & evening tacos.",
+          "Teotihuacan pyramids & Frida Kahlo Museum.",
+          "Chapultepec park/museum, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 180000,
         "itinerary": [
-          "Arrive Mexico City — Zócalo & street tacos." ,
-          "Teotihuacan day trip (shared tour) & Museo Frida (book ahead)." ,
-          "Fly to Cancún / Tulum (budget flight) — beach time." ,
-          "Tulum ruins + cenote swim (local colectivos/cheap tours)." ,
-          "Snorkeling in Cozumel or Playa del Carmen." ,
-          "Depart." 
+          "Arrive Mexico City — Zócalo & street tacos.",
+          "Teotihuacan day trip (shared tour) & Museo Frida (book ahead).",
+          "Fly to Cancún / Tulum (budget flight) — beach time.",
+          "Tulum ruins + cenote swim (local colectivos/cheap tours).",
+          "Snorkeling in Cozumel or Playa del Carmen.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 350000,
         "itinerary": [
-          "Arrive Mexico City — historic centre." ,
-          "Museums & Xochimilco canals." ,
-          "Day trip to Teotihuacan." ,
-          "Fly to Mérida/Península Yucatán; explore colonial town." ,
-          "Chichén Itzá early visit; cenote swim." ,
-          "Valladolid & local markets." ,
-          "Tulum beaches & ruins." ,
-          "Coba ruins & jungle exploration." ,
-          "Cozumel/Playa del Carmen snorkeling/diving." ,
-          "Relax at beach/resort." ,
-          "Return to Mexico City for last shopping." ,
-          "Depart." 
+          "Arrive Mexico City — historic centre.",
+          "Museums & Xochimilco canals.",
+          "Day trip to Teotihuacan.",
+          "Fly to Mérida/Península Yucatán; explore colonial town.",
+          "Chichén Itzá early visit; cenote swim.",
+          "Valladolid & local markets.",
+          "Tulum beaches & ruins.",
+          "Coba ruins & jungle exploration.",
+          "Cozumel/Playa del Carmen snorkeling/diving.",
+          "Relax at beach/resort.",
+          "Return to Mexico City for last shopping.",
+          "Depart."
         ]
       }
     ]
@@ -729,40 +773,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 45000,
         "itinerary": [
-          "Arrive Tokyo — Shibuya crossing & evening." ,
-          "Asakusa & Senso-ji, Meiji Shrine, Shinjuku sunset." ,
-          "Morning fish market or shopping; depart." 
+          "Arrive Tokyo — Shibuya crossing & evening.",
+          "Asakusa & Senso-ji, Meiji Shrine, Shinjuku sunset.",
+          "Morning fish market or shopping; depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 92000,
         "itinerary": [
-          "Arrive Tokyo — Shinjuku evening & small-plate dinner." ,
-          "Asakusa & Senso-ji, Ueno Park museums (many discount mornings)." ,
-          "Day trip to Nikko or Hakone (budget express)." ,
-          "Shinkansen to Kyoto — Gion and evening stroll." ,
-          "Fushimi Inari & Arashiyama bamboo grove (budget bus)." ,
-          "Depart." 
+          "Arrive Tokyo — Shinjuku evening & small-plate dinner.",
+          "Asakusa & Senso-ji, Ueno Park museums (many discount mornings).",
+          "Day trip to Nikko or Hakone (budget express).",
+          "Shinkansen to Kyoto — Gion and evening stroll.",
+          "Fushimi Inari & Arashiyama bamboo grove (budget bus).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 180000,
         "itinerary": [
-          "Arrive Tokyo — explore neighborhoods (Shibuya/Shinjuku)." ,
-          "Asakusa, Tokyo Skytree, Ueno museums." ,
-          "Day trip to Nikko or Mt. Fuji area." ,
-          "Shinkansen to Kyoto — Gion & evening." ,
-          "Fushimi Inari, Kiyomizu-dera & Arashiyama bamboo." ,
-          "Nara day trip (Todai-ji & deer park)." ,
-          "Osaka — food tour & Dotonbori." ,
-          "Himeji Castle day trip." ,
-          "Hiroshima & Miyajima island visit." ,
-          "Return to Tokyo or explore northern region." ,
-          "Shopping & cultural experiences." ,
-          "Depart." 
+          "Arrive Tokyo — explore neighborhoods (Shibuya/Shinjuku).",
+          "Asakusa, Tokyo Skytree, Ueno museums.",
+          "Day trip to Nikko or Mt. Fuji area.",
+          "Shinkansen to Kyoto — Gion & evening.",
+          "Fushimi Inari, Kiyomizu-dera & Arashiyama bamboo.",
+          "Nara day trip (Todai-ji & deer park).",
+          "Osaka — food tour & Dotonbori.",
+          "Himeji Castle day trip.",
+          "Hiroshima & Miyajima island visit.",
+          "Return to Tokyo or explore northern region.",
+          "Shopping & cultural experiences.",
+          "Depart."
         ]
       }
     ]
@@ -777,40 +824,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 69000,
         "itinerary": [
-          "Arrive Athens — Plaka & evening views of Acropolis." ,
-          "Acropolis, Acropolis museum, Monastiraki." ,
-          "Morning seaside or fly to Santorini, depart." 
+          "Arrive Athens — Plaka & evening views of Acropolis.",
+          "Acropolis, Acropolis museum, Monastiraki.",
+          "Morning seaside or fly to Santorini, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 120000,
         "itinerary": [
-          "Arrive Athens — Plaka & Acropolis viewpoint at sunset." ,
-          "Acropolis & Acropolis Museum (combo ticket)." ,
-          "Ferry to Mykonos or Santorini (budget ferry if off-season)." ,
-          "Island exploration: beaches & local tavernas." ,
-          "Optional day trip to nearby island or relax." ,
-          "Depart." 
+          "Arrive Athens — Plaka & Acropolis viewpoint at sunset.",
+          "Acropolis & Acropolis Museum (combo ticket).",
+          "Ferry to Mykonos or Santorini (budget ferry if off-season).",
+          "Island exploration: beaches & local tavernas.",
+          "Optional day trip to nearby island or relax.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 250000,
         "itinerary": [
-          "Arrive Athens — Acropolis at sunset." ,
-          "Full Athens city tour." ,
-          "Ferry to Mykonos — beaches & nightlife." ,
-          "Mykonos relaxation & island tour." ,
-          "Ferry to Santorini — Oia sunset." ,
-          "Santorini tour, wine tasting." ,
-          "Boat day / caldera cruise." ,
-          "Santorini leisure / black sand beaches." ,
-          "Optional Naxos or Paros day trips." ,
-          "Return to Athens; islands wrap-up." ,
-          "Day trip to Delphi or Sounion." ,
-          "Depart." 
+          "Arrive Athens — Acropolis at sunset.",
+          "Full Athens city tour.",
+          "Ferry to Mykonos — beaches & nightlife.",
+          "Mykonos relaxation & island tour.",
+          "Ferry to Santorini — Oia sunset.",
+          "Santorini tour, wine tasting.",
+          "Boat day / caldera cruise.",
+          "Santorini leisure / black sand beaches.",
+          "Optional Naxos or Paros day trips.",
+          "Return to Athens; islands wrap-up.",
+          "Day trip to Delphi or Sounion.",
+          "Depart."
         ]
       }
     ]
@@ -825,40 +875,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 167000,
         "itinerary": [
-          "Arrive Sydney — Opera House & Harbour Bridge." ,
-          "Bondi to Coogee coastal walk; evening The Rocks." ,
-          "Taronga Zoo or Blue Mountains day trip, depart." 
+          "Arrive Sydney — Opera House & Harbour Bridge.",
+          "Bondi to Coogee coastal walk; evening The Rocks.",
+          "Taronga Zoo or Blue Mountains day trip, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 220000,
         "itinerary": [
-          "Arrive Sydney — Opera House & harbour walk." ,
-          "Bondi to Coogee coastal walk & beaches." ,
-          "Blue Mountains day trip (public transport & walking)." ,
-          "Fly to Melbourne (budget carrier) — laneways & street art." ,
-          "Great Ocean Road short section day trip (budget coach)." ,
-          "Depart." 
+          "Arrive Sydney — Opera House & harbour walk.",
+          "Bondi to Coogee coastal walk & beaches.",
+          "Blue Mountains day trip (public transport & walking).",
+          "Fly to Melbourne (budget carrier) — laneways & street art.",
+          "Great Ocean Road short section day trip (budget coach).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 410000,
         "itinerary": [
-          "Arrive Sydney — harbour highlights." ,
-          "Blue Mountains day trip." ,
-          "Fly to Melbourne — laneways & cafes." ,
-          "Great Ocean Road day trip." ,
-          "Melbourne arts & shopping." ,
-          "Fly to Cairns — reef gateway." ,
-          "Great Barrier Reef snorkeling/diving." ,
-          "Daintree Rainforest & Cape Tribulation." ,
-          "Cairns leisure or Kuranda trip." ,
-          "Fly to Canberra or Adelaide (optional wine regions)." ,
-          "Regional exploration (Barossa or Hunter Valley)." ,
-          "Depart." 
+          "Arrive Sydney — harbour highlights.",
+          "Blue Mountains day trip.",
+          "Fly to Melbourne — laneways & cafes.",
+          "Great Ocean Road day trip.",
+          "Melbourne arts & shopping.",
+          "Fly to Cairns — reef gateway.",
+          "Great Barrier Reef snorkeling/diving.",
+          "Daintree Rainforest & Cape Tribulation.",
+          "Cairns leisure or Kuranda trip.",
+          "Fly to Canberra or Adelaide (optional wine regions).",
+          "Regional exploration (Barossa or Hunter Valley).",
+          "Depart."
         ]
       }
     ]
@@ -873,40 +926,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 76000,
         "itinerary": [
-          "Arrive Zurich — Bahnhofstrasse & old town." ,
-          "Day trip to Lucerne & Mt Pilatus or Rigi." ,
-          "Scenic train to Interlaken or depart." 
+          "Arrive Zurich — Bahnhofstrasse & old town.",
+          "Day trip to Lucerne & Mt Pilatus or Rigi.",
+          "Scenic train to Interlaken or depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 150000,
         "itinerary": [
-          "Arrive Zurich — old town stroll & lakefront." ,
-          "Train to Lucerne — Chapel Bridge & lakeside." ,
-          "Day trip to Mt. Pilatus or Rigi (look for saver passes)." ,
-          "Travel to Interlaken — scenic walks & budget activities." ,
-          "Jungfrau region day trip using regional passes (plan saver fares)." ,
-          "Depart." 
+          "Arrive Zurich — old town stroll & lakefront.",
+          "Train to Lucerne — Chapel Bridge & lakeside.",
+          "Day trip to Mt. Pilatus or Rigi (look for saver passes).",
+          "Travel to Interlaken — scenic walks & budget activities.",
+          "Jungfrau region day trip using regional passes (plan saver fares).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 320000,
         "itinerary": [
-          "Arrive Zurich — city stroll." ,
-          "Zurich to Lucerne; Chapel Bridge." ,
-          "Train to Interlaken; lakeside." ,
-          "Jungfrau region — Lauterbrunnen & Mürren." ,
-          "Grindelwald & alpine activities." ,
-          "Zermatt & Matterhorn views." ,
-          "Glacier Express scenic train to St. Moritz." ,
-          "Bernina pass & Engadin valleys." ,
-          "Geneva — lake & UN." ,
-          "Montreux & Chillon Castle." ,
-          "Wine region (Lavaux terraces)." ,
-          "Depart." 
+          "Arrive Zurich — city stroll.",
+          "Zurich to Lucerne; Chapel Bridge.",
+          "Train to Interlaken; lakeside.",
+          "Jungfrau region — Lauterbrunnen & Mürren.",
+          "Grindelwald & alpine activities.",
+          "Zermatt & Matterhorn views.",
+          "Glacier Express scenic train to St. Moritz.",
+          "Bernina pass & Engadin valleys.",
+          "Geneva — lake & UN.",
+          "Montreux & Chillon Castle.",
+          "Wine region (Lavaux terraces).",
+          "Depart."
         ]
       }
     ]
@@ -921,40 +977,40 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 91000,
         "itinerary": [
-          "Arrive Oslo — Opera House & waterfront." ,
-          "Day fjord cruise or Vigeland Park & museums." ,
-          "Morning museums, depart." 
+          "Arrive Oslo — Opera House & waterfront.",
+          "Day fjord cruise or Vigeland Park & museums.",
+          "Morning museums, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 180000,
         "itinerary": [
-          "Arrive Oslo — waterfront & Vigeland Park." ,
-          "Oslo museums (choose 1–2) and ferry rides." ,
-          "Train/flight to Bergen — Bryggen & harbour walk." ,
-          "Fjord cruise day (book economy/shared options)." ,
-          "Flåm Railway short scenic stretch & village walk." ,
-          "Depart." 
+          "Arrive Oslo — waterfront & Vigeland Park.",
+          "Oslo museums (choose 1–2) and ferry rides.",
+          "Train/flight to Bergen — Bryggen & harbour walk.",
+          "Fjord cruise day (book economy/shared options).",
+          "Flåm Railway short scenic stretch & village walk.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 350000,
         "itinerary": [
-          "Arrive Oslo — city sights." ,
-          "Oslo museums and harbour." ,
-          "Train/flight to Bergen; Bryggen." ,
-          "Fjord cruise (Nærøyfjord) & scenic drives." ,
-          "Flåm Railway & mountain vistas." ,
-          "Ålesund & Geirangerfjord area." ,
-          "Drive coastal Atlantic Road." ,
-          "Trondheim historic sites." ,
-          "Tromsø (optional) for northern lights (seasonal)." ,
-          "Arctic cultural experiences (north)." ,
-          "Return to Oslo." ,
-          "Depart." 
+          "Arrive Oslo — city sights.",
+          "Oslo museums and harbour.",
+          "Train/flight to Bergen; Bryggen.",
+          "Fjord cruise (Nærøyfjord) & scenic drives.",
+          "Flåm Railway & mountain vistas.",
+          "Ålesund & Geirangerfjord area.",
+          "Drive coastal Atlantic Road.",
+          "Trondheim historic sites.",
+          "Tromsø (optional) for northern lights (seasonal)."
         ]
       }
     ]
@@ -969,40 +1025,40 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 25000,
         "itinerary": [
-          "Arrive Cairo — Khan el-Khalili market." ,
-          "Pyramids of Giza & Egyptian Museum." ,
-          "Islamic Cairo or fly to Luxor, depart." 
+          "Arrive Cairo — Khan el-Khalili market.",
+          "Pyramids of Giza & Egyptian Museum.",
+          "Islamic Cairo or fly to Luxor, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 53000,
         "itinerary": [
-          "Arrive Cairo — Khan el-Khalili market & street eats." ,
-          "Giza Pyramids & Sphinx (shared tour)." ,
-          "Egyptian Museum & Coptic Cairo half-day." ,
-          "Fly to Luxor — East Bank temples." ,
-          "West Bank: Valley of the Kings (budget guided group)." ,
-          "Return to Cairo & depart." 
+          "Arrive Cairo — Khan el-Khalili market & street eats.",
+          "Giza Pyramids & Sphinx (shared tour).",
+          "Egyptian Museum & Coptic Cairo half-day.",
+          "Fly to Luxor — East Bank temples.",
+          "West Bank: Valley of the Kings (budget guided group).",
+          "Return to Cairo & depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 140000,
         "itinerary": [
-          "Arrive Cairo — pyramids at sunset." ,
-          "Pyramids & Sphinx, museum." ,
-          "Fly to Luxor — East Bank temples." ,
-          "Luxor West Bank (Valley of the Kings)." ,
-          "Begin Nile cruise to Aswan — temples along way." ,
-          "Aswan: Philae Temple & Nubian village." ,
-          "Abu Simbel day trip (from Aswan)." ,
-          "Nile cruise leisure; free exploration." ,
-          "Return to Cairo; Coptic Cairo." ,
-          "Alexandria day trip (Roman amphitheatre)." ,
-          "Markets & final sightseeing." ,
-          "Depart." 
+          "Arrive Cairo — pyramids at sunset.",
+          "Pyramids & Sphinx, museum.",
+          "Fly to Luxor — East Bank temples.",
+          "Luxor West Bank (Valley of the Kings).",
+          "Begin Nile cruise to Aswan — temples along way.",
+          "Aswan: Philae Temple & Nubian village.",
+          "Abu Simbel day trip (from Aswan).",
+          "Nile cruise leisure; free exploration.",
+          "Return to Cairo; Coptic Cairo."
         ]
       }
     ]
@@ -1017,40 +1073,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 110000,
         "itinerary": [
-          "Arrive Oahu — Waikiki beach & sunset." ,
-          "Pearl Harbor and North Shore surf beaches." ,
-          "Diamond Head hike, depart." 
+          "Arrive Oahu — Waikiki beach & sunset.",
+          "Pearl Harbor and North Shore surf beaches.",
+          "Diamond Head hike, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 319000,
         "itinerary": [
-          "Arrive Oahu — Waikiki beach & local eatery." ,
-          "Pearl Harbor visit & North Shore surf beaches." ,
-          "Diamond Head hike & local markets." ,
-          "Fly to Maui (budget inter-island deals) — beach town." ,
-          "Road to Hana highlights or snorkeling trip (book group tours)." ,
-          "Depart." 
+          "Arrive Oahu — Waikiki beach & local eatery.",
+          "Pearl Harbor visit & North Shore surf beaches.",
+          "Diamond Head hike & local markets.",
+          "Fly to Maui (budget inter-island deals) — beach town.",
+          "Road to Hana highlights or snorkeling trip (book group tours).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 550000,
         "itinerary": [
-          "Arrive Oahu — Waikiki." ,
-          "Pearl Harbor & Honolulu." ,
-          "Fly to Maui — road to Hana or Lahaina." ,
-          "Haleakalā sunrise & beach time." ,
-          "Fly to Kauai — Waimea Canyon & Napali coast boat." ,
-          "Napali coast hike or boat tour." ,
-          "Fly to Big Island — Volcanoes National Park." ,
-          "Lava fields & black sand beaches." ,
-          "Kona coffee region & snorkeling." ,
-          "Leisure & spa day." ,
-          "Return to Oahu for last shopping." ,
-          "Depart." 
+          "Arrive Oahu — Waikiki.",
+          "Pearl Harbor & Honolulu.",
+          "Fly to Maui — road to Hana or Lahaina.",
+          "Haleakalā sunrise & beach time.",
+          "Fly to Kauai — Waimea Canyon & Napali coast boat.",
+          "Napali coast hike or boat tour.",
+          "Fly to Big Island — Volcanoes National Park.",
+          "Lava fields & black sand beaches.",
+          "Kona coffee region & snorkeling.",
+          "Leisure & spa day.",
+          "Return to Oahu for last shopping.",
+          "Depart."
         ]
       }
     ]
@@ -1065,40 +1124,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 42000,
         "itinerary": [
-          "Arrive Seoul — Myeongdong street food & shopping." ,
-          "Gyeongbokgung Palace, Bukchon Hanok Village, Insadong." ,
-          "N Seoul Tower morning, depart." 
+          "Arrive Seoul — Myeongdong street food & shopping.",
+          "Gyeongbokgung Palace, Bukchon Hanok Village, Insadong.",
+          "N Seoul Tower morning, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 85000,
         "itinerary": [
-          "Arrive Seoul — Myeongdong shopping & street food." ,
-          "Gyeongbokgung Palace & Bukchon Hanok Village." ,
-          "DMZ half-day tour (book ahead) or local markets." ,
-          "KTX to Busan — Haeundae beach & nightlife." ,
-          "Gamcheon Culture Village & Jagalchi Market." ,
-          "Depart." 
+          "Arrive Seoul — Myeongdong shopping & street food.",
+          "Gyeongbokgung Palace & Bukchon Hanok Village.",
+          "DMZ half-day tour (book ahead) or local markets.",
+          "KTX to Busan — Haeundae beach & nightlife.",
+          "Gamcheon Culture Village & Jagalchi Market.",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 170000,
         "itinerary": [
-          "Arrive Seoul — city highlights." ,
-          "Palaces & markets tour." ,
-          "DMZ day trip (book in advance)." ,
-          "Busan — Haeundae beach & market." ,
-          "Gamcheon Culture Village & seaside." ,
-          "Gyeongju historical sites (Bulguksa)." ,
-          "Jeju Island flight — waterfalls & lava tubes." ,
-          "Hallasan hike & coastal views." ,
-          "Return to Seoul; K-pop / cafe culture." ,
-          "Shopping & Han River cruise." ,
-          "Gangnam & modern Seoul experiences." ,
-          "Depart." 
+          "Arrive Seoul — city highlights.",
+          "Palaces & markets tour.",
+          "DMZ day trip (book in advance).",
+          "Busan — Haeundae beach & market.",
+          "Gamcheon Culture Village & seaside.",
+          "Gyeongju historical sites (Bulguksa).",
+          "Jeju Island flight — waterfalls & lava tubes.",
+          "Hallasan hike & coastal views.",
+          "Return to Seoul; K-pop / cafe culture.",
+          "Shopping & Han River cruise.",
+          "Gangnam & modern Seoul experiences.",
+          "Depart."
         ]
       }
     ]
@@ -1113,40 +1175,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 115000,
         "itinerary": [
-          "Arrive Kilimanjaro / Arusha — rest." ,
-          "Full-day Serengeti safari or Ngorongoro crater visit." ,
-          "Morning game drive, depart." 
+          "Arrive Kilimanjaro / Arusha — rest.",
+          "Full-day Serengeti safari or Ngorongoro crater visit.",
+          "Morning game drive, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 312000,
         "itinerary": [
-          "Arrive Arusha/Kilimanjaro — local market & rest." ,
-          "Drive to Ngorongoro Crater — evening at lodge." ,
-          "Full-day Ngorongoro safari (shared vehicle)." ,
-          "Transfer to Serengeti — afternoon game drive." ,
-          "Full-day Serengeti safari (budget camps)." ,
-          "Depart (return to Arusha & fly)." 
+          "Arrive Arusha/Kilimanjaro — local market & rest.",
+          "Drive to Ngorongoro Crater — evening at lodge.",
+          "Full-day Ngorongoro safari (shared vehicle).",
+          "Transfer to Serengeti — afternoon game drive.",
+          "Full-day Serengeti safari (budget camps).",
+          "Depart (return to Arusha & fly)."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 399000,
         "itinerary": [
-          "Arrive Arusha — acclimatize." ,
-          "Tarangire National Park safari." ,
-          "Lake Manyara or move to Ngorongoro." ,
-          "Ngorongoro Crater full-day safari." ,
-          "Transfer to Serengeti — evening game drive." ,
-          "Full day Serengeti safaris." ,
-          "Balloon safari morning (seasonal)." ,
-          "Cultural visit to Maasai village." ,
-          "Fly to Zanzibar — Stone Town evening." ,
-          "Spice tour & beaches." ,
-          "Relaxation / water sports." ,
-          "Depart." 
+          "Arrive Arusha — acclimatize.",
+          "Tarangire National Park safari.",
+          "Lake Manyara or move to Ngorongoro.",
+          "Ngorongoro Crater full-day safari.",
+          "Transfer to Serengeti — evening game drive.",
+          "Full day Serengeti safaris.",
+          "Balloon safari morning (seasonal).",
+          "Cultural visit to Maasai village.",
+          "Fly to Zanzibar — Stone Town evening.",
+          "Spice tour & beaches.",
+          "Relaxation / water sports.",
+          "Depart."
         ]
       }
     ]
@@ -1161,40 +1226,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 122000,
         "itinerary": [
-          "Arrive San José — transfer to Arenal or Manuel Antonio." ,
-          "Arenal volcano & hot springs OR Manuel Antonio national park." ,
-          "Zipline or beach morning, depart." 
+          "Arrive San José — transfer to Arenal or Manuel Antonio.",
+          "Arenal volcano & hot springs OR Manuel Antonio national park.",
+          "Zipline or beach morning, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 290000,
         "itinerary": [
-          "Arrive San José — transfer to La Fortuna/Arenal region." ,
-          "Arenal volcano viewpoint & hot springs (budget pools)." ,
-          "Zipline or hanging bridges (look for group discounts)." ,
-          "Monteverde cloud forest (shared shuttle) & reserve walk." ,
-          "Travel to Manuel Antonio — beach & national park (entrance fee)." ,
-          "Depart." 
+          "Arrive San José — transfer to La Fortuna/Arenal region.",
+          "Arenal volcano viewpoint & hot springs (budget pools).",
+          "Zipline or hanging bridges (look for group discounts).",
+          "Monteverde cloud forest (shared shuttle) & reserve walk.",
+          "Travel to Manuel Antonio — beach & national park (entrance fee).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 767000,
         "itinerary": [
-          "Arrive San José — city quick tour." ,
-          "Arenal/La Fortuna: volcano & hot springs." ,
-          "Waterfall hike & canopy zipline." ,
-          "Monteverde cloud forest — wildlife and hanging bridges." ,
-          "Travel to Nicoya Peninsula or Guanacaste beaches." ,
-          "Surfing or beach relaxation." ,
-          "Manuel Antonio national park wildlife & beaches." ,
-          "Corcovado (Osa Peninsula) or Tortuguero for turtles (seasonal)." ,
-          "Wildlife tours and boat rides." ,
-          "Coffee plantation visit & cultural experiences." ,
-          "Return to San José; markets." ,
-          "Depart." 
+          "Arrive San José — city quick tour.",
+          "Arenal/La Fortuna: volcano & hot springs.",
+          "Waterfall hike & canopy zipline.",
+          "Monteverde cloud forest — wildlife and hanging bridges.",
+          "Travel to Nicoya Peninsula or Guanacaste beaches.",
+          "Surfing or beach relaxation.",
+          "Manuel Antonio national park wildlife & beaches.",
+          "Corcovado (Osa Peninsula) or Tortuguero for turtles (seasonal).",
+          "Wildlife tours and boat rides.",
+          "Coffee plantation visit & cultural experiences.",
+          "Return to San José; markets.",
+          "Depart."
         ]
       }
     ]
@@ -1209,40 +1277,43 @@
       {
         "id": "3d2n",
         "duration": "2N / 3D",
+        "price": 157000,
         "itinerary": [
-          "Arrive Rio — Copacabana beach & evening." ,
-          "Christ the Redeemer & Sugarloaf cable car." ,
-          "Tijuca forest or morning beach, depart." 
+          "Arrive Rio — Copacabana beach & evening.",
+          "Christ the Redeemer & Sugarloaf cable car.",
+          "Tijuca forest or morning beach, depart."
         ]
       },
       {
         "id": "6d5n",
         "duration": "5N / 6D",
+        "price": 350000,
         "itinerary": [
-          "Arrive Rio de Janeiro — Copacabana evening & local churrascaria." ,
-          "Christ the Redeemer & Sugarloaf (book combo for savings)." ,
-          "Lapa & Santa Teresa neighborhoods + Selarón Steps." ,
-          "Fly to Foz do Iguaçu (budget flight) — explore Brazilian side of falls." ,
-          "Argentine side of Iguazu (optional cheap cross-border bus)." ,
-          "Depart." 
+          "Arrive Rio de Janeiro — Copacabana evening & local churrascaria.",
+          "Christ the Redeemer & Sugarloaf (book combo for savings).",
+          "Lapa & Santa Teresa neighborhoods + Selarón Steps.",
+          "Fly to Foz do Iguaçu (budget flight) — explore Brazilian side of falls.",
+          "Argentine side of Iguazu (optional cheap cross-border bus).",
+          "Depart."
         ]
       },
       {
         "id": "12d11n",
         "duration": "11N / 12D",
+        "price": 675000,
         "itinerary": [
-          "Arrive Rio — beaches & promenade." ,
-          "Christ the Redeemer & Sugarloaf." ,
-          "Explore Lapa & Santa Teresa neighborhoods." ,
-          "Fly to Foz do Iguaçu — Iguazu Falls." ,
-          "Explore both Argentine & Brazilian sides of falls." ,
-          "Fly to Salvador — Pelourinho & Afro-Brazilian culture." ,
-          "Beaches & cultural performances." ,
-          "Flight to Manaus — gateway to Amazon." ,
-          "Begin Amazon lodge/cruise — wildlife." ,
-          "Jungle walks & river excursions." ,
-          "Return to Manaus; city tour." ,
-          "Depart." 
+          "Arrive Rio — beaches & promenade.",
+          "Christ the Redeemer & Sugarloaf.",
+          "Explore Lapa & Santa Teresa neighborhoods.",
+          "Fly to Foz do Iguaçu — Iguazu Falls.",
+          "Explore both Argentine & Brazilian sides of falls.",
+          "Fly to Salvador — Pelourinho & Afro-Brazilian culture.",
+          "Beaches & cultural performances.",
+          "Flight to Manaus — gateway to Amazon.",
+          "Begin Amazon lodge/cruise — wildlife.",
+          "Jungle walks & river excursions.",
+          "Return to Manaus; city tour.",
+          "Depart."
         ]
       }
     ]

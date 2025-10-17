@@ -41,6 +41,25 @@ function ID24() {
     }
   }, [location]);
 
+  // Format price with Indian Rupee symbol
+  const formatPrice = (price) => {
+    if (!price || isNaN(price)) {
+      return "₹0";
+    }
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
+  const formatDuration = (duration) => {
+    if (!duration) return '';
+    return duration
+      .replace(/(\d+)N/g, '$1 Nights')
+      .replace(/(\d+)D/g, '$1 Days');
+  };
+
   return (
     <>
       <div className={styles.homePageContainer}>
@@ -75,15 +94,26 @@ function ID24() {
                   {pkg.options?.map((opt) => (
                     <article key={opt.id} className={styles.optionCard}>
                       <div className={styles.optionCardHeader}>
-                        <h3 className={styles.optionDuration}>{opt.duration}</h3>
+                        <div className={styles.durationPriceWrapper}>
+                          <div className={styles.priceDisplay}>
+                            <span className={styles.priceLabel}>
+                              Starting from
+                            </span>
+                            <h3 className={styles.priceAmount}>
+                              {formatPrice(opt.price)}
+                            </h3>
+                          </div>
+                        </div>
                         <button className={styles.bookBtn}>Book Now</button>
                       </div>
                       <div className={styles.itinerarySection}>
-                        <h4 className={styles.itineraryTitle}>Day-by-Day Itinerary</h4>
+                        <h4 className={styles.itineraryTitle}>{formatDuration(opt.duration)}</h4>
                         <ol className={styles.itineraryList}>
                           {opt.itinerary?.map((day, idx) => (
                             <li key={idx} className={styles.itineraryItem}>
-                              <span className={styles.dayNumber}>Day {idx + 1}</span>
+                              <span className={styles.dayNumber}>
+                                Day {idx + 1}
+                              </span>
                               <span className={styles.dayDetails}>{day}</span>
                             </li>
                           ))}

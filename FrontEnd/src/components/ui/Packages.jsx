@@ -326,7 +326,7 @@ export function Packages({ src }) {
                     animate={{ opacity: 1, transition: { delay: 0.1 } }}
                     exit={{ opacity: 0 }}
                     href={active.ctaLink}
-                    target="_blank"
+                    // target="_blank"
                     style={{
                       padding: "12px 16px",
                       fontSize: "14px",
