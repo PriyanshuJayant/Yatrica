@@ -12,7 +12,9 @@ import {
 
 function NavBar() {
   const { scrollYProgress } = useScroll();
-  const [isMobileNavBar, setIsMobileNavBar] = useState(window.innerWidth <= 768);
+  const [isMobileNavBar, setIsMobileNavBar] = useState(
+    window.innerWidth <= 768
+  );
 
   useEffect(() => {
     const handleResize = () => setIsMobileNavBar(window.innerWidth <= 768);
@@ -22,7 +24,7 @@ function NavBar() {
 
   const bg = useTransform(
     scrollYProgress,
-    [0, isMobileNavBar? 0.03 : 0.1],
+    [0, isMobileNavBar ? 0.03 : 0.1],
     ["rgba(255,255,255,0)", "rgba(255, 255, 255, 1)"]
   );
 
@@ -233,6 +235,25 @@ function NavBar() {
                       }
                     >
                       Budget
+                    </Link>
+                    <Link
+                      to="/packages/allpackages"
+                      className={styles.navLink}
+                      style={{
+                        padding: "10px 16px",
+                        color: "#333",
+                        textDecoration: "none",
+                        fontSize: "15px",
+                        transition: "background 0.2s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.background = "#f5f5f5")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.background = "white")
+                      }
+                    >
+                      All Packages
                     </Link>
                   </motion.div>
                 )}

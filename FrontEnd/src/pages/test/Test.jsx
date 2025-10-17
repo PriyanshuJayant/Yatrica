@@ -1,11 +1,11 @@
 import React from "react";
 import CorporatePage from "../Packages/Corporate/Corporate";
-import ContactUs from '../../components/Contact/Contact'
+import ContactUs from '../Static/Contact/ContactPage'
 function Test() {
   return (
     <>
       <div>
-        Hello
+        {/* Hello */}
         <ContactUs/>
       </div>
     </>

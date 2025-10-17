@@ -10,7 +10,7 @@ import CorporatePage from "./pages/Packages/Corporate/Corporate";
 import HoneyMoonPage from "./pages/Packages/Honeymoon/HoneyMoon";
 import BudgetPage from "./pages/Packages/Budget/Budget";
 import ContactPage from "./pages/Static/Contact/ContactPage";
-import SinglePackage from "./pages/Packages/SinglePackage/SinglePackage";
+import All from './pages/Packages/All/All';
 
 import ID1 from "./packages/1_Thailand";
 import ID2 from "./packages/2_Vietnam";
@@ -61,7 +61,7 @@ function AnimatedRoutes() {
         <Route path="/packages/budget" element={<motion.div {...pageTransition}><BudgetPage /></motion.div>} />
         <Route path="/test" element={<motion.div {...pageTransition}><Test /></motion.div>} />
         <Route path="/contact" element={<motion.div {...pageTransition}><ContactPage /></motion.div>} />
-        <Route path="/packages/" element={<motion.div {...pageTransition}><SinglePackage /></motion.div>} />
+        <Route path="/packages/allpackages" element={<motion.div {...pageTransition}><All /></motion.div>} />
 
 
         <Route path="/packages/id/1" element={<motion.div {...pageTransition}><ID1 /></motion.div>} />
