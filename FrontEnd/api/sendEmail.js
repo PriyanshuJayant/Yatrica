@@ -101,14 +101,14 @@ export default async function handler(req, res) {
             
             <p>In the meantime, feel free to explore our website for amazing travel packages and destinations.</p>
             
-            <p>If you have any urgent queries, please feel free to call us at <strong>+91 (000) 000-0000</strong></p>
+            <p>If you have any urgent queries, please feel free to call us at <strong>+91 (981) 845-6811</strong></p>
             
             <p>Best regards,<br>
             <strong>The Yatrica Travel Team</strong></p>
           </div>
           <div class="footer">
             <p>© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.</p>
-            <p>📧 info@yatricatravel.com | 📞 +91 (000) 000-0000</p>
+            <p>📧 info@yatrica.co.in | 📞 +91 (981) 845-6811</p>
           </div>
         </body>
         </html>
