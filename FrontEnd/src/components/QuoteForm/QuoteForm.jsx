@@ -367,20 +367,12 @@ export default function ContactForm() {
                   lineHeight: '1.5'
                 }}>
                   I have read and agree to the{' '}
-                  <a href="#" style={{
+                  <a href="/user-agreement" style={{
                     color: '#007bff',
                     fontWeight: '500',
                     textDecoration: 'none'
                   }}>
                     User Agreement
-                  </a>
-                  {' '}and{' '}
-                  <a href="#" style={{
-                    color: '#007bff',
-                    fontWeight: '500',
-                    textDecoration: 'none'
-                  }}>
-                    Privacy Policy
                   </a>
                   .
                 </span>

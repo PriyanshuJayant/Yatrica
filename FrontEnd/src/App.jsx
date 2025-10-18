@@ -12,6 +12,8 @@ import BudgetPage from "./pages/Packages/Budget/Budget";
 import ContactPage from "./pages/Static/Contact/ContactPage";
 import All from './pages/Packages/All/All';
 import UserAgreement from "./pages/Static/UserAgreement/UserAgreement";
+// import PrivacyPolicy from "./pages/Static/PrivacyPolicy/PrivacyPolicy";
+import TermsConditions from "./pages/Static/TermsConditions/TermsConditions";
 
 import ID1 from "./packages/1_Thailand";
 import ID2 from "./packages/2_Vietnam";
@@ -64,6 +66,8 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<motion.div {...pageTransition}><ContactPage /></motion.div>} />
         <Route path="/packages/allpackages" element={<motion.div {...pageTransition}><All /></motion.div>} />
         <Route path="/user-agreement" element={<motion.div {...pageTransition}><UserAgreement /></motion.div>} />
+        {/* <Route path="/privacy-policy" element={<motion.div {...pageTransition}><PrivacyPolicy /></motion.div>} /> */}
+        <Route path="/terms-conditions" element={<motion.div {...pageTransition}><TermsConditions /></motion.div>} />
 
 
         <Route path="/packages/id/1" element={<motion.div {...pageTransition}><ID1 /></motion.div>} />

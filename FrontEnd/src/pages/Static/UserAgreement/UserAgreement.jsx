@@ -7,6 +7,9 @@ function UserAgreement() {
   return (
     <>
       <NavBar />
+      <div className={styles.pageContainer}>
+
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <header className={styles.header}>
@@ -93,6 +96,7 @@ function UserAgreement() {
             </p>
           </section>
         </div>
+      </div>
       </div>
       <Footer />
     </>
