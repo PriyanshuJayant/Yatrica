@@ -54,16 +54,16 @@ function ID1() {
   };
 
   const formatDuration = (duration) => {
-  if (!duration) return '';
-  return duration
-    .replace(/(\d+)N/g, '$1 Nights')
-    .replace(/(\d+)D/g, '$1 Days');
-};
+    if (!duration) return "";
+    return duration
+      .replace(/(\d+)N/g, "$1 Nights")
+      .replace(/(\d+)D/g, "$1 Days");
+  };
 
   return (
     <>
       <div className={styles.homePageContainer}>
-        <NavBar />
+          <NavBar />
         {/* -------------------- Page Content -------------------- */}
         {!pkg ? (
           <div className={styles.pageContainer}>
@@ -106,7 +106,9 @@ function ID1() {
                           <button className={styles.bookBtn}>Book Now</button>
                         </div>
                         <div className={styles.itinerarySection}>
-                            <h4 className={styles.itineraryTitle}>{formatDuration(opt.duration)}</h4>
+                          <h4 className={styles.itineraryTitle}>
+                            {formatDuration(opt.duration)}
+                          </h4>
                           <ol className={styles.itineraryList}>
                             {opt.itinerary?.map((day, idx) => (
                               <li key={idx} className={styles.itineraryItem}>
