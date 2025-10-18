@@ -96,7 +96,7 @@ function Home() {
           </div>
 
           {/* -------------------- SERVICES SECTION -------------------- */}
-          <div id="services" style={{ width: "100%" }}>
+          <div id="services" style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}>
             <Services />
           </div>
 
@@ -148,7 +148,7 @@ function Home() {
           </div>
 
           {/* -------------------- QUOTE FORM -------------------- */}
-          <div id="Question" style={{ width: "100%" }}>
+          <div id="Question" style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}>
             <QuoteForm />
           </div>
 

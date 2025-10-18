@@ -27,7 +27,11 @@ function NavBar() {
     [0, isMobileNavBar ? 0.03 : 0.1],
     ["rgba(255,255,255,0)", "rgba(255, 255, 255, 1)"]
   );
-
+  const TextBg = useTransform(
+    scrollYProgress,
+    [0, isMobileNavBar ? 0.03 : 0.1],
+    ["rgba(255,255,255,1)", "rgba(0, 0, 0, 1)"]
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -103,7 +107,7 @@ function NavBar() {
             }`}
           >
             <Link to="/" className={styles.navLink}>
-              Home
+              <motion.span style={{ color: TextBg }}>Home</motion.span>
             </Link>
 
             <div
@@ -119,7 +123,7 @@ function NavBar() {
                 className={styles.navLink}
                 style={{ display: "inline-flex", alignItems: "center" }}
               >
-                Packages
+                <motion.span style={{ color: TextBg }}>Packages</motion.span>
                 <motion.span
                   style={{
                     marginLeft: "5px",
@@ -131,7 +135,7 @@ function NavBar() {
                       ? "rotate(180deg)"
                       : "rotate(0deg)",
                     transition: "transform 0.2s ease",
-                    filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(255, 248, 248, .42))drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))drop-shadow(0 0 30px rgba(255, 255, 255, 0.5))"
+                    color: TextBg,
                   }}
                 >
                   {/* ▼ */}
@@ -280,7 +284,7 @@ function NavBar() {
                 }
               }}
             >
-              Services
+              <motion.span style={{ color: TextBg }}>Services</motion.span>
             </a>
             <a
               href="#Question"
@@ -296,10 +300,10 @@ function NavBar() {
                 }
               }}
             >
-              Ask Question
+              <motion.span style={{ color: TextBg }}>Ask Question</motion.span>
             </a>
             <Link to="/contact" className={styles.navLink}>
-              Book Now
+              <motion.span style={{ color: TextBg }}>Book Now</motion.span>
             </Link>
           </nav>
 

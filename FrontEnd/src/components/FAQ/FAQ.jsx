@@ -60,8 +60,12 @@ function FAQItem({ question, answer, index, isOpen, toggleOpen }) {
             ease: "easeInOut",
           }}
           style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
             color: isOpen ? "#61daff" : "#888",
             transition: "color 0.2s ease",
+            transformOrigin: "center",
           }}
         >
           <ChevronDown size={18} />
@@ -279,7 +283,7 @@ export default function FAQs() {
                 cursor: "pointer",
                 transition: "background-color 0.2s ease",
               }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = "#0069d9")}
+              onMouseOver={(e) => (e.target.style.backgroundColor = "#00c3ff")}
               onMouseOut={(e) => (e.target.style.backgroundColor = "#61daff")}
             >
               Contact Support

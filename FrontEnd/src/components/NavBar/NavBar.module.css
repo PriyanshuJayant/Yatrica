@@ -125,11 +125,6 @@ html {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  text-shadow: 
-    0 0 10px rgba(255, 248, 248, 0.421),
-    0 0 20px rgba(255, 255, 255, 0.7),
-    0 0 30px rgba(255, 255, 255, 0.5),
-    0px 0px 1px rgba(255, 255, 255, 0.8);
 }
 .navLink::after {
   content: '';
@@ -533,7 +528,9 @@ html {
   }
   
   .mobileNavLink {
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: black;
   }
 }
 
