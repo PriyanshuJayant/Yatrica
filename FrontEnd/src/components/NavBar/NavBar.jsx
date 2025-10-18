@@ -131,6 +131,7 @@ function NavBar() {
                       ? "rotate(180deg)"
                       : "rotate(0deg)",
                     transition: "transform 0.2s ease",
+                    filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(255, 248, 248, .42))drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))drop-shadow(0 0 30px rgba(255, 255, 255, 0.5))"
                   }}
                 >
                   {/* ▼ */}
@@ -169,6 +170,7 @@ function NavBar() {
                         textDecoration: "none",
                         fontSize: "15px",
                         transition: "background 0.2s ease",
+                        textShadow: "none",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.background = "#f5f5f5")
@@ -188,6 +190,7 @@ function NavBar() {
                         textDecoration: "none",
                         fontSize: "15px",
                         transition: "background 0.2s ease",
+                        textShadow: "none",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.background = "#f5f5f5")
@@ -207,6 +210,7 @@ function NavBar() {
                         textDecoration: "none",
                         fontSize: "15px",
                         transition: "background 0.2s ease",
+                        textShadow: "none",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.background = "#f5f5f5")
@@ -226,6 +230,7 @@ function NavBar() {
                         textDecoration: "none",
                         fontSize: "15px",
                         transition: "background 0.2s ease",
+                        textShadow: "none",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.background = "#f5f5f5")
@@ -245,6 +250,7 @@ function NavBar() {
                         textDecoration: "none",
                         fontSize: "15px",
                         transition: "background 0.2s ease",
+                        textShadow: "none",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.background = "#f5f5f5")

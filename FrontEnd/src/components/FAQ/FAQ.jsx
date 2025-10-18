@@ -2,25 +2,26 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail } from "lucide-react";
 import { Badge } from "../ui/badge";
+import {Link} from 'react-router-dom'
 
 function FAQItem({ question, answer, index, isOpen, toggleOpen }) {
   return (
     <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{
-      duration: 0.3,
-      delay: index * 0.15,
-      ease: "easeOut",
-    }}
-    style={{
-      border: "1px solid #ddd",
-      marginBottom: "10px",
-      backgroundColor: isOpen ? "#f9f9f9" : "#fff",
-      boxShadow: isOpen ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
-      transition: "all 0.25s ease",
-      borderRadius: "20px",
-    }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.3,
+        delay: index * 0.15,
+        ease: "easeOut",
+      }}
+      style={{
+        border: "1px solid #ddd",
+        marginBottom: "10px",
+        backgroundColor: isOpen ? "#f9f9f9" : "#fff",
+        boxShadow: isOpen ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
+        transition: "all 0.25s ease",
+        borderRadius: "20px",
+      }}
     >
       <button
         type="button"
@@ -132,38 +133,39 @@ export default function FAQs() {
 
   const faqs = [
     {
-      question: "What makes MVPBlocks unique?",
+      question: "What makes Yatrica different from other travel companies?",
       answer:
-        "MVPBlocks stands out through its intuitive design, powerful component library, and seamless integration options.",
+        "Yatrica stands out for its personalized itineraries, honest pricing, and local expertise. We don’t offer generic trips — every package is hand-crafted to deliver the perfect balance of comfort, adventure, and authentic experiences.",
     },
     {
-      question: "How can I customize the components?",
+      question: "Can I customize a travel package to suit my needs?",
       answer:
-        "All components are built with Tailwind CSS, making them highly customizable.",
+        "Absolutely! Every traveler is unique — you can adjust destinations, duration, budget, and experiences. Our team will redesign the itinerary to match your preferences and send you a personalized quote.",
     },
     {
-      question: "Do the components work with dark mode?",
+      question:
+        "Are flights, hotels, and activities included in the package price?",
       answer:
-        "Yes, all MVPBlocks components are designed to work seamlessly with both light and dark modes.",
+        "Most packages include accommodation, sightseeing, and key activities. Flights are optional and can be added based on your departure city and travel dates. Each itinerary clearly mentions inclusions and exclusions before you book.",
     },
     {
-      question: "How can I get started with MVPBlocks?",
+      question: "How can I book or get a quote for a trip?",
       answer:
-        "You can get started by browsing our component library and copying the code for the components you need.",
+        "You can easily submit a Quote Inquiry form on our website, and our travel team will contact you within 24 hours with details and pricing. Once confirmed, you can secure your booking through our online payment options or direct assistance.",
     },
     {
-      question: "Can I use MVPBlocks for commercial projects?",
+      question: "What if my travel plans change or I need to cancel?",
       answer:
-        "Absolutely! MVPBlocks is free to use for both personal and commercial projects.",
+        "We understand that plans can change. Yatrica offers flexible modification and cancellation options depending on the package and booking date. Our support team will guide you through rescheduling or refund options — ensuring you don’t lose your travel investment unnecessarily.",
     },
   ];
-// -------------Responsiveness-------------
-      // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-      // useEffect(() => {
-      //   const handleResize = () => setIsMobile(window.innerWidth <= 768);
-      //   window.addEventListener("resize", handleResize);
-      //   return () => window.removeEventListener("resize", handleResize);
-      // }, []);
+  // -------------Responsiveness-------------
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // useEffect(() => {
+  //   const handleResize = () => setIsMobile(window.innerWidth <= 768);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   return (
     <section
       style={{
@@ -225,7 +227,7 @@ export default function FAQs() {
               Frequently Asked Questions
             </h2>
             <p style={{ color: "#777", fontSize: "14px" }}>
-              Everything you need to know about MVPBlocks
+              Everything you need to know about Yatrica
             </p>
           </motion.div>
 
@@ -264,6 +266,7 @@ export default function FAQs() {
             >
               We're here to help you
             </p>
+              <Link to="/contact">
             <button
               type="button"
               style={{
@@ -281,6 +284,7 @@ export default function FAQs() {
             >
               Contact Support
             </button>
+              </Link>
           </motion.div>
         </div>
 

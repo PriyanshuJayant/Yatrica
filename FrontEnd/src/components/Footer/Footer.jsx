@@ -81,7 +81,6 @@ export default function Footer() {
     <footer
       style={{
         backgroundColor: "#F5F5F5",
-        marginTop: "4rem",
         width: "100%",
         borderTopLeftRadius: "1rem",
         borderTopRightRadius: "1rem",
