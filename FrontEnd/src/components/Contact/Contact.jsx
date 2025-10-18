@@ -5,10 +5,6 @@ import { User, Phone, Mail, MessageSquare } from 'lucide-react';
 // -------------------- STYLES ------------------------
 import styles from "./Contact.module.css";
 
-// -------------------- COMPONENT IMPORTS -------------
-import NavBar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Footer/Footer";
-
 // =====================================================
 //                     Corporate Packages
 // =====================================================

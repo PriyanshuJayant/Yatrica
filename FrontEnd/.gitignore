@@ -25,5 +25,9 @@ dist-ssr
 
 task.json
 .env
+
+#DOCUMENTATION
 EMAIL_SETUP.md
 QUICK_START.md
+QUICK_START_QUOTE.md
+QUOTE_FORM_SETUP.md

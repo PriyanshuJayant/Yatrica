@@ -34,12 +34,12 @@ const data = {
   contact: {
     email: "info@yatrica.co.in",
     phone: "+91 9818456811 ",
-    address: "Milky ",
+    address: "Milky Way Galaxy",
   },
   company: {
     name: "Yatrica",
     description:
-      "Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.",
+      "Discover the world effortlessly with our curated travel packages — crafted for families, couples, and explorers seeking unforgettable journeys.",
     logo: "https://i.postimg.cc/2SRcktkT/Mvpblocks.webp",
   },
 };

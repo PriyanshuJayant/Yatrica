@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Plane, MapPin, User, Phone, Mail, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Plane, MapPin, User, Phone, Mail, Sparkles, Loader2, CheckCircle, XCircle } from 'lucide-react';
 
 function FormField({ icon: Icon, label, name, type, placeholder, value, onChange, focusedField, setFocusedField, required = true }) {
   return (
@@ -70,11 +70,60 @@ export default function ContactForm() {
   });
 
   const [focusedField, setFocusedField] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Contact request submitted! Our holiday expert will contact you soon.');
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/api/sendQuote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          destination: formData.destination,
+          departureCity: formData.departureCity,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Quote request sent successfully! Our travel expert will contact you soon.',
+        });
+        // Reset form
+        setFormData({
+          destination: '',
+          departureCity: '',
+          name: '',
+          phone: '',
+          email: '',
+          agreed: false,
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Failed to send quote request. Please try again.',
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting quote form:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -338,42 +387,94 @@ export default function ContactForm() {
               </label>
             </motion.div>
 
+            {/* Status Messages */}
+            <AnimatePresence>
+              {submitStatus.message && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    padding: '14px 18px',
+                    borderRadius: '8px',
+                    marginBottom: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    backgroundColor: submitStatus.type === 'success' ? '#d4edda' : '#f8d7da',
+                    color: submitStatus.type === 'success' ? '#155724' : '#721c24',
+                    border: `1px solid ${submitStatus.type === 'success' ? '#c3e6cb' : '#f5c6cb'}`,
+                  }}
+                >
+                  {submitStatus.type === 'success' ? (
+                    <CheckCircle size={20} style={{ flexShrink: 0 }} />
+                  ) : (
+                    <XCircle size={20} style={{ flexShrink: 0 }} />
+                  )}
+                  <span style={{ fontSize: '14px', lineHeight: '1.5' }}>
+                    {submitStatus.message}
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             {/* Submit Button */}
             <motion.button
               type="submit"
+              disabled={isSubmitting}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.5 }}
-              whileHover={{ 
+              whileHover={!isSubmitting ? { 
                 scale: 1.02,
-                boxShadow: '0 6px 20px rgba(0, 123, 255, 0)'
-              }}
-              whileTap={{ scale: 0.98 }}
+                boxShadow: '0 6px 20px rgba(0, 123, 255, 0.3)'
+              } : {}}
+              whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               style={{
                 padding: '14px 32px',
-                backgroundColor: '#61daffff',
+                backgroundColor: isSubmitting ? '#6c757d' : '#61daffff',
                 color: '#fff',
                 border: 'none',
                 borderRadius: '8px',
                 fontWeight: '600',
                 fontSize: '15px',
-                cursor: 'pointer',
+                cursor: isSubmitting ? 'not-allowed' : 'pointer',
                 transition: 'all 0.3s ease',
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                boxShadow: '0 4px 12px rgba(0, 123, 255, 0.2)'
+                boxShadow: isSubmitting ? 'none' : '0 4px 12px rgba(0, 123, 255, 0.2)',
+                opacity: isSubmitting ? 0.7 : 1
               }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#61daffff'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#61daffff'}
+              onMouseOver={(e) => {
+                if (!isSubmitting) e.target.style.backgroundColor = '#4cc3e0';
+              }}
+              onMouseOut={(e) => {
+                if (!isSubmitting) e.target.style.backgroundColor = '#61daffff';
+              }}
             >
-              <span>Submit Request</span>
-              <motion.span
-                animate={{ x: [0, 4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                →
-              </motion.span>
+              {isSubmitting ? (
+                <>
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                  >
+                    <Loader2 size={18} />
+                  </motion.div>
+                  <span>Sending...</span>
+                </>
+              ) : (
+                <>
+                  <span>Submit Request</span>
+                  <motion.span
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </>
+              )}
             </motion.button>
           </motion.form>
         </div>

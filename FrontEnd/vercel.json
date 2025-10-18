@@ -9,6 +9,10 @@
     "api/sendEmail.js": {
       "memory": 1024,
       "maxDuration": 10
+    },
+    "api/sendQuote.js": {
+      "memory": 1024,
+      "maxDuration": 10
     }
   }
 }
