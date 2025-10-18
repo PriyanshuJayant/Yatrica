@@ -27,7 +27,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
           left: '14px',
           top: '50%',
           transform: 'translateY(-50%)',
-          color: focusedField === name ? '#007bff' : '#888',
+          color: focusedField === name ? '#61daff' : '#888',
           transition: 'color 0.2s ease',
           pointerEvents: 'none',
           zIndex: 1
@@ -44,7 +44,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
           style={{
             width: '100%',
             padding: '12px 14px 12px 44px',
-            border: `2px solid ${focusedField === name ? '#007bff' : '#ddd'}`,
+            border: `2px solid ${focusedField === name ? '#61daff' : '#ddd'}`,
             borderRadius: '10px',
             fontSize: '14px',
             backgroundColor: focusedField === name ? '#fff' : '#f9f9f9',
@@ -166,13 +166,13 @@ export default function ContactForm() {
             <div style={{
               display: 'inline-block',
               padding: '4px 12px',
-              border: '1px solid #007bff',
+              border: '1px solid #61daff',
               borderRadius: '20px',
               fontSize: '12px',
               fontWeight: '500',
               letterSpacing: '0.5px',
               textTransform: 'uppercase',
-              color: '#007bff',
+              color: '#61daff',
               marginBottom: '12px'
             }}>
               Have any Question ?
@@ -226,7 +226,7 @@ export default function ContactForm() {
                 height: '36px',
                 borderRadius: '50%',
                 backgroundColor: 'rgba(0, 123, 255, 0.1)',
-                color: '#007bff',
+                color: '#61daff',
                 marginBottom: '12px'
               }}
             >
@@ -358,7 +358,9 @@ export default function ContactForm() {
                     cursor: 'pointer',
                     flexShrink: 0,
                     marginTop: '2px',
-                    accentColor: '#007bff'
+                    accentColor: '#61daff',
+                    position:"relative",
+                    bottom:"2px",
                   }}
                 />
                 <span style={{
@@ -368,7 +370,7 @@ export default function ContactForm() {
                 }}>
                   I have read and agree to the{' '}
                   <a href="/user-agreement" style={{
-                    color: '#007bff',
+                    color: '#61daff',
                     fontWeight: '500',
                     textDecoration: 'none'
                   }}>

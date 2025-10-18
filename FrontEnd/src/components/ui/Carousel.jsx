@@ -109,7 +109,7 @@ const styles = {
     bottom: "0",
     left: "0",
     height: "4px",
-    backgroundColor: "#007bff",
+    backgroundColor: "#61daff",
     zIndex: 2,
     transformOrigin: "left",
   },

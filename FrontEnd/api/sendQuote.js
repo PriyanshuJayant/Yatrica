@@ -1,28 +1,33 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   // Only allow POST requests
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { destination, departureCity, name, phone, email } = req.body;
+  const { destination, departureCity, name, phone, email, agreed } = req.body;
 
   // Validate input
   if (!destination || !departureCity || !name || !phone || !email) {
-    return res.status(400).json({ error: 'All fields are required' });
+    return res.status(400).json({ error: "All fields are required" });
+  }
+
+  // User Agreement Verification (separate check)
+  if (!agreed) {
+    return res.status(400).json({ error: "You must agree to the terms and conditions to proceed" });
   }
 
   // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return res.status(400).json({ error: 'Invalid email address' });
+    return res.status(400).json({ error: "Invalid email address" });
   }
 
   try {
     // Create transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER || process.env.VITE_EMAIL_USER,
         pass: process.env.EMAIL_PASS || process.env.VITE_EMAIL_PASS,
@@ -31,9 +36,11 @@ export default async function handler(req, res) {
 
     // Email to the person who filled the form
     const userMailOptions = {
-      from: `"Yatrica Travel" <${process.env.EMAIL_USER || process.env.VITE_EMAIL_USER}>`,
+      from: `"Yatrica Travel" <${
+        process.env.EMAIL_USER || process.env.VITE_EMAIL_USER
+      }>`,
       to: email,
-      subject: 'Thank You for Your Quote Request - Yatrica Travel',
+      subject: "Thank You for Your Quote Request - Yatrica Travel",
       html: `
         <!DOCTYPE html>
         <html>
@@ -55,7 +62,7 @@ export default async function handler(req, res) {
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
             .header {
-              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              background: linear-gradient(135deg, #61daff 0%, #0056b3 100%);
               color: white;
               padding: 40px 30px;
               text-align: center;
@@ -73,20 +80,20 @@ export default async function handler(req, res) {
             }
             .greeting {
               font-size: 18px;
-              color: #007bff;
+              color: #61daff;
               font-weight: 600;
               margin-bottom: 20px;
             }
             .details-box {
               background: #f8f9fa;
-              border-left: 4px solid #007bff;
+              border-left: 4px solid #61daff;
               padding: 20px;
               margin: 25px 0;
               border-radius: 8px;
             }
             .details-box h3 {
               margin: 0 0 15px 0;
-              color: #007bff;
+              color: #61daff;
               font-size: 18px;
             }
             .detail-row {
@@ -123,7 +130,7 @@ export default async function handler(req, res) {
             .cta-button {
               display: inline-block;
               padding: 14px 32px;
-              background: #007bff;
+              background: #61daff;
               color: white;
               text-decoration: none;
               border-radius: 8px;
@@ -144,7 +151,7 @@ export default async function handler(req, res) {
             }
             .divider {
               height: 2px;
-              background: linear-gradient(90deg, transparent, #007bff, transparent);
+              background: linear-gradient(90deg, transparent, #61daff, transparent);
               margin: 25px 0;
             }
           </style>
@@ -204,13 +211,13 @@ export default async function handler(req, res) {
               
               <p style="margin-top: 30px; font-size: 14px; color: #6c757d;">
                 <strong>Need immediate assistance?</strong><br>
-                Call us at <strong style="color: #007bff;">+91 (000) 000-0000</strong><br>
-                Email us at <strong style="color: #007bff;">info@yatricatravel.com</strong>
+                Call us at <strong style="color: #61daff;">+91 (000) 000-0000</strong><br>
+                Email us at <strong style="color: #61daff;">info@yatricatravel.com</strong>
               </p>
               
               <p style="margin-top: 25px;">
                 Best regards,<br>
-                <strong style="color: #007bff;">The Yatrica Travel Team</strong><br>
+                <strong style="color: #61daff;">The Yatrica Travel Team</strong><br>
                 <em style="font-size: 13px; color: #6c757d;">Your Journey, Our Passion</em>
               </p>
             </div>
@@ -227,7 +234,9 @@ export default async function handler(req, res) {
 
     // Email to your business (admin notification)
     const adminMailOptions = {
-      from: `"Yatrica Quote Form" <${process.env.EMAIL_USER || process.env.VITE_EMAIL_USER}>`,
+      from: `"Yatrica Quote Form" <${
+        process.env.EMAIL_USER || process.env.VITE_EMAIL_USER
+      }>`,
       to: process.env.EMAIL_USER || process.env.VITE_EMAIL_USER,
       subject: `🎯 New Quote Request from ${name}`,
       html: `
@@ -301,7 +310,7 @@ export default async function handler(req, res) {
               background: white;
               margin: 10px 0;
               border-radius: 8px;
-              border-left: 4px solid #007bff;
+              border-left: 4px solid #61daff;
               align-items: center;
               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             }
@@ -314,7 +323,7 @@ export default async function handler(req, res) {
             }
             .label {
               font-weight: 600;
-              color: #007bff;
+              color: #61daff;
               font-size: 12px;
               text-transform: uppercase;
               letter-spacing: 0.5px;
@@ -327,7 +336,7 @@ export default async function handler(req, res) {
               font-weight: 500;
             }
             .value a {
-              color: #007bff;
+              color: #61daff;
               text-decoration: none;
             }
             .value a:hover {
@@ -338,7 +347,7 @@ export default async function handler(req, res) {
               border-radius: 10px;
               padding: 20px;
               margin: 25px 0;
-              border: 2px solid #007bff;
+              border: 2px solid #61daff;
             }
             .travel-details h4 {
               margin: 0 0 15px 0;
@@ -372,7 +381,7 @@ export default async function handler(req, res) {
             }
             .action-btn {
               padding: 10px 20px;
-              background: #007bff;
+              background: #61daff;
               color: white;
               text-decoration: none;
               border-radius: 6px;
@@ -394,10 +403,10 @@ export default async function handler(req, res) {
             <div class="header">
               <h1>🎯 New Quote Request</h1>
               <div class="timestamp">
-                📅 ${new Date().toLocaleString('en-IN', { 
-                  timeZone: 'Asia/Kolkata',
-                  dateStyle: 'full',
-                  timeStyle: 'short'
+                📅 ${new Date().toLocaleString("en-IN", {
+                  timeZone: "Asia/Kolkata",
+                  dateStyle: "full",
+                  timeStyle: "short",
                 })}
               </div>
             </div>
@@ -469,7 +478,10 @@ export default async function handler(req, res) {
             
             <div class="footer">
               <p style="margin: 0;">This is an automated notification from Yatrica Travel Quote Request System</p>
-              <p style="margin: 10px 0 0 0; opacity: 0.8;">Generated at ${new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
+              <p style="margin: 10px 0 0 0; opacity: 0.8;">Generated at ${new Date().toLocaleTimeString(
+                "en-IN",
+                { timeZone: "Asia/Kolkata" }
+              )}</p>
             </div>
           </div>
         </body>
@@ -481,16 +493,15 @@ export default async function handler(req, res) {
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
 
-    return res.status(200).json({ 
-      success: true, 
-      message: 'Quote request sent successfully' 
+    return res.status(200).json({
+      success: true,
+      message: "Quote request sent successfully",
     });
-
   } catch (error) {
-    console.error('Error sending quote email:', error);
-    return res.status(500).json({ 
-      error: 'Failed to send quote request',
-      details: error.message 
+    console.error("Error sending quote email:", error);
+    return res.status(500).json({
+      error: "Failed to send quote request",
+      details: error.message,
     });
   }
 }

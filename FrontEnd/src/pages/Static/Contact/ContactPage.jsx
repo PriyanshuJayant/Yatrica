@@ -37,7 +37,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
           left: '14px',
           top: isTextarea ? '14px' : '50%',
           transform: isTextarea ? 'none' : 'translateY(-50%)',
-          color: focusedField === name ? '#007bff' : '#888',
+          color: focusedField === name ? '#61daff' : '#888',
           transition: 'color 0.2s ease',
           pointerEvents: 'none',
           zIndex: 1
@@ -55,7 +55,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
             style={{
               width: '100%',
               padding: '12px 14px 12px 44px',
-              border: `2px solid ${focusedField === name ? '#007bff' : '#ddd'}`,
+              border: `2px solid ${focusedField === name ? '#61daff' : '#ddd'}`,
               borderRadius: '10px',
               fontSize: '14px',
               backgroundColor: focusedField === name ? '#fff' : '#f9f9f9',
@@ -80,7 +80,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
             style={{
               width: '100%',
               padding: '12px 14px 12px 44px',
-              border: `2px solid ${focusedField === name ? '#007bff' : '#ddd'}`,
+              border: `2px solid ${focusedField === name ? '#61daff' : '#ddd'}`,
               borderRadius: '10px',
               fontSize: '14px',
               backgroundColor: focusedField === name ? '#fff' : '#f9f9f9',

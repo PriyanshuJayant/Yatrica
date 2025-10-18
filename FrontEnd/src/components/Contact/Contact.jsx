@@ -33,7 +33,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
           left: '14px',
           top: isTextarea ? '14px' : '50%',
           transform: isTextarea ? 'none' : 'translateY(-50%)',
-          color: focusedField === name ? '#007bff' : '#888',
+          color: focusedField === name ? '#61daff' : '#888',
           transition: 'color 0.2s ease',
           pointerEvents: 'none',
           zIndex: 1
@@ -51,7 +51,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
             style={{
               width: '100%',
               padding: '12px 14px 12px 44px',
-              border: `2px solid ${focusedField === name ? '#007bff' : '#ddd'}`,
+              border: `2px solid ${focusedField === name ? '#61daff' : '#ddd'}`,
               borderRadius: '10px',
               fontSize: '14px',
               backgroundColor: focusedField === name ? '#fff' : '#f9f9f9',
@@ -76,7 +76,7 @@ function FormField({ icon: Icon, label, name, type, placeholder, value, onChange
             style={{
               width: '100%',
               padding: '12px 14px 12px 44px',
-              border: `2px solid ${focusedField === name ? '#007bff' : '#ddd'}`,
+              border: `2px solid ${focusedField === name ? '#61daff' : '#ddd'}`,
               borderRadius: '10px',
               fontSize: '14px',
               backgroundColor: focusedField === name ? '#fff' : '#f9f9f9',
@@ -188,13 +188,13 @@ function ContactPage() {
             <div style={{
               display: 'inline-block',
               padding: '4px 12px',
-              border: '1px solid #007bff',
+              border: '1px solid #61daff',
               borderRadius: '20px',
               fontSize: '12px',
               fontWeight: '500',
               letterSpacing: '0.5px',
               textTransform: 'uppercase',
-              color: '#007bff',
+              color: '#61daff',
               marginBottom: '12px'
             }}>
               Get In Touch
@@ -301,7 +301,7 @@ function ContactPage() {
               style={{
                 width: '100%',
                 padding: '14px 32px',
-                backgroundColor: isSubmitting ? '#6c757d' : '#007bff',
+                backgroundColor: isSubmitting ? '#6c757d' : '#61daff',
                 color: '#fff',
                 border: 'none',
                 borderRadius: '8px',
@@ -317,7 +317,7 @@ function ContactPage() {
                 opacity: isSubmitting ? 0.7 : 1
               }}
               onMouseOver={(e) => !isSubmitting && (e.target.style.backgroundColor = '#0056b3')}
-              onMouseOut={(e) => !isSubmitting && (e.target.style.backgroundColor = '#007bff')}
+              onMouseOut={(e) => !isSubmitting && (e.target.style.backgroundColor = '#61daff')}
             >
               <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               {!isSubmitting && (

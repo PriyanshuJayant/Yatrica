@@ -60,7 +60,7 @@ function FAQItem({ question, answer, index, isOpen, toggleOpen }) {
             ease: "easeInOut",
           }}
           style={{
-            color: isOpen ? "#007bff" : "#888",
+            color: isOpen ? "#61daff" : "#888",
             transition: "color 0.2s ease",
           }}
         >
@@ -252,7 +252,7 @@ export default function FAQs() {
                 height: "36px",
                 borderRadius: "50%",
                 backgroundColor: "rgba(0, 123, 255, 0.1)",
-                color: "#007bff",
+                color: "#61daff",
                 marginBottom: "12px",
               }}
             >
@@ -270,7 +270,7 @@ export default function FAQs() {
             <button
               type="button"
               style={{
-                backgroundColor: "#007bff",
+                backgroundColor: "#61daff",
                 color: "#fff",
                 padding: "10px 18px",
                 border: "none",
@@ -280,7 +280,7 @@ export default function FAQs() {
                 transition: "background-color 0.2s ease",
               }}
               onMouseOver={(e) => (e.target.style.backgroundColor = "#0069d9")}
-              onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+              onMouseOut={(e) => (e.target.style.backgroundColor = "#61daff")}
             >
               Contact Support
             </button>
