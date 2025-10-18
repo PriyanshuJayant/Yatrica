@@ -123,7 +123,7 @@ export default async function handler(req, res) {
             .cta-button {
               display: inline-block;
               padding: 14px 32px;
-              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              background: #007bff;
               color: white;
               text-decoration: none;
               border-radius: 8px;
@@ -197,7 +197,7 @@ export default async function handler(req, res) {
               </div>
               
               <div class="cta-section">
-                <a href="https://yatricatravel.com" class="cta-button">
+                <a href="https://yatrica.vercel.app/packages/allpackages" class="cta-button">
                   Explore More Packages
                 </a>
               </div>
