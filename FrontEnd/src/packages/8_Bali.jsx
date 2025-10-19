@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation ,Link} from "react-router-dom";
 
 // -------------------- STYLES --------------------
 import styles from "./0_Global.module.css";
@@ -130,7 +130,7 @@ function ID8() {
                 <p className={styles.ctaSubtitle}>
                   Contact us to customize your perfect itinerary
                 </p>
-                <button className={styles.ctaButton}>Get a Free Quote</button>
+                <Link to="/quote"> <button className={styles.ctaButton}>Get a Free Quote</button> </Link>
               </div>
               </section>
             </div>
