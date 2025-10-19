@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function BannerComp({
   src,
@@ -18,8 +18,7 @@ export function BannerComp({
       // Internal link (starts with '/')
       if (buttonLink.startsWith("/")) {
         navigate(buttonLink);
-      } 
-      else {
+      } else {
         window.open(buttonLink, "_blank");
       }
     } else if (onButtonClick) {
@@ -43,11 +42,15 @@ export function BannerComp({
         loop
         muted
         playsInline
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
         style={{
           width: "100%",
           height: "100%",
           objectFit: "cover",
           display: "block",
+          WebkitAppearance: "none",
         }}
         type="video/mp4"
       />
