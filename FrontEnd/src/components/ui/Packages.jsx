@@ -332,7 +332,7 @@ export function Packages({ src }) {
                       fontSize: "14px",
                       borderRadius: "9999px",
                       fontWeight: "bold",
-                      backgroundColor: "#87CEEB",
+                      backgroundColor: "#2196f3",
                       color: "#fff",
                       textDecoration: "none",
                       whiteSpace: "nowrap",

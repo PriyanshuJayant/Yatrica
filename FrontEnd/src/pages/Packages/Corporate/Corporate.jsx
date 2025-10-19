@@ -1,36 +1,20 @@
-import React from "react";
-import { motion } from "framer-motion";
-
 // -------------------- STYLES ------------------------
 import styles from "./Corporate.module.css";
 
 // -------------------- COMPONENT IMPORTS -------------
 import NavBar from "../../../components/NavBar/NavBar";
 import Hero from "../../../components/Hero/Hero";
-import BannerVideo from "../../../components/BannerVideo/BannerVideo";
-import CardCouresel from "../../../components/CardCarousel/CardCouresel";
-import { BannerComp } from "../../../components/ui/BannerComp";
-import { Packages } from "../../../components/ui/Packages";
-import Services from "../../../components/Services/Services";
-import FAQs from "../../../components/FAQ/FAQ";
-import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 import Footer from "../../../components/Footer/Footer";
-// import CarouselComp from "../../components/Carousel/CarouselComp";
 import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveGrid";
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
+import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 
 // --------------------- Dynamic Components -----------
-// import { ResponsivePackageGrid} from "../../components/SinglePackage/SinglePackage";
 
 // -------------------- VIDEO ASSETS ------------------
-import Diwali from "/videos/DiwaliOffers.mp4";
-import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
 
 // -------------------- DATA FILES --------------------
-import FamilyJSON from "../../../assets/data/familyPackage.json";
-import budgetFriendlyJSON from "../../../assets/data/budgetFriendly.json";
-import CorporateJSON from "../../../assets/data/corporate.json";
 import packagesData from "../../../assets/Packages/CorporatePackages.json";
 
 // =====================================================
@@ -90,6 +74,12 @@ function CorporatePage() {
               />
             ))}
           </ResponsivePackageGrid>
+
+                    {/* -------------------- QUOTE FORM -------------------- */}
+                    <div id="Question" style={{ width: "100%" }}>
+                      <QuoteForm />
+                    </div>
+
 
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
           {/* <div className={styles.HomeContainer}>
