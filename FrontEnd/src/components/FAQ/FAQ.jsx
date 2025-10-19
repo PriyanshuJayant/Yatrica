@@ -63,7 +63,7 @@ function FAQItem({ question, answer, index, isOpen, toggleOpen }) {
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            color: isOpen ? "#61daff" : "#888",
+            color: isOpen ? "#42a5f5" : "#888",
             transition: "color 0.2s ease",
             transformOrigin: "center",
           }}
@@ -256,7 +256,7 @@ export default function FAQs() {
                 height: "36px",
                 borderRadius: "50%",
                 backgroundColor: "rgba(0, 123, 255, 0.1)",
-                color: "#61daff",
+                color: "#2f65b5",
                 marginBottom: "12px",
               }}
             >
@@ -274,7 +274,7 @@ export default function FAQs() {
             <button
               type="button"
               style={{
-                backgroundColor: "#61daff",
+                backgroundColor: "#2196f3",
                 color: "#fff",
                 padding: "10px 18px",
                 border: "none",
@@ -283,8 +283,8 @@ export default function FAQs() {
                 cursor: "pointer",
                 transition: "background-color 0.2s ease",
               }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = "#00c3ff")}
-              onMouseOut={(e) => (e.target.style.backgroundColor = "#61daff")}
+              onMouseOver={(e) => (e.target.style.backgroundColor = "#42a5f5")}
+              onMouseOut={(e) => (e.target.style.backgroundColor = "#2196f3")}
             >
               Contact Support
             </button>

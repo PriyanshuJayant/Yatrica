@@ -26,6 +26,7 @@ import SinglePackage from "../../../components/SinglePackage/SinglePackage";
 import Diwali from "/videos/DiwaliOffers.mp4";
 import Corporate from "/videos/CorporateTours.mp4";
 import Family from "/videos/FamilyTours.mp4";
+import HeroVideo from '/videos/Hero.mp4'
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../../assets/data/familyPackage.json";
@@ -44,7 +45,7 @@ function All() {
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
         <div className={styles.FamilyHero} style={{ position: "relative" }}>
-          <Hero videoSrc={Family} showContent={false} />
+          <Hero videoSrc={HeroVideo} showContent={false} />
           <div
             style={{
               position: "absolute",
@@ -68,7 +69,7 @@ function All() {
             }}
           >
             <div style={{ fontSize: "35px", fontWeight: "600" }}>
-              Budget Tours
+              Explore All Packages
             </div>
             <div style={{ fontSize: "18px", fontWeight: "400" }}>
               Enjoy your best time with your Family and Friends

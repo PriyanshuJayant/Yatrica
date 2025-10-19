@@ -16,7 +16,7 @@ export function Badge({ variant = "default", children, style = {}, ...props }) {
   };
 
   const variants = {
-    default: { backgroundColor: "#61daff", color: "white" },
+    default: { backgroundColor: "#42a5f5", color: "white" },
     secondary: { backgroundColor: "#6c757d", color: "white" },
     destructive: { backgroundColor: "#dc3545", color: "white" },
     outline: { borderColor: "#ccc", color: "#333", backgroundColor: "transparent" },

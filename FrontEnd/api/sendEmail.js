@@ -48,7 +48,7 @@ export default async function handler(req, res) {
               padding: 20px;
             }
             .header {
-              background: linear-gradient(135deg, #61daff 0%, #0056b3 100%);
+              background: linear-gradient(135deg, #42a5f5 0%, #0056b3 100%);
               color: white;
               padding: 30px;
               text-align: center;
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
             .message-box {
               background: white;
               padding: 20px;
-              border-left: 4px solid #61daff;
+              border-left: 4px solid #42a5f5;
               margin: 20px 0;
               border-radius: 5px;
             }
@@ -151,11 +151,11 @@ export default async function handler(req, res) {
               background: white;
               margin: 8px 0;
               border-radius: 5px;
-              border-left: 4px solid #61daff;
+              border-left: 4px solid #42a5f5;
             }
             .label {
               font-weight: bold;
-              color: #61daff;
+              color: #42a5f5;
               min-width: 120px;
             }
             .value {

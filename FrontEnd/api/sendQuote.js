@@ -62,7 +62,7 @@ export default async function handler(req, res) {
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
             .header {
-              background: linear-gradient(135deg, #61daff 0%, #0056b3 100%);
+              background: linear-gradient(135deg, #42a5f5 0%, #0056b3 100%);
               color: white;
               padding: 40px 30px;
               text-align: center;
@@ -80,20 +80,20 @@ export default async function handler(req, res) {
             }
             .greeting {
               font-size: 18px;
-              color: #61daff;
+              color: #42a5f5;
               font-weight: 600;
               margin-bottom: 20px;
             }
             .details-box {
               background: #f8f9fa;
-              border-left: 4px solid #61daff;
+              border-left: 4px solid #42a5f5;
               padding: 20px;
               margin: 25px 0;
               border-radius: 8px;
             }
             .details-box h3 {
               margin: 0 0 15px 0;
-              color: #61daff;
+              color: #42a5f5;
               font-size: 18px;
             }
             .detail-row {
@@ -130,7 +130,7 @@ export default async function handler(req, res) {
             .cta-button {
               display: inline-block;
               padding: 14px 32px;
-              background: #61daff;
+              background: #42a5f5;
               color: white;
               text-decoration: none;
               border-radius: 8px;
@@ -151,7 +151,7 @@ export default async function handler(req, res) {
             }
             .divider {
               height: 2px;
-              background: linear-gradient(90deg, transparent, #61daff, transparent);
+              background: linear-gradient(90deg, transparent, #42a5f5, transparent);
               margin: 25px 0;
             }
           </style>
@@ -211,13 +211,13 @@ export default async function handler(req, res) {
               
               <p style="margin-top: 30px; font-size: 14px; color: #6c757d;">
                 <strong>Need immediate assistance?</strong><br>
-                Call us at <strong style="color: #61daff;">+91 (000) 000-0000</strong><br>
-                Email us at <strong style="color: #61daff;">info@yatricatravel.com</strong>
+                Call us at <strong style="color: #42a5f5;">+91 (000) 000-0000</strong><br>
+                Email us at <strong style="color: #42a5f5;">info@yatricatravel.com</strong>
               </p>
               
               <p style="margin-top: 25px;">
                 Best regards,<br>
-                <strong style="color: #61daff;">The Yatrica Travel Team</strong><br>
+                <strong style="color: #42a5f5;">The Yatrica Travel Team</strong><br>
                 <em style="font-size: 13px; color: #6c757d;">Your Journey, Our Passion</em>
               </p>
             </div>
@@ -310,7 +310,7 @@ export default async function handler(req, res) {
               background: white;
               margin: 10px 0;
               border-radius: 8px;
-              border-left: 4px solid #61daff;
+              border-left: 4px solid #42a5f5;
               align-items: center;
               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             }
@@ -323,7 +323,7 @@ export default async function handler(req, res) {
             }
             .label {
               font-weight: 600;
-              color: #61daff;
+              color: #42a5f5;
               font-size: 12px;
               text-transform: uppercase;
               letter-spacing: 0.5px;
@@ -336,7 +336,7 @@ export default async function handler(req, res) {
               font-weight: 500;
             }
             .value a {
-              color: #61daff;
+              color: #42a5f5;
               text-decoration: none;
             }
             .value a:hover {
@@ -347,7 +347,7 @@ export default async function handler(req, res) {
               border-radius: 10px;
               padding: 20px;
               margin: 25px 0;
-              border: 2px solid #61daff;
+              border: 2px solid #42a5f5;
             }
             .travel-details h4 {
               margin: 0 0 15px 0;
@@ -381,7 +381,7 @@ export default async function handler(req, res) {
             }
             .action-btn {
               padding: 10px 20px;
-              background: #61daff;
+              background: #42a5f5;
               color: white;
               text-decoration: none;
               border-radius: 6px;

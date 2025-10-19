@@ -53,7 +53,7 @@ function FormField({
             left: "14px",
             top: "50%",
             transform: "translateY(-50%)",
-            color: focusedField === name ? "#61daff" : "#888",
+            color: focusedField === name ? "#2196f3" : "#888",
             transition: "color 0.2s ease",
             pointerEvents: "none",
             zIndex: 1,
@@ -71,7 +71,7 @@ function FormField({
           style={{
             width: "100%",
             padding: "12px 14px 12px 44px",
-            border: `2px solid ${focusedField === name ? "#61daff" : "#ddd"}`,
+            border: `2px solid ${focusedField === name ? "#2196f3" : "#ddd"}`,
             borderRadius: "10px",
             fontSize: "14px",
             backgroundColor: focusedField === name ? "#fff" : "#f9f9f9",
@@ -202,13 +202,13 @@ export default function ContactForm() {
               style={{
                 display: "inline-block",
                 padding: "4px 12px",
-                border: "1px solid #61daff",
+                border: "1px solid gray",
                 borderRadius: "20px",
                 fontSize: "12px",
                 fontWeight: "500",
                 letterSpacing: "0.5px",
                 textTransform: "uppercase",
-                color: "#61daff",
+                color: "#2f65b5",
                 marginBottom: "12px",
               }}
             >
@@ -268,7 +268,7 @@ export default function ContactForm() {
                 height: "36px",
                 borderRadius: "50%",
                 backgroundColor: "rgba(0, 123, 255, 0.1)",
-                color: "#61daff",
+                color: "#2f65b5",
                 marginBottom: "12px",
               }}
             >
@@ -407,7 +407,7 @@ export default function ContactForm() {
                     cursor: "pointer",
                     flexShrink: 0,
                     marginTop: "2px",
-                    accentColor: "#61daff",
+                    accentColor: "#0D1B2A",
                     position: "relative",
                     bottom: "2px",
                   }}
@@ -423,7 +423,7 @@ export default function ContactForm() {
                   <a
                     href="/user-agreement"
                     style={{
-                      color: "#61daff",
+                      color: "#2f65b5",
                       fontWeight: "500",
                       textDecoration: "none",
                     }}
@@ -489,7 +489,7 @@ export default function ContactForm() {
               whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               style={{
                 padding: "14px 32px",
-                backgroundColor: isSubmitting ? "#00c3ff" : "#61daff",
+                backgroundColor: isSubmitting ? "#42a5f5" : "#2196f3",
                 color: "#fff",
                 border: "none",
                 borderRadius: "8px",
@@ -506,10 +506,12 @@ export default function ContactForm() {
                 opacity: isSubmitting ? 0.7 : 1,
               }}
               onMouseOver={(e) => {
-                if (!isSubmitting) e.target.style.backgroundColor = "#00c3ff";
+                if (!isSubmitting)
+                  e.currentTarget.style.backgroundColor = "#42a5f5";
               }}
               onMouseOut={(e) => {
-                if (!isSubmitting) e.target.style.backgroundColor = "#61daff";
+                if (!isSubmitting)
+                  e.currentTarget.style.backgroundColor = "#2196f3";
               }}
             >
               {isSubmitting ? (
@@ -528,18 +530,7 @@ export default function ContactForm() {
                 </>
               ) : (
                 <>
-                  <span
-                    onMouseOver={(e) => {
-                      if (!isSubmitting)
-                        e.target.style.backgroundColor = "#00c3ff";
-                    }}
-                    onMouseOut={(e) => {
-                      if (!isSubmitting)
-                        e.target.style.backgroundColor = "#61daff";
-                    }}
-                  >
-                    Submit Request
-                  </span>
+                  <span>Submit Request</span>
                   <motion.span
                     animate={{ x: [0, 4, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}

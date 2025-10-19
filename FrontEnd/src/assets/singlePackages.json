@@ -156,7 +156,7 @@
     "id": "4",
     "title": "Laos",
     "category": "South East Asia",
-    "image": "/images/packages/laos.jpg",
+    "image": "https://images.pexels.com/photos/4553124/pexels-photo-4553124.jpeg",
     "description": "Relaxed pace with stunning waterfalls and ancient temples.",
     "options": [
       {
@@ -258,7 +258,7 @@
     "id": "6",
     "title": "Kenya",
     "category": "Africa",
-    "image": "/images/packages/kenya.jpg",
+    "image": "https://images.pexels.com/photos/19530816/pexels-photo-19530816.jpeg",
     "description": "World-class safaris and unique wildlife experiences.",
     "options": [
       {
@@ -309,7 +309,7 @@
     "id": "7",
     "title": "Mauritius",
     "category": "Island Escape",
-    "image": "/images/packages/mauritius.jpg",
+    "image": "https://images.pexels.com/photos/1189479/pexels-photo-1189479.jpeg",
     "description": "Tropical beaches, coral reefs, and volcanic landscapes.",
     "options": [
       {
@@ -360,7 +360,7 @@
     "id": "8",
     "title": "Bali (Indonesia)",
     "category": "Island Escape",
-    "image": "/images/packages/bali.jpg",
+    "image": "https://images.pexels.com/photos/30337556/pexels-photo-30337556.jpeg",
     "description": "Temples, rice terraces, spiritual experiences, and beaches.",
     "options": [
       {
@@ -411,7 +411,7 @@
     "id": "9",
     "title": "France / Europe (multi-city)",
     "category": "Europe",
-    "image": "/images/packages/france.jpg",
+    "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg",
     "description": "Iconic landmarks and chateau exploration in France.",
     "options": [
       {
@@ -462,7 +462,7 @@
     "id": "10",
     "title": "Spain / Europe",
     "category": "Europe",
-    "image": "/images/packages/spain.jpg",
+    "image": "https://images.pexels.com/photos/12536954/pexels-photo-12536954.jpeg",
     "description": "Experience vibrant cities, Gothic history, and sun-drenched beaches.",
     "options": [
       {
@@ -513,7 +513,7 @@
     "id": "11",
     "title": "USA",
     "category": "North America",
-    "image": "/images/packages/usa.jpg",
+    "image": "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg",
     "description": "Explore East Coast cityscapes and West Coast natural wonders.",
     "options": [
       {
@@ -564,7 +564,7 @@
     "id": "12",
     "title": "Turkey",
     "category": "Eurasia",
-    "image": "/images/packages/turkey.jpg",
+    "image": "https://images.pexels.com/photos/26812425/pexels-photo-26812425.jpeg",
     "description": "Blend of European and Asian culture, historic sites, and unique landscapes.",
     "options": [
       {
@@ -614,7 +614,7 @@
     "id": "13",
     "title": "Russia",
     "category": "Europe/Eurasia",
-    "image": "/images/packages/russia.jpg",
+    "image": "https://images.pexels.com/photos/8405430/pexels-photo-8405430.jpeg",
     "description": "Experience the grandeur of Moscow and the elegance of St. Petersburg.",
     "options": [
       {
@@ -665,7 +665,7 @@
     "id": "14",
     "title": "Cambodia",
     "category": "South East Asia",
-    "image": "/images/packages/cambodia.jpg",
+    "image": "https://images.pexels.com/photos/3217663/pexels-photo-3217663.jpeg",
     "description": "Discover the ancient wonders of Angkor Wat and vibrant local life.",
     "options": [
       {
@@ -716,7 +716,7 @@
     "id": "15",
     "title": "Mexico",
     "category": "North America",
-    "image": "/images/packages/mexico.jpg",
+    "image": "https://images.pexels.com/photos/12630077/pexels-photo-12630077.jpeg",
     "description": "Ancient pyramids, rich culture, and beautiful Caribbean beaches.",
     "options": [
       {
@@ -767,7 +767,7 @@
     "id": "16",
     "title": "Japan",
     "category": "Asia",
-    "image": "/images/packages/japan.jpg",
+    "image": "https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg",
     "description": "A perfect blend of modern innovation and ancient tradition.",
     "options": [
       {
@@ -818,7 +818,7 @@
     "id": "17",
     "title": "Greece",
     "category": "Europe",
-    "image": "/images/packages/greece.jpg",
+    "image": "https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg",
     "description": "Ancient history in Athens and the iconic islands of the Aegean Sea.",
     "options": [
       {
@@ -869,7 +869,7 @@
     "id": "18",
     "title": "Australia",
     "category": "Oceania",
-    "image": "/images/packages/australia.jpg",
+    "image": "https://images.pexels.com/photos/32311511/pexels-photo-32311511.jpeg",
     "description": "Explore Sydney's harbour, Melbourne's culture, and the Great Barrier Reef.",
     "options": [
       {
@@ -920,7 +920,7 @@
     "id": "19",
     "title": "Switzerland",
     "category": "Europe",
-    "image": "/images/packages/switzerland.jpg",
+    "image": "https://images.pexels.com/photos/2779863/pexels-photo-2779863.jpeg",
     "description": "Alpine views, pristine lakes, and charming cities via scenic trains.",
     "options": [
       {
@@ -971,7 +971,7 @@
     "id": "20",
     "title": "Norway / Scandinavia",
     "category": "Europe",
-    "image": "/images/packages/norway.jpg",
+    "image": "https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpegswitzer",
     "description": "Spectacular fjords, Viking history, and cosmopolitan cities.",
     "options": [
       {
@@ -1019,7 +1019,7 @@
     "id": "21",
     "title": "Egypt",
     "category": "Africa/Middle East",
-    "image": "/images/packages/egypt.jpg",
+    "image": "https://images.pexels.com/photos/71241/pexels-photo-71241.jpeg",
     "description": "Ancient wonders of the pyramids and a cruise along the Nile River.",
     "options": [
       {
@@ -1067,7 +1067,7 @@
     "id": "22",
     "title": "Hawaii (USA)",
     "category": "Island Escape",
-    "image": "/images/packages/hawaii.jpg",
+    "image": "https://images.pexels.com/photos/2521620/pexels-photo-2521620.jpeg",
     "description": "Island hopping across the diverse landscapes of the Hawaiian archipelago.",
     "options": [
       {
@@ -1118,7 +1118,7 @@
     "id": "23",
     "title": "South Korea",
     "category": "Asia",
-    "image": "/images/packages/southkorea.jpg",
+    "image": "https://images.pexels.com/photos/31495725/pexels-photo-31495725.jpeg",
     "description": "Modern Seoul, ancient palaces, and coastal Busan.",
     "options": [
       {
@@ -1169,7 +1169,7 @@
     "id": "24",
     "title": "Tanzania",
     "category": "Africa",
-    "image": "/images/packages/tanzania.jpg",
+    "image": "https://images.pexels.com/photos/4982560/pexels-photo-4982560.jpeg",
     "description": "Home to the Serengeti, Ngorongoro Crater, and Zanzibar beaches.",
     "options": [
       {
@@ -1220,7 +1220,7 @@
     "id": "25",
     "title": "Costa Rica",
     "category": "Central America",
-    "image": "/images/packages/costarica.jpg",
+    "image": "https://images.pexels.com/photos/919494/pexels-photo-919494.jpeg",
     "description": "Eco-tourism haven with volcanoes, cloud forests, and stunning beaches.",
     "options": [
       {
@@ -1271,7 +1271,7 @@
     "id": "26",
     "title": "Brazil",
     "category": "South America",
-    "image": "/images/packages/brazil.jpg",
+    "image": "https://images.pexels.com/photos/13911606/pexels-photo-13911606.jpeg",
     "description": "Famous beaches, vibrant culture, and the majestic Iguazu Falls.",
     "options": [
       {
