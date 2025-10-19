@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  Dribbble,
   Facebook,
-  Github,
   Instagram,
   Mail,
   MapPin,
@@ -40,7 +38,7 @@ const data = {
     name: "Yatrica",
     description:
       "Discover the world effortlessly with our curated travel packages — crafted for families, couples, and explorers seeking unforgettable journeys.",
-    logo: "https://i.postimg.cc/2SRcktkT/Mvpblocks.webp",
+    logo: "/images/Logo.png",
   },
 };
 
@@ -115,9 +113,9 @@ export default function Footer() {
                 src={data.company.logo}
                 alt="logo"
                 style={{
-                  height: "32px",
-                  width: "32px",
-                  borderRadius: "50%",
+                  // height: "32px",
+                  width: "50px",
+                  // borderRadius: "50%",
                 }}
               />
               <span style={{ fontSize: "1.5rem", fontWeight: "600" }}>

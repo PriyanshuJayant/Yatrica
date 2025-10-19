@@ -14,6 +14,7 @@ import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
 import ContactForm from "../../components/Contact/Contact";
+import DiwaliPopUp from "../../components/DiwaliPopUp/DiwaliPopUp";
 
 // -------------------- VIDEO ASSETS --------------------
 import Diwali from "/videos/DiwaliOffers.mp4";
@@ -33,6 +34,16 @@ import HoneyMoon from '../../assets/data/honeyMoon.json'
 
 function Home() {
   const location = useLocation();
+  const [showDiwaliPopup, setShowDiwaliPopup] = useState(false);
+
+  // Show Diwali popup after 1 second
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowDiwaliPopup(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     // If navigation included state requesting a scroll, or a hash is present, scroll
@@ -48,6 +59,12 @@ function Home() {
   }, [location]);
   return (
     <>
+      {/* Diwali Popup */}
+      {/* <DiwaliPopUp 
+        isOpen={showDiwaliPopup} 
+        onClose={() => setShowDiwaliPopup(false)} 
+      /> */}
+
       <div className={styles.homePageContainer}>
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
