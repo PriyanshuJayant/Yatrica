@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   // User Agreement Verification (separate check)
   if (!agreed) {
-    return res.status(400).json({ error: "You must agree to the terms and conditions to proceed" });
+    return res.status(400).json({ error: "You must agree to the User Agreement to proceed" });
   }
 
   // Email validation

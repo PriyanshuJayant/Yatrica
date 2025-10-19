@@ -105,6 +105,15 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // client-side validation: ensure user agreed to terms
+    if (!formData.agreed) {
+      setSubmitStatus({
+        type: "error",
+        message: "You must agree to the User Agreement to proceed",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus({ type: "", message: "" });
 
@@ -120,6 +129,7 @@ export default function ContactForm() {
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
+          agreed: formData.agreed,
         }),
       });
 
