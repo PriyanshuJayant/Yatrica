@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { User, Phone, Mail, MessageSquare } from "lucide-react";
 // -------------------- STYLES ------------------------
 import styles from "./Contact.module.css";
+import { WorldMap } from "../../components/ui/world-map";
 
 // =====================================================
 //                     Corporate Packages
@@ -388,56 +389,48 @@ function ContactPage() {
             </motion.form>
           </div>
 
-          {/* RIGHT COLUMN - Empty for Future Components */}
+          {/* RIGHT COLUMN - World Map */}
           <div
             style={{
-              flex: "1 1 55%",
+              flex: "1 1 60%",
               minWidth: "300px",
               backgroundColor: "#f9f9f9",
               borderRadius: "12px",
-              padding: "40px",
-              minHeight: "400px",
+              overflow: "hidden",
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              alignItems: "stretch",
             }}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              style={{
-                textAlign: "center",
-                color: "#999",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "48px",
-                  marginBottom: "16px",
-                }}
-              >
-                📦
-              </div>
-              <p
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  margin: "0",
-                }}
-              >
-                Right Column Ready
-              </p>
-              <p
-                style={{
-                  fontSize: "13px",
-                  marginTop: "8px",
-                  color: "#bbb",
-                }}
-              >
-                Add your components here
-              </p>
-            </motion.div>
+            <WorldMap
+              darkMode={false}
+              lineColor="#0ea5e9"
+              dots={[
+                {
+                  start: { lat: 64.2008, lng: -149.4937 }, // Alaska
+                  end: { lat: 34.0522, lng: -118.2437 }, // Los Angeles
+                },
+                {
+                  start: { lat: 64.2008, lng: -149.4937 }, // Alaska
+                  end: { lat: -15.7975, lng: -47.8919 }, // Brazil
+                },
+                {
+                  start: { lat: -15.7975, lng: -47.8919 }, // Brazil
+                  end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+                },
+                {
+                  start: { lat: 51.5074, lng: -0.1278 }, // London
+                  end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                },
+                {
+                  start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                  end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+                },
+                {
+                  start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                  end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+                },
+              ]}
+            />
           </div>
         </div>
       </section>
