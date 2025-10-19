@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
 
 // -------------------- STYLES --------------------
 import styles from "./Home.module.css";
@@ -8,8 +7,6 @@ import styles from "./Home.module.css";
 // -------------------- COMPONENT IMPORTS --------------------
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/Hero/Hero";
-// import BannerVideo from "../../components/BannerVideo/BannerVideo";
-// import CardCouresel from "../../components/CardCarousel/CardCouresel";
 import { BannerComp } from "../../components/ui/BannerComp";
 import { Packages } from "../../components/ui/Packages";
 import Services from "../../components/Services/Services";
@@ -17,8 +14,6 @@ import FAQs from "../../components/FAQ/FAQ";
 import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
 import ContactForm from "../../components/Contact/Contact";
-// import ContactPage from './'
-// import CarouselComp from "../../components/Carousel/CarouselComp"; // Optional
 
 // -------------------- VIDEO ASSETS --------------------
 import Diwali from "/videos/DiwaliOffers.mp4";

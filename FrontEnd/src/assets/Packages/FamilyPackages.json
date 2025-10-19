@@ -4,34 +4,34 @@
         "src": "https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171",
         "location": "Dubai",
         "pricing": "20,500 - 91,000",
-        "link": "/package/family/dubai"
+        "link": "/packages/id/5"
     },
     {
         "id": 2,
         "src": "https://plus.unsplash.com/premium_photo-1661963643348-e95c6387ee8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
         "location": "Greece",
         "pricing": "69,000 - 2,50,000",
-        "link": "/package/family/greece"
+        "link": "/packages/id/17"
     },
     {
         "id": 3,
         "src": "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1167",
         "location": "Kenya",
         "pricing": "45,000 - 1,80,000",
-        "link": "/package/family/kenya"
+        "link": "/packages/id/6"
     },
     {
         "id": 4,
         "src": "https://plus.unsplash.com/premium_photo-1730035378906-5ed3f1b8f707?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
         "location": "Vietnam",
         "pricing": "19,200 - 81,000",
-        "link": "/package/family/vietnam"
+        "link": "/packages/id/2"
     },
     {
         "id": 5,
         "src": "https://images.unsplash.com/photo-1612862862126-865765df2ded?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
         "location": "Sri Lanka",
         "pricing": "12,900 - 51,000",
-        "link": "/package/family/sri-lanka"
+        "link": "/packages/id/3"
     }
 ]

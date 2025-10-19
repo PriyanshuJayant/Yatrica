@@ -387,15 +387,29 @@ function NavBar() {
                 >
                   Services
                 </a>
-                <Link
-                  to="/about-us"
+                <a
+                  href="#Question"
                   className={styles.mobileNavLink}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+
+                    if (location.pathname === "/") {
+                      const el = document.getElementById("Question");
+                      if (el)
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                    } else {
+                      navigate("/", { state: { scrollTo: "Question" } });
+                    }
+                  }}
                 >
-                  About Us
-                </Link>
+                  Ask Question
+                </a>
                 <Link
-                  to="/book-now"
+                  to="/contact"
                   className={styles.mobileNavLink}
                   onClick={() => setIsMenuOpen(false)}
                 >

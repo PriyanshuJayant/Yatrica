@@ -6,7 +6,6 @@ import NavBar from "../../../components/NavBar/NavBar";
 import Hero from "../../../components/Hero/Hero";
 import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 import Footer from "../../../components/Footer/Footer";
-// import CarouselComp from "../../components/Carousel/CarouselComp";
 import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveGrid";
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
 

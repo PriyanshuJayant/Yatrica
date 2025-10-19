@@ -4,20 +4,20 @@
         "src": "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
         "location": "Dubai",
         "pricing": "20,500 - 91,000",
-        "link": "/package/family/dubai"
+        "link": "/packages/id/5"
     },
     {
         "id": 2,
         "src": "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
         "location": "Greece",
         "pricing": "69,000 - 2,50,000",
-        "link": "/package/family/greece"
+        "link": "/packages/id/17"
     },
     {
         "id": 3,
         "src": "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
         "location": "Thailand",
         "pricing": "16,800 - 55,400",
-        "link": "/package/family/thailand"
+        "link": "/packages/id/1"
     }
 ]

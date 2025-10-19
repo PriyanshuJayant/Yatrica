@@ -1,6 +1,3 @@
-// -------------------- Dynamic Routing -------------
-import { Outlet, Link } from "react-router-dom";
-
 // -------------------- STYLES --------------------
 import styles from "./Packages.module.css";
 
