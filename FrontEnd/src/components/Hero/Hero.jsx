@@ -15,7 +15,7 @@ function Hero({ videoSrc, words, showContent = true }) {
   const flipStyle = {
     display: "inline-block",
     margin: "0 0.4rem",
-    color: "#a2eaf7ff",
+    color: "#4fc3f7",
     fontWeight: "600",
   };
 

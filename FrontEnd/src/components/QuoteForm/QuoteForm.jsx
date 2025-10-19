@@ -533,6 +533,12 @@ export default function ContactForm() {
                       repeat: Infinity,
                       ease: "linear",
                     }}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transformOrigin: "center",
+                    }}
                   >
                     <Loader2 size={18} />
                   </motion.div>
