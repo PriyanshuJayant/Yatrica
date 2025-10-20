@@ -1,8 +1,8 @@
-import { useRef, memo } from "react";
+import { useRef } from "react";
 import { motion } from "motion/react";
 import DottedMap from "dotted-map";
 
-export const WorldMap = memo(function WorldMap({
+export function WorldMap({
   dots = [],
   lineColor = "#0ea5e9",
   darkMode = false,
@@ -191,10 +191,10 @@ export const WorldMap = memo(function WorldMap({
       </svg>
     </motion.div>
   );
-});
+}
 
-// Demo Component - Memoized to prevent re-renders when parent state changes
-const WorldMapDemo = memo(function WorldMapDemo() {
+// Demo Component
+export default function WorldMapDemo() {
   return (
     <div
       style={{
@@ -239,6 +239,4 @@ const WorldMapDemo = memo(function WorldMapDemo() {
       />
     </div>
   );
-});
-
-export default WorldMapDemo;
+}
