@@ -54,7 +54,7 @@ function Home() {
       setTimeout(() => {
         const el = document.getElementById(scrollTarget);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
+      }, 300); // Increased from 50ms to 300ms to ensure page is fully rendered
     }
   }, [location]);
   return (

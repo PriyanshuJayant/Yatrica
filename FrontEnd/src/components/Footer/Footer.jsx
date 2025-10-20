@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Facebook,
   Instagram,
@@ -9,14 +10,14 @@ import {
 } from "lucide-react";
 
 const data = {
-  facebookLink: "",
-  instaLink: "",
+  facebookLink: "https://www.facebook.com/share/19nfdx2UPL/?mibextid=wwXIfr",
+  instaLink: "https://www.instagram.com/yatrica.co.in?igsh=cG5kMTZ1YzMxZjhw&utm_source=qr",
   twitterLink: "",
   services: {
-    webdev: "/web-development",
-    webdesign: "/web-design",
-    marketing: "/marketing",
-    googleads: "/google-ads",
+    webdev: "/#services",
+    webdesign: "/#services",
+    marketing: "/#services",
+    googleads: "/#services",
   },
   about: {
     history: "/company-history",
@@ -25,14 +26,14 @@ const data = {
     careers: "/careers",
   },
   help: {
-    faqs: "/faqs",
-    support: "/support",
-    livechat: "/live-chat",
+    faqs: "/user-agreement",
+    support: "/privacy-policy",
+    livechat: "/terms-conditions",
   },
   contact: {
     email: "info@yatrica.co.in",
     phone: "+91 9818456811 ",
-    address: "Milky Way Galaxy",
+    address: "Uttar Pradesh, Sipri Bazar, Jhansi, 284003",
   },
   company: {
     name: "Yatrica",
@@ -63,9 +64,9 @@ const serviceLinks = [
 ];
 
 const helpfulLinks = [
-  { text: "FAQs", href: data.help.faqs },
-  { text: "Support", href: data.help.support },
-  { text: "Live Chat", href: data.help.livechat, hasIndicator: true },
+  { text: "User Agreement", href: data.help.faqs },
+  { text: "Privacy Policy", href: data.help.support },
+  { text: "Terms Conditions", href: data.help.livechat, hasIndicator: true },
 ];
 
 const contactInfo = [
@@ -75,6 +76,29 @@ const contactInfo = [
 ];
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLinkClick = (e, href) => {
+    // Check if it's a hash link (anchor)
+    if (href.startsWith("/#")) {
+      e.preventDefault();
+      const hash = href.substring(2); // Remove "/#"
+      
+      // If we're already on home page, just scroll
+      if (location.pathname === "/") {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        // Navigate to home with hash state
+        navigate("/", { state: { scrollTo: hash } });
+      }
+    }
+    // For regular links, let them work normally
+  };
+
   return (
     <footer
       style={{
@@ -150,6 +174,7 @@ export default function Footer() {
                 <li key={label}>
                   <a
                     href={href}
+                    target="_blank"
                     style={{
                       color: "#0077B6",
                       transition: "0.3s",
@@ -172,7 +197,7 @@ export default function Footer() {
             }}
           >
             {/* About */}
-            <div>
+            {/* <div>
               <p style={{ fontSize: "18px", fontWeight: "600" }}>About Us</p>
               <ul style={{ marginTop: "1rem", listStyle: "none", padding: 0 }}>
                 {aboutLinks.map(({ text, href }) => (
@@ -189,7 +214,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Services */}
             <div>
@@ -201,9 +226,11 @@ export default function Footer() {
                   <li key={text} style={{ marginBottom: "0.75rem" }}>
                     <a
                       href={href}
+                      onClick={(e) => handleLinkClick(e, href)}
                       style={{
                         color: "rgba(0,0,0,0.6)",
                         textDecoration: "none",
+                        cursor: "pointer",
                       }}
                     >
                       {text}

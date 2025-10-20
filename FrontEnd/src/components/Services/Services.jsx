@@ -15,9 +15,9 @@ const serviceList = [
   },
   {
     icon: <Camera size={30} color="#2563eb" />,
-    title: "Packages",
+    title: "Visa Assistance",
     description:
-      "Custom itineraries that blend adventure, comfort, and culture. Explore Thailand, Switzerland, Dubai, and beyond. Flights, hotels, tours, transfers — we handle it all so you make memories.",
+      "Travel abroad without paperwork stress! Our visa support team guides you through every step — from application to approval. We help with documentation, appointments, and coordination for a smooth, hassle-free visa process.",
   },
 ];
 
@@ -101,10 +101,10 @@ const Service9 = () => {
               fontFamily:"Poppins"
             }}
           >
-            Services We Have
+            Visa Assistance
           </h2>
           <p style={{ fontSize: "17px", opacity: 0.8, marginBottom: "24px", lineHeight: "1.6" , fontFamily:"Poppins"}}>
-            Experience seamless travel planning with Yatrica. From flights to full packages, we handle every detail so you can focus on the journey ahead.
+            
           </p>
         </div>
 
