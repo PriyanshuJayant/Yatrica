@@ -1,4 +1,4 @@
-import { useRef, useMemo, memo, useCallback } from "react";
+import { useRef, memo } from "react";
 import { motion } from "motion/react";
 import DottedMap from "dotted-map";
 
@@ -9,29 +9,26 @@ export const WorldMap = memo(function WorldMap({
 }) {
   const svgRef = useRef(null);
   
-  // Memoize the map and SVG generation to prevent recreation on every render
-  const svgMap = useMemo(() => {
-    const map = new DottedMap({ height: 100, grid: "diagonal" });
-    return map.getSVG({
-      radius: 0.22,
-      color: darkMode ? "#FFFFFF40" : "#00000040",
-      shape: "circle",
-      backgroundColor: darkMode ? "black" : "white",
-    });
-  }, [darkMode]);
+  // Create map instance
+  const map = new DottedMap({ height: 100, grid: "diagonal" });
+  const svgMap = map.getSVG({
+    radius: 0.22,
+    color: darkMode ? "#FFFFFF40" : "#00000040",
+    shape: "circle",
+    backgroundColor: darkMode ? "black" : "white",
+  });
 
-  // Use useCallback for functions instead of useMemo
-  const projectPoint = useCallback((lat, lng) => {
+  const projectPoint = (lat, lng) => {
     const x = (lng + 180) * (800 / 360);
     const y = (90 - lat) * (400 / 180);
     return { x, y };
-  }, []);
+  };
 
-  const createCurvedPath = useCallback((start, end) => {
+  const createCurvedPath = (start, end) => {
     const midX = (start.x + end.x) / 2;
     const midY = Math.min(start.y, end.y) - 50;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
-  }, []);
+  };
 
   const containerStyle = {
     width: "100%",
