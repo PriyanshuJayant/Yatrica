@@ -16,6 +16,7 @@ import UserAgreement from "./pages/Static/UserAgreement/UserAgreement";
 import TermsConditions from "./pages/Static/TermsConditions/TermsConditions";
 import QuotePage from "./pages/Static/Quote/Quote";
 
+
 import ID1 from "./packages/1_Thailand";
 import ID2 from "./packages/2_Vietnam";
 import ID3 from "./packages/3_SriLanka";
