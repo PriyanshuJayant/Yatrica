@@ -9,4 +9,15 @@ export default defineConfig({
       overlay: true,
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'dotted-map': ['dotted-map'],
+          'framer-motion': ['framer-motion'],
+        }
+      }
+    }
+  }
 });
