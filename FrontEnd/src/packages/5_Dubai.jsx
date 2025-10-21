@@ -101,7 +101,7 @@ function ID5() {
                             </h3>
                           </div>
                         </div>
-                        <button className={styles.bookBtn}>Book Now</button>
+                        <button className={styles.bookBtn}>Get Quote</button>
                       </div>
                       <div className={styles.itinerarySection}>
                         <h4 className={styles.itineraryTitle}>{formatDuration(opt.duration)}</h4>

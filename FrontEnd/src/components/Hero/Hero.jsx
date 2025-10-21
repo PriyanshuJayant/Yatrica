@@ -40,7 +40,7 @@ function Hero({ videoSrc, words, showContent = true }) {
               <FlipWords words={words || defaultWords} />
             </span>
             <br />
-            journeys with Yatrica Travels
+            journeys with Yatrica
           </div>
         </div>
       )}

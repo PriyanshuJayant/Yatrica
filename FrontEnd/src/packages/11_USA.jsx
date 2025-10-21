@@ -101,7 +101,7 @@ function ID11() {
                             </h3>
                           </div>
                         </div>
-                        <button className={styles.bookBtn}>Book Now</button>
+                        <Link to="/quote"> <button className={styles.bookBtn}>Get Quote</button> </Link>
                       </div>
                       <div className={styles.itinerarySection}>
                         <h4 className={styles.itineraryTitle}>{formatDuration(opt.duration)}</h4>

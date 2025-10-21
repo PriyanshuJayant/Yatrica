@@ -101,7 +101,7 @@ const Service9 = () => {
               fontFamily:"Poppins"
             }}
           >
-            Visa Assistance
+            Services We Provide
           </h2>
           <p style={{ fontSize: "17px", opacity: 0.8, marginBottom: "24px", lineHeight: "1.6" , fontFamily:"Poppins"}}>
             
