@@ -9,9 +9,6 @@ import NavBar from "../components/NavBar/NavBar";
 import QuoteForm from "../components/QuoteForm/QuoteForm";
 import Footer from "../components/Footer/Footer";
 
-// -------------------- VIDEO ASSETS --------------------
-import HomeHero from "/videos/Hero.mp4";
-
 // -------------------- DATA FILES --------------------
 import singlePackages from "../assets/singlePackages.json";
 

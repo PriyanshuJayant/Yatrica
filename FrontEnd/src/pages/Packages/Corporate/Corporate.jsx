@@ -12,7 +12,7 @@ import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 // --------------------- Dynamic Components -----------
 
 // -------------------- VIDEO ASSETS ------------------
-import Family from "/videos/FamilyTours.mp4";
+const Family = "/videos/FamilyTours.mp4";
 
 // -------------------- DATA FILES --------------------
 import packagesData from "../../../assets/Packages/CorporatePackages.json";

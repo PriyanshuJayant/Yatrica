@@ -12,9 +12,9 @@ import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
 
 // -------------------- VIDEO ASSETS --------------------
-import Corporate from "/videos/CorporateTours.mp4";
-import Family from "/videos/FamilyTours.mp4";
-import HomeHero from "/videos/Hero.mp4";
+const Corporate = "/videos/CorporateTours.mp4";
+const Family = "/videos/FamilyTours.mp4";
+const HomeHero = "/videos/Hero.mp4";
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";

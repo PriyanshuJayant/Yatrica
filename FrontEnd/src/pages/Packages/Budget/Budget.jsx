@@ -10,7 +10,7 @@ import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveG
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
 
 // -------------------- VIDEO ASSETS ------------------
-import Family from "/videos/FamilyTours.mp4";
+const Family = "/videos/FamilyTours.mp4";
 
 // -------------------- DATA FILES --------------------
 import packagesData from "../../../assets/Packages/BudgetPackages.json";

@@ -17,10 +17,10 @@ import ContactForm from "../../components/Contact/Contact";
 import DiwaliPopUp from "../../components/DiwaliPopUp/DiwaliPopUp";
 
 // -------------------- VIDEO ASSETS --------------------
-import Diwali from "/videos/DiwaliOffers.mp4";
-import Corporate from "/videos/CorporateTours.mp4";
-import Family from "/videos/FamilyTours.mp4";
-import HomeHero from "/videos/Hero.mp4";
+const Diwali = "/videos/DiwaliOffers.mp4";
+const Corporate = "/videos/CorporateTours.mp4";
+const Family = "/videos/FamilyTours.mp4";
+const HomeHero = "/videos/Hero.mp4";
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
