@@ -21,14 +21,14 @@ const Diwali = "/videos/DiwaliOffers.mp4";
 const Corporate = "/videos/CorporateTours.mp4";
 const Family = "/videos/FamilyTours.mp4";
 const HomeHero = "/videos/Hero.mp4";
-const Honeymoon = "/videos/HoneyMoon.mp4"
-const Budget  = "/videos/BudgetTour.mp4"
+const Honeymoon = "/videos/HoneyMoon.mp4";
+const Budget = "/videos/BudgetTour.mp4";
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
 import CorporateJSON from "../../assets/data/corporate.json";
-import HoneyMoon from '../../assets/data/honeyMoon.json'
+import HoneyMoon from "../../assets/data/honeyMoon.json";
 
 // =====================================================
 //                     HOME COMPONENT
@@ -82,17 +82,17 @@ function Home() {
         <div className={styles.pageContainer}>
           {/* --------------------Diwali Section-------------------- */}
           {/* <div className={styles.DiwaliComponent}> */}
-            <video
-              className={styles.diwaliBanner}
-              src={Diwali}
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              Your Browser does not support this video format
-            </video>
-            {/* <CardCouresel /> */}
+          <video
+            className={styles.diwaliBanner}
+            src={Diwali}
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            Your Browser does not support this video format
+          </video>
+          {/* <CardCouresel /> */}
           {/* </div> */}
 
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
@@ -110,7 +110,10 @@ function Home() {
           </div>
 
           {/* -------------------- SERVICES SECTION -------------------- */}
-          <div id="services" style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}>
+          <div
+            id="services"
+            style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}
+          >
             <Services />
           </div>
 
@@ -142,6 +145,14 @@ function Home() {
             </div>
           </div>
 
+          {/* -------------------- QUOTE FORM -------------------- */}
+          <div
+            id="Question"
+            style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}
+          >
+            <QuoteForm />
+          </div>
+
           {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
@@ -159,11 +170,6 @@ function Home() {
           {/* -------------------- FAQ SECTION -------------------- */}
           <div className={styles.FAQSection}>
             <FAQs />
-          </div>
-
-          {/* -------------------- QUOTE FORM -------------------- */}
-          <div id="Question" style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}>
-            <QuoteForm />
           </div>
 
           <ContactForm />
