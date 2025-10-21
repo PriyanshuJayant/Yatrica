@@ -33,7 +33,7 @@ const data = {
   contact: {
     email: "info@yatrica.co.in",
     phone: "+91 9818456811 ",
-    address: "Uttar Pradesh, Sipri Bazar, Jhansi, 284003",
+    address: "Sipri Bazar, Jhansi, Uttar Pradesh-284003",
   },
   company: {
     name: "Yatrica",

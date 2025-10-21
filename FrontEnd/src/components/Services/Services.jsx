@@ -74,7 +74,7 @@ const Service9 = () => {
     <section
       style={{
         paddingTop: "56px",
-        paddingBottom: "96px",
+        paddingBottom: "56px",
         backgroundColor: "white",
         color: "#0f172a",
         position: "relative",
@@ -114,7 +114,6 @@ const Service9 = () => {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: "24px",
-            marginTop: "80px",
           }}
         >
           {serviceList.map((service, i) => (
