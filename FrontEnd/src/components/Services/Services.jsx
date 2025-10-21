@@ -91,7 +91,7 @@ const Service9 = () => {
         {/* Background Shape */}
 
         {/* Heading Section */}
-        <div style={{ width: "100%",  marginBottom: "48px" , display:"flex", flexDirection:"column", textAlign:"center"}}>
+        <div style={{ width: "100%",  marginBottom: "15px" , display:"flex", flexDirection:"column", textAlign:"center"}}>
           <h2
             style={{
               fontSize: "30px",
