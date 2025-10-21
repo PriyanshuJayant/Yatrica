@@ -17,7 +17,7 @@ import ContactForm from "../../components/Contact/Contact";
 import DiwaliPopUp from "../../components/DiwaliPopUp/DiwaliPopUp";
 
 // -------------------- VIDEO ASSETS --------------------
-const Diwali = "/videos/DiwaliOffers.mp4";
+const Diwali = "/videos/NewYear.mp4";
 const Corporate = "/videos/CorporateTours.mp4";
 const Family = "/videos/FamilyTours.mp4";
 const HomeHero = "/videos/Hero.mp4";
