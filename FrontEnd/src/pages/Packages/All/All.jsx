@@ -10,7 +10,7 @@ import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveG
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
 
 // -------------------- VIDEO ASSETS ------------------
-const HeroVideo = '/videos/Hero.mp4'
+const HomeHero = "/videos/Hero.mp4";
 
 // -------------------- DATA FILES --------------------
 import packagesData from "../../../assets/Packages/AllPackages.json";
@@ -26,7 +26,7 @@ function All() {
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
         <div className={styles.FamilyHero} style={{ position: "relative" }}>
-          <Hero videoSrc={HeroVideo} showContent={false} />
+          <Hero videoSrc={HomeHero} showContent={false} />
           <div
             style={{
               position: "absolute",

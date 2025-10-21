@@ -1,20 +1,20 @@
-import { Camera, Shuffle, Leaf } from "lucide-react";
+import { Handshake, Hotel, Plane } from "lucide-react";
 
 const serviceList = [
   {
-    icon: <Leaf size={30} color="#2563eb" />,
+    icon: <Plane size={30} color="#2563eb" />,
     title: "Flights",
     description:
       "Unbeatable airfares from top airlines worldwide. Whether it's a quick escape or a long journey, we deliver the best routes, lowest prices, and smooth bookings with 24/7 support.",
   },
   {
-    icon: <Shuffle size={30} color="#2563eb" />,
+    icon: <Hotel size={30} color="#2563eb" />,
     title: "Hotels",
     description:
       "From cozy retreats to luxury resorts, our verified hotel partners offer comfort that matches your style. Beach escapes, city breaks, or mountain getaways — your perfect stay awaits.",
   },
   {
-    icon: <Camera size={30} color="#2563eb" />,
+    icon: <Handshake size={30} color="#2563eb" />,
     title: "Visa Assistance",
     description:
       "Travel abroad without paperwork stress! Our visa support team guides you through every step — from application to approval. We help with documentation, appointments, and coordination for a smooth, hassle-free visa process.",
@@ -28,7 +28,7 @@ const ServiceItem = ({ service }) => (
       boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
       borderRadius: "16px",
       padding: "24px",
-      paddingBottom: "48px",
+      paddingBottom: "20px",
       height: "100%",
       position: "relative",
       color: "#0f172a",

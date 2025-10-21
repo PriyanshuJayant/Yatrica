@@ -10,7 +10,7 @@ import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveG
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
 
 // -------------------- VIDEO ASSETS ------------------
-const Family = "/videos/FamilyTours.mp4";
+const Budget  = "/videos/BudgetTour.mp4"
 
 // -------------------- DATA FILES --------------------
 import packagesData from "../../../assets/Packages/BudgetPackages.json";
@@ -26,7 +26,7 @@ function BudgetPage() {
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
         <div className={styles.FamilyHero} style={{ position: "relative" }}>
-          <Hero videoSrc={Family} showContent={false} />
+          <Hero videoSrc={Budget} showContent={false} />
           <div
             style={{
               position: "absolute",

@@ -21,6 +21,8 @@ const Diwali = "/videos/DiwaliOffers.mp4";
 const Corporate = "/videos/CorporateTours.mp4";
 const Family = "/videos/FamilyTours.mp4";
 const HomeHero = "/videos/Hero.mp4";
+const Honeymoon = "/videos/HoneyMoon.mp4"
+const Budget  = "/videos/BudgetTour.mp4"
 
 // -------------------- DATA FILES --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
@@ -129,7 +131,7 @@ function Home() {
           {/* -------------------- HONEYMOON SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
-              src={Corporate}
+              src={Honeymoon}
               heading="Honeymoon"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"
@@ -143,7 +145,7 @@ function Home() {
           {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
           <div className={styles.HomeContainer}>
             <BannerComp
-              src={Corporate}
+              src={Budget}
               heading="Budget Friendly"
               subHeading="Enjoy your best time with your Partner"
               buttonText="More Honeymoon Packages →"

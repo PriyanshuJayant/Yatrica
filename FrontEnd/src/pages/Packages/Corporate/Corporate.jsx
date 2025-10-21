@@ -12,7 +12,7 @@ import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 // --------------------- Dynamic Components -----------
 
 // -------------------- VIDEO ASSETS ------------------
-const Family = "/videos/FamilyTours.mp4";
+const Corporate = "/videos/CorporateTours.mp4";
 
 // -------------------- DATA FILES --------------------
 import packagesData from "../../../assets/Packages/CorporatePackages.json";
@@ -28,7 +28,7 @@ function CorporatePage() {
         {/* -------------------- NAVBAR & HERO -------------------- */}
         <NavBar />
         <div className={styles.FamilyHero} style={{ position: "relative" }}>
-          <Hero videoSrc={Family} showContent={false} />
+          <Hero videoSrc={Corporate} showContent={false} />
           <div
             style={{
               position: "absolute",
