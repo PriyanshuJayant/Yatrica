@@ -126,10 +126,11 @@ export function Packages({ src }) {
 
     // Ensure the expanded card stays within viewport bounds
     const padding = 20; // Padding from viewport edges
+    const paddingTop = 100; // Top Padding 
 
     // Check top boundary
-    if (desiredTop < padding) {
-      desiredTop = padding;
+    if (desiredTop < paddingTop) {
+      desiredTop = paddingTop;
     }
 
     // Check bottom boundary
