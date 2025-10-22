@@ -11,6 +11,11 @@ export function PreloadAssets({ assets = [] }) {
     const preloadLinks = [];
 
     assets.forEach((asset) => {
+      // Skip videos - they don't support preload and should load naturally
+      if (asset.endsWith('.mp4') || asset.endsWith('.webm')) {
+        return;
+      }
+
       const link = document.createElement('link');
       link.rel = 'preload';
       
@@ -19,15 +24,15 @@ export function PreloadAssets({ assets = [] }) {
         link.as = 'font';
         link.type = asset.endsWith('.woff2') ? 'font/woff2' : 'font/woff';
         link.crossOrigin = 'anonymous';
-      } else if (asset.endsWith('.mp4') || asset.endsWith('.webm')) {
-        link.as = 'video';
-        link.type = asset.endsWith('.mp4') ? 'video/mp4' : 'video/webm';
       } else if (asset.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i)) {
         link.as = 'image';
       } else if (asset.endsWith('.css')) {
         link.as = 'style';
       } else if (asset.endsWith('.js')) {
         link.as = 'script';
+      } else {
+        // Skip unsupported types
+        return;
       }
 
       link.href = asset;

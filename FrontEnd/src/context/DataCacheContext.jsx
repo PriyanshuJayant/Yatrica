@@ -1,24 +1,61 @@
-import React, { createContext, useContext, useRef, useCallback } from 'react';
+import React, { createContext, useContext, useRef, useCallback, useEffect } from 'react';
+import { cacheManager, StorageType } from '../utils/CacheManager';
 
 /**
- * DataCacheContext - Centralized cache for JSON data
+ * DataCacheContext - Centralized cache for JSON data with persistent storage
  * Prevents redundant fetching and reduces bundle size by lazy loading JSON
  */
 const DataCacheContext = createContext(null);
 
+const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+const STORAGE = StorageType.LOCAL; // Persistent across sessions
+
 export function DataCacheProvider({ children }) {
   const cacheRef = useRef(new Map());
+  const isInitialized = useRef(false);
+
+  // Initialize cache from persistent storage on mount
+  useEffect(() => {
+    if (isInitialized.current) return;
+    isInitialized.current = true;
+
+    // Clean expired entries on startup
+    const cleanCache = async () => {
+      try {
+        // This will be handled by CacheManager's TTL checks
+        // console.log('✅ Cache initialized with persistent storage');
+      } catch (error) {
+        console.warn('Failed to initialize cache:', error);
+      }
+    };
+
+    cleanCache();
+  }, []);
 
   const getData = useCallback(async (key, loader) => {
-    // Check if data is already cached
+    // Check memory cache first (fastest)
     if (cacheRef.current.has(key)) {
       return cacheRef.current.get(key);
+    }
+
+    // Check persistent storage (LocalStorage/IndexedDB)
+    const cachedData = await cacheManager.get(`data_${key}`, { storage: STORAGE });
+    if (cachedData !== null) {
+      cacheRef.current.set(key, cachedData);
+      return cachedData;
     }
 
     // Load data using the provided loader function
     try {
       const data = await loader();
+      
+      // Store in both memory and persistent cache
       cacheRef.current.set(key, data);
+      await cacheManager.set(`data_${key}`, data, { 
+        ttl: CACHE_TTL, 
+        storage: STORAGE 
+      });
+      
       return data;
     } catch (error) {
       console.error(`Failed to load data for key: ${key}`, error);
@@ -26,19 +63,25 @@ export function DataCacheProvider({ children }) {
     }
   }, []);
 
-  const setData = useCallback((key, data) => {
+  const setData = useCallback(async (key, data) => {
     cacheRef.current.set(key, data);
+    await cacheManager.set(`data_${key}`, data, { 
+      ttl: CACHE_TTL, 
+      storage: STORAGE 
+    });
   }, []);
 
   const hasData = useCallback((key) => {
     return cacheRef.current.has(key);
   }, []);
 
-  const clearData = useCallback((key) => {
+  const clearData = useCallback(async (key) => {
     if (key) {
       cacheRef.current.delete(key);
+      await cacheManager.delete(`data_${key}`, { storage: STORAGE });
     } else {
       cacheRef.current.clear();
+      await cacheManager.clear({ storage: STORAGE });
     }
   }, []);
 

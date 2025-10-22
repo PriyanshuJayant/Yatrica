@@ -1,11 +1,13 @@
 import "./App.css";
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { KeepAliveProvider } from "./context/KeepAliveContext";
 import { DataCacheProvider } from "./context/DataCacheContext";
 import { RouteCacheManager } from "./hooks/useRouteCache";
 import { PreloadAssets, DNSPrefetch } from "./components/PreloadAssets/PreloadAssets";
+import { initializeCacheWarming } from "./utils/CacheWarming";
+import CacheDebugPanel from "./components/CacheDebugPanel/CacheDebugPanel";
 
 // ==================== LOADING COMPONENT ====================
 const PageLoader = () => (
@@ -141,6 +143,12 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  // Initialize cache warming on app start
+  useEffect(() => {
+    const cleanup = initializeCacheWarming();
+    return cleanup;
+  }, []);
+
   return (
     <DataCacheProvider>
       <KeepAliveProvider>
@@ -165,6 +173,9 @@ function App() {
           <RouteCacheManager />
           <AnimatedRoutes />
         </Router>
+
+        {/* Cache Debug Panel (dev only) - Commented out */}
+        {/* <CacheDebugPanel /> */}
       </KeepAliveProvider>
     </DataCacheProvider>
   );
