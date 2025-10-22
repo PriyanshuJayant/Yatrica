@@ -309,6 +309,7 @@ export default async function handler(req, res) {
         // Don't fail the whole request if tracking email fails
       }
     }
+    
 
     return res.status(200).json({
       success: true,
