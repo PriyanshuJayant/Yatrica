@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 // -------------------- STYLES --------------------
-import styles from "./Home.module.css";
-// import styles from "../pages.module.css";
+import styles from "../pages.module.css";
 
 
 // -------------------- COMPONENT IMPORTS --------------------
