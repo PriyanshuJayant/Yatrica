@@ -61,7 +61,7 @@ function TermsConditions() {
                 For questions about this offer, please contact us at:
               </p>
               <p className={styles.paragraph}>
-                <strong>Yatrica Travel</strong><br />
+                <strong>Yatrica</strong><br />
                 Email: info@yatrica.co.in<br />
                 Phone: +91 (981) 845-6811<br />
                 Address: Sipri Bazar, Jhansi, Uttar Pradesh-284003

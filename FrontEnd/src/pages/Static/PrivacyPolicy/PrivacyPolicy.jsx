@@ -178,7 +178,7 @@
 //                 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
 //               </p>
 //               <p className={styles.paragraph}>
-//                 <strong>Yatrica Travel</strong><br />
+//                 <strong>Yatrica</strong><br />
 //                 Email: info@yatricatravel.com<br />
 //                 Phone: +91 (000) 000-0000<br />
 //                 Address: [Your Business Address]

@@ -38,11 +38,11 @@ export default async function handler(req, res) {
 
     // Email to the person who filled the form
     const userMailOptions = {
-      from: `"Yatrica Travel" <${
+      from: `"Yatrica" <${
         process.env.EMAIL_USER || process.env.VITE_EMAIL_USER
       }>`,
       to: email,
-      subject: "Thank You for Your Quote Request - Yatrica Travel",
+      subject: "Thank You for Your Quote Request - Yatrica",
       html: `
         <!DOCTYPE html>
 <html lang="en">
@@ -59,9 +59,9 @@ export default async function handler(req, res) {
             <!-- Header -->
             <tr>
               <td style="background: linear-gradient(90deg, #2563eb, #0ea5a4); border-radius: 12px; padding: 30px; text-align: center;">
-                <img src="https://raw.githubusercontent.com/PriyanshuJayant/Yatrica/main/FrontEnd/public/images/Logo.png" alt="Yatrica Logo" style="width: 60px; height: 60px; margin-bottom: 10px;" />
+                <img src="https://raw.githubusercontent.com/PriyanshuJayant/Yatrica/main/FrontEnd/public/images/Logo.png" alt="Yatrica Logo" style="width: 80px; height: 60px; margin-bottom: 10px;" />
                 <h1 style="color: white; margin: 10px 0 5px 0; font-size: 24px; font-weight: 600;">Quote Request Received!</h1>
-                <p style="color: rgba(255, 255, 255, 0.95); margin: 0; font-size: 14px;">Yatrica Travel</p>
+                <p style="color: rgba(255, 255, 255, 0.95); margin: 0; font-size: 14px;">Yatrica</p>
               </td>
             </tr>
 
@@ -71,7 +71,7 @@ export default async function handler(req, res) {
                 
                 <p style="margin: 0 0 15px 0; font-size: 16px; color: #0f172a;">Dear <strong>${name}</strong>,</p>
 
-                <p style="margin: 0 0 20px 0; color: #6b7280; line-height: 1.6;">Thank you for requesting a quote with <strong style="color: #2563eb;">Yatrica Travel</strong>! We have received your travel inquiry and our holiday experts are already reviewing your requirements.</p>
+                <p style="margin: 0 0 20px 0; color: #6b7280; line-height: 1.6;">Thank you for requesting a quote with <strong style="color: #2563eb;">Yatrica</strong>! We have received your travel inquiry and our holiday experts are already reviewing your requirements.</p>
 
                 <!-- Travel Details Box -->
                 <div style="margin: 20px 0;">
@@ -121,7 +121,7 @@ export default async function handler(req, res) {
 
                 <p style="margin-top: 20px; color: #0f172a;">
                   Best regards,<br/>
-                  <strong style="color: #2563eb;">The Yatrica Travel Team</strong><br/>
+                  <strong style="color: #2563eb;">The Yatrica's Team</strong><br/>
                   <em style="font-size: 13px; color: #6b7280;">Your Journey, Our Passion</em>
                 </p>
 
@@ -131,7 +131,7 @@ export default async function handler(req, res) {
             <!-- Footer -->
             <tr>
               <td style="padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
-                <p style="margin: 0;">© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.</p>
+                <p style="margin: 0;">© ${new Date().getFullYear()} Yatrica. All rights reserved.</p>
                 <p style="margin: 8px 0 0 0;">📧 <a href="mailto:info@yatrica.co.in" style="color: #2563eb; text-decoration: none;">info@yatrica.co.in</a> | 📞 +91 (981) 845-6811</p>
               </td>
             </tr>
@@ -272,7 +272,7 @@ export default async function handler(req, res) {
             <!-- Footer -->
             <tr>
               <td style="padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
-                <p style="margin: 0;">This is an automated notification from Yatrica Travel Quote Request System</p>
+                <p style="margin: 0;">This is an automated notification from Yatrica Quote Request System</p>
                 <p style="margin: 8px 0 0 0;">Generated at ${new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata" })}</p>
               </td>
             </tr>
