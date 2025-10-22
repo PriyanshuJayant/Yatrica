@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../../../components/NavBar/NavBar';
 import Footer from '../../../components/Footer/Footer';
-import styles from '../Contact/ContactPage.module.css'
+import styles from '../../pages.module.css';
 import quotePage from '../../../assets/data/quotePage.json';
 import ContactForm from '../../../components/QuoteForm/QuoteForm';
 
@@ -25,7 +25,7 @@ function QuotePage() {
         </div>
       </div>
       
-      <div className={styles.pageContainer}>
+      <div className={styles.contactPageContainer}>
         {/* <ContactPage/> */}
         <ContactForm/>
       </div>

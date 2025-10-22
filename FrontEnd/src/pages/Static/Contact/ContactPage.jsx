@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../../../components/NavBar/NavBar';
 import Footer from '../../../components/Footer/Footer';
-import styles from './ContactPage.module.css'
+import styles from '../../pages.module.css';
 import ContactPage from '../../../components/Contact/Contact';
 import contactData from '../../../assets/data/contactPage.json';
 
@@ -25,7 +25,7 @@ function UserAgreement() {
         </div>
       </div>
       
-      <div className={styles.pageContainer}>
+      <div className={styles.contactPageContainer}>
         <ContactPage/>
       </div>
       <Footer />

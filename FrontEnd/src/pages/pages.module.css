@@ -1,4 +1,85 @@
-/* ==================== HERO HEADER SECTION ==================== */
+/* ==================== COMMON PAGE CONTAINERS ==================== */
+
+.homePageContainer {
+  background-color: rgb(236, 236, 236);
+}
+
+.pageContainer {
+  margin: 0 10rem 0 10rem;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ==================== HOME PAGE SPECIFIC ==================== */
+
+.DiwaliComponent {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  padding-bottom: 15px;
+}
+
+.diwaliBanner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.BannerVideo {
+  margin-top: 5rem;
+}
+
+.CardCarousel {
+  position: relative;
+  bottom: 70px;
+}
+
+.ExpandableCard {
+  position: relative;
+  margin-top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+}
+
+.FAQSection {
+  width: 100%;
+}
+
+.HomeContainer {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  height: auto;
+  padding-bottom: 35px;
+}
+
+/* ==================== PACKAGE PAGES (ALL, FAMILY, BUDGET, CORPORATE, HONEYMOON) ==================== */
+
+.FamilyHero {
+  background: "linear-gradient(to right, rgba(0, 0, 0, 0.47) 0%, rgba(0,0,0,0.4) 40%, transparent 100%)";
+  z-index: 1;
+  position: absolute;
+}
+
+.FamilyHeroVideo {
+  border: 2px solid black;
+}
+
+/* ==================== CONTACT PAGE ==================== */
 
 .packageHeader {
   position: relative;
@@ -59,9 +140,7 @@
   line-height: 1.6;
 }
 
-/* ==================== PAGE CONTAINER ==================== */
-
-.pageContainer {
+.contactPageContainer {
   margin: 0 auto;
   padding: 40px 10rem;
   display: flex;
@@ -73,10 +152,23 @@
   background-color: #ececec;
 }
 
+/* ==================== STATIC PAGES (USER AGREEMENT, PRIVACY, TERMS) ==================== */
+
 .container {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+}
+
+.staticPageContainer {
+  margin: 0 auto;
+  padding: 40px 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1400px;
 }
 
 .content {
@@ -148,169 +240,60 @@
   margin-bottom: 0;
 }
 
+/* ==================== RESPONSIVE DESIGN ==================== */
+
 /* Tablet Responsive Design */
 @media (max-width: 1024px) {
-  .pageContainer {
+  .pageContainer,
+  .staticPageContainer,
+  .contactPageContainer {
     padding: 40px 5rem;
-  }
-
-  .packageTitle {
-    font-size: 36px;
   }
 }
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
-  .packageHeader {
-    height: 350px;
+  .pageContainer {
+    margin: 0 1rem 0 1rem;
+    padding: 2.5rem 0 2.5rem 0;
   }
 
-  .headerOverlay {
-    padding: 2rem 1.5rem;
+  .staticPageContainer,
+  .contactPageContainer {
+    margin: 0;
+    padding: 20px 1rem;
+  }
+
+  .ExpandableCard {
+    padding: 0 1rem 0 1rem !important;
+  }
+
+  .content {
+    padding: 40px 24px;
+  }
+
+  .title {
+    font-size: 28px;
   }
 
   .packageTitle {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .packageDescription {
     font-size: 16px;
   }
 
-  .pageContainer {
-    margin: 0;
-    padding: 20px 1rem;
-    gap: 20px;
-  }
-
-  .container {
-    padding: 0;
-    padding-top: 60px;
-  }
-
-  .content {
-    padding: 40px 28px;
-    border-radius: 4px;
-  }
-
-  .header {
-    margin-bottom: 32px;
-    padding-bottom: 20px;
-  }
-
-  .title {
-    font-size: 28px;
-    letter-spacing: -0.3px;
-  }
-
-  .meta {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .meta p {
-    font-size: 13px;
-  }
-
-  .section {
-    margin-bottom: 32px;
+  .headerOverlay {
+    padding: 2rem 1.5rem;
   }
 
   .sectionTitle {
     font-size: 18px;
-    margin-bottom: 12px;
-  }
-
-  .paragraph {
-    font-size: 15px;
-    line-height: 1.65;
-    margin-bottom: 14px;
-  }
-
-  .list {
-    padding-left: 20px;
-  }
-
-  .list li {
-    font-size: 15px;
-    line-height: 1.65;
-    margin-bottom: 10px;
-  }
-}
-
-/* Small Mobile Devices */
-@media (max-width: 480px) {
-  .pageContainer {
-    padding: 16px 0.75rem;
-    gap: 16px;
-  }
-
-  .content {
-    padding: 32px 20px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-    border-radius: 0;
-  }
-
-  .header {
-    margin-bottom: 28px;
-    padding-bottom: 16px;
-  }
-
-  .title {
-    font-size: 24px;
-    line-height: 1.2;
-  }
-
-  .meta p {
-    font-size: 12px;
-  }
-
-  .section {
-    margin-bottom: 28px;
-  }
-
-  .sectionTitle {
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-
-  .paragraph {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-
-  .list {
-    padding-left: 18px;
-  }
-
-  .list li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 8px;
-  }
-}
-
-/* Extra Small Devices */
-@media (max-width: 360px) {
-  .pageContainer {
-    padding: 12px 0.5rem;
-  }
-
-  .content {
-    padding: 24px 16px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
-
-  .sectionTitle {
-    font-size: 16px;
   }
 
   .paragraph,
   .list li {
-    font-size: 13px;
+    font-size: 15px;
   }
 }

@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 
 // -------------------- STYLES --------------------
 import styles from "./Home.module.css";
+// import styles from "../pages.module.css";
+
 
 // -------------------- COMPONENT IMPORTS --------------------
 import NavBar from "../../components/NavBar/NavBar";

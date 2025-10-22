@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './UserAgreement.module.css';
+import styles from '../../pages.module.css';
 import NavBar from '../../../components/NavBar/NavBar';
 import Footer from '../../../components/Footer/Footer';
 
@@ -7,7 +7,7 @@ function UserAgreement() {
   return (
     <>
       <NavBar />
-      <div className={styles.pageContainer}>
+      <div className={styles.staticPageContainer}>
 
       
       <div className={styles.container}>

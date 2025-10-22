@@ -1,5 +1,5 @@
 // -------------------- STYLES ------------------------
-import styles from "./All.module.css";
+import styles from "../../pages.module.css";
 
 // -------------------- COMPONENT IMPORTS -------------
 import NavBar from "../../../components/NavBar/NavBar";
