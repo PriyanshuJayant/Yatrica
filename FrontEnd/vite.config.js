@@ -91,12 +91,7 @@ export default defineConfig({
             return 'framer-vendor';
           }
           
-          // Dotted Map - map visualization
-          if (id.includes('node_modules/dotted-map')) {
-            return 'map-vendor';
-          }
-          
-          // All other node_modules
+          // All other node_modules (including dotted-map to avoid circular deps)
           if (id.includes('node_modules')) {
             return 'vendor';
           }
