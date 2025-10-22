@@ -72,11 +72,12 @@ export default defineConfig({
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
-          // React core libraries - changes rarely, cache forever
+          // React core libraries - MUST stay together in same chunk
           if (id.includes('node_modules/react/') || 
               id.includes('node_modules/react-dom/') ||
+              id.includes('node_modules/react-is/') ||
               id.includes('node_modules/scheduler/')) {
-            return 'react-vendor';
+            return 'vendor';
           }
           
           // React Router - separate chunk for routing
