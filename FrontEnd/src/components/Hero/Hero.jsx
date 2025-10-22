@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import { FlipWords } from "../ui/flipWords";
+import { LazyVideo } from "../LazyVideo/LazyVideo";
 
 function Hero({ videoSrc, words, showContent = true }) {
   const defaultWords = [
@@ -21,16 +22,18 @@ function Hero({ videoSrc, words, showContent = true }) {
 
   return (
     <div className={styles.videoContainer}>
-      <video
+      <LazyVideo
         className={styles.video}
         src={videoSrc}
         autoPlay
         muted
         loop
         playsInline
+        eager={true}
+        rootMargin="0px"
       >
         Your browser does not support the video tag!
-      </video>
+      </LazyVideo>
 
       {showContent && (
         <div className={styles.containerStyle}>

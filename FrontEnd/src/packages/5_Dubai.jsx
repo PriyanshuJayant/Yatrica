@@ -75,6 +75,8 @@ function ID5() {
                 className={styles.heroImage}
                 src={pkg.image}
                 alt={pkg.title}
+                loading="eager"
+                decoding="async"
               />
               <div className={styles.headerOverlay}>
                 <span className={styles.categoryBadge}>{pkg.category}</span>

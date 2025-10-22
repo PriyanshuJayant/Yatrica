@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { motion, AnimatePresence } from "framer-motion";
 import { KeepAliveProvider } from "./context/KeepAliveContext";
 import { RouteCacheManager } from "./hooks/useRouteCache";
+import { PreloadAssets, DNSPrefetch } from "./components/PreloadAssets/PreloadAssets";
 
 // ==================== LOADING COMPONENT ====================
 const PageLoader = () => (
@@ -141,6 +142,22 @@ function AnimatedRoutes() {
 function App() {
   return (
     <KeepAliveProvider>
+      {/* Preload critical assets for faster initial render */}
+      <PreloadAssets 
+        assets={[
+          '/videos/Hero.mp4',
+          '/images/Logo.png',
+        ]} 
+      />
+      
+      {/* DNS Prefetch for external domains */}
+      <DNSPrefetch 
+        domains={[
+          'https://images.unsplash.com',
+          'https://res.cloudinary.com',
+        ]} 
+      />
+      
       <Router>
         <ScrollToTop />
         <RouteCacheManager />

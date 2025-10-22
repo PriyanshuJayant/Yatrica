@@ -273,6 +273,8 @@ export function Packages({ src }) {
                 <img
                   src={active.src}
                   alt={active.title}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: "100%",
                     height: "280px",
@@ -439,6 +441,8 @@ export function Packages({ src }) {
                 <img
                   src={card.src}
                   alt={card.title}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     height: "100%",
                     width: "100%",

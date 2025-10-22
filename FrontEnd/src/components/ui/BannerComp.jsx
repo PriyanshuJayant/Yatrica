@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { LazyVideo } from "../LazyVideo/LazyVideo";
 
 export function BannerComp({
   src,
@@ -36,15 +37,14 @@ export function BannerComp({
       }}
     >
       {/* Video background */}
-      <video
+      <LazyVideo
         src={src}
         autoPlay
         loop
         muted
         playsInline
         controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
+        eager={true}
         style={{
           width: "100%",
           height: "100%",
@@ -52,7 +52,6 @@ export function BannerComp({
           display: "block",
           WebkitAppearance: "none",
         }}
-        type="video/mp4"
       />
 
       {/* Gradient Overlays */}

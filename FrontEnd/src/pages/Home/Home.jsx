@@ -17,6 +17,7 @@ import Footer from "../../components/Footer/Footer";
 import ContactForm from "../../components/Contact/Contact";
 import DiwaliPopUp from "../../components/DiwaliPopUp/DiwaliPopUp";
 import { LazySection } from "../../components/LazySection/LazySection";
+import { LazyVideo } from "../../components/LazyVideo/LazyVideo";
 
 // -------------------- VIDEO ASSETS --------------------
 const Diwali = "/videos/NewYear.mp4";
@@ -84,16 +85,17 @@ function Home() {
         <div className={styles.pageContainer}>
           {/* --------------------Diwali Section-------------------- */}
           {/* <div className={styles.DiwaliComponent}> */}
-          <video
+          <LazyVideo
             className={styles.diwaliBanner}
             src={Diwali}
             autoPlay
             muted
             loop
             playsInline
+            eager={true}
           >
             Your Browser does not support this video format
-          </video>
+          </LazyVideo>
           {/* <CardCouresel /> */}
           {/* </div> */}
 

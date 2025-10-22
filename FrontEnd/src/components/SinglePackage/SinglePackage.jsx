@@ -80,7 +80,13 @@ const SinglePackage = ({ src, location, pricing, link = "#" }) => {
           onMouseLeave={() => setIsHovered(false)}
         >
           <div style={imageContainerStyle}>
-            <img src={src} alt={location} style={imageStyle} />
+            <img 
+              src={src} 
+              alt={location} 
+              style={imageStyle} 
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div style={detailsContainerStyle}>
             <h3 style={locationStyle}>{location}</h3>
