@@ -41,90 +41,69 @@ export default async function handler(req, res) {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Thank you — Yatrica Travel</title>
-    <style>
-      :root{
-        --bg: #f6f8fa;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #0ea5a4; /* teal */
-        --accent-2: #2563eb; /* blue */
-        --radius: 12px;
-        --max-width: 720px;
-        --shadow: 0 6px 18px rgba(18, 38, 63, 0.08);
-      }
-
-      html,body{
-        height:100%;
-        margin:0;
-        padding:0;
-        background: linear-gradient(180deg,var(--bg),#eef2f7 60%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        color: #0f172a;
-      }
-
-      .wrapper{
-        max-width:var(--max-width);
-        margin:28px auto;
-        padding:20px;
-      }
-
-      .header-card{
-        background: linear-gradient(90deg,var(--accent-2),var(--accent));
-        color: white;
-        padding:22px 24px;
-        border-radius:var(--radius);
-        box-shadow: var(--shadow);
-        display:flex;
-        gap:16px;
-        align-items:center;
-      }
-
-      .header-card h1{ margin:0; font-size:20px; }
-
-      .card{ background:var(--card); margin-top:16px; border-radius:calc(var(--radius)-2px); padding:20px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.04); }
-
-      .lead{ font-size:15px; color:#0f172a; font-weight:700; margin-bottom:8px }
-
-      .message-box{ background:linear-gradient(180deg,#fbfdff,#fbfffb); padding:16px; border-radius:10px; border:1px solid rgba(37,99,235,0.06); }
-
-      .footer{ margin-top:14px; font-size:13px; color:var(--muted); text-align:center; }
-
-      @media (max-width:560px){ .header-card{flex-direction:column;align-items:flex-start} }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <div class="wrapper">
-      <div class="header-card" role="banner" aria-label="Thank you message">
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="font-size:28px;line-height:1">✈️</div>
-          <h1>Thank You for Reaching Out!</h1>
-        </div>
-        <div style="margin-left:auto;color:rgba(255,255,255,0.95);font-weight:600">Yatrica</div>
-      </div>
+  <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f6f8fa;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f6f8fa; padding: 20px 0;">
+      <tr>
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+            
+            <!-- Header -->
+            <tr>
+              <td style="background: linear-gradient(90deg, #2563eb, #0ea5a4); border-radius: 12px; padding: 30px; text-align: center;">
+                <img src="https://raw.githubusercontent.com/PriyanshuJayant/Yatrica/main/FrontEnd/public/images/Logo.png" alt="Yatrica Logo" style="width: 60px; height: 60px; margin-bottom: 10px;" />
+                <h1 style="color: white; margin: 10px 0 5px 0; font-size: 24px; font-weight: 600;">Thank You for Reaching Out!</h1>
+                <p style="color: rgba(255, 255, 255, 0.95); margin: 0; font-size: 14px;">Yatrica Travel</p>
+              </td>
+            </tr>
 
-      <div class="card" role="main">
-        <p style="margin:0 0 10px 0">Dear ${name},</p>
+            <!-- Main Content -->
+            <tr>
+              <td style="background-color: white; border-radius: 10px; padding: 30px; margin-top: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                
+                <p style="margin: 0 0 15px 0; font-size: 16px; color: #0f172a;">Dear <strong>${name}</strong>,</p>
 
-        <p style="margin-top:0; color:var(--muted)">
-          Thank you for contacting <strong>Yatrica</strong>. We have received your message and our team will get back to you within 24 hours.
-        </p>
+                <p style="margin: 0 0 20px 0; color: #6b7280; line-height: 1.6;">
+                  Thank you for contacting <strong style="color: #2563eb;">Yatrica Travel</strong>. We have received your message and our team will get back to you within 24 hours.
+                </p>
 
-        <div style="margin:14px 0">
-          <div class="lead">Your Message</div>
-          <div class="message-box">${message}</div>
-        </div>
+                <!-- Message Box -->
+                <div style="margin: 20px 0;">
+                  <h3 style="font-size: 16px; color: #0f172a; font-weight: 700; margin: 0 0 12px 0;">Your Message</h3>
+                  <div style="background: linear-gradient(180deg, #fbfdff, #f0f9ff); padding: 16px; border-radius: 10px; border: 1px solid rgba(37, 99, 235, 0.1); color: #374151; line-height: 1.6;">
+                    ${message}
+                  </div>
+                </div>
 
-        <p style="color:var(--muted)">In the meantime, feel free to explore our website for amazing travel packages and destinations.</p>
+                <p style="margin: 20px 0; color: #6b7280; line-height: 1.6;">
+                  In the meantime, feel free to explore our website for amazing travel packages and destinations.
+                </p>
 
-        <p style="color:var(--muted)">If you have any urgent queries, please feel free to call us at <strong>+91 (981) 845-6811</strong></p>
+                <p style="margin: 20px 0; color: #6b7280; line-height: 1.6;">
+                  If you have any urgent queries, please feel free to call us at <strong style="color: #2563eb;">+91 (981) 845-6811</strong>
+                </p>
 
-        <p style="margin-top:18px">Best regards,<br /><strong>The YatricaTeam</strong></p>
+                <p style="margin-top: 20px; color: #0f172a;">
+                  Best regards,<br/>
+                  <strong style="color: #2563eb;">The Yatrica Travel Team</strong>
+                </p>
 
-        <div class="footer">© ${new Date().getFullYear()} Yatrica. All rights reserved.<br/>📧 info@yatrica.co.in | 📞 +91 (981) 845-6811</div>
-      </div>
-    </div>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+                <p style="margin: 0;">© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.</p>
+                <p style="margin: 8px 0 0 0;">📧 <a href="mailto:info@yatrica.co.in" style="color: #2563eb; text-decoration: none;">info@yatrica.co.in</a> | 📞 +91 (981) 845-6811</p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
 
@@ -143,180 +122,94 @@ export default async function handler(req, res) {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Contact Form Submission</title>
-    <style>
-      :root{
-        --bg: #f6f8fa;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #0ea5a4; /* teal */
-        --accent-2: #2563eb; /* blue */
-        --success: #16a34a;
-        --radius: 12px;
-        --max-width: 720px;
-        --shadow: 0 6px 18px rgba(18, 38, 63, 0.08);
-        font-synthesis: none;
-      }
-
-      html,body{
-        height:100%;
-        margin:0;
-        padding:0;
-        background: linear-gradient(180deg,var(--bg),#eef2f7 60%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        color: #0f172a;
-        -webkit-font-smoothing:antialiased;
-        -moz-osx-font-smoothing:grayscale;
-      }
-
-      .wrapper{
-        max-width:var(--max-width);
-        margin:28px auto;
-        padding:20px;
-      }
-
-      .header-card{
-        background: linear-gradient(90deg,var(--accent-2),var(--accent));
-        color: white;
-        padding:22px 24px;
-        border-radius:var(--radius);
-        box-shadow: var(--shadow);
-        display:flex;
-        gap:16px;
-        align-items:center;
-      }
-
-      .header-card h1{
-        margin:0;
-        font-size:20px;
-        letter-spacing: -0.2px;
-      }
-
-      .meta{
-        margin-left:auto;
-        text-align:right;
-        font-size:13px;
-        opacity:0.95;
-      }
-
-      .card{
-        background:var(--card);
-        margin-top:16px;
-        border-radius:calc(var(--radius) - 2px);
-        padding:20px;
-        box-shadow: var(--shadow);
-        border:1px solid rgba(15,23,42,0.04);
-      }
-
-      .row{
-        display:flex;
-        gap:16px;
-        align-items:flex-start;
-        padding:12px 0;
-        border-bottom:1px dashed rgba(15,23,42,0.04);
-      }
-
-      .row:last-child{ border-bottom:0; }
-
-      .label{ width:140px; color:var(--muted); font-weight:600; }
-      .value{ color:#0f172a; font-weight:500; word-break:break-word; }
-
-      .value a{ color:var(--accent-2); text-decoration:none; }
-      .value a:hover{ text-decoration:underline; }
-
-      .message{
-        background:linear-gradient(180deg,#fbfdff, #fbfffb);
-        padding:14px;
-        border-radius:10px;
-        border:1px solid rgba(34,197,94,0.08);
-        color:#0b1720;
-      }
-
-      .notice{
-        margin-top:12px;
-        background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(14,165,164,0.04));
-        padding:10px 12px;
-        border-radius:8px;
-        color:var(--muted);
-        font-size:13px;
-        display:flex; gap:8px; align-items:center;
-      }
-
-      .footer{
-        margin-top:14px;
-        font-size:13px;
-        color:var(--muted);
-        text-align:center;
-      }
-
-      /* Responsive */
-      @media (max-width:560px){
-        .row{ flex-direction:column; }
-        .label{ width:100%; font-size:13px; }
-        .meta{ text-align:left; margin-left:0; margin-top:8px; }
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <div class="wrapper">
-      <div class="header-card" role="banner" aria-label="New contact submission">
-        <div style="display:flex;align-items:center;gap:12px">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="24" height="24" rx="6" fill="rgba(255,255,255,0.12)"/>
-            <path d="M12 7v6l4 2" stroke="rgba(255,255,255,0.95)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <h1>New Contact Form Submission</h1>
-        </div>
-        <div class="meta">
-          <div style="font-weight:600">Received</div>
-          <div style="opacity:0.9;">${new Date().toLocaleString("en-IN", {
-            timeZone: "Asia/Kolkata",
-          })}</div>
-        </div>
-      </div>
+  <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f6f8fa;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f6f8fa; padding: 20px 0;">
+      <tr>
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+            
+            <!-- Header -->
+            <tr>
+              <td style="background: linear-gradient(90deg, #2563eb, #0ea5a4); border-radius: 12px; padding: 30px;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <h1 style="color: white; margin: 0; font-size: 22px; font-weight: 600;">🔔 New Contact Form Submission</h1>
+                    </td>
+                    <td align="right">
+                      <div style="color: rgba(255, 255, 255, 0.95); font-size: 12px;">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Received</div>
+                        <div>${new Date().toLocaleString("en-IN", {
+                          timeZone: "Asia/Kolkata",
+                          dateStyle: "medium",
+                          timeStyle: "short",
+                        })}</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-      <div class="card" role="main">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-          <div style="font-size:15px;font-weight:700;color:#0f172a">Contact Details</div>
-          <div style="font-size:13px;color:var(--muted)">Yatrica</div>
-        </div>
+            <!-- Main Content -->
+            <tr>
+              <td style="background-color: white; border-radius: 10px; padding: 30px; margin-top: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                
+                <h3 style="font-size: 16px; color: #0f172a; font-weight: 700; margin: 0 0 16px 0; padding-bottom: 12px; border-bottom: 2px solid rgba(37, 99, 235, 0.1);">Contact Details</h3>
 
-        <div class="row">
-          <div class="label">Name</div>
-          <div class="value">${name}</div>
-        </div>
+                <!-- Contact Info Table -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #6b7280; font-weight: 600; width: 30%;">👤 Name</td>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #0f172a; font-weight: 500;">${name}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #6b7280; font-weight: 600;">📧 Email</td>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06);"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #6b7280; font-weight: 600;">📞 Phone</td>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06);"><a href="tel:${phone}" style="color: #2563eb; text-decoration: none;">${phone}</a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="padding: 16px 0 8px 0; color: #6b7280; font-weight: 600;">💬 Message</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div style="background: linear-gradient(180deg, #fbfdff, #f0f9ff); padding: 16px; border-radius: 10px; border: 1px solid rgba(34, 197, 94, 0.08); color: #374151; line-height: 1.6; margin-top: 8px;">
+                        ${message}
+                      </div>
+                    </td>
+                  </tr>
+                </table>
 
-        <div class="row">
-          <div class="label">Email</div>
-          <div class="value"><a href="mailto:${email}">${email}</a></div>
-        </div>
+                <!-- Action Notice -->
+                <table width="100%" cellpadding="12" cellspacing="0" style="background: linear-gradient(90deg, rgba(37, 99, 235, 0.06), rgba(14, 165, 164, 0.04)); border-radius: 8px; margin-top: 20px;">
+                  <tr>
+                    <td style="color: #374151; font-size: 13px;">
+                      <strong style="color: #0f172a;">⚠️ Action Required:</strong>
+                      <div style="margin-top: 6px;">Please respond to this inquiry within 24 hours for best customer satisfaction.</div>
+                    </td>
+                  </tr>
+                </table>
 
-        <div class="row">
-          <div class="label">Phone</div>
-          <div class="value"><a href="tel:${phone}">${phone}</a></div>
-        </div>
+              </td>
+            </tr>
 
-        <div class="row">
-          <div class="label">Message</div>
-          <div class="value message">${message}</div>
-        </div>
+            <!-- Footer -->
+            <tr>
+              <td style="padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+                <p style="margin: 0;">This is an automated notification from Yatrica Travel Contact Form</p>
+                <p style="margin: 8px 0 0 0;">Generated at ${new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata" })}</p>
+              </td>
+            </tr>
 
-        <div class="notice" role="note">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 9v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 17h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div>
-            <strong style="color:#07203a">Action Required:</strong>
-            <div style="margin-top:4px">Please respond to this inquiry within 24 hours.</div>
-          </div>
-        </div>
-
-        <div class="footer">This is an automated notification from Yatrica Travel Contact Form</div>
-      </div>
-    </div>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
       `,

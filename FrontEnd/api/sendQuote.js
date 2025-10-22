@@ -48,98 +48,98 @@ export default async function handler(req, res) {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Quote Request — Yatrica Travel</title>
-    <style>
-      :root{
-        --bg: #f6f8fa;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #0ea5a4; /* teal */
-        --accent-2: #2563eb; /* blue */
-        --radius: 12px;
-        --max-width: 720px;
-        --shadow: 0 6px 18px rgba(18, 38, 63, 0.08);
-      }
-
-      html,body{
-        height:100%;
-        margin:0;
-        padding:0;
-        background: linear-gradient(180deg,var(--bg),#eef2f7 60%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        color: #0f172a;
-      }
-
-      .wrapper{ max-width:var(--max-width); margin:28px auto; padding:20px; }
-
-      .header-card{ background: linear-gradient(90deg,var(--accent-2),var(--accent)); color:white; padding:22px 24px; border-radius:var(--radius); box-shadow:var(--shadow); display:flex; gap:16px; align-items:center; }
-
-      .header-card h1{ margin:0; font-size:20px }
-
-      .card{ background:var(--card); margin-top:16px; border-radius:calc(var(--radius)-2px); padding:20px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.04); }
-
-      .lead{ font-size:15px; color:#0f172a; font-weight:700; margin-bottom:8px }
-
-      .details{ background:linear-gradient(180deg,#fbfdff,#fbfffb); padding:14px; border-radius:10px; border:1px solid rgba(37,99,235,0.06); }
-
-      .detail-row{ display:flex; gap:12px; padding:10px 0; border-bottom:1px dashed rgba(15,23,42,0.04); }
-      .detail-row:last-child{ border-bottom:0 }
-      .detail-label{ min-width:140px; color:var(--muted); font-weight:600 }
-      .detail-value{ color:#0f172a; font-weight:500 }
-
-      .cta{ text-align:center; margin:22px 0 }
-      .cta a{ display:inline-block; padding:12px 28px; border-radius:8px; background:var(--accent-2); color:white; text-decoration:none; font-weight:600; box-shadow:0 6px 18px rgba(37,99,235,0.12) }
-
-      .info{ background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(14,165,164,0.04)); padding:12px; border-radius:8px; color:var(--muted); margin:16px 0 }
-
-      .footer{ margin-top:14px; font-size:13px; color:var(--muted); text-align:center }
-
-      @media (max-width:560px){ .header-card{flex-direction:column;align-items:flex-start} .detail-row{flex-direction:column} .detail-label{min-width:0} }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <div class="wrapper">
-      <div class="header-card" role="banner" aria-label="Quote request received">
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="font-size:28px;line-height:1">✈️</div>
-          <h1>Quote Request Received!</h1>
-        </div>
-        <div style="margin-left:auto;color:rgba(255,255,255,0.95);font-weight:600">Yatrica Travel</div>
-      </div>
+  <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f6f8fa;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f6f8fa; padding: 20px 0;">
+      <tr>
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+            
+            <!-- Header -->
+            <tr>
+              <td style="background: linear-gradient(90deg, #2563eb, #0ea5a4); border-radius: 12px; padding: 30px; text-align: center;">
+                <img src="https://raw.githubusercontent.com/PriyanshuJayant/Yatrica/main/FrontEnd/public/images/Logo.png" alt="Yatrica Logo" style="width: 60px; height: 60px; margin-bottom: 10px;" />
+                <h1 style="color: white; margin: 10px 0 5px 0; font-size: 24px; font-weight: 600;">Quote Request Received!</h1>
+                <p style="color: rgba(255, 255, 255, 0.95); margin: 0; font-size: 14px;">Yatrica Travel</p>
+              </td>
+            </tr>
 
-      <div class="card" role="main">
-        <p style="margin:0 0 10px 0">Dear ${name},</p>
+            <!-- Main Content -->
+            <tr>
+              <td style="background-color: white; border-radius: 10px; padding: 30px; margin-top: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                
+                <p style="margin: 0 0 15px 0; font-size: 16px; color: #0f172a;">Dear <strong>${name}</strong>,</p>
 
-        <p style="margin-top:0;color:var(--muted)">Thank you for requesting a quote with <strong>Yatrica Travel</strong>! We have received your travel inquiry and our holiday experts are already reviewing your requirements.</p>
+                <p style="margin: 0 0 20px 0; color: #6b7280; line-height: 1.6;">Thank you for requesting a quote with <strong style="color: #2563eb;">Yatrica Travel</strong>! We have received your travel inquiry and our holiday experts are already reviewing your requirements.</p>
 
-        <div style="margin:14px 0">
-          <div class="lead">Your Travel Details</div>
-          <div class="details">
-            <div class="detail-row"><div class="detail-label">✈️ Destination</div><div class="detail-value">${destination}</div></div>
-            <div class="detail-row"><div class="detail-label">🛫 Departure City</div><div class="detail-value">${departureCity}</div></div>
-            <div class="detail-row"><div class="detail-label">👤 Name</div><div class="detail-value">${name}</div></div>
-            <div class="detail-row"><div class="detail-label">📞 Phone</div><div class="detail-value">${phone}</div></div>
-            <div class="detail-row"><div class="detail-label">📧 Email</div><div class="detail-value">${email}</div></div>
-          </div>
-        </div>
+                <!-- Travel Details Box -->
+                <div style="margin: 20px 0;">
+                  <h3 style="font-size: 16px; color: #0f172a; font-weight: 700; margin: 0 0 12px 0;">Your Travel Details</h3>
+                  <table width="100%" cellpadding="12" cellspacing="0" style="background: linear-gradient(180deg, #fbfdff, #f0f9ff); border-radius: 10px; border: 1px solid rgba(37, 99, 235, 0.1);">
+                    <tr>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #6b7280; font-weight: 600; width: 40%;">✈️ Destination</td>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #0f172a; font-weight: 600;">${destination}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #6b7280; font-weight: 600;">🛫 Departure City</td>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #0f172a; font-weight: 600;">${departureCity}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #6b7280; font-weight: 600;">👤 Name</td>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #0f172a; font-weight: 500;">${name}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #6b7280; font-weight: 600;">📞 Phone</td>
+                      <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #0f172a; font-weight: 500;">${phone}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px; color: #6b7280; font-weight: 600;">📧 Email</td>
+                      <td style="padding: 12px; color: #0f172a; font-weight: 500;">${email}</td>
+                    </tr>
+                  </table>
+                </div>
 
-        <div class="info">
-          <div style="font-weight:700;color:#07203a;margin-bottom:6px">What Happens Next?</div>
-          <div>✓ Our travel expert will review your requirements</div>
-          <div>✓ You'll receive a personalized quote within 24 hours</div>
-          <div>✓ We'll contact you via phone or email with the best options</div>
-        </div>
+                <!-- What Happens Next -->
+                <div style="background: linear-gradient(90deg, rgba(37, 99, 235, 0.06), rgba(14, 165, 164, 0.04)); padding: 16px; border-radius: 8px; margin: 20px 0;">
+                  <p style="font-weight: 700; color: #0f172a; margin: 0 0 10px 0;">What Happens Next?</p>
+                  <p style="margin: 5px 0; color: #374151; font-size: 14px;">✓ Our travel expert will review your requirements</p>
+                  <p style="margin: 5px 0; color: #374151; font-size: 14px;">✓ You'll receive a personalized quote within 24 hours</p>
+                  <p style="margin: 5px 0; color: #374151; font-size: 14px;">✓ We'll contact you via phone or email with the best options</p>
+                </div>
 
-        <div class="cta"><a href="https://yatrica.vercel.app/packages/allpackages">Explore More Packages</a></div>
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 25px 0;">
+                  <a href="https://yatrica.vercel.app/packages/allpackages" style="display: inline-block; padding: 14px 32px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);">Explore More Packages</a>
+                </div>
 
-        <p style="margin-top:10px;color:var(--muted)"><strong>Need immediate assistance?</strong><br/>Call us at <strong style="color:var(--accent-2)">+91 (000) 000-0000</strong><br/>Email us at <strong style="color:var(--accent-2)">info@yatricatravel.com</strong></p>
+                <p style="margin: 20px 0 0 0; color: #6b7280; line-height: 1.6; font-size: 14px;">
+                  <strong style="color: #0f172a;">Need immediate assistance?</strong><br/>
+                  Call us at <strong style="color: #2563eb;">+91 (981) 845-6811</strong><br/>
+                  Email us at <strong style="color: #2563eb;">info@yatrica.co.in</strong>
+                </p>
 
-        <p style="margin-top:16px">Best regards,<br/><strong style="color:var(--accent-2)">The Yatrica Travel Team</strong><br/><em style="font-size:13px;color:var(--muted)">Your Journey, Our Passion</em></p>
+                <p style="margin-top: 20px; color: #0f172a;">
+                  Best regards,<br/>
+                  <strong style="color: #2563eb;">The Yatrica Travel Team</strong><br/>
+                  <em style="font-size: 13px; color: #6b7280;">Your Journey, Our Passion</em>
+                </p>
 
-        <div class="footer">© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.<br/>📧 <a href="mailto:info@yatricatravel.com">info@yatricatravel.com</a> | 📞 +91 (981) 845-6811</div>
-      </div>
-    </div>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+                <p style="margin: 0;">© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.</p>
+                <p style="margin: 8px 0 0 0;">📧 <a href="mailto:info@yatrica.co.in" style="color: #2563eb; text-decoration: none;">info@yatrica.co.in</a> | 📞 +91 (981) 845-6811</p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
 
@@ -158,153 +158,129 @@ export default async function handler(req, res) {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>New Quote Request — Yatrica Travel</title>
-    <style>
-      :root{
-        --bg: #f6f8fa;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #0ea5a4;
-        --accent-2: #2563eb;
-        --success: #16a34a;
-        --radius: 12px;
-        --max-width: 720px;
-        --shadow: 0 6px 18px rgba(18, 38, 63, 0.08);
-      }
-
-      html,body{
-        height:100%;
-        margin:0;
-        padding:0;
-        background: linear-gradient(180deg,var(--bg),#eef2f7 60%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        color: #0f172a;
-        -webkit-font-smoothing:antialiased;
-        -moz-osx-font-smoothing:grayscale;
-      }
-
-      .wrapper{ max-width:var(--max-width); margin:28px auto; padding:20px; }
-
-      .header-card{ background: linear-gradient(90deg,var(--accent-2),var(--accent)); color:white; padding:22px 24px; border-radius:var(--radius); box-shadow:var(--shadow); display:flex; gap:16px; align-items:center; }
-
-      .header-card h1{ margin:0; font-size:20px; letter-spacing:-0.2px }
-
-      .meta{ margin-left:auto; text-align:right; font-size:13px; opacity:0.95 }
-
-      .card{ background:var(--card); margin-top:16px; border-radius:calc(var(--radius)-2px); padding:20px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.04); }
-
-      .alert{ background:linear-gradient(90deg, rgba(245,158,11,0.08), rgba(234,179,8,0.06)); padding:12px 14px; border-radius:8px; color:#92400e; font-size:14px; display:flex; gap:10px; align-items:center; margin-bottom:16px }
-
-      .travel-box{ background:linear-gradient(180deg,#fbfdff,#f0f9ff); padding:16px; border-radius:10px; border:1px solid rgba(37,99,235,0.12); margin:14px 0 }
-      .travel-row{ display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px dashed rgba(15,23,42,0.06) }
-      .travel-row:last-child{ border-bottom:0 }
-
-      .lead{ font-size:15px; color:#0f172a; font-weight:700; margin-bottom:8px }
-
-      .row{ display:flex; gap:16px; align-items:flex-start; padding:12px 0; border-bottom:1px dashed rgba(15,23,42,0.04); }
-      .row:last-child{ border-bottom:0 }
-      .label{ width:140px; color:var(--muted); font-weight:600 }
-      .value{ color:#0f172a; font-weight:500; word-break:break-word }
-      .value a{ color:var(--accent-2); text-decoration:none }
-      .value a:hover{ text-decoration:underline }
-
-      .action{ background:linear-gradient(90deg, rgba(22,163,74,0.06), rgba(34,197,94,0.04)); padding:14px; border-radius:8px; margin:16px 0 }
-      .action ul{ margin:8px 0 12px 20px; color:#15803d }
-      .cta-group{ display:flex; gap:10px; flex-wrap:wrap }
-      .cta-btn{ display:inline-block; padding:10px 20px; border-radius:6px; background:var(--accent-2); color:white; text-decoration:none; font-weight:600; font-size:14px }
-
-      .tip{ background:#fef3c7; padding:12px; border-radius:8px; color:#92400e; font-size:13px; margin-top:14px }
-
-      .footer{ margin-top:14px; font-size:13px; color:var(--muted); text-align:center }
-
-      @media (max-width:560px){ .header-card{flex-direction:column;align-items:flex-start} .meta{text-align:left;margin-left:0;margin-top:8px} .row{flex-direction:column} .label{width:100%;font-size:13px} }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <div class="wrapper">
-      <div class="header-card" role="banner" aria-label="New quote request">
-        <div style="display:flex;align-items:center;gap:12px">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="24" height="24" rx="6" fill="rgba(255,255,255,0.12)"/>
-            <path d="M9 11l3 3 8-8" stroke="rgba(255,255,255,0.95)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="rgba(255,255,255,0.95)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <h1>New Quote Request</h1>
-        </div>
-        <div class="meta">
-          <div style="font-weight:600">Received</div>
-          <div style="opacity:0.9">${new Date().toLocaleString("en-IN", {
-            timeZone: "Asia/Kolkata",
-            dateStyle: "full",
-            timeStyle: "short",
-          })}</div>
-        </div>
-      </div>
+  <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f6f8fa;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f6f8fa; padding: 20px 0;">
+      <tr>
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+            
+            <!-- Header -->
+            <tr>
+              <td style="background: linear-gradient(90deg, #2563eb, #0ea5a4); border-radius: 12px; padding: 30px;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <h1 style="color: white; margin: 0; font-size: 22px; font-weight: 600;">🔔 New Quote Request</h1>
+                    </td>
+                    <td align="right">
+                      <div style="color: rgba(255, 255, 255, 0.95); font-size: 12px;">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Received</div>
+                        <div>${new Date().toLocaleString("en-IN", {
+                          timeZone: "Asia/Kolkata",
+                          dateStyle: "medium",
+                          timeStyle: "short",
+                        })}</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-      <div class="card" role="main">
-        <div class="alert">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div><strong>Action Required:</strong> A new customer is waiting for a travel quote. Please respond within 24 hours for best conversion rates.</div>
-        </div>
+            <!-- Main Content -->
+            <tr>
+              <td style="background-color: white; border-radius: 10px; padding: 30px; margin-top: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                
+                <!-- Alert Box -->
+                <table width="100%" cellpadding="12" cellspacing="0" style="background: linear-gradient(90deg, rgba(245, 158, 11, 0.08), rgba(234, 179, 8, 0.06)); border-radius: 8px; margin-bottom: 20px;">
+                  <tr>
+                    <td style="color: #92400e; font-size: 14px;">
+                      <strong>⚠️ Action Required:</strong> A new customer is waiting for a travel quote. Please respond within 24 hours for best conversion rates.
+                    </td>
+                  </tr>
+                </table>
 
-        <div style="margin:14px 0">
-          <div class="lead">Travel Request Details</div>
-          <div class="travel-box">
-            <div class="travel-row">
-              <span style="font-weight:600;color:var(--muted)">✈️ Destination</span>
-              <span style="color:var(--accent-2);font-weight:700;font-size:16px">${destination}</span>
-            </div>
-            <div class="travel-row">
-              <span style="font-weight:600;color:var(--muted)">🛫 Departure City</span>
-              <span style="color:var(--accent-2);font-weight:700;font-size:16px">${departureCity}</span>
-            </div>
-          </div>
-        </div>
+                <!-- Travel Details -->
+                <h3 style="font-size: 16px; color: #0f172a; font-weight: 700; margin: 20px 0 12px 0;">Travel Request Details</h3>
+                <table width="100%" cellpadding="14" cellspacing="0" style="background: linear-gradient(180deg, #fbfdff, #f0f9ff); border-radius: 10px; border: 1px solid rgba(37, 99, 235, 0.12); margin-bottom: 20px;">
+                  <tr>
+                    <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #6b7280; font-weight: 600; width: 40%;">✈️ Destination</td>
+                    <td style="padding: 12px; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); color: #2563eb; font-weight: 700; font-size: 16px;">${destination}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px; color: #6b7280; font-weight: 600;">🛫 Departure City</td>
+                    <td style="padding: 12px; color: #2563eb; font-weight: 700; font-size: 16px;">${departureCity}</td>
+                  </tr>
+                </table>
 
-        <div style="margin:14px 0">
-          <div class="lead">Customer Information</div>
-          
-          <div class="row">
-            <div class="label">👤 Name</div>
-            <div class="value">${name}</div>
-          </div>
+                <!-- Customer Information -->
+                <h3 style="font-size: 16px; color: #0f172a; font-weight: 700; margin: 20px 0 12px 0;">Customer Information</h3>
+                <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #6b7280; font-weight: 600; width: 30%;">👤 Name</td>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #0f172a; font-weight: 500;">${name}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06); color: #6b7280; font-weight: 600;">📧 Email</td>
+                    <td style="padding: 12px 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.06);"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; color: #6b7280; font-weight: 600;">📞 Phone</td>
+                    <td style="padding: 12px 0;"><a href="tel:${phone}" style="color: #2563eb; text-decoration: none;">${phone}</a></td>
+                  </tr>
+                </table>
 
-          <div class="row">
-            <div class="label">📧 Email</div>
-            <div class="value"><a href="mailto:${email}">${email}</a></div>
-          </div>
+                <!-- Action Box -->
+                <table width="100%" cellpadding="16" cellspacing="0" style="background: linear-gradient(90deg, rgba(22, 163, 74, 0.06), rgba(34, 197, 94, 0.04)); border-radius: 8px; margin: 20px 0;">
+                  <tr>
+                    <td>
+                      <p style="font-weight: 700; color: #15803d; margin: 0 0 10px 0;">📋 Next Steps</p>
+                      <ul style="margin: 8px 0 16px 20px; padding: 0; color: #15803d;">
+                        <li style="margin: 6px 0;">Review available packages for ${destination}</li>
+                        <li style="margin: 6px 0;">Prepare customized quote with pricing</li>
+                        <li style="margin: 6px 0;">Contact customer within 24 hours</li>
+                        <li style="margin: 6px 0;">Send detailed itinerary options</li>
+                      </ul>
+                      <table cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="padding-right: 10px;">
+                            <a href="mailto:${email}" style="display: inline-block; padding: 12px 24px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">📧 Send Email</a>
+                          </td>
+                          <td>
+                            <a href="tel:${phone}" style="display: inline-block; padding: 12px 24px; background-color: #16a34a; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">📞 Call Now</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
 
-          <div class="row">
-            <div class="label">📞 Phone</div>
-            <div class="value"><a href="tel:${phone}">${phone}</a></div>
-          </div>
-        </div>
+                <!-- Pro Tip -->
+                <table width="100%" cellpadding="12" cellspacing="0" style="background-color: #fef3c7; border-radius: 8px; margin-top: 20px;">
+                  <tr>
+                    <td style="color: #92400e; font-size: 13px;">
+                      💡 <strong>Pro Tip:</strong> Customers who receive quotes within 2 hours are 3x more likely to book!
+                    </td>
+                  </tr>
+                </table>
 
-        <div class="action">
-          <div style="font-weight:700;color:#15803d;margin-bottom:6px">📋 Next Steps</div>
-          <ul>
-            <li>Review available packages for ${destination}</li>
-            <li>Prepare customized quote with pricing</li>
-            <li>Contact customer within 24 hours</li>
-            <li>Send detailed itinerary options</li>
-          </ul>
-          <div class="cta-group">
-            <a href="mailto:${email}" class="cta-btn">📧 Send Email</a>
-            <a href="tel:${phone}" class="cta-btn">📞 Call Now</a>
-          </div>
-        </div>
+              </td>
+            </tr>
 
-        <div class="tip">💡 <strong>Pro Tip:</strong> Customers who receive quotes within 2 hours are 3x more likely to book!</div>
+            <!-- Footer -->
+            <tr>
+              <td style="padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+                <p style="margin: 0;">This is an automated notification from Yatrica Travel Quote Request System</p>
+                <p style="margin: 8px 0 0 0;">Generated at ${new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata" })}</p>
+              </td>
+            </tr>
 
-        <div class="footer">This is an automated notification from Yatrica Travel Quote Request System<br/>Generated at ${new Date().toLocaleTimeString(
-          "en-IN",
-          { timeZone: "Asia/Kolkata" }
-        )}</div>
-      </div>
-    </div>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
 
