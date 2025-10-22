@@ -74,8 +74,8 @@ function BudgetPage() {
                   <SinglePackage
                     key={pkg.id || index}
                     src={pkg.src}
-                    location={pkg.title}
-                    pricing={pkg.description}
+                    location={pkg.title || pkg.location}
+                    pricing={pkg.description || pkg.pricing}
                     link={pkg.ctaLink}
                   />
                 ))}

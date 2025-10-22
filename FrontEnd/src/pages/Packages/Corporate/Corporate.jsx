@@ -21,8 +21,8 @@ const Corporate = "/videos/CorporateTours.mp4";
 // =====================================================
 
 function CorporatePage() {
-  const { data: packagesData, loading } = usePackageData('corporate');
-  
+  const { data: packagesData, loading } = usePackageData("corporate");
+
   return (
     <>
       <div className={styles.homePageContainer}>
@@ -66,7 +66,13 @@ function CorporatePage() {
         <div className={styles.pageContainer}>
           <LazySection minHeight="600px">
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '60px', fontSize: '18px' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "60px",
+                  fontSize: "18px",
+                }}
+              >
                 Loading corporate packages...
               </div>
             ) : packagesData && packagesData.length > 0 ? (
@@ -75,14 +81,20 @@ function CorporatePage() {
                   <SinglePackage
                     key={pkg.id || index}
                     src={pkg.src}
-                    location={pkg.title}
-                    pricing={pkg.description}
+                    location={pkg.title || pkg.location}
+                    pricing={pkg.description || pkg.pricing}
                     link={pkg.ctaLink}
                   />
                 ))}
               </ResponsivePackageGrid>
             ) : (
-              <div style={{ textAlign: 'center', padding: '60px', fontSize: '18px' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "60px",
+                  fontSize: "18px",
+                }}
+              >
                 No packages available
               </div>
             )}
@@ -94,7 +106,6 @@ function CorporatePage() {
               <QuoteForm />
             </div>
           </LazySection>
-
 
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
           {/* <div className={styles.HomeContainer}>
