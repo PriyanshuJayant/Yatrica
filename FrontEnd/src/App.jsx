@@ -3,6 +3,7 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { KeepAliveProvider } from "./context/KeepAliveContext";
+import { DataCacheProvider } from "./context/DataCacheContext";
 import { RouteCacheManager } from "./hooks/useRouteCache";
 import { PreloadAssets, DNSPrefetch } from "./components/PreloadAssets/PreloadAssets";
 
@@ -141,29 +142,31 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <KeepAliveProvider>
-      {/* Preload critical assets for faster initial render */}
-      <PreloadAssets 
-        assets={[
-          '/videos/Hero.mp4',
-          '/images/Logo.png',
-        ]} 
-      />
-      
-      {/* DNS Prefetch for external domains */}
-      <DNSPrefetch 
-        domains={[
-          'https://images.unsplash.com',
-          'https://res.cloudinary.com',
-        ]} 
-      />
-      
-      <Router>
-        <ScrollToTop />
-        <RouteCacheManager />
-        <AnimatedRoutes />
-      </Router>
-    </KeepAliveProvider>
+    <DataCacheProvider>
+      <KeepAliveProvider>
+        {/* Preload critical assets for faster initial render */}
+        <PreloadAssets 
+          assets={[
+            '/videos/Hero.mp4',
+            '/images/Logo.png',
+          ]} 
+        />
+        
+        {/* DNS Prefetch for external domains */}
+        <DNSPrefetch 
+          domains={[
+            'https://images.unsplash.com',
+            'https://res.cloudinary.com',
+          ]} 
+        />
+        
+        <Router>
+          <ScrollToTop />
+          <RouteCacheManager />
+          <AnimatedRoutes />
+        </Router>
+      </KeepAliveProvider>
+    </DataCacheProvider>
   );
 }
 

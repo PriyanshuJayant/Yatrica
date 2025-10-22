@@ -18,6 +18,7 @@ import ContactForm from "../../components/Contact/Contact";
 import DiwaliPopUp from "../../components/DiwaliPopUp/DiwaliPopUp";
 import { LazySection } from "../../components/LazySection/LazySection";
 import { LazyVideo } from "../../components/LazyVideo/LazyVideo";
+import { useHomePackageData } from "../../context/DataCacheContext";
 
 // -------------------- VIDEO ASSETS --------------------
 const Diwali = "/videos/NewYear.mp4";
@@ -27,12 +28,6 @@ const HomeHero = "/videos/Hero.mp4";
 const Honeymoon = "/videos/HoneyMoon.mp4";
 const Budget = "/videos/BudgetTour.mp4";
 
-// -------------------- DATA FILES --------------------
-import FamilyJSON from "../../assets/data/familyPackage.json";
-import budgetFriendlyJSON from "../../assets/data/budgetFriendly.json";
-import CorporateJSON from "../../assets/data/corporate.json";
-import HoneyMoon from "../../assets/data/honeyMoon.json";
-
 // =====================================================
 //                     HOME COMPONENT
 // =====================================================
@@ -40,6 +35,11 @@ import HoneyMoon from "../../assets/data/honeyMoon.json";
 function Home() {
   const location = useLocation();
   const [showDiwaliPopup, setShowDiwaliPopup] = useState(false);
+  
+  // Lazy load package data
+  const { data: packageData, loading: packagesLoading } = useHomePackageData([
+    'family', 'corporate', 'honeymoon', 'budget'
+  ]);
 
   // Show Diwali popup after 1 second
   useEffect(() => {
@@ -110,7 +110,11 @@ function Home() {
                 buttonLink="/packages/family"
               />
               <div className={styles.ExpandableCard}>
-                <Packages src={FamilyJSON} />
+                {packagesLoading ? (
+                  <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
+                ) : (
+                  <Packages src={packageData.family || []} />
+                )}
               </div>
             </div>
           </LazySection>
@@ -136,7 +140,11 @@ function Home() {
                 buttonLink="/packages/corporate"
               />
               <div className={styles.ExpandableCard}>
-                <Packages src={CorporateJSON} />
+                {packagesLoading ? (
+                  <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
+                ) : (
+                  <Packages src={packageData.corporate || []} />
+                )}
               </div>
             </div>
           </LazySection>
@@ -152,7 +160,11 @@ function Home() {
                 buttonLink="/packages/honeymoon"
               />
               <div className={styles.ExpandableCard}>
-                <Packages src={HoneyMoon} />
+                {packagesLoading ? (
+                  <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
+                ) : (
+                  <Packages src={packageData.honeymoon || []} />
+                )}
               </div>
             </div>
           </LazySection>
@@ -178,7 +190,11 @@ function Home() {
                 buttonLink="/packages/honeymoon"
               />
               <div className={styles.ExpandableCard}>
-                <Packages src={budgetFriendlyJSON} />
+                {packagesLoading ? (
+                  <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
+                ) : (
+                  <Packages src={packageData.budget || []} />
+                )}
               </div>
             </div>
           </LazySection>

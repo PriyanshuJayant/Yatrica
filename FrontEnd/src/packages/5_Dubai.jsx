@@ -9,9 +9,7 @@ import NavBar from "../components/NavBar/NavBar";
 import QuoteForm from "../components/QuoteForm/QuoteForm";
 import Footer from "../components/Footer/Footer";
 import { LazySection } from "../components/LazySection/LazySection";
-
-// -------------------- DATA FILES --------------------
-import singlePackages from "../assets/singlePackages.json";
+import { useSinglePackageData } from "../context/DataCacheContext";
 
 // =====================================================
 //                     HOME COMPONENT
@@ -19,13 +17,7 @@ import singlePackages from "../assets/singlePackages.json";
 
 function ID5() {
   const location = useLocation();
-  const [pkg, setPkg] = useState(null);
-
-  // Load Thailand package (id: "1")
-  useEffect(() => {
-    const thailandPkg = singlePackages.find((p) => p.id === "5");
-    setPkg(thailandPkg || null);
-  }, []);
+  const { data: pkg, loading } = useSinglePackageData("5");
 
   useEffect(() => {
     const scrollTarget =
@@ -63,9 +55,11 @@ function ID5() {
       <div className={styles.homePageContainer}>
         <NavBar />
         {/* -------------------- Page Content -------------------- */}
-        {!pkg ? (
+        {loading || !pkg ? (
           <div className={styles.pageContainer}>
-            <div className={styles.loading}>Loading package details...</div>
+            <div className={styles.loading}>
+              {loading ? 'Loading package details...' : 'Package not found'}
+            </div>
           </div>
         ) : (
           <>

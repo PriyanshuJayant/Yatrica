@@ -9,20 +9,20 @@ import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveG
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
 import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 import { LazySection } from "../../../components/LazySection/LazySection";
+import { usePackageData } from "../../../context/DataCacheContext";
 
 // --------------------- Dynamic Components -----------
 
 // -------------------- VIDEO ASSETS ------------------
 const Corporate = "/videos/CorporateTours.mp4";
 
-// -------------------- DATA FILES --------------------
-import packagesData from "../../../assets/Packages/CorporatePackages.json";
-
 // =====================================================
 //                     Corporate Packages
 // =====================================================
 
 function CorporatePage() {
+  const { data: packagesData, loading } = usePackageData('corporate');
+  
   return (
     <>
       <div className={styles.homePageContainer}>
@@ -65,17 +65,27 @@ function CorporatePage() {
         {/* -------------------- Page Content -------------------- */}
         <div className={styles.pageContainer}>
           <LazySection minHeight="600px">
-            <ResponsivePackageGrid>
-              {packagesData.map((pkg) => (
-                <SinglePackage
-                  key={pkg.id}
-                  src={pkg.src}
-                  location={pkg.location}
-                  pricing={pkg.pricing}
-                  link={pkg.link}
-                />
-              ))}
-            </ResponsivePackageGrid>
+            {loading ? (
+              <div style={{ textAlign: 'center', padding: '60px', fontSize: '18px' }}>
+                Loading corporate packages...
+              </div>
+            ) : packagesData && packagesData.length > 0 ? (
+              <ResponsivePackageGrid>
+                {packagesData.map((pkg) => (
+                  <SinglePackage
+                    key={pkg.id}
+                    src={pkg.src}
+                    location={pkg.location}
+                    pricing={pkg.pricing}
+                    link={pkg.link}
+                  />
+                ))}
+              </ResponsivePackageGrid>
+            ) : (
+              <div style={{ textAlign: 'center', padding: '60px', fontSize: '18px' }}>
+                No packages available
+              </div>
+            )}
           </LazySection>
 
           {/* -------------------- QUOTE FORM -------------------- */}
