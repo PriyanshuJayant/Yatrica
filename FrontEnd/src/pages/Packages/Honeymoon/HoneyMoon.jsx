@@ -69,13 +69,13 @@ function HoneyMoonPage() {
               </div>
             ) : packagesData && packagesData.length > 0 ? (
               <ResponsivePackageGrid>
-                {packagesData.map((pkg) => (
+                {packagesData.map((pkg, index) => (
                   <SinglePackage
-                    key={pkg.id}
+                    key={pkg.id || index}
                     src={pkg.src}
-                    location={pkg.location}
-                    pricing={pkg.pricing}
-                    link={pkg.link}
+                    location={pkg.title}
+                    pricing={pkg.description}
+                    link={pkg.ctaLink}
                   />
                 ))}
               </ResponsivePackageGrid>
