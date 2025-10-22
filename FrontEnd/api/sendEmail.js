@@ -215,9 +215,23 @@ export default async function handler(req, res) {
       `,
     };
 
-    // Send both emails
+    const TrackContact = {
+    }
+
+    // Email to tracking address (third copy for monitoring)
+    const trackingMailOptions = {
+      from: `"Yatrica Contact Form" <${
+        process.env.EMAIL_USER || process.env.VITE_EMAIL_USER
+      }>`,
+      to: process.env.TRACK_MAIL || process.env.VITE_TRACK_MAIL,
+      subject: `New Contact Form Submission from ${name}`,
+      html: adminMailOptions.html, // Same content as admin email
+    };
+
+    // Send all three emails
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
+    await transporter.sendMail(trackingMailOptions);
 
     return res.status(200).json({
       success: true,
