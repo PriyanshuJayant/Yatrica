@@ -15,7 +15,9 @@ export default async function handler(req, res) {
 
   // User Agreement Verification (separate check)
   if (!agreed) {
-    return res.status(400).json({ error: "You must agree to the User Agreement to proceed" });
+    return res
+      .status(400)
+      .json({ error: "You must agree to the User Agreement to proceed" });
   }
 
   // Email validation
@@ -43,192 +45,104 @@ export default async function handler(req, res) {
       subject: "Thank You for Your Quote Request - Yatrica Travel",
       html: `
         <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            body {
-              font-family: 'Arial', sans-serif;
-              line-height: 1.6;
-              color: #333;
-              max-width: 600px;
-              margin: 0 auto;
-              padding: 20px;
-              background-color: #f5f5f5;
-            }
-            .container {
-              background: white;
-              border-radius: 12px;
-              overflow: hidden;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-              background: linear-gradient(135deg, #42a5f5 0%, #0056b3 100%);
-              color: white;
-              padding: 40px 30px;
-              text-align: center;
-            }
-            .header h1 {
-              margin: 0 0 10px 0;
-              font-size: 28px;
-            }
-            .icon {
-              font-size: 56px;
-              margin-bottom: 15px;
-            }
-            .content {
-              padding: 40px 30px;
-            }
-            .greeting {
-              font-size: 18px;
-              color: #42a5f5;
-              font-weight: 600;
-              margin-bottom: 20px;
-            }
-            .details-box {
-              background: #f8f9fa;
-              border-left: 4px solid #42a5f5;
-              padding: 20px;
-              margin: 25px 0;
-              border-radius: 8px;
-            }
-            .details-box h3 {
-              margin: 0 0 15px 0;
-              color: #42a5f5;
-              font-size: 18px;
-            }
-            .detail-row {
-              display: flex;
-              padding: 8px 0;
-              border-bottom: 1px solid #e9ecef;
-            }
-            .detail-row:last-child {
-              border-bottom: none;
-            }
-            .detail-label {
-              font-weight: 600;
-              color: #495057;
-              min-width: 140px;
-            }
-            .detail-value {
-              color: #212529;
-            }
-            .info-section {
-              background: #e7f3ff;
-              padding: 20px;
-              border-radius: 8px;
-              margin: 25px 0;
-            }
-            .info-section p {
-              margin: 8px 0;
-              font-size: 14px;
-              color: #0056b3;
-            }
-            .cta-section {
-              text-align: center;
-              margin: 30px 0;
-            }
-            .cta-button {
-              display: inline-block;
-              padding: 14px 32px;
-              background: #42a5f5;
-              color: white;
-              text-decoration: none;
-              border-radius: 8px;
-              font-weight: 600;
-              font-size: 16px;
-              box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-            }
-            .footer {
-              background: #2c3e50;
-              color: white;
-              padding: 25px 30px;
-              text-align: center;
-              font-size: 14px;
-            }
-            .footer a {
-              color: #61dafb;
-              text-decoration: none;
-            }
-            .divider {
-              height: 2px;
-              background: linear-gradient(90deg, transparent, #42a5f5, transparent);
-              margin: 25px 0;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <div class="icon">✈️</div>
-              <h1>Quote Request Received!</h1>
-              <p style="margin: 0; opacity: 0.9;">We're excited to help plan your journey</p>
-            </div>
-            
-            <div class="content">
-              <p class="greeting">Dear ${name},</p>
-              
-              <p>Thank you for requesting a quote with <strong>Yatrica Travel</strong>! We have received your travel inquiry and our holiday experts are already reviewing your requirements.</p>
-              
-              <div class="details-box">
-                <h3>📋 Your Travel Details:</h3>
-                <div class="detail-row">
-                  <span class="detail-label">✈️ Destination:</span>
-                  <span class="detail-value">${destination}</span>
-                </div>
-                <div class="detail-row">
-                  <span class="detail-label">🛫 Departure City:</span>
-                  <span class="detail-value">${departureCity}</span>
-                </div>
-                <div class="detail-row">
-                  <span class="detail-label">👤 Name:</span>
-                  <span class="detail-value">${name}</span>
-                </div>
-                <div class="detail-row">
-                  <span class="detail-label">📞 Phone:</span>
-                  <span class="detail-value">${phone}</span>
-                </div>
-                <div class="detail-row">
-                  <span class="detail-label">📧 Email:</span>
-                  <span class="detail-value">${email}</span>
-                </div>
-              </div>
-              
-              <div class="divider"></div>
-              
-              <div class="info-section">
-                <h3 style="margin: 0 0 12px 0; color: #0056b3;">🌟 What Happens Next?</h3>
-                <p>✓ Our travel expert will review your requirements</p>
-                <p>✓ You'll receive a personalized quote within 24 hours</p>
-                <p>✓ We'll contact you via phone or email with the best options</p>
-                <p>✓ Feel free to ask any questions - we're here to help!</p>
-              </div>
-              
-              <div class="cta-section">
-                <a href="https://yatrica.vercel.app/packages/allpackages" class="cta-button">
-                  Explore More Packages
-                </a>
-              </div>
-              
-              <p style="margin-top: 30px; font-size: 14px; color: #6c757d;">
-                <strong>Need immediate assistance?</strong><br>
-                Call us at <strong style="color: #42a5f5;">+91 (000) 000-0000</strong><br>
-                Email us at <strong style="color: #42a5f5;">info@yatricatravel.com</strong>
-              </p>
-              
-              <p style="margin-top: 25px;">
-                Best regards,<br>
-                <strong style="color: #42a5f5;">The Yatrica Travel Team</strong><br>
-                <em style="font-size: 13px; color: #6c757d;">Your Journey, Our Passion</em>
-              </p>
-            </div>
-            
-            <div class="footer">
-              <p style="margin: 0 0 10px 0;">© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.</p>
-              <p style="margin: 0;">📧 <a href="mailto:info@yatricatravel.com">info@yatricatravel.com</a> | 📞 +91 (000) 000-0000</p>
-            </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quote Request — Yatrica Travel</title>
+    <style>
+      :root{
+        --bg: #f6f8fa;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #0ea5a4; /* teal */
+        --accent-2: #2563eb; /* blue */
+        --radius: 12px;
+        --max-width: 720px;
+        --shadow: 0 6px 18px rgba(18, 38, 63, 0.08);
+      }
+
+      html,body{
+        height:100%;
+        margin:0;
+        padding:0;
+        background: linear-gradient(180deg,var(--bg),#eef2f7 60%);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        color: #0f172a;
+      }
+
+      .wrapper{ max-width:var(--max-width); margin:28px auto; padding:20px; }
+
+      .header-card{ background: linear-gradient(90deg,var(--accent-2),var(--accent)); color:white; padding:22px 24px; border-radius:var(--radius); box-shadow:var(--shadow); display:flex; gap:16px; align-items:center; }
+
+      .header-card h1{ margin:0; font-size:20px }
+
+      .card{ background:var(--card); margin-top:16px; border-radius:calc(var(--radius)-2px); padding:20px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.04); }
+
+      .lead{ font-size:15px; color:#0f172a; font-weight:700; margin-bottom:8px }
+
+      .details{ background:linear-gradient(180deg,#fbfdff,#fbfffb); padding:14px; border-radius:10px; border:1px solid rgba(37,99,235,0.06); }
+
+      .detail-row{ display:flex; gap:12px; padding:10px 0; border-bottom:1px dashed rgba(15,23,42,0.04); }
+      .detail-row:last-child{ border-bottom:0 }
+      .detail-label{ min-width:140px; color:var(--muted); font-weight:600 }
+      .detail-value{ color:#0f172a; font-weight:500 }
+
+      .cta{ text-align:center; margin:22px 0 }
+      .cta a{ display:inline-block; padding:12px 28px; border-radius:8px; background:var(--accent-2); color:white; text-decoration:none; font-weight:600; box-shadow:0 6px 18px rgba(37,99,235,0.12) }
+
+      .info{ background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(14,165,164,0.04)); padding:12px; border-radius:8px; color:var(--muted); margin:16px 0 }
+
+      .footer{ margin-top:14px; font-size:13px; color:var(--muted); text-align:center }
+
+      @media (max-width:560px){ .header-card{flex-direction:column;align-items:flex-start} .detail-row{flex-direction:column} .detail-label{min-width:0} }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-card" role="banner" aria-label="Quote request received">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="font-size:28px;line-height:1">✈️</div>
+          <h1>Quote Request Received!</h1>
+        </div>
+        <div style="margin-left:auto;color:rgba(255,255,255,0.95);font-weight:600">Yatrica Travel</div>
+      </div>
+
+      <div class="card" role="main">
+        <p style="margin:0 0 10px 0">Dear ${name},</p>
+
+        <p style="margin-top:0;color:var(--muted)">Thank you for requesting a quote with <strong>Yatrica Travel</strong>! We have received your travel inquiry and our holiday experts are already reviewing your requirements.</p>
+
+        <div style="margin:14px 0">
+          <div class="lead">Your Travel Details</div>
+          <div class="details">
+            <div class="detail-row"><div class="detail-label">✈️ Destination</div><div class="detail-value">${destination}</div></div>
+            <div class="detail-row"><div class="detail-label">🛫 Departure City</div><div class="detail-value">${departureCity}</div></div>
+            <div class="detail-row"><div class="detail-label">👤 Name</div><div class="detail-value">${name}</div></div>
+            <div class="detail-row"><div class="detail-label">📞 Phone</div><div class="detail-value">${phone}</div></div>
+            <div class="detail-row"><div class="detail-label">📧 Email</div><div class="detail-value">${email}</div></div>
           </div>
-        </body>
-        </html>
+        </div>
+
+        <div class="info">
+          <div style="font-weight:700;color:#07203a;margin-bottom:6px">What Happens Next?</div>
+          <div>✓ Our travel expert will review your requirements</div>
+          <div>✓ You'll receive a personalized quote within 24 hours</div>
+          <div>✓ We'll contact you via phone or email with the best options</div>
+        </div>
+
+        <div class="cta"><a href="https://yatrica.vercel.app/packages/allpackages">Explore More Packages</a></div>
+
+        <p style="margin-top:10px;color:var(--muted)"><strong>Need immediate assistance?</strong><br/>Call us at <strong style="color:var(--accent-2)">+91 (000) 000-0000</strong><br/>Email us at <strong style="color:var(--accent-2)">info@yatricatravel.com</strong></p>
+
+        <p style="margin-top:16px">Best regards,<br/><strong style="color:var(--accent-2)">The Yatrica Travel Team</strong><br/><em style="font-size:13px;color:var(--muted)">Your Journey, Our Passion</em></p>
+
+        <div class="footer">© ${new Date().getFullYear()} Yatrica Travel. All rights reserved.<br/>📧 <a href="mailto:info@yatricatravel.com">info@yatricatravel.com</a> | 📞 +91 (981) 845-6811</div>
+      </div>
+    </div>
+  </body>
+</html>
+
       `,
     };
 
@@ -241,251 +155,159 @@ export default async function handler(req, res) {
       subject: `🎯 New Quote Request from ${name}`,
       html: `
         <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            body {
-              font-family: 'Arial', sans-serif;
-              line-height: 1.6;
-              color: #333;
-              max-width: 600px;
-              margin: 0 auto;
-              padding: 20px;
-              background-color: #f5f5f5;
-            }
-            .container {
-              background: white;
-              border-radius: 12px;
-              overflow: hidden;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-              background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
-              color: white;
-              padding: 35px 30px;
-              text-align: center;
-            }
-            .header h1 {
-              margin: 0;
-              font-size: 26px;
-            }
-            .timestamp {
-              background: rgba(255, 255, 255, 0.2);
-              padding: 8px 16px;
-              border-radius: 20px;
-              display: inline-block;
-              margin-top: 12px;
-              font-size: 13px;
-            }
-            .content {
-              padding: 35px 30px;
-            }
-            .alert-box {
-              background: #fff3cd;
-              border-left: 4px solid #ffc107;
-              padding: 15px 20px;
-              margin-bottom: 25px;
-              border-radius: 6px;
-            }
-            .alert-box strong {
-              color: #856404;
-            }
-            .details-card {
-              background: #f8f9fa;
-              border-radius: 10px;
-              padding: 25px;
-              margin: 20px 0;
-              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            }
-            .details-card h3 {
-              margin: 0 0 20px 0;
-              color: #28a745;
-              font-size: 20px;
-              border-bottom: 2px solid #28a745;
-              padding-bottom: 10px;
-            }
-            .info-row {
-              display: flex;
-              padding: 14px;
-              background: white;
-              margin: 10px 0;
-              border-radius: 8px;
-              border-left: 4px solid #42a5f5;
-              align-items: center;
-              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            }
-            .info-icon {
-              font-size: 24px;
-              margin-right: 15px;
-            }
-            .info-content {
-              flex: 1;
-            }
-            .label {
-              font-weight: 600;
-              color: #42a5f5;
-              font-size: 12px;
-              text-transform: uppercase;
-              letter-spacing: 0.5px;
-              display: block;
-              margin-bottom: 4px;
-            }
-            .value {
-              color: #212529;
-              font-size: 16px;
-              font-weight: 500;
-            }
-            .value a {
-              color: #42a5f5;
-              text-decoration: none;
-            }
-            .value a:hover {
-              text-decoration: underline;
-            }
-            .travel-details {
-              background: linear-gradient(135deg, #e7f3ff 0%, #f0f8ff 100%);
-              border-radius: 10px;
-              padding: 20px;
-              margin: 25px 0;
-              border: 2px solid #42a5f5;
-            }
-            .travel-details h4 {
-              margin: 0 0 15px 0;
-              color: #0056b3;
-            }
-            .travel-row {
-              display: flex;
-              justify-content: space-between;
-              padding: 10px 0;
-              border-bottom: 1px solid rgba(0, 123, 255, 0.2);
-            }
-            .travel-row:last-child {
-              border-bottom: none;
-            }
-            .action-section {
-              background: #d4edda;
-              padding: 20px;
-              border-radius: 8px;
-              margin: 25px 0;
-              border-left: 4px solid #28a745;
-            }
-            .action-section strong {
-              color: #155724;
-              font-size: 16px;
-            }
-            .quick-actions {
-              display: flex;
-              gap: 10px;
-              margin-top: 15px;
-              flex-wrap: wrap;
-            }
-            .action-btn {
-              padding: 10px 20px;
-              background: #42a5f5;
-              color: white;
-              text-decoration: none;
-              border-radius: 6px;
-              font-size: 14px;
-              font-weight: 600;
-              display: inline-block;
-            }
-            .footer {
-              background: #2c3e50;
-              color: white;
-              padding: 20px;
-              text-align: center;
-              font-size: 13px;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <h1>🎯 New Quote Request</h1>
-              <div class="timestamp">
-                📅 ${new Date().toLocaleString("en-IN", {
-                  timeZone: "Asia/Kolkata",
-                  dateStyle: "full",
-                  timeStyle: "short",
-                })}
-              </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>New Quote Request — Yatrica Travel</title>
+    <style>
+      :root{
+        --bg: #f6f8fa;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #0ea5a4;
+        --accent-2: #2563eb;
+        --success: #16a34a;
+        --radius: 12px;
+        --max-width: 720px;
+        --shadow: 0 6px 18px rgba(18, 38, 63, 0.08);
+      }
+
+      html,body{
+        height:100%;
+        margin:0;
+        padding:0;
+        background: linear-gradient(180deg,var(--bg),#eef2f7 60%);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        color: #0f172a;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+      }
+
+      .wrapper{ max-width:var(--max-width); margin:28px auto; padding:20px; }
+
+      .header-card{ background: linear-gradient(90deg,var(--accent-2),var(--accent)); color:white; padding:22px 24px; border-radius:var(--radius); box-shadow:var(--shadow); display:flex; gap:16px; align-items:center; }
+
+      .header-card h1{ margin:0; font-size:20px; letter-spacing:-0.2px }
+
+      .meta{ margin-left:auto; text-align:right; font-size:13px; opacity:0.95 }
+
+      .card{ background:var(--card); margin-top:16px; border-radius:calc(var(--radius)-2px); padding:20px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.04); }
+
+      .alert{ background:linear-gradient(90deg, rgba(245,158,11,0.08), rgba(234,179,8,0.06)); padding:12px 14px; border-radius:8px; color:#92400e; font-size:14px; display:flex; gap:10px; align-items:center; margin-bottom:16px }
+
+      .travel-box{ background:linear-gradient(180deg,#fbfdff,#f0f9ff); padding:16px; border-radius:10px; border:1px solid rgba(37,99,235,0.12); margin:14px 0 }
+      .travel-row{ display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px dashed rgba(15,23,42,0.06) }
+      .travel-row:last-child{ border-bottom:0 }
+
+      .lead{ font-size:15px; color:#0f172a; font-weight:700; margin-bottom:8px }
+
+      .row{ display:flex; gap:16px; align-items:flex-start; padding:12px 0; border-bottom:1px dashed rgba(15,23,42,0.04); }
+      .row:last-child{ border-bottom:0 }
+      .label{ width:140px; color:var(--muted); font-weight:600 }
+      .value{ color:#0f172a; font-weight:500; word-break:break-word }
+      .value a{ color:var(--accent-2); text-decoration:none }
+      .value a:hover{ text-decoration:underline }
+
+      .action{ background:linear-gradient(90deg, rgba(22,163,74,0.06), rgba(34,197,94,0.04)); padding:14px; border-radius:8px; margin:16px 0 }
+      .action ul{ margin:8px 0 12px 20px; color:#15803d }
+      .cta-group{ display:flex; gap:10px; flex-wrap:wrap }
+      .cta-btn{ display:inline-block; padding:10px 20px; border-radius:6px; background:var(--accent-2); color:white; text-decoration:none; font-weight:600; font-size:14px }
+
+      .tip{ background:#fef3c7; padding:12px; border-radius:8px; color:#92400e; font-size:13px; margin-top:14px }
+
+      .footer{ margin-top:14px; font-size:13px; color:var(--muted); text-align:center }
+
+      @media (max-width:560px){ .header-card{flex-direction:column;align-items:flex-start} .meta{text-align:left;margin-left:0;margin-top:8px} .row{flex-direction:column} .label{width:100%;font-size:13px} }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-card" role="banner" aria-label="New quote request">
+        <div style="display:flex;align-items:center;gap:12px">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="6" fill="rgba(255,255,255,0.12)"/>
+            <path d="M9 11l3 3 8-8" stroke="rgba(255,255,255,0.95)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="rgba(255,255,255,0.95)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h1>New Quote Request</h1>
+        </div>
+        <div class="meta">
+          <div style="font-weight:600">Received</div>
+          <div style="opacity:0.9">${new Date().toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            dateStyle: "full",
+            timeStyle: "short",
+          })}</div>
+        </div>
+      </div>
+
+      <div class="card" role="main">
+        <div class="alert">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div><strong>Action Required:</strong> A new customer is waiting for a travel quote. Please respond within 24 hours for best conversion rates.</div>
+        </div>
+
+        <div style="margin:14px 0">
+          <div class="lead">Travel Request Details</div>
+          <div class="travel-box">
+            <div class="travel-row">
+              <span style="font-weight:600;color:var(--muted)">✈️ Destination</span>
+              <span style="color:var(--accent-2);font-weight:700;font-size:16px">${destination}</span>
             </div>
-            
-            <div class="content">
-              <div class="alert-box">
-                <strong>⚡ Action Required:</strong> A new customer is waiting for a travel quote. Please respond within 24 hours for best conversion rates.
-              </div>
-              
-              <div class="travel-details">
-                <h4>✈️ Travel Request Details</h4>
-                <div class="travel-row">
-                  <span style="font-weight: 600;">Destination:</span>
-                  <span style="color: #0056b3; font-weight: 600; font-size: 18px;">${destination}</span>
-                </div>
-                <div class="travel-row">
-                  <span style="font-weight: 600;">Departure City:</span>
-                  <span style="color: #0056b3; font-weight: 600; font-size: 18px;">${departureCity}</span>
-                </div>
-              </div>
-              
-              <div class="details-card">
-                <h3>👤 Customer Information</h3>
-                
-                <div class="info-row">
-                  <span class="info-icon">👤</span>
-                  <div class="info-content">
-                    <span class="label">Full Name</span>
-                    <span class="value">${name}</span>
-                  </div>
-                </div>
-                
-                <div class="info-row">
-                  <span class="info-icon">📧</span>
-                  <div class="info-content">
-                    <span class="label">Email Address</span>
-                    <span class="value"><a href="mailto:${email}">${email}</a></span>
-                  </div>
-                </div>
-                
-                <div class="info-row">
-                  <span class="info-icon">📞</span>
-                  <div class="info-content">
-                    <span class="label">Phone Number</span>
-                    <span class="value"><a href="tel:${phone}">${phone}</a></span>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="action-section">
-                <strong>📋 Next Steps:</strong>
-                <ul style="margin: 10px 0 0 20px; color: #155724;">
-                  <li>Review available packages for ${destination}</li>
-                  <li>Prepare customized quote with pricing</li>
-                  <li>Contact customer within 24 hours</li>
-                  <li>Send detailed itinerary options</li>
-                </ul>
-                
-                <div class="quick-actions">
-                  <a href="mailto:${email}" class="action-btn">📧 Send Email</a>
-                  <a href="tel:${phone}" class="action-btn">📞 Call Now</a>
-                </div>
-              </div>
-              
-              <p style="margin-top: 25px; padding: 15px; background: #fff3cd; border-radius: 6px; font-size: 14px; color: #856404;">
-                💡 <strong>Pro Tip:</strong> Customers who receive quotes within 2 hours are 3x more likely to book!
-              </p>
-            </div>
-            
-            <div class="footer">
-              <p style="margin: 0;">This is an automated notification from Yatrica Travel Quote Request System</p>
-              <p style="margin: 10px 0 0 0; opacity: 0.8;">Generated at ${new Date().toLocaleTimeString(
-                "en-IN",
-                { timeZone: "Asia/Kolkata" }
-              )}</p>
+            <div class="travel-row">
+              <span style="font-weight:600;color:var(--muted)">🛫 Departure City</span>
+              <span style="color:var(--accent-2);font-weight:700;font-size:16px">${departureCity}</span>
             </div>
           </div>
-        </body>
-        </html>
+        </div>
+
+        <div style="margin:14px 0">
+          <div class="lead">Customer Information</div>
+          
+          <div class="row">
+            <div class="label">👤 Name</div>
+            <div class="value">${name}</div>
+          </div>
+
+          <div class="row">
+            <div class="label">📧 Email</div>
+            <div class="value"><a href="mailto:${email}">${email}</a></div>
+          </div>
+
+          <div class="row">
+            <div class="label">📞 Phone</div>
+            <div class="value"><a href="tel:${phone}">${phone}</a></div>
+          </div>
+        </div>
+
+        <div class="action">
+          <div style="font-weight:700;color:#15803d;margin-bottom:6px">📋 Next Steps</div>
+          <ul>
+            <li>Review available packages for ${destination}</li>
+            <li>Prepare customized quote with pricing</li>
+            <li>Contact customer within 24 hours</li>
+            <li>Send detailed itinerary options</li>
+          </ul>
+          <div class="cta-group">
+            <a href="mailto:${email}" class="cta-btn">📧 Send Email</a>
+            <a href="tel:${phone}" class="cta-btn">📞 Call Now</a>
+          </div>
+        </div>
+
+        <div class="tip">💡 <strong>Pro Tip:</strong> Customers who receive quotes within 2 hours are 3x more likely to book!</div>
+
+        <div class="footer">This is an automated notification from Yatrica Travel Quote Request System<br/>Generated at ${new Date().toLocaleTimeString(
+          "en-IN",
+          { timeZone: "Asia/Kolkata" }
+        )}</div>
+      </div>
+    </div>
+  </body>
+</html>
+
       `,
     };
 
