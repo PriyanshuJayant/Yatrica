@@ -16,6 +16,7 @@ import QuoteForm from "../../components/QuoteForm/QuoteForm";
 import Footer from "../../components/Footer/Footer";
 import ContactForm from "../../components/Contact/Contact";
 import DiwaliPopUp from "../../components/DiwaliPopUp/DiwaliPopUp";
+import { LazySection } from "../../components/LazySection/LazySection";
 
 // -------------------- VIDEO ASSETS --------------------
 const Diwali = "/videos/NewYear.mp4";
@@ -97,87 +98,105 @@ function Home() {
           {/* </div> */}
 
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
-            <BannerComp
-              src={Family}
-              heading="Family Tours"
-              subHeading="Enjoy your best time with your Family"
-              buttonText="More Family Packages →"
-              buttonLink="/packages/family"
-            />
-            <div className={styles.ExpandableCard}>
-              <Packages src={FamilyJSON} />
+          <LazySection minHeight="400px">
+            <div className={styles.HomeContainer}>
+              <BannerComp
+                src={Family}
+                heading="Family Tours"
+                subHeading="Enjoy your best time with your Family"
+                buttonText="More Family Packages →"
+                buttonLink="/packages/family"
+              />
+              <div className={styles.ExpandableCard}>
+                <Packages src={FamilyJSON} />
+              </div>
             </div>
-          </div>
+          </LazySection>
 
           {/* -------------------- SERVICES SECTION -------------------- */}
-          <div
-            id="services"
-            style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}
-          >
-            <Services />
-          </div>
+          <LazySection minHeight="300px">
+            <div
+              id="services"
+              style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}
+            >
+              <Services />
+            </div>
+          </LazySection>
 
           {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
-            <BannerComp
-              src={Corporate}
-              heading="Corporate Tours"
-              subHeading="Enjoy your best time with your Company"
-              buttonText="More Corporate Packages →"
-              buttonLink="/packages/corporate"
-            />
-            <div className={styles.ExpandableCard}>
-              <Packages src={CorporateJSON} />
+          <LazySection minHeight="400px">
+            <div className={styles.HomeContainer}>
+              <BannerComp
+                src={Corporate}
+                heading="Corporate Tours"
+                subHeading="Enjoy your best time with your Company"
+                buttonText="More Corporate Packages →"
+                buttonLink="/packages/corporate"
+              />
+              <div className={styles.ExpandableCard}>
+                <Packages src={CorporateJSON} />
+              </div>
             </div>
-          </div>
+          </LazySection>
 
           {/* -------------------- HONEYMOON SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
-            <BannerComp
-              src={Honeymoon}
-              heading="Honeymoon"
-              subHeading="Enjoy your best time with your Partner"
-              buttonText="More Honeymoon Packages →"
-              buttonLink="/packages/honeymoon"
-            />
-            <div className={styles.ExpandableCard}>
-              <Packages src={HoneyMoon} />
+          <LazySection minHeight="400px">
+            <div className={styles.HomeContainer}>
+              <BannerComp
+                src={Honeymoon}
+                heading="Honeymoon"
+                subHeading="Enjoy your best time with your Partner"
+                buttonText="More Honeymoon Packages →"
+                buttonLink="/packages/honeymoon"
+              />
+              <div className={styles.ExpandableCard}>
+                <Packages src={HoneyMoon} />
+              </div>
             </div>
-          </div>
+          </LazySection>
 
           {/* -------------------- QUOTE FORM -------------------- */}
-          <div
-            id="Question"
-            style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}
-          >
-            <QuoteForm />
-          </div>
+          <LazySection minHeight="300px">
+            <div
+              id="Question"
+              style={{ width: "100%", paddingTop: "90px", marginTop: "-90px" }}
+            >
+              <QuoteForm />
+            </div>
+          </LazySection>
 
           {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
-          <div className={styles.HomeContainer}>
-            <BannerComp
-              src={Budget}
-              heading="Budget Friendly"
-              subHeading="Enjoy your best time with your Partner"
-              buttonText="More Honeymoon Packages →"
-              buttonLink="/packages/honeymoon"
-            />
-            <div className={styles.ExpandableCard}>
-              <Packages src={budgetFriendlyJSON} />
+          <LazySection minHeight="400px">
+            <div className={styles.HomeContainer}>
+              <BannerComp
+                src={Budget}
+                heading="Budget Friendly"
+                subHeading="Enjoy your best time with your Partner"
+                buttonText="More Honeymoon Packages →"
+                buttonLink="/packages/honeymoon"
+              />
+              <div className={styles.ExpandableCard}>
+                <Packages src={budgetFriendlyJSON} />
+              </div>
             </div>
-          </div>
+          </LazySection>
 
           {/* -------------------- FAQ SECTION -------------------- */}
-          <div className={styles.FAQSection}>
-            <FAQs />
-          </div>
+          <LazySection minHeight="200px">
+            <div className={styles.FAQSection}>
+              <FAQs />
+            </div>
+          </LazySection>
 
-          <ContactForm />
+          <LazySection minHeight="300px">
+            <ContactForm />
+          </LazySection>
         </div>
 
         {/* -------------------- FOOTER -------------------- */}
-        <Footer />
+        <LazySection minHeight="200px">
+          <Footer />
+        </LazySection>
       </div>
     </>
   );

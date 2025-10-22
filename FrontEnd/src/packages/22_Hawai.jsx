@@ -8,6 +8,7 @@ import styles from "./0_Global.module.css";
 import NavBar from "../components/NavBar/NavBar";
 import QuoteForm from "../components/QuoteForm/QuoteForm";
 import Footer from "../components/Footer/Footer";
+import { LazySection } from "../components/LazySection/LazySection";
 
 // -------------------- DATA FILES --------------------
 import singlePackages from "../assets/singlePackages.json";
@@ -133,7 +134,9 @@ function ID22() {
             </div>
           </>
         )}
-        <Footer />
+        <LazySection minHeight="200px">
+          <Footer />
+        </LazySection>
       </div>
     </>
   );

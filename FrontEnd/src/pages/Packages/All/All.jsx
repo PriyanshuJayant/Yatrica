@@ -8,6 +8,7 @@ import QuoteForm from "../../../components/QuoteForm/QuoteForm";
 import Footer from "../../../components/Footer/Footer";
 import ResponsivePackageGrid from "../../../components/SinglePackage/ResponsiveGrid";
 import SinglePackage from "../../../components/SinglePackage/SinglePackage";
+import { LazySection } from "../../../components/LazySection/LazySection";
 
 // -------------------- VIDEO ASSETS ------------------
 const HomeHero = "/videos/Hero.mp4";
@@ -61,28 +62,31 @@ function All() {
 
         {/* -------------------- Page Content -------------------- */}
         <div className={styles.pageContainer}>
-          <ResponsivePackageGrid>
-            {packagesData.map((pkg) => (
-              <SinglePackage
-                key={pkg.id}
-                src={pkg.src}
-                location={pkg.location}
-                pricing={pkg.pricing}
-                link={pkg.link}
-              />
-            ))}
-          </ResponsivePackageGrid>
+          <LazySection minHeight="600px">
+            <ResponsivePackageGrid>
+              {packagesData.map((pkg) => (
+                <SinglePackage
+                  key={pkg.id}
+                  src={pkg.src}
+                  location={pkg.location}
+                  pricing={pkg.pricing}
+                  link={pkg.link}
+                />
+              ))}
+            </ResponsivePackageGrid>
+          </LazySection>
 
           {/* -------------------- QUOTE FORM -------------------- */}
-          <div id="Question" style={{ width: "100%" }}>
-            <QuoteForm />
-          </div>
-
-
-
+          <LazySection minHeight="300px">
+            <div id="Question" style={{ width: "100%" }}>
+              <QuoteForm />
+            </div>
+          </LazySection>
         </div>
         {/* -------------------- FOOTER -------------------- */}
-        <Footer />
+        <LazySection minHeight="200px">
+          <Footer />
+        </LazySection>
       </div>
     </>
   );
