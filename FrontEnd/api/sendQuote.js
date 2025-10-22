@@ -287,20 +287,28 @@ export default async function handler(req, res) {
       `,
     };
 
-    // Email to tracking address (third copy for monitoring)
-    const trackingMailOptions = {
-      from: `"Yatrica Quote Form" <${
-        process.env.EMAIL_USER || process.env.VITE_EMAIL_USER
-      }>`,
-      to: process.env.TRACK_MAIL || process.env.VITE_TRACK_MAIL,
-      subject: `🎯 New Quote Request from ${name}`,
-      html: adminMailOptions.html, // Same content as admin email
-    };
-
-    // Send all three emails
+    // Send user and admin emails
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(trackingMailOptions);
+
+    // Send tracking email if TRACK_MAIL is configured
+    const trackingEmail = process.env.TRACK_MAIL || process.env.VITE_TRACK_MAIL;
+    if (trackingEmail) {
+      try {
+        const trackingMailOptions = {
+          from: `"Yatrica Quote Form" <${
+            process.env.EMAIL_USER || process.env.VITE_EMAIL_USER
+          }>`,
+          to: trackingEmail,
+          subject: `🎯 New Quote Request from ${name}`,
+          html: adminMailOptions.html, // Same content as admin email
+        };
+        await transporter.sendMail(trackingMailOptions);
+      } catch (trackError) {
+        console.error("Error sending tracking email:", trackError);
+        // Don't fail the whole request if tracking email fails
+      }
+    }
 
     return res.status(200).json({
       success: true,
@@ -309,6 +317,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error sending quote email:", error);
     return res.status(500).json({
+      success: false,
       error: "Failed to send quote request",
       details: error.message,
     });
