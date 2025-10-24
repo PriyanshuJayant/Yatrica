@@ -22,7 +22,7 @@ import { LazyVideo } from "../../components/LazyVideo/LazyVideo";
 // -------------------- DATA FILES (Static Imports) --------------------
 import FamilyJSON from "../../assets/data/familyPackage.json";
 import CorporateJSON from "../../assets/data/corporate.json";
-import HoneymoonJSON from "../../assets/data/honeymoon.json";
+import HoneymoonJSON from "../../assets/data/honeyMoon.json";
 import BudgetJSON from "../../assets/data/budgetFriendly.json";
 
 // -------------------- VIDEO ASSETS --------------------
