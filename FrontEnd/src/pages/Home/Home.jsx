@@ -100,20 +100,18 @@ function Home() {
           {/* </div> */}
 
           {/* -------------------- FAMILY TOURS SECTION -------------------- */}
-          <LazySection minHeight="400px">
-            <div className={styles.HomeContainer}>
-              <BannerComp
-                src={Family}
-                heading="Family Tours"
-                subHeading="Enjoy your best time with your Family"
-                buttonText="More Family Packages →"
-                buttonLink="/packages/family"
-              />
-              <div className={styles.ExpandableCard}>
-                <Packages src={FamilyJSON} />
-              </div>
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Family}
+              heading="Family Tours"
+              subHeading="Enjoy your best time with your Family"
+              buttonText="More Family Packages →"
+              buttonLink="/packages/family"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={FamilyJSON} />
             </div>
-          </LazySection>
+          </div>
 
           {/* -------------------- SERVICES SECTION -------------------- */}
           <LazySection minHeight="300px">
@@ -126,36 +124,32 @@ function Home() {
           </LazySection>
 
           {/* -------------------- CORPORATE TOURS SECTION -------------------- */}
-          <LazySection minHeight="400px">
-            <div className={styles.HomeContainer}>
-              <BannerComp
-                src={Corporate}
-                heading="Corporate Tours"
-                subHeading="Enjoy your best time with your Company"
-                buttonText="More Corporate Packages →"
-                buttonLink="/packages/corporate"
-              />
-              <div className={styles.ExpandableCard}>
-                <Packages src={CorporateJSON} />
-              </div>
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Corporate}
+              heading="Corporate Tours"
+              subHeading="Enjoy your best time with your Company"
+              buttonText="More Corporate Packages →"
+              buttonLink="/packages/corporate"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={CorporateJSON} />
             </div>
-          </LazySection>
+          </div>
 
           {/* -------------------- HONEYMOON SECTION -------------------- */}
-          <LazySection minHeight="400px">
-            <div className={styles.HomeContainer}>
-              <BannerComp
-                src={Honeymoon}
-                heading="Honeymoon"
-                subHeading="Enjoy your best time with your Partner"
-                buttonText="More Honeymoon Packages →"
-                buttonLink="/packages/honeymoon"
-              />
-              <div className={styles.ExpandableCard}>
-                <Packages src={HoneymoonJSON} />
-              </div>
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Honeymoon}
+              heading="Honeymoon"
+              subHeading="Enjoy your best time with your Partner"
+              buttonText="More Honeymoon Packages →"
+              buttonLink="/packages/honeymoon"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={HoneymoonJSON} />
             </div>
-          </LazySection>
+          </div>
 
           {/* -------------------- QUOTE FORM -------------------- */}
           <LazySection minHeight="300px">
@@ -168,20 +162,18 @@ function Home() {
           </LazySection>
 
           {/* -------------------- BUDGET FRIENDLY SECTION -------------------- */}
-          <LazySection minHeight="400px">
-            <div className={styles.HomeContainer}>
-              <BannerComp
-                src={Budget}
-                heading="Budget Friendly"
-                subHeading="Enjoy your best time with your Partner"
-                buttonText="More Honeymoon Packages →"
-                buttonLink="/packages/honeymoon"
-              />
-              <div className={styles.ExpandableCard}>
-                <Packages src={BudgetJSON} />
-              </div>
+          <div className={styles.HomeContainer}>
+            <BannerComp
+              src={Budget}
+              heading="Budget Friendly"
+              subHeading="Enjoy your best time with your Partner"
+              buttonText="More Honeymoon Packages →"
+              buttonLink="/packages/honeymoon"
+            />
+            <div className={styles.ExpandableCard}>
+              <Packages src={BudgetJSON} />
             </div>
-          </LazySection>
+          </div>
 
           {/* -------------------- FAQ SECTION -------------------- */}
           <LazySection minHeight="200px">
