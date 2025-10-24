@@ -60,29 +60,47 @@ export function Packages({ src }) {
   const id = useId();
   const ref = useRef(null);
   const containerRef = useRef(null);
+  const previousSrcRef = useRef(null);
+
+  // ✅ Memoize the source data to prevent unnecessary re-renders
+  const memoizedSrc = useMemo(() => src, [JSON.stringify(src)]);
 
   // ✅ Fetch data dynamically from src with caching
   useEffect(() => {
     async function fetchData() {
       try {
-        if (!src) {
+        if (!memoizedSrc) {
+          setCardsData([]);
           setLoading(false);
           return;
         }
 
-        // Generate cache key
-        const cacheKey = typeof src === 'string' ? src : JSON.stringify(src);
+        // If src is already the parsed JSON array (most common case from Home.jsx)
+        if (Array.isArray(memoizedSrc)) {
+          // Only update if data actually changed
+          if (memoizedSrc.length > 0 && JSON.stringify(previousSrcRef.current) !== JSON.stringify(memoizedSrc)) {
+            previousSrcRef.current = memoizedSrc;
+            setCardsData(memoizedSrc);
+          } else if (memoizedSrc.length > 0) {
+            setCardsData(memoizedSrc);
+          }
+          setLoading(false);
+          return;
+        }
+
+        // Generate cache key for string URLs
+        const cacheKey = typeof memoizedSrc === 'string' ? memoizedSrc : `obj-${Date.now()}`;
         
-        // Check cache first
-        if (dataCache.has(cacheKey)) {
+        // Check cache first (only for URLs)
+        if (typeof memoizedSrc === 'string' && dataCache.has(cacheKey)) {
           setCardsData(dataCache.get(cacheKey));
           setLoading(false);
           return;
         }
 
         // If src is a string assume it's a URL/path and fetch it
-        if (typeof src === "string") {
-          const response = await fetch(src);
+        if (typeof memoizedSrc === "string") {
+          const response = await fetch(memoizedSrc);
           if (!response.ok)
             throw new Error(`HTTP ${response.status} ${response.statusText}`);
           const data = await response.json();
@@ -92,23 +110,13 @@ export function Packages({ src }) {
           return;
         }
 
-        // If src is already the parsed JSON (imported), use it directly
-        if (Array.isArray(src)) {
-          dataCache.set(cacheKey, src);
-          setCardsData(src);
-          setLoading(false);
-          return;
-        }
-
         // If src is an object (could be a module default export), try to extract data
-        if (typeof src === "object") {
-          const data = src.default ?? src;
+        if (typeof memoizedSrc === "object") {
+          const data = memoizedSrc.default ?? memoizedSrc;
           if (Array.isArray(data)) {
-            dataCache.set(cacheKey, data);
             setCardsData(data);
           } else if (data && typeof data === "object") {
             const values = Object.values(data);
-            dataCache.set(cacheKey, values);
             setCardsData(values);
           }
           setLoading(false);
@@ -122,7 +130,7 @@ export function Packages({ src }) {
       }
     }
     fetchData();
-  }, [src]);
+  }, [memoizedSrc]);
 
   useEffect(() => {
     function onKeyDown(event) {
