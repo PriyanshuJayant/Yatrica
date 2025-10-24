@@ -1,8 +1,11 @@
-import React, { useEffect, useId, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState, useMemo, useCallback } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import "./Packages.css";
 
-// ✅ Custom hook for outside click detection
+// ✅ Data cache to prevent re-fetching
+const dataCache = new Map();
+
+// ✅ Custom hook for outside click detection (memoized callback)
 const useOutsideClick = (ref, callback) => {
   useEffect(() => {
     const listener = (event) => {
@@ -45,6 +48,8 @@ const CloseIcon = () => (
 // ✅ Reusable Packages component
 export function Packages({ src }) {
   const [cardsData, setCardsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [active, setActive] = useState(null);
   const [cardPosition, setCardPosition] = useState({
     top: 0,
@@ -56,11 +61,24 @@ export function Packages({ src }) {
   const ref = useRef(null);
   const containerRef = useRef(null);
 
-  // ✅ Fetch data dynamically from src
+  // ✅ Fetch data dynamically from src with caching
   useEffect(() => {
     async function fetchData() {
       try {
-        if (!src) return;
+        if (!src) {
+          setLoading(false);
+          return;
+        }
+
+        // Generate cache key
+        const cacheKey = typeof src === 'string' ? src : JSON.stringify(src);
+        
+        // Check cache first
+        if (dataCache.has(cacheKey)) {
+          setCardsData(dataCache.get(cacheKey));
+          setLoading(false);
+          return;
+        }
 
         // If src is a string assume it's a URL/path and fetch it
         if (typeof src === "string") {
@@ -68,26 +86,39 @@ export function Packages({ src }) {
           if (!response.ok)
             throw new Error(`HTTP ${response.status} ${response.statusText}`);
           const data = await response.json();
+          dataCache.set(cacheKey, data);
           setCardsData(data);
+          setLoading(false);
           return;
         }
 
         // If src is already the parsed JSON (imported), use it directly
         if (Array.isArray(src)) {
+          dataCache.set(cacheKey, src);
           setCardsData(src);
+          setLoading(false);
           return;
         }
 
         // If src is an object (could be a module default export), try to extract data
         if (typeof src === "object") {
           const data = src.default ?? src;
-          if (Array.isArray(data)) setCardsData(data);
-          else if (data && typeof data === "object")
-            setCardsData(Object.values(data));
+          if (Array.isArray(data)) {
+            dataCache.set(cacheKey, data);
+            setCardsData(data);
+          } else if (data && typeof data === "object") {
+            const values = Object.values(data);
+            dataCache.set(cacheKey, values);
+            setCardsData(values);
+          }
+          setLoading(false);
           return;
         }
+        
+        setLoading(false);
       } catch (err) {
-        console.error("Failed to load cards data:", err);
+        setError(err.message);
+        setLoading(false);
       }
     }
     fetchData();
@@ -95,7 +126,7 @@ export function Packages({ src }) {
 
   useEffect(() => {
     function onKeyDown(event) {
-      if (event.key === "Escape") setActive(false);
+      if (event.key === "Escape") setActive(null);
     }
 
     document.body.style.overflow = active ? "hidden" : "auto";
@@ -103,9 +134,12 @@ export function Packages({ src }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
 
-  useOutsideClick(ref, () => setActive(null));
+  // ✅ Memoized callback to prevent re-renders
+  const handleOutsideClick = useCallback(() => setActive(null), []);
+  useOutsideClick(ref, handleOutsideClick);
 
-  const handleCardClick = (card, event) => {
+  // ✅ Optimized card click handler
+  const handleCardClick = useCallback((card, event) => {
     if (active?.title === card.title) {
       setActive(null);
       return;
@@ -159,7 +193,7 @@ export function Packages({ src }) {
       expandedHeight,
     });
     setActive(card);
-  };
+  }, [active]);
 
   // -------------Responsiveness-------------
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -168,6 +202,54 @@ export function Packages({ src }) {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // ✅ Show loading state
+  if (loading) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '400px',
+        fontSize: '16px',
+        color: '#666'
+      }}>
+        Loading packages...
+      </div>
+    );
+  }
+
+  // ✅ Show error state
+  if (error) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '400px',
+        fontSize: '16px',
+        color: '#e53e3e'
+      }}>
+        Error loading packages: {error}
+      </div>
+    );
+  }
+
+  // ✅ Show empty state
+  if (!cardsData || cardsData.length === 0) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '400px',
+        fontSize: '16px',
+        color: '#666'
+      }}>
+        No packages available
+      </div>
+    );
+  }
 
   return (
     <div
@@ -206,6 +288,7 @@ export function Packages({ src }) {
                 left: cardPosition.expandedLeft + cardPosition.expandedWidth - 40,
               }}
               exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
               style={{
                 display: "flex",
                 position: "fixed",
@@ -220,6 +303,7 @@ export function Packages({ src }) {
                 border: "none",
                 cursor: "pointer",
                 zIndex: 101,
+                WebkitTapHighlightColor: "transparent",
               }}
               onClick={() => setActive(null)}
             >
@@ -254,9 +338,9 @@ export function Packages({ src }) {
               }}
               transition={{
                 type: "spring",
-                damping: 30,
-                stiffness: 400,
-                duration: 0.3,
+                damping: 25,
+                stiffness: 300,
+                mass: 0.8,
               }}
               style={{
                 display: "flex",
@@ -267,14 +351,16 @@ export function Packages({ src }) {
                 width: "70%",
                 zIndex: 100,
                 boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+                willChange: "transform",
               }}
             >
               <div style={{ position: "relative" }}>
                 <img
                   src={active.src}
                   alt={active.title}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
+                  fetchpriority="high"
                   style={{
                     width: "100%",
                     height: "280px",
@@ -411,7 +497,7 @@ export function Packages({ src }) {
         >
           {cardsData.map((card) => (
             <li
-              key={card.title}
+              key={`${card.title}-${card.description}`}
               onClick={(e) => {
                 if (active?.title !== card.title) handleCardClick(card, e);
               }}
@@ -427,6 +513,7 @@ export function Packages({ src }) {
                 pointerEvents: active?.title === card.title ? "none" : "auto",
                 overflow: "hidden",
                 position: "relative",
+                WebkitTapHighlightColor: "transparent",
               }}
             >
               <div
@@ -443,12 +530,14 @@ export function Packages({ src }) {
                   alt={card.title}
                   loading="lazy"
                   decoding="async"
+                  fetchpriority="low"
                   style={{
                     height: "100%",
                     width: "100%",
                     objectFit: "cover",
                     objectPosition: "center",
                     display: "block",
+                    willChange: "auto",
                   }}
                 />
 
