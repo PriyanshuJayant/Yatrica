@@ -60,49 +60,52 @@ export function Packages({ src }) {
   const id = useId();
   const ref = useRef(null);
   const containerRef = useRef(null);
-  const previousSrcRef = useRef(null);
 
-  // ✅ Memoize the source data to prevent unnecessary re-renders
-  const memoizedSrc = useMemo(() => src, [JSON.stringify(src)]);
-
-  // ✅ Fetch data dynamically from src with caching
+  // ✅ Process data immediately when src changes - simplified for iPhone Safari compatibility
   useEffect(() => {
-    async function fetchData() {
+    async function processData() {
       try {
-        if (!memoizedSrc) {
+        // Handle null/undefined
+        if (!src || (Array.isArray(src) && src.length === 0)) {
           setCardsData([]);
           setLoading(false);
           return;
         }
 
-        // If src is already the parsed JSON array (most common case from Home.jsx)
-        if (Array.isArray(memoizedSrc)) {
-          // Only update if data actually changed
-          if (memoizedSrc.length > 0 && JSON.stringify(previousSrcRef.current) !== JSON.stringify(memoizedSrc)) {
-            previousSrcRef.current = memoizedSrc;
-            setCardsData(memoizedSrc);
-          } else if (memoizedSrc.length > 0) {
-            setCardsData(memoizedSrc);
+        // CASE 1: Direct array (most common - from both Home.jsx and Packages.jsx)
+        if (Array.isArray(src)) {
+          setCardsData(src);
+          setLoading(false);
+          return;
+        }
+
+        // CASE 2: Imported JSON module with default export
+        if (src && typeof src === "object" && src.default) {
+          if (Array.isArray(src.default)) {
+            setCardsData(src.default);
+          } else {
+            setCardsData(Object.values(src.default));
           }
           setLoading(false);
           return;
         }
 
-        // Generate cache key for string URLs
-        const cacheKey = typeof memoizedSrc === 'string' ? memoizedSrc : `obj-${Date.now()}`;
-        
-        // Check cache first (only for URLs)
-        if (typeof memoizedSrc === 'string' && dataCache.has(cacheKey)) {
-          setCardsData(dataCache.get(cacheKey));
-          setLoading(false);
-          return;
-        }
+        // CASE 3: URL string - fetch from server
+        if (typeof src === "string") {
+          const cacheKey = src;
+          
+          // Check cache
+          if (dataCache.has(cacheKey)) {
+            setCardsData(dataCache.get(cacheKey));
+            setLoading(false);
+            return;
+          }
 
-        // If src is a string assume it's a URL/path and fetch it
-        if (typeof memoizedSrc === "string") {
-          const response = await fetch(memoizedSrc);
-          if (!response.ok)
-            throw new Error(`HTTP ${response.status} ${response.statusText}`);
+          // Fetch and cache
+          const response = await fetch(src);
+          if (!response.ok) {
+            throw new Error(`Failed to load: ${response.statusText}`);
+          }
           const data = await response.json();
           dataCache.set(cacheKey, data);
           setCardsData(data);
@@ -110,27 +113,25 @@ export function Packages({ src }) {
           return;
         }
 
-        // If src is an object (could be a module default export), try to extract data
-        if (typeof memoizedSrc === "object") {
-          const data = memoizedSrc.default ?? memoizedSrc;
-          if (Array.isArray(data)) {
-            setCardsData(data);
-          } else if (data && typeof data === "object") {
-            const values = Object.values(data);
-            setCardsData(values);
-          }
+        // CASE 4: Plain object
+        if (src && typeof src === "object") {
+          setCardsData(Object.values(src));
           setLoading(false);
           return;
         }
         
+        // Fallback
+        setCardsData([]);
         setLoading(false);
       } catch (err) {
         setError(err.message);
+        setCardsData([]);
         setLoading(false);
       }
     }
-    fetchData();
-  }, [memoizedSrc]);
+
+    processData();
+  }, [src]);
 
   useEffect(() => {
     function onKeyDown(event) {

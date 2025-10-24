@@ -110,10 +110,10 @@ function Home() {
                 buttonLink="/packages/family"
               />
               <div className={styles.ExpandableCard}>
-                {packagesLoading ? (
+                {packagesLoading || !packageData?.family ? (
                   <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
                 ) : (
-                  <Packages src={packageData.family || []} />
+                  <Packages src={packageData.family} />
                 )}
               </div>
             </div>
@@ -140,10 +140,10 @@ function Home() {
                 buttonLink="/packages/corporate"
               />
               <div className={styles.ExpandableCard}>
-                {packagesLoading ? (
+                {packagesLoading || !packageData?.corporate ? (
                   <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
                 ) : (
-                  <Packages src={packageData.corporate || []} />
+                  <Packages src={packageData.corporate} />
                 )}
               </div>
             </div>
@@ -160,10 +160,10 @@ function Home() {
                 buttonLink="/packages/honeymoon"
               />
               <div className={styles.ExpandableCard}>
-                {packagesLoading ? (
+                {packagesLoading || !packageData?.honeymoon ? (
                   <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
                 ) : (
-                  <Packages src={packageData.honeymoon || []} />
+                  <Packages src={packageData.honeymoon} />
                 )}
               </div>
             </div>
@@ -190,10 +190,10 @@ function Home() {
                 buttonLink="/packages/honeymoon"
               />
               <div className={styles.ExpandableCard}>
-                {packagesLoading ? (
+                {packagesLoading || !packageData?.budget ? (
                   <div style={{ textAlign: 'center', padding: '40px' }}>Loading packages...</div>
                 ) : (
-                  <Packages src={packageData.budget || []} />
+                  <Packages src={packageData.budget} />
                 )}
               </div>
             </div>
