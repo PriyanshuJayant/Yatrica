@@ -78,7 +78,7 @@ function FamilyPage() {
                     src={pkg.src}
                     location={pkg.title || pkg.location}
                     pricing={pkg.description || pkg.pricing}
-                    link={pkg.ctaLink}
+                    link={pkg.link || pkg.ctaLink}
                   />
                 ))}
               </ResponsivePackageGrid>

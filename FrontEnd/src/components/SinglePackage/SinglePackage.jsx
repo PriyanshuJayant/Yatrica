@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SinglePackage = ({ src, location, pricing, link = "#" }) => {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -73,8 +74,8 @@ const SinglePackage = ({ src, location, pricing, link = "#" }) => {
   return (
     <>
       <div style={SinglePackageStyle}>
-        <a
-          href={link}
+        <Link
+          to={link}
           style={cardStyle}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -93,7 +94,7 @@ const SinglePackage = ({ src, location, pricing, link = "#" }) => {
             <p style={pricingStyle}>₹{pricing}</p>
             <button style={buttonStyle}>View Details</button>
           </div>
-        </a>
+        </Link>
       </div>
     </>
   );
