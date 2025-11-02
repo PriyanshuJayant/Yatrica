@@ -1,181 +1,181 @@
 [
   {
     "id": 1,
-    "src": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "src": "/images/Packages/AllPackages/Thailand.webp",
     "location": "Thailand",
     "pricing": "16,800 - 55,400",
     "link": "/packages/id/1"
   },
   {
     "id": 2,
-    "src": "https://images.unsplash.com/photo-1748102288867-3588d5975ced?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+    "src": "/images/Packages/AllPackages/Vietnam.webp",
     "location": "Vietnam",
     "pricing": "19,200 - 81,000",
     "link": "/packages/id/2"
   },
   {
     "id": 3,
-    "src": "https://images.unsplash.com/photo-1580910527739-556eb89f9d65?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+    "src": "/images/Packages/AllPackages/SriLanka.webp",
     "location": "Sri Lanka",
     "pricing": "12,900 - 51,000",
     "link": "/packages/id/3"
   },
   {
     "id": 4,
-    "src": "https://images.pexels.com/photos/6861657/pexels-photo-6861657.jpeg",
+    "src": "/images/Packages/AllPackages/Laos.jpg",
     "location": "Laos",
     "pricing": "17,100 - 7,13,000",
     "link": "/packages/id/4"
   },
   {
     "id": 5,
-    "src": "https://images.unsplash.com/photo-1546412414-e1885259563a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+    "src": "/images/Packages/AllPackages/Dubai.webp",
     "location": "Dubai / UAE",
     "pricing": "20,500 - 91,000",
     "link": "/packages/id/5"
   },
   {
     "id": 6,
-    "src": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171",
+    "src": "/images/Packages/AllPackages/Kenya.webp",
     "location": "Kenya",
     "pricing": "45,000 - 1,80,000",
     "link": "/packages/id/6"
   },
   {
     "id": 7,
-    "src": "https://images.pexels.com/photos/18069591/pexels-photo-18069591.jpeg",
+    "src": "/images/Packages/AllPackages/Mauritius.webp",
     "location": "Mauritius",
     "pricing": "32,000 - 1,20,000",
     "link": "/packages/id/7"
   },
   {
     "id": 8,
-    "src": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg",
+    "src": "/images/Packages/AllPackages/Bali.jpeg",
     "location": "Bali (Indonesia)",
     "pricing": "19,000 - 80,000",
     "link": "/packages/id/8"
   },
   {
     "id": 9,
-    "src": "https://images.pexels.com/photos/2675268/pexels-photo-2675268.jpeg",
+    "src": "/images/Packages/AllPackages/France.jpg",
     "location": "France / Europe (multi-city)",
     "pricing": "59,000 - 2,50,000",
     "link": "/packages/id/9"
   },  
   {
     "id": 10,
-    "src": "https://images.pexels.com/photos/3354774/pexels-photo-3354774.jpeg",
+    "src": "/images/Packages/AllPackages/Spain.webp",
     "location": "Spain / Europe",
     "pricing": "51,000 - 2,50,000",
     "link": "/packages/id/10"
   },
   {
     "id": 11,
-    "src": "https://images.pexels.com/photos/19628062/pexels-photo-19628062.jpeg",
+    "src": "/images/Packages/AllPackages/USA.webp",
     "location": "USA",
     "pricing": "1,50,000 - 3,90,000",
     "link": "/packages/id/11"
   },
   {
     "id": 12,
-    "src": "https://images.pexels.com/photos/27705570/pexels-photo-27705570.jpeg",
+    "src": "/images/Packages/AllPackages/Turkey.webp",
     "location": "Turkey",
     "pricing": "36,000 - 1,20,000",
     "link": "/packages/id/12"
   },
   {
     "id": 13,
-    "src": "https://images.pexels.com/photos/753339/pexels-photo-753339.jpeg",
+    "src": "/images/Packages/AllPackages/Russia.webp",
     "location": "Russia",
     "pricing": "37,000 - 1,50,000",
     "link": "/packages/id/13"
   },
   {
     "id": 14,
-    "src": "https://images.pexels.com/photos/5769456/pexels-photo-5769456.jpeg",
+    "src": "/images/Packages/AllPackages/Cambodia.webp",
     "location": "Cambodia",
     "pricing": "18,000 - 79,000",
     "link": "/packages/id/14"
   },
   {
     "id": 15,
-    "src": "https://images.pexels.com/photos/5862695/pexels-photo-5862695.jpeg",
+    "src": "/images/Packages/AllPackages/Mexico.webp",
     "location": "Mexico",
     "pricing": "18,000 - 79,000",
     "link": "/packages/id/15"
   },
   {
     "id": 16,
-    "src": "https://images.pexels.com/photos/31047822/pexels-photo-31047822.jpeg",
+    "src": "/images/Packages/AllPackages/Japan.webp",
     "location": "Japan",
     "pricing": "45,000 - 1,80,000",
     "link": "/packages/id/16"
   },
   {
     "id": 17,
-    "src": "https://images.pexels.com/photos/3264723/pexels-photo-3264723.jpeg",
+    "src": "/images/Packages/AllPackages/Greece.webp",
     "location": "Greece",
     "pricing": "69,000 - 2,50,000",
     "link": "/packages/id/17"
   },
   {
     "id": 18,
-    "src": "https://images.pexels.com/photos/31592815/pexels-photo-31592815.jpeg",
+    "src": "/images/Packages/AllPackages/Australia.webp",
     "location": "Australia",
     "pricing": "1,67,000 - 4,10,000",
     "link": "/packages/id/18"
   },
   {
     "id": 19,
-    "src": "https://images.pexels.com/photos/34337557/pexels-photo-34337557.jpeg",
+    "src": "/images/Packages/AllPackages/Switzerland.webp",
     "location": "Switzerland",
     "pricing": "76,000 - 3,20,000",
     "link": "/packages/id/19"
   },
   {
     "id": 20,
-    "src": "https://images.pexels.com/photos/1562058/pexels-photo-1562058.jpeg",
+    "src": "/images/Packages/AllPackages/Norway.webp",
     "location": "Norway / Scandinavia",
     "pricing": "91,000 - 3,50,000",
     "link": "/packages/id/20"
   },  {
     "id": 21,
-    "src": "https://images.pexels.com/photos/29824316/pexels-photo-29824316.jpeg",
+    "src": "/images/Packages/AllPackages/Egypt.webp",
     "location": "Egypt",
     "pricing": "25,000 - 1,40,000",
     "link": "/packages/id/21"
   },
   {
     "id": 22,
-    "src": "https://images.pexels.com/photos/5232397/pexels-photo-5232397.jpeg",
+    "src": "/images/Packages/AllPackages/Hawai.webp",
     "location": "Hawaii(USA)",
     "pricing": "1,10,200 - 5,50,000",
     "link": "/packages/id/22"
   },
   {
     "id": 23,
-    "src": "https://images.pexels.com/photos/2128042/pexels-photo-2128042.jpeg",
+    "src": "/images/Packages/AllPackages/SouthKorea.webp",
     "location": "South Korea",
     "pricing": "42,000 - 1,70,000",
     "link": "/packages/id/23"
   },
   {
     "id": 24,
-    "src": "https://images.pexels.com/photos/2949825/pexels-photo-2949825.jpeg",
+    "src": "/images/Packages/AllPackages/Tanzania.webp",
     "location": "Tanzania",
     "pricing": "1,15,000 - 3,99,000",
     "link": "/packages/id/24"
   },
   {
     "id": 25,
-    "src": "https://images.pexels.com/photos/14055688/pexels-photo-14055688.jpeg",
+    "src": "/images/Packages/AllPackages/Costarica.webp",
     "location": "Costa Rica",
     "pricing": "1,22,000 - 7,67,000",
     "link": "/packages/id/25"
   },
   {
     "id": 26,
-    "src": "https://images.pexels.com/photos/24039432/pexels-photo-24039432.jpeg",
+    "src": "/images/Packages/AllPackages/Brazil.webp",
     "location": "Brazil",
     "pricing": "1,57,000 - 6,75,000",
     "link": "/packages/id/26"
