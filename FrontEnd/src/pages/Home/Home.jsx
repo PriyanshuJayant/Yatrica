@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 // -------------------- STYLES --------------------
 import styles from "../pages.module.css";
@@ -85,6 +85,7 @@ function Home() {
         <div className={styles.pageContainer}>
           {/* --------------------Diwali Section-------------------- */}
           {/* <div className={styles.DiwaliComponent}> */}
+          <Link to="/terms-conditions">
           <LazyVideo
             className={styles.diwaliBanner}
             src={Diwali}
@@ -93,9 +94,10 @@ function Home() {
             loop
             playsInline
             eager={true}
-          >
+            >
             Your Browser does not support this video format
           </LazyVideo>
+            </Link>
           {/* <CardCouresel /> */}
           {/* </div> */}
 

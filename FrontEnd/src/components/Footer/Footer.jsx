@@ -46,7 +46,7 @@ const data = {
 const socialLinks = [
   { icon: Facebook, label: "Facebook", href: data.facebookLink },
   { icon: Instagram, label: "Instagram", href: data.instaLink },
-  { icon: Twitter, label: "Twitter", href: data.twitterLink },
+  // { icon: Twitter, label: "Twitter", href: data.twitterLink },
 ];
 
 const aboutLinks = [
