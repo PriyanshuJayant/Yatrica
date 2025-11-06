@@ -275,6 +275,7 @@ html {
 
 .contactButton {
   text-decoration: none;
+  display: none;
 }
 
 .contactBtn {
