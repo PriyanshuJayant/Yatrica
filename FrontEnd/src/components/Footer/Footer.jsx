@@ -32,7 +32,7 @@ const data = {
   },
   contact: {
     email: "info@yatrica.co.in",
-    phone: "+91 9818456811 ",
+    // phone: "+91 9818456811 ",
     address: "Sipri Bazar, Jhansi, Uttar Pradesh-284003",
   },
   company: {
@@ -71,7 +71,7 @@ const helpfulLinks = [
 
 const contactInfo = [
   { icon: Mail, text: data.contact.email },
-  { icon: Phone, text: data.contact.phone },
+  // { icon: Phone, text: data.contact.phone },
   { icon: MapPin, text: data.contact.address, isAddress: true },
 ];
 
