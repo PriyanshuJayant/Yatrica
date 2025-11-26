@@ -29,10 +29,12 @@ export default async function handler(req, res) {
   try {
     // Create transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
-        user: process.env.EMAIL_USER || process.env.VITE_EMAIL_USER,
-        pass: process.env.EMAIL_PASS || process.env.VITE_EMAIL_PASS,
+        user: process.env.EMAIL_USER || process.env.VITE_EMAIL_USER, // Your Hostinger email
+        pass: process.env.EMAIL_PASS || process.env.VITE_EMAIL_PASS, // Your Hostinger email password
       },
     });
 
